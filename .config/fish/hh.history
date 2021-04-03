@@ -1,0 +1,31 @@
+kate .config/fish/config.fish
+bash -c 'WINEFSYNC=0 WINEESYNC=0 WINEPREFIX=/home/lucas/.wine_origin/ wine Origin.exe'
+
+ cd /home/lucas
+ clear
+ cd /
+ cd /home/lucas
+ cd /home/lucas
+ cd '/home/lucas/.wine_origin/drive_c/Program Files (x86)/Origin'
+bash -c 'WINEFSYNC=0 WINEESYNC=0 WINEPREFIX=/home/lucas/.wine_origin/ wine Origin.exe'
+
+ cd /
+find . -iname "*orgasm*" -type f -exec mv {} orgasm/ \;
+ cd /home/lucas
+ clear
+ cd /
+ cd /home/lucas
+ cd /home/lucas
+ clear
+ cd /
+ cd /home/lucas
+ cd '/mnt/HDD/Videos_HDD/The.Good.Doctor.S04E12.Teeny.Blue.Eyes.720p.AMZN.WEBRip.DDP5.1.x264-TOMMY[TGx]'
+ cd /tmp/XXX/final/orgasm
+ cd /home/lucas
+man set
+kate .config/fish/config.fish
+sudo lspci -v
+MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
+MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
+MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
+MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10

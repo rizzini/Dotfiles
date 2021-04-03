@@ -1,0 +1,14 @@
+
+function findall() {
+	sudo find /mnt/archlinux/ROOT/* -iname "*$1*"
+}
+
+function finddeleteall() {
+        sudo find /mnt/archlinux/ROOT/* -iname "*$1*" -exec rm -rf {} \;
+}
+
+function latest_installed_packages(){ 
+cat /var/log/pacman.log | grep -w installed | cut -c45- | sed -e "s/[(][^)]*[)]/()/g" | tr -d '()' | tr -d ' '
+}
+
+alias kate=kate_

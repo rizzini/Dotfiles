@@ -29,3 +29,26 @@ MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine 
 MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
 MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
 MESA_GL_VERSION_OVERRIDE=4.5 LIBGL_DEBUG= WINEPREFIX=/home/lucas/.wine_d3/ wine /mnt/HDD/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default -dx10
+yadm commit -a
+ cd /home/lucas
+ clear
+ cd /
+ cd /home/lucas
+ cd /home/lucas
+ cd /home/lucas/.ssh
+sudo rm -rf *
+ cd /
+ cd /home/lucas/.ssh
+ cd /home/lucas/.ssh
+ cd /home/lucas/.ssh
+ cd /home/lucas/.ssh
+sudo rm -rf *
+ cd /home/lucas
+ clear
+ cd /
+ cd /home/lucas
+ cd /home/lucas
+ cd /home/lucas/.ssh
+ cd /
+ cd /home/lucas
+ cd /

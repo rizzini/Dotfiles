@@ -1,8 +1,4 @@
 #!/bin/bash
-# 
-# if [ -n "$(pgrep -i macro )" ]; then
-#     exit
-# fi
 
 while :;
 do

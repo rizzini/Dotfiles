@@ -1,21 +1,3 @@
-atualizados+=('xxx')
-atualizados+=('xxx')
-"${atualizados[*]}"
-${atualizados[*]}
-echo ${atualizados[*]}
-exit
-atualizados+=('xxx')
-echo "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: "${instalados[*]}""
-echo "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n" "INSTALADOS: "${instalados[*]}""
-echo "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""/n" "INSTALADOS: "${instalados[*]}""
-exit
-instalados+=('pywall.sh')
-instalados+=('pywall.sh')
-echo "${instalados[*]}"
- instalados+=('xxx')
-echo "${instalados[*]}"
- instalados+=('xxxff')
-echo "${instalados[*]}"
 exit
  instalados+=('xxxff')
 instalados+=('pywall.sh')
@@ -498,3 +480,21 @@ makepkg -Crscif
 kate /mnt/archlinux/wine-tkg-git/wine-tkg-git/prepare.log
 git checkout 
 kate customization.cfg 
+Documentos/scripts/macro_d3_wiz.sh
+exit
+while :; do xdotool key 1; sleep 0.3; done
+yay -S keybind
+yay -Ss keybind
+yay -Ss xkeybind
+yay -Ss x keybind
+yay -Ss x keybinder
+yay -Ss keybinder
+yay -S xbindkeys
+xbindkeys --help
+xbindkeys 
+xbindkeys --defaults > /home/lucas/.xbindkeysrc
+k .xbindkeysrc 
+kate .xbindkeysrc 
+chmod +x Documentos/scripts/macro_d3_wiz.sh 
+kate .xbindkeysrc 
+exit

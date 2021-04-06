@@ -1,1 +1,0 @@
-/home/lucas/Documentos/scripts/pywall.sh

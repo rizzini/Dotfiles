@@ -1,1 +1,0 @@
-/home/lucas/Documentos/scripts/compositor_management.sh

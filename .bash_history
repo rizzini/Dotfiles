@@ -1,65 +1,3 @@
-exit
- instalados+=('xxxff')
-instalados+=('pywall.sh')
-echo "${instalados[*]}"
-echo "${instalados[*]}"
-        printf "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: "${instalados[*]}""
-        printf "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: "${instalados[@]}""
-        printf "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: "$(echo ${instalados[@]})""
-printf ${instalados[@]}
-printf $instalados[@]
-printf $instalados
-echo "${instalados[*]}"
-        printf "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: "$(echo "${instalados[@]}")""
-echo $instalados 
-echo $instalados[2] 
-echo "${instalados[*]}"
-echo "${instalados[@]}"
-echo "${instalados[1]}"
-echo "${instalados[2]}"
-echo "${instalados[0]}"
-for i in "${instalados[*]}"; do echo $i; done
-for i in ${instalados[*]}; do echo $i; done
-for i in ${instalados[*]}; do echo $i '1'; done
-printf "Um ou mais arquivos foram atualizados."" $(date +%H:%M:%S)""\n""ATUALIZADOS: ""$(for i in ${instalados[*]}; do echo $i' '; done)"
-for i in ${instalados[*]}; do echo $i '1'; done
-for i in ${instalados[*]}; do printf $i '1'; done
-for i in ${instalados[*]}; do printf $i' '; done
-printf "Um ou mais arquivos foram atualizados."" $(date +%H:%M:%S)""\n""ATUALIZADOS: ""$(for i in ${instalados[*]}; do printf $i' '; done)"
-exit
-        printf "Um ou mais arquivos foram atualizados."" $(date +%H:%M:%S)""\n""ATUALIZADOS: ""$(for i in ${atualizados[*]}; do printf $i' '; done)"
-atualizados+=('pywall.sh')
-atualizados+=('pywall.sh')
-        printf "Um ou mais arquivos foram atualizados."" $(date +%H:%M:%S)""\n""ATUALIZADOS: ""$(for i in ${atualizados[*]}; do printf $i' '; done)"
-instalados+=('pywall.sh')
-instalados+=('pywall.sh')
-printf "Um ou mais arquivos foram instalados. $(date +%H:%M:%S)""\n""INSTALADOS: ""$(for i in ${instalados[*]}; do printf $i' '; done)"
-printf "Um ou mais arquivos foram instalados e atualizados. $(date +%H:%M:%S)""\n""INSTALADOS: ""$(for i in ${instalados[*]}; do printf $i' '; done)""\n""ATUALIZADOS: ""$(for i in ${atualizados[*]}; do printf $i' '; done)""
-    elif [ $status -eq 0 ] && [ $status_ -eq 0 ]; then
-        echo "Nenhum arquivo instalado ou atualizado. $(date +%H:%M:%S)";
-    fi
-    rm -rf /tmp/scripts_pessoais/
-fi
-
-        printf "Um ou mais arquivos foram instalados e atualizados. $(date +%H:%M:%S)""\n""INSTALADOS: ""$(for i in ${instalados[*]}; do printf $i' '; done)""\n""ATUALIZADOS: ""$(for i in ${atualizados[*]}; do printf $i' '; done)""
-
-
-        printf "Um ou mais arquivos foram instalados e atualizados. $(date +%H:%M:%S)""\n""INSTALADOS: ""$(for i in ${instalados[*]}; do printf $i' '; done)""\n""ATUALIZADOS: ""$(for i in ${atualizados[*]}; do printf $i' '; done)"
-exit
-[[ $- == *i* ]] && rm -rf /tmp/scripts_pessoais/;
-exit
-[[ ! $- == *i* ]] && rm -rf /tmp/scripts_pessoais/;
-exit
-if ! ping -c1 -w5 8.8.8.8 &> /dev/null; then     echo 'Sem conexão...';     exit 1; fi
-if ! ping -c1 -w5 8.8.8.9 &> /dev/null; then     echo 'Sem conexão...';     exit 1; fi
-lso() { ls -alG "$@" | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}'; }
-lso
-ls -alG "$@" | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}'
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}'
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}'
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-10
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c3-10
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-10
 ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-4
 ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-3
 ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-4
@@ -498,3 +436,65 @@ kate .xbindkeysrc
 chmod +x Documentos/scripts/macro_d3_wiz.sh 
 kate .xbindkeysrc 
 exit
+findall 
+fish
+rm -f fish fish_indent
+cd /usr/bin/
+rm -f fish fish_indent
+cd /etc
+sudo grep -rl fish
+kate passwd
+kate passwd-
+sudo grep -rl fish
+kate security/pam_env.conf
+sudo grep -rl fish
+kate  security/pam_env.conf
+chsh -l
+ chsh -s $(/bin/bash)
+ chsh -s /bin/bash
+ chsh -s /bin/bash
+ chsh -s /bin/bash
+sudo  chsh -s /bin/bash
+echo $SHELL
+echo $SHELL
+chsh -s $(which bash)
+chsh -l
+chsh -l
+sudo chsh -l
+sudo chsh -l
+sudo chsh -s '/bin/bash'
+chsh -s '/bin/bash'
+chsh -s /bin/bash
+exit
+kate /etc/passwd
+sudo reboot
+sudo dmesg
+journalct
+journalctl
+journalctl --follow
+journalctl --boot=0
+cat /var/log/sddm
+cat /var/log/sddm.log
+#sudo find / -iname "*sddm*"
+sudo loadkey bt-abnt2
+sudo loadkeys bt-abnt2
+sudo loadkeys br-abnt2
+#sudo find / -iname "*sddm*" | grep log
+sudo find / -iname "*sddm*" | grep log
+sudo find /mnt/archlinux/ROOT/ -iname "*sddm*" | grep log
+sudo find /mnt/archlinux/ROOT/ -iname "*sddm*" 
+date
+ls
+ls -lah
+sudo pacman -S fish
+cp -r /mnt/archlinux/btrbk_snapshots/HOME/HOME.20210404T0700/lucas/.config/fish/ ~/.config/
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120; done shutdown
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120; done; shutdown
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120; done
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120 done
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120 done;
+while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120; done
+[200~while :;do if [ -n "$(pgrep makepkg)" ]; then sleep 120; fi done shutdown~
+while :;do if [ -n "$(pgrep makepkg)" ]; then sleep 120; fi done shutdown
+while :;do if [ -n "$(pgrep makepkg)" ]; then sleep 120; fi done; shutdown
+if [ -n "$(pgrep spotify)" ]; then playerctl --player=spotify previous; else playerctl previous; fi

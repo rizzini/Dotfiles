@@ -1,37 +1,3 @@
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-4
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-3
-ls -alG  /etc/btrbk/btrbk_root.conf | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' | cut -c2-4
-exit
-arquivo1='/etc/btrbk/btrbk_root.conf'
-echo ${arquivo1##*/}
-echo ${arquivo1#*/}
-echo ${arquivo1*/}
-echo ${arquivo1##*/}
-echo ${arquivo1#*/}
-echo ${arquivo1#**/}
-echo ${arquivo1#***/}
-echo ${arquivo1#*//}
-echo ${arquivo1#*/}
-echo ${arquivo1##*/}
-echo ${arquivo1##**/}
-echo ${arquivo1%%\?*}
-echo ${arquivo1%%\/*}
-echo ${arquivo1%%/*}
-echo ${arquivo1##/*}
-echo ${arquivo1##\*}
-echo ${arquivo1%%\*}
-echo ${arquivo1&&\*}
-echo ${arquivo1##\*}
-echo "$(dirname "${arquivo1}")"
-arquivo1='/etc/btrbk/btrbk_root.conf'
-arquivo2='/etc/btrbk/btrbk_root.conf'
-caminho=$(echo "$(dirname "${arquivo1}")")
-echo $arquivo1
-echo $arquivo1 | cut -c1
-echo $arquivo1 | cut -c-1
-echo $arquivo1 | cut -c-1-99
-echo $arquivo1 | cut -c1-99
-echo $arquivo1 | cut -c2-99
 echo "$(basename "${arquivo1}")"
 caminho_=$(echo $arquivo1 | cut -c2-99)
 echo $caminho
@@ -498,3 +464,37 @@ while :; do if [ -n "$(pgrep makepkg)" ]; then sleep 120; done
 while :;do if [ -n "$(pgrep makepkg)" ]; then sleep 120; fi done shutdown
 while :;do if [ -n "$(pgrep makepkg)" ]; then sleep 120; fi done; shutdown
 if [ -n "$(pgrep spotify)" ]; then playerctl --player=spotify previous; else playerctl previous; fi
+while [ -n "$(pgrep xbindkeys)" ]; do killall -9 xbindkeys; done
+while [ -n "$(pgrep xbindkeys)" ]; do killall -9 xbindkeys; done
+exit
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh & echo "$!" &> /tmp/macro_d3.pid
+cat /tmp/macro_d3.pid
+tm /tmp/macro_d3.pid
+rm /tmp/macro_d3.pid
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+bash -c /home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+bash -x /home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+/home/lucas/Documentos/scripts/macro_d3_wiz.sh 
+]exit
+exit
+if [ $(pgrep macro_d3_wiz.sh | wc -l) -le 1 ]; then     while :;     do
+                 sleep 0.4;     done; else         killall -9 macro_d3_wiz.sh; fi
+exit
+if [ $(pgrep macro_d3_wiz.sh | wc -l) -eq 0 ]; then     while :;     do
+                 sleep 0.4;     done; else         killall -9 macro_d3_wiz.sh; fi
+if [ $(pgrep macro_d3_wiz.sh | wc -l) -eq 0 ]; then     while :;     do                  sleep 0.4; echo      done; else         killall -9 macro_d3_wiz.sh; fi
+if [ $(pgrep macro_d3_wiz.sh | wc -l) -eq 0 ]; then     while :;     do                  sleep 0.4; echo 1     done; else         killall -9 macro_d3_wiz.sh; fi
+if [ $(pgrep macro_d3_wiz.sh | wc -l) -eq 0 ]; then     while :;     do                  sleep 0.4; echo 1;     done; else         killall -9 macro_d3_wiz.sh; fi

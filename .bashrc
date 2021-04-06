@@ -1,29 +1,29 @@
-#
+ #
 # ~/.bashrc
 #
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source ~/.profile
-
-if type "wal" >> /dev/null 2>&1; then
-     /usr/bin/cat ~/.cache/wal/sequences
-
-fi
-
-
-if status --is-interactive; then
-   if test -f /usr/bin/paleofetch; then
-   paleofetch
-   fi
-fi
-
-if test -d ~/.local/bin; then
-    if not contains -- ~/.local/bin $PATH
-        set -p PATH ~/.local/bin
-    fi
-fi
+# source ~/.profile
+# 
+# if type "wal" >> /dev/null 2>&1; then
+#      /usr/bin/cat ~/.cache/wal/sequences
+# 
+# fi
+# 
+# 
+# if status --is-interactive; then
+#    if test -f /usr/bin/paleofetch; then
+#    paleofetch
+#    fi
+# fi
+# 
+# if test -d ~/.local/bin; then
+#     if not contains -- ~/.local/bin $PATH
+#         set -p PATH ~/.local/bin
+#     fi
+# fi
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '

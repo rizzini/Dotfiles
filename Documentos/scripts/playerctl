@@ -1,0 +1,33 @@
+#!/bin/bash
+if [ "$1" == 'play_pause' ]; then
+    if [ -n "$(pgrep -x spotify)" ];
+    then
+        playerctl --player=spotify play-pause;
+    elif [ -n "$(pgrep -x spotifyd)" ];then
+        if [ "$(playerctl --player=spotifyd status)" == "Playing" ]; then
+            playerctl --player=spotifyd pause;
+        elif [ "$(playerctl --player=spotifyd status)" == "Paused" ]; then
+            playerctl --player=spotifyd play;
+        fi
+    else
+        playerctl play-pause;
+    fi
+elif [ "$1" == 'previous' ]; then
+    if [ -n "$(pgrep -x spotify)" ];
+    then
+        playerctl --player=spotify previous;
+    elif [ -n "$(pgrep -x spotifyd)" ];then
+        playerctl --player=spotifyd previous;  
+    else
+        playerctl previous;
+    fi
+elif [ "$1" == 'next' ]; then
+    if [ -n "$(pgrep -x spotify)" ];
+    then
+        playerctl --player=spotify next;
+    elif [ -n "$(pgrep -x spotifyd)" ];then
+        playerctl --player=spotifyd next;  
+    else
+        playerctl next;
+    fi
+fi

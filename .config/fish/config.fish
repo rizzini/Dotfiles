@@ -3,6 +3,7 @@ set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 source ~/.profile
 
+
 set -x WINEFSYNC 0
 set -x WINEESYNC 0
 
@@ -131,3 +132,4 @@ if type "wal" >> /dev/null 2>&1
 
 end
 
+# fisher install PatrickF1/fzf.fish 

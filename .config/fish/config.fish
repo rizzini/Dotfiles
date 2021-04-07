@@ -85,6 +85,7 @@ end
 ## Useful aliases
 
 ##Custon
+alias h='__fzf_search_history'
 alias mpv='mpv --geometry=50%:50% --autofit-larger=70%x70% --profile=gpu-hq --video-sync=display-resample --hwdec=vaapi --vo=gpu'
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'

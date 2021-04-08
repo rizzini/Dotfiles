@@ -73,5 +73,5 @@ while :; do
     
     sleep 1
     echo -e "$atual" > /tmp/wallpaper.pywall.tmp
-    sleep 1
+    sleep 5
 done

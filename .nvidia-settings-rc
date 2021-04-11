@@ -2,7 +2,7 @@
 # /home/lucas/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Thu Apr  1 06:42:51 2021
+# Generated on Sun Apr 11 11:04:58 2021
 #
 
 # ConfigProperties:
@@ -14,9 +14,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
-Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),No,1000
+Timer = Thermal_Monitor_(GPU_0),No,1000
+Timer = Memory_Used_(GPU_0),No,3000
 
 # Attributes:
 
@@ -27,7 +27,7 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/TextureClamping=0
 0/FXAA=0
 0/AllowFlipping=0
-0/FSAAAppControlled=0
+0/FSAAAppControlled=1
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=3
 0/FSAAAppEnhanced=0

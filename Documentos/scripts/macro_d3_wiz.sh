@@ -3,8 +3,13 @@ set -x
 if [ $(pgrep macro_d3_wiz.sh | wc -l) -lt 3 ]; then
     while :;
     do
-        xdotool key 5;        
-        sleep 0.4;
+        if [ $(xdotool search --sync --name 'Diablo III') -eq $(xdotool getwindowfocus) ]; then 
+            xdotool key 5;        
+            sleep 0.4;
+        else
+            sleep 0.4;
+        fi
+        
     done
 else
         killall -9 macro_d3_wiz.sh

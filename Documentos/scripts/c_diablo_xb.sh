@@ -1,4 +1,5 @@
 #!/bin/bash
+bash -c 'sleep 20 && /home/lucas/Documentos/scripts/c_diablo_xb_overlay.sh' &
 sleep 10 &&
 while [ -n "$(pgrep Diablo)" ]; do
 
@@ -9,6 +10,7 @@ while [ -n "$(pgrep Diablo)" ]; do
     else
         killall -9 macro_d3_wiz.sh
         killall -9 xbindkeys
+        killall -9 pqiv
     fi
     sleep 1
 done

@@ -14,6 +14,3 @@ if [ $(pgrep macro_d3_wiz.sh | wc -l) -lt 3 ]; then
 else
         killall -9 macro_d3_wiz.sh
 fi
-
-
-

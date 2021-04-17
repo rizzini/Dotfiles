@@ -7,14 +7,14 @@ while [ -n "$(pgrep Diablo)" ]; do
         aberto=0
     fi    
     if [ $aberto -eq 1 ]; then        
-        if [ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" ]; then
+        if [[ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_on.png' &
         fi
 
     fi    
     if [ $aberto -eq 0 ]; then
-        if [ -z "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" ]; then
+        if [[ -z "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_off.png' &
         fi

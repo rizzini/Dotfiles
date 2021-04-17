@@ -7,10 +7,8 @@ while [ -n "$(pgrep Diablo)" ]; do
         if [ -z "$(pgrep xbindkeys)" ]; then
             xbindkeys
         fi
-    else
-        killall -9 macro_d3_wiz.sh
-        killall -9 xbindkeys
-        killall -9 pqiv
+    else 
+        killall -9 macro_d3_wiz.sh xdotool xbindkeys pqiv
     fi
     sleep 1
 done

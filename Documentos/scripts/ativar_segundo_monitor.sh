@@ -7,7 +7,7 @@ if [ ! $(xrandr | grep -w connected |  sed 's/ .*//' | wc -l) -eq 2 ]; then
 fi
 
 if [ $(xrandr --listactivemonitors | head -1 | cut -c 11-11) -eq 1 ]; then
-    xrandr --output HDMI-0 --auto --output HDMI-1-1 --same-as HDMI-0 --mode 1920x1080  
+    xrandr --output HDMI-0 --off --output HDMI-1-1 --same-as HDMI-0 --mode 1920x1080  
 #     sleep 1
 #     pacmd set-default-sink 1
 #     sleep 1

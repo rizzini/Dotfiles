@@ -1,17 +1,21 @@
 #!/bin/bash
-# bash -c 'sleep 20 && /home/lucas/Documentos/scripts/c_diablo_xb_overlay.sh' &
-# sleep 10 &&
 killall -9 pqiv
 rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
-while [ -n "$(pgrep Diablo)" ]; do
-    aberto=0       
-    if [ -n "$(pgrep macro_d3_wiz.sh)" ]; then
-        aberto=1
-    else
-        aberto=0
-    fi   
-    
+sleep 10 &&
+while [ -n "$(pgrep Diablo)" ]; do    
     if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then   
+    
+        if [ -f "/tmp/c_diablo_xb_macro_on.pid.tmp" ]; then
+            /home/lucas/Documentos/scripts/macro_d3_wiz.sh &
+            aberto=0
+        else 
+            if [ -n "$(pgrep macro_d3_wiz.sh)" ]; then
+                aberto=1
+            else
+                aberto=0
+            fi   
+        fi
+    
         if [ -z "$(pgrep xbindkeys)" ]; then
             xbindkeys
         fi

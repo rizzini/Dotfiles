@@ -19,8 +19,8 @@ while [ -n "$(pgrep Diablo)" ]; do
         if [ -z "$(pgrep xbindkeys)" ]; then
             xbindkeys
         fi
-        if [ $aberto -eq 1 ]; then        
-            if [[ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
+    if [ $aberto -eq 1 ]; then        
+        if [[ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_on.png' &
         fi
@@ -32,7 +32,6 @@ while [ -n "$(pgrep Diablo)" ]; do
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_off.png' &
         fi
     fi
-        
         rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
     else 
         if [ -n "$(ps -aux | grep macro_on | grep wine_d3 | awk '{print $2;}')" ]; then

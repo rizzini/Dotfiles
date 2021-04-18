@@ -1,7 +1,7 @@
 #!/bin/bash
 killall -9 pqiv
 rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
-# sleep 10 &&
+sleep 10 &&
 while [ -n "$(pgrep Diablo)" ]; do    
     if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then   
     

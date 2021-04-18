@@ -8,7 +8,6 @@ set -x WINEFSYNC 0
 set -x WINEESYNC 0
 
 if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
-    set -x KWIN_TRIPLE_BUFFER1
     set -x __GL_YIELD USLEEP
     set -x __GL_MaxFramesAllowed 1
     set -x KWIN_COMPOSE O2ES
@@ -16,8 +15,7 @@ if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
     set -x __GL_THREADED_OPTIMIZATION 1
     set -x __GL_SHADER_DISK_CACHE 1
     set -x __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/'
-    set -x __GL_SYNC_TO_VBLANK 1
-    set -x backend 'x11'
+
 end
 
 ## Add ~/.local/bin to PATH

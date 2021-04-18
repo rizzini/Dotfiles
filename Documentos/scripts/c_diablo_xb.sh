@@ -3,8 +3,7 @@ killall -9 pqiv
 rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
 sleep 10 &&
 while [ -n "$(pgrep Diablo)" ]; do    
-    if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then   
-    
+    if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then       
         if [ -f "/tmp/c_diablo_xb_macro_on.pid.tmp" ]; then
             /home/lucas/Documentos/scripts/macro_d3_wiz.sh &
             aberto=0
@@ -14,8 +13,7 @@ while [ -n "$(pgrep Diablo)" ]; do
             else
                 aberto=0
             fi   
-        fi
-    
+        fi    
         if [ -z "$(pgrep xbindkeys)" ]; then
             xbindkeys
         fi
@@ -24,7 +22,6 @@ while [ -n "$(pgrep Diablo)" ]; do
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_on.png' &
         fi
-
     fi    
     if [ $aberto -eq 0 ]; then
         if [[ -z "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then

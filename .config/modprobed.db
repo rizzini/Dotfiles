@@ -5,6 +5,7 @@ at24
 blake2b_generic
 bpf_preload
 btrfs
+cdrom
 cec
 coretemp
 crc16
@@ -91,6 +92,7 @@ nf_nat_tftp
 nf_reject_ipv4
 nf_reject_ipv6
 nouveau
+option
 pcspkr
 r8169
 raid6_pq
@@ -121,12 +123,15 @@ soundwire_cadence
 soundwire_generic_allocation
 soundwire_intel
 squashfs
+sr_mod
 syscopyarea
 sysfillrect
 sysimgblt
 tcp_diag
+uas
 udp_diag
 usb_storage
+usb_wwan
 usbhid
 uvcvideo
 vfat
@@ -147,5 +152,6 @@ xt_addrtype
 xt_conntrack
 xt_hl
 xt_limit
+xt_recent
 xt_state
 xt_tcpudp

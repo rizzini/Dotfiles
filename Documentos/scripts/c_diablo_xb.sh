@@ -1,6 +1,11 @@
 #!/bin/bash
 killall -9 pqiv
-rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
+if test -f /tmp/c_diablo_xb_macro_off.pid.tmp; then
+    rm /tmp/c_diablo_xb_macro_off.pid.tmp
+fi
+if test -f /tmp/c_diablo_xb_macro_on.pid.tmp; then
+    rm /tmp/c_diablo_xb_macro_on.pid.tmp
+fi
 sleep 10 &&
 while [ -n "$(pgrep Diablo)" ]; do    
     if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then       
@@ -29,7 +34,12 @@ while [ -n "$(pgrep Diablo)" ]; do
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_off.png' &
         fi
     fi
-        rm /tmp/c_diablo_xb_macro_off.pid.tmp  /tmp/c_diablo_xb_macro_on.pid.tmp
+        if test -f /tmp/c_diablo_xb_macro_off.pid.tmp; then
+            rm /tmp/c_diablo_xb_macro_off.pid.tmp
+        fi
+        if test -f /tmp/c_diablo_xb_macro_on.pid.tmp; then
+            rm /tmp/c_diablo_xb_macro_on.pid.tmp
+        fi
     else 
         if [ -n "$(ps -aux | grep macro_on | grep wine_d3 | awk '{print $2;}')" ]; then
             touch /tmp/c_diablo_xb_macro_on.pid.tmp

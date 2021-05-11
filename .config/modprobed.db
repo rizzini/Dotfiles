@@ -4,7 +4,9 @@ agpgart
 at24
 blake2b_generic
 bpf_preload
+bridge
 btrfs
+cbc
 cdrom
 cec
 coretemp
@@ -20,6 +22,7 @@ dm_crypt
 dm_mod
 drm
 drm_kms_helper
+encrypted_keys
 ext4
 fat
 fb_sys_fops
@@ -46,9 +49,12 @@ ip6_tables
 ip6t_REJECT
 ip6t_rt
 ip6table_filter
+ip6table_mangle
+ip6table_nat
 ip_tables
 ipt_REJECT
 iptable_filter
+iptable_mangle
 iptable_nat
 irqbypass
 jbd2
@@ -58,6 +64,7 @@ kvm_intel
 ledtrig_audio
 libcrc32c
 libphy
+llc
 loop
 lpc_ich
 mac_hid
@@ -99,6 +106,7 @@ raid6_pq
 rapl
 realtek
 rfkill
+rng_core
 snd
 snd_compress
 snd_hda_codec
@@ -124,10 +132,14 @@ soundwire_generic_allocation
 soundwire_intel
 squashfs
 sr_mod
+stp
 syscopyarea
 sysfillrect
 sysimgblt
 tcp_diag
+tpm
+trusted
+tun
 uas
 udp_diag
 usb_storage
@@ -146,6 +158,7 @@ x_tables
 xhci_pci
 xhci_pci_renesas
 xor
+xt_CHECKSUM
 xt_LOG
 xt_MASQUERADE
 xt_addrtype

@@ -3,7 +3,7 @@ clipboard=$(xclip -o -sel clip)
 texto+=($clipboard)
 url_prefixo='https://translate.google.com/?sl=en&tl=pt&text='
 url_sufixo='&op=translate'
-re='^[0-9]+$'
+#corrigir tradução quando após % vier um ponto. Ex.: it wasn't 100%.
 
 for i in "${texto[@]}"
 do  

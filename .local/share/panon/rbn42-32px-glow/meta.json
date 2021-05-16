@@ -1,0 +1,7 @@
+{
+    "arguments": [{
+        "name": "background_opacity",
+        "default": 0.7,
+        "type": "double"
+    }]
+}

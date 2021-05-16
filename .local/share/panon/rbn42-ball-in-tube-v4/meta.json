@@ -1,0 +1,38 @@
+{
+    "arguments": [{
+        "name": "radius",
+        "default": 0.1,
+        "type": "double"
+    }, {
+        "name": "center_x",
+        "default": 0.5,
+        "type": "double"
+    }, {
+        "name": "center_y",
+        "default": 0.5,
+        "type": "double"
+    }, {
+        "name": "maxlife",
+        "default": 150,
+        "type": "double",
+        "min":0
+    }, {
+        "name": "speed",
+        "default": 60,
+        "type": "double"
+    }, {
+        "name": "strength",
+        "default": 3,
+        "type": "double"
+    }, {
+        "name": "pow_exp",
+        "default": 3,
+        "type": "double"
+    }, {
+        "name": "opacity",
+        "default": 1,
+        "type": "double",
+        "max":1,
+        "min":0
+    }]
+}

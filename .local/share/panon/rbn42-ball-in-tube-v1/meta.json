@@ -1,0 +1,46 @@
+{
+    "arguments": [{
+        "name": "color_left",
+        "default": "#00ff2a",
+        "type": "color"
+    }, {
+        "name": "color_right",
+        "default": "#3c00ff",
+        "type": "color"
+    }, {
+        "name": "radius",
+        "default": 0.2,
+        "type": "double"
+    }, {
+        "name": "center_x",
+        "default": 0.5,
+        "type": "double"
+    }, {
+        "name": "center_y",
+        "default": 0.35,
+        "type": "double"
+    }, {
+        "name": "maxlife",
+        "default": 150,
+        "type": "double",
+        "min":0
+    }, {
+        "name": "speed",
+        "default": 60,
+        "type": "double"
+    }, {
+        "name": "strength",
+        "default": 6,
+        "type": "double"
+    }, {
+        "name": "pow_exp",
+        "default": 3,
+        "type": "double"
+    }, {
+        "name": "opacity",
+        "default": 1,
+        "type": "double",
+        "max":1,
+        "min":0
+    }]
+}

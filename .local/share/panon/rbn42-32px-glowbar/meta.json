@@ -1,0 +1,38 @@
+{
+    "arguments": [{
+        "name": "bar_width",
+        "default": 1,
+        "type": "int"
+    }, {
+        "name": "gap_width",
+        "default": 6,
+        "type": "int"
+    }, {
+        "name": "background_color_and_opacity",
+        "default": "#E0000000",
+        "type": "color"
+    }, {
+        "name": "height_ratio",
+        "default": 0.95,
+        "type": "double",
+        "max":1,
+        "min":0
+    }, {
+        "name": "glow_radius",
+        "default": 20,
+        "type": "int",
+        "min":0
+    }, {
+        "name": "bar_strength",
+        "default": 12,
+        "type": "double"
+    }, {
+        "name": "glow_strength",
+        "default": 1.1,
+        "type": "double"
+    }, {
+        "name": "glow_strength2",
+        "default": 0.8,
+        "type": "double"
+    }]
+}

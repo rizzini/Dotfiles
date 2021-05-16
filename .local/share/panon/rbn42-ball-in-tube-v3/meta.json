@@ -1,0 +1,63 @@
+{
+    "arguments": [{
+        "name": "color_left",
+        "default": "#8f0000",
+        "type": "color"
+    }, {
+        "name": "color_right",
+        "default": "#00088f",
+        "type": "color"
+    }, {
+        "name": "layout_w",
+        "default": 1,
+        "type": "int",
+        "min":1
+    }, {
+        "name": "layout_h",
+        "default": 1,
+        "type": "int",
+        "min":1
+    }, {
+        "name": "ball_radius",
+        "default": 0.2,
+        "type": "double"
+    }, {
+        "name": "ball_x",
+        "default": 0.0,
+        "type": "double"
+    }, {
+        "name": "ball_y",
+        "default": -0.0,
+        "type": "double"
+    }, {
+        "name": "ball_z",
+        "default": 0.2,
+        "type": "double"
+    }, {
+        "name": "camera_z",
+        "default": -1.3,
+        "type": "double"
+    }, {
+        "name": "speed",
+        "default": 60,
+        "type": "double"
+    }, {
+        "name": "camera_speed",
+        "default": 0.1,
+        "type": "double"
+    }, {
+        "name": "strength",
+        "default": 2,
+        "type": "double"
+    }, {
+        "name": "pow_exp",
+        "default": 3,
+        "type": "double"
+    }, {
+        "name": "opacity",
+        "default": 1,
+        "type": "double",
+        "max":1,
+        "min":0
+    }]
+}

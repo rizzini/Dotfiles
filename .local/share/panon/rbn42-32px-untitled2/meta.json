@@ -1,0 +1,39 @@
+{
+    "arguments": [{
+        "name": "from_color",
+        "default": "#6bff2b",
+        "type": "color"
+    }, {
+        "name": "to_color",
+        "default": "#08f",
+        "type": "color"
+    }, {
+        "name": "unit_width",
+        "default": 6,
+        "type": "int"
+    }, {
+        "name": "unit_height",
+        "default": 2,
+        "type": "int"
+    }, {
+        "name": "gap_width",
+        "default": 3,
+        "type": "int"
+    }, {
+        "name": "gap_height",
+        "default": 2,
+        "type": "int"
+    }, {
+        "name": "decay",
+        "default": 0.04,
+        "type": "double"
+    },{
+        "name": "blur_radius",
+        "default": 1,
+        "type": "int"
+    },{
+        "name": "move_step",
+        "default": 4,
+        "type": "int"
+    }]
+}

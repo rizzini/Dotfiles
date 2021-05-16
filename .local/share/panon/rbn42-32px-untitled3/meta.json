@@ -1,0 +1,37 @@
+{
+    "arguments": [{
+        "name": "dual_channel",
+        "default": false,
+        "type": "bool"
+    }, {
+        "name": "laser_width",
+        "default": 1.4,
+        "type": "double",
+        "min":0
+    }, {
+        "name": "background_color_and_opacity",
+        "default": "#80000000",
+        "type": "color"
+    }, {
+        "name": "min_arc",
+        "default": 30,
+        "type": "int",
+        "min":0,
+        "max":180
+    }, {
+        "name": "max_arc",
+        "default": 150,
+        "type": "int",
+        "min":0,
+        "max":180
+    }, {
+        "name": "strength",
+        "default": 2,
+        "type": "double",
+        "min":0
+    }, {
+        "name": "N1",
+        "default":10.245,
+        "type": "double"
+    }]
+}

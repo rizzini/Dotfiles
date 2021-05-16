@@ -1,0 +1,11 @@
+{
+    "arguments": [{
+        "name": "strength",
+        "default": 4,
+        "type": "double"
+    },{
+        "name": "background_opacity",
+        "default": 0.7,
+        "type": "double"
+    }]
+}

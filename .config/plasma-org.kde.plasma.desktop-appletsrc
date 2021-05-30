@@ -45,7 +45,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][2][Applets][25][Configuration]
-PreloadWeight=81
+PreloadWeight=0
 
 [Containments][2][Applets][25][Configuration][ConfigDialog]
 DialogHeight=420
@@ -125,6 +125,9 @@ useFixedWidth=true
 immutability=1
 plugin=panon
 
+[Containments][2][Applets][45][Configuration]
+PreloadWeight=0
+
 [Containments][2][Applets][45][Configuration][Backend]
 backendIndex=1
 bassResolutionLevel=3
@@ -154,6 +157,9 @@ preferredWidth=830
 immutability=1
 plugin=org.kde.paneltransparencybutton
 
+[Containments][2][Applets][46][Configuration]
+PreloadWeight=0
+
 [Containments][2][Applets][46][Configuration][Appearance]
 transparencyEnabled=true
 
@@ -178,7 +184,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=100
+PreloadWeight=0
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -216,7 +222,7 @@ immutability=1
 plugin=org.kde.NowPlaying
 
 [Containments][34][Applets][42][Configuration]
-PreloadWeight=55
+PreloadWeight=0
 
 [Containments][34][Applets][42][Configuration][ConfigDialog]
 DialogHeight=540
@@ -234,6 +240,8 @@ DialogWidth=809
 PreloadWeight=0
 
 [Containments][34][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=485
 positions=1,17,desktop:/oscar,0,0
 sortMode=-1
 
@@ -317,32 +325,47 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][47][Applets][50][Configuration]
+PreloadWeight=0
+
 [Containments][47][Applets][50][Configuration][General]
-launchers=applications:Diablo 3.desktop,applications:Diablo 3-2.desktop,preferred://browser
+launchers=applications:smartcode-stremio.desktop?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAHOklEQVRogbVabWxT1xl-3uN77Ws7aUkMDaESH23IBxuQjYw1CYNUVSt1miZRYf5M27T9SDWp66RCgp2YuIFp6rZ2hUA7uaq2Sas2CVfqtNGk39iQQVkHmzTqUZFpGU0_VCDBSew49j3n7IeTKCFxfO_1zfMv8tV5n-ec57zvec8JYYUQbjujeKtvHJSM6D9XR5996dLjuZWI41iJQcNtZxRP9c0OEMIA9qz2efkm10PvX_rstLA7FrN7QADwrvuiEyR7CKQRSBMkQjWbKw8BILtj2Tpg-46Ien9t5UEAR4igLPhRQodE79C10Z_baSfbLDRHnmQPETkXfUBgILT4fB6-r-Wh909fssdOtggII8zWtq3vACFMIG2ZTxUQWjLTGm-9suWvccRlqbFLtlCkPaImJyoOgOinMD4hHEBPKief7Y3uz5YSv6QVyJP3HZjJNottUxgMErtUBr21wX8xnohyqxwsCwgjzHjths68bbCcbZYGQSFQq8qgl2InSxaa3bAEHAWVvI-4lBReVX7rF4-_ZD47mQ7eviOi1tRVdhTMNubBiNCSybqkv_nhC2azk9lCRjV1lR0S8nCRbGMWGoF1jU9WBmDSFYY_bt8RUTfX-joF5NOLipRdkNCJcOSustFnjNrJkIXynq_olCRDNtlmaRAYgGYzdioqIIwwq27bGJAkQ4ZsQwAkSqkwCoGap6c1tFzZcq5YdlpWQNh_yultrAqA0EsoPvNEwK59X8LUZBbp5LRZ4vOhgGi388tVsqVh34Xl6kRBAWH_KafXQZ0AQiCoRqISATu_VYemb9Yik8rh5sg4hJAga6vBALSoRGht8BcUsaSAMMLMu60qAEIIBJfRiETAltb1qNpYgU3bqlBWoWHko1vgusVzG0EhoNnJIAvZaZGAsP-U09O4JkhETxud-TsFVFSVgTkYqjZVYOO2Kty8nsTE6JRlESDscW2tQkv94pVYICDSHlGF7g4SWLdZ8ncKyP9NKFvlRs2OddCzHF_87zaktQMDQaJZdUhqrd9_fr6I-YWMkhMVQYC6zNimeGzAc5cLD353Ox754VfhLreYhQkukizgVtAtIed2lQPIz_w36r4fItBhkKlT5cIYd6zAfDBGuGfDKtz_lWrc-mQC4zfTVkQoBNo1uPVDR2uD_3w8EeWOSPvf1WQqGyQgWAr5YgLyvxPc5S5sbloHfVrHjY_HwXUBMpOmCIxADygMrLXBf175ZPzf3SqUAFC6bRgjSCxvciKC5nWi7TvbUV3jw9u_v4yJZMZsKBcBhyQJUv6Z-vTuST7NigU2AsYID-tNuM_AtxISI9nbODN-DePj5jMUAY5ypt2tjE_cE2Te63Ka609YyTzzwSRBFJkIKSUmUxm8_Mp7-Mubl5HJZM1ZCAAkchpTXnTeUoMsFvtBRqREl-ZQXwBg-8XTgrhS4r_XbyB49I949c8XMT2dM08eEG6m_to3Vh6MXnhqigFALNab8XnqD2pM7SNAt586oOscr791GT8O_Ab_-NewpTEI0N2knuRpfiB64akpYF4diEb3c5HiQY3sFSGlxNjtFI5F-vHLF07jdtJC-sQMeaaerBwrC8RivXP8FnRksVhvhqd5t0ZqX4m85_DR0GcIHPkDXnv9A-i65csHuJh6smK0rGt25mexqKWcEXHIzZTnSlmJbFbHn_o_wJPB3-LK1Y-tDgMCdI2U55Ofj3TeSR4ocBodHo6Ltau_fU7TuJtD7ITB3pmI8MiD2-FyKjj58ht45dVBa1lmAXm1zzdWHnrnbz9bssEo2A-MjLypr13TOKhpXrcO0QwDPRYRYf261Yj87h1cvDw00wtYb83cpB6rHCsLLTXzczGLDeL3n3KMTV59Zgq5n0gUrxNEgBCw2sTMktI1phznKbFgwy6Foj1xIhGVdZv3niXKenQpdhq5yCqJvETOyRwnRFqGYrHeovemhm4lhoYGeH3NY2fJkfPqUjyAFXiomIHQmHJCpmV3LNZr6IBk-GZuaGiAf-_a7nc_rVPKdCG-ZsOV4kLkjwcnfN4rHf39Lxq-YjRFIo64rK_Ze5axrGcmO9kiYiZV9okp0W2GPKwQmLMTZT06RAtKt5PUoBwTUyJk1DbzYWkGh4YGeFPjmvf0XLWbQ3wdFh8LCdA1qM_7yhoC_f1PWHo3s2yBRCIhN9y7e1B1OVw8v7FNiZitsGJK9FglD5To4eHhuL7h3j2DTpfq0iVvhQk7ecj5HE_zHiu2mY-SN-HwcFxvavzRGT035jaysQnQPUz9lZ7mXUbyfDHYkkUSiaisr9l7jijn5ssUOwJyLqYe5yl-2A7ygI3vxPnstPccsaynwNlJuMnRJ9LWsk0h2FqM8sVuz7uf1zq8848dJJFzO5Tjlf0fHuofNpfni8H2f_aIIy7raraeJVbu5lLsJIJwORzHRUoetps8sHJnGjz6aJ8rR8mjIEmqWBUaGHiypAeDQvg_pHXp9N-q3tsAAAAASUVORK5CYII%3D,applications:UNO.desktop,applications:Diablo 3-2.desktop,applications:Diablo 3.desktop,preferred://browser,applications:genymobile-genymotion.desktop,applications:spotify.desktop
 
 [Containments][47][Applets][51]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
+
+[Containments][47][Applets][51][Configuration]
+PreloadWeight=0
 
 [Containments][47][Applets][52]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][47][Applets][52][Configuration]
-PreloadWeight=65
+PreloadWeight=100
 SystrayContainmentId=53
 
 [Containments][47][Applets][61]
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
+[Containments][47][Applets][61][Configuration]
+PreloadWeight=0
+
 [Containments][47][Applets][62]
 immutability=1
 plugin=org.kde.plasma.showdesktop
 
+[Containments][47][Applets][62][Configuration]
+PreloadWeight=0
+
 [Containments][47][Applets][66]
 immutability=1
 plugin=org.kde.paneltransparencybutton
+
+[Containments][47][Applets][66][Configuration]
+PreloadWeight=0
 
 [Containments][47][Applets][66][Configuration][Appearance]
 transparencyEnabled=true
@@ -353,6 +376,7 @@ plugin=panon
 
 [Containments][47][Applets][67][Configuration][Backend]
 backendIndex=1
+pulseaudioDevice=alsa_output.pci-0000_00_1b.0.analog-stereo.monitor
 reduceBass=false
 
 [Containments][47][Applets][67][Configuration][Colors]
@@ -390,7 +414,7 @@ alphaSort=true
 customButtonImage=/usr/share/pixmaps/archlinux-logo.png
 favoriteSystemActions=
 favoritesPortedToKAstats=true
-hiddenApplications=Dandara.desktop
+hiddenApplications=Dandara.desktop,messenger-nativefier.desktop
 showRecentApps=false
 showRecentDocs=false
 useCustomButtonImage=true
@@ -399,12 +423,66 @@ useExtraRunners=false
 [Containments][47][Applets][68][Shortcuts]
 global=Alt+F1
 
+[Containments][47][Applets][69]
+immutability=1
+plugin=org.kde.netspeedWidget
+
+[Containments][47][Applets][69][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][47][Applets][69][Configuration][General]
+byteColor=204,201,179
+customColors=true
+fontSize=75
+gigabyteColor=204,202,179
+kilobyteColor=204,202,179
+megabyteColor=204,202,179
+showIcons=false
+
+[Containments][47][Applets][70]
+immutability=1
+plugin=com.github.zren.commandoutput
+
+[Containments][47][Applets][70][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][47][Applets][70][Configuration][General]
+command=bash -c '/usr/local/bin/disk_monitor_'
+fixedWidth=127
+fontSize=9
+interval=0
+textColor=#ccc9b3
+
+[Containments][47][Applets][71]
+immutability=1
+plugin=com.github.zren.commandoutput
+
+[Containments][47][Applets][71][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][47][Applets][71][Configuration][General]
+command=/home/lucas/Documentos/scripts/cpu_gpu_temp.sh
+fixedWidth=61
+fontSize=9
+textColor=#ccc9b3
+useFixedWidth=true
+
+[Containments][47][Applets][72]
+immutability=1
+plugin=org.kde.plasma.systemloadviewer
+
 [Containments][47][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
+[Containments][47][Configuration]
+PreloadWeight=0
+
 [Containments][47][General]
-AppletOrder=68;50;67;51;52;66;61;62
+AppletOrder=68;50;67;71;70;51;69;72;52;66;61;62
 
 [Containments][53]
 activityId=
@@ -419,48 +497,90 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.clipboard
 
+[Containments][53][Applets][54][Configuration]
+PreloadWeight=0
+
 [Containments][53][Applets][55]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
+
+[Containments][53][Applets][55][Configuration]
+PreloadWeight=0
 
 [Containments][53][Applets][56]
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][53][Applets][56][Configuration]
+PreloadWeight=0
+
 [Containments][53][Applets][57]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
+[Containments][53][Applets][57][Configuration]
+PreloadWeight=0
+
 [Containments][53][Applets][58]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][53][Applets][58][Configuration]
+PreloadWeight=0
 
 [Containments][53][Applets][59]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][53][Applets][59][Configuration]
-PreloadWeight=60
+PreloadWeight=5
 
 [Containments][53][Applets][60]
 immutability=1
 plugin=org.kde.plasma.vault
 
+[Containments][53][Applets][60][Configuration]
+PreloadWeight=0
+
 [Containments][53][Applets][63]
 immutability=1
 plugin=org.kde.plasma.battery
+
+[Containments][53][Applets][63][Configuration]
+PreloadWeight=0
 
 [Containments][53][Applets][64]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][53][Applets][64][Configuration]
+PreloadWeight=0
+
 [Containments][53][Applets][65]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
+[Containments][53][Applets][65][Configuration]
+PreloadWeight=0
+
+[Containments][53][Applets][73]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][53][Applets][73][Configuration]
+PreloadWeight=100
+
+[Containments][53][ConfigDialog]
+DialogHeight=541
+DialogWidth=939
+
+[Containments][53][Configuration]
+PreloadWeight=0
+
 [Containments][53][General]
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault
 knownItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault
+shownItems=org.kde.plasma.bluetooth
 
 [Containments][8]
 activityId=
@@ -476,7 +596,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][10][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][8][Applets][11]
 immutability=1
@@ -507,7 +627,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][14][Configuration]
-PreloadWeight=100
+PreloadWeight=0
 
 [Containments][8][Applets][14][Configuration][ConfigDialog]
 DialogHeight=540
@@ -573,4 +693,4 @@ opacity=80
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/video_driver/video_driver.sh,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/Screenshot_20210423_131425.png,0,desktop:/pywall_widget color,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/oscar,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/video_driver/proprietario,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/video_driver/open_surce,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/azMdZ5b_460svav1.m4v,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/2021-04-11_12-36.png,0,desktop:/1.,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/2,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0
+screenMapping=desktop:/Screenshot_20210423_131425.png,0,desktop:/2021-04-11_12-36.png,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0,desktop:/video_driver/video_driver.sh,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/oscar,0,desktop:/pywall_widget color,0,desktop:/simplescreenrecorder-2021-05-23_21.47.28.m4v,0,desktop:/video_driver/open_surce,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/video_driver/proprietario,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/1.,0,desktop:/1,0,desktop:/2,0,desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0,desktop:/azMdZ5b_460svav1.m4v,0

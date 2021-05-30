@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=klorax.dracula-transparent
-Font=Monospace,10,-1,5,50,0,0,0,0,0
+Font=DroidSansMono Nerd Font,9,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]

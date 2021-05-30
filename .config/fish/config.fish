@@ -90,7 +90,7 @@ alias mpv='mpv --geometry=50%:50% --autofit-larger=70%x70% --profile=gpu-hq --vi
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first' # preferred listing
+alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
 
 
 # Replace some more things with better alternatives

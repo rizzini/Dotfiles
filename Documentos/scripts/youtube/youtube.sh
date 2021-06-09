@@ -3,13 +3,11 @@ SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 cancelado=0
 
-matar(){
+matar_se_cancelado(){
 if [ -z "$(pgrep kdialog)" ]; then
     while [[ -n "$(pgrep youtube-dl)" && -n "$(pgrep HandBrakeCLI)" ]]; do
         killall -9 youtube-dl HandBrakeCLI;
-        sleep 0.5
     done
-    sleep 1
     find /tmp/youtube_reddit -name '*.ytdl' -type f -delete 
     find /tmp/youtube_reddit -name '*.part' -type f -delete 
     qdbus $dbusRef close
@@ -58,9 +56,9 @@ if [[ $string =~ $regex ]]; then
         dbusRef=`kdialog --title "YouTube" --progressbar "Iniciando download.." 100`
         video_id=$(xclip -o | sed -r 's/^.*[&?]v=(.{11})([&#].*)?$/\1/')    
         qdbus $dbusRef setLabelText "Baixando vídeo do Youtube.."
-        youtube-dl --newline --max-downloads 1  -o  "/tmp/youtube_reddit/%(title)s.%(ext)s" --restrict-filenames -f mp4 -- $video_id 2>&1 \
+        youtube-dl -k --newline --max-downloads 3 -o  "/tmp/youtube_reddit/%(title)s.%(ext)s" --restrict-filenames -- $video_id 2>&1 \
         | while read -r line; do
-            matar
+            matar_se_cancelado
             if [[ "$(echo $line | grep '[0-9]*%')" ]];then
                 percent=$(echo $line | awk '{print $2}')
                 qdbus $dbusRef Set "" value $(echo "${percent%%.*}" | sed 's/%//')
@@ -69,9 +67,9 @@ if [[ $string =~ $regex ]]; then
     elif [ $reddit -eq 1 ]; then
         dbusRef=`kdialog --title "Reddit" --progressbar "Iniciando download.." 100`
         qdbus $dbusRef setLabelText "Baixando vídeo do Reddit"
-        youtube-dl --newline --max-downloads 3  -o  "/tmp/youtube_reddit/%(title)s" --restrict-filenames -f mp4 -- $string 2>&1 \
+        youtube-dl -k --newline --max-downloads 3  -o  "/tmp/youtube_reddit/%(title)s" --restrict-filenames -- $string 2>&1 \
         | while read -r line; do
-            matar
+            matar_se_cancelado
             if [[ "$(echo $line | grep '[0-9]*%')" ]];then
                 percent=$(echo $line | awk '{print $2}')
                 echo "$3${percent%.*}"
@@ -88,7 +86,7 @@ if [[ $string =~ $regex ]]; then
                 qdbus $dbusRef setLabelText "Convertendo.."
                 HandBrakeCLI --json  -i $arquivo_baixado -o "/tmp/youtube_reddit/"$(echo $arquivo_baixado | cut -c21-999 | sed 's/.*/convertido_&/') -e x264 2>&1 \
                 | while read -r line; do
-                    matar
+                    matar_se_cancelado
                     if [[ $line == *"Progress"* ]]; then
                         if [[ $line = *[[:digit:]]* ]]; then
                             porcentagem=$(echo $line | cut -c13-999 | tr -d ',' | cut -c3-4)

@@ -137,6 +137,7 @@ raid6_pq
 rapl
 rc_core
 realtek
+rfcomm
 rfkill
 rng_core
 scsi_mod

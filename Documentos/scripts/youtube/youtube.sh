@@ -2,14 +2,18 @@
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 cancelado=0
-
+converter=0
 matar_se_cancelado(){
 if [ -z "$(pgrep kdialog)" ]; then
     while [[ -n "$(pgrep youtube-dl)" && -n "$(pgrep HandBrakeCLI)" ]]; do
         killall -9 youtube-dl HandBrakeCLI;
     done
     find /tmp/youtube_reddit -name '*.ytdl' -type f -delete 
-    find /tmp/youtube_reddit -name '*.part' -type f -delete 
+    find /tmp/youtube_reddit -name '*.part' -type f -delete
+    if [[ $reddit -eq 1 && $converter -eq 1 ]]; then
+        find /tmp/youtube_reddit/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" " | xargs rm
+    fi
+    
     qdbus $dbusRef close
     exit
 fi
@@ -56,18 +60,18 @@ if [[ $string =~ $regex ]]; then
         dbusRef=`kdialog --title "YouTube" --progressbar "Iniciando download.." 100`
         video_id=$(xclip -o | sed -r 's/^.*[&?]v=(.{11})([&#].*)?$/\1/')    
         qdbus $dbusRef setLabelText "Baixando vídeo do Youtube.."
-        youtube-dl -k --newline --max-downloads 3 -o  "/tmp/youtube_reddit/%(title)s.%(ext)s" --restrict-filenames -- $video_id 2>&1 \
+        youtube-dl --newline --max-downloads 3 -o  "/tmp/youtube_reddit/%(title)s.%(ext)s" --restrict-filenames -- $video_id 2>&1 \
         | while read -r line; do
             matar_se_cancelado
-            if [[ "$(echo $line | grep '[0-9]*%')" ]];then
-                percent=$(echo $line | awk '{print $2}')
-                qdbus $dbusRef Set "" value $(echo "${percent%%.*}" | sed 's/%//')
+            if [[ $line == *"[download]"* ]];then
+                line=$(echo $line | awk '{print $2}' | tr -d '%')
+                qdbus $dbusRef Set "" value $(echo ${line%.*})
             fi
         done  
     elif [ $reddit -eq 1 ]; then
         dbusRef=`kdialog --title "Reddit" --progressbar "Iniciando download.." 100`
         qdbus $dbusRef setLabelText "Baixando vídeo do Reddit"
-        youtube-dl -k --newline --max-downloads 3  -o  "/tmp/youtube_reddit/%(title)s" --restrict-filenames -- $string 2>&1 \
+        youtube-dl --newline --max-downloads 3 -f mp4 -o  "/tmp/youtube_reddit/%(title)s" --restrict-filenames -- $string 2>&1 \
         | while read -r line; do
             matar_se_cancelado
             if [[ "$(echo $line | grep '[0-9]*%')" ]];then
@@ -82,6 +86,7 @@ if [[ $string =~ $regex ]]; then
         if [ $reddit -eq 1 ]; then
             kdialog --yesno 'Deseja converter o vídeo do Reddit?'
             if [ $? = "0" ]; then
+                converter=1
                 arquivo_baixado=$(find /tmp/youtube_reddit/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" " )  
                 qdbus $dbusRef setLabelText "Convertendo.."
                 HandBrakeCLI --json  -i $arquivo_baixado -o "/tmp/youtube_reddit/"$(echo $arquivo_baixado | cut -c21-999 | sed 's/.*/convertido_&/') -e x264 2>&1 \

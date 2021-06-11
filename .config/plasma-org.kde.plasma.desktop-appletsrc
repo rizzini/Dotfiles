@@ -244,6 +244,7 @@ PreloadWeight=0
 [Containments][34][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=485
+positions=1,17,desktop:/2021-06-10_23:45:41.mp3,0,2,desktop:/2021-06-10_23:45:32.mp3,0,1,desktop:/Cruella.2021.720p.DSNP.WEBRip.DDP5.1.Atmos.x264-TOMMY.srt,0,0
 sortMode=-1
 
 [Containments][34][Wallpaper][org.kde.image][General]
@@ -344,7 +345,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][47][Applets][52][Configuration]
-PreloadWeight=84
+PreloadWeight=89
 SystrayContainmentId=53
 
 [Containments][47][Applets][61]
@@ -388,7 +389,7 @@ hslSaturation=90
 hsluvHueFrom=370
 
 [Containments][47][Applets][67][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=558
 DialogWidth=720
 
 [Containments][47][Applets][67][Configuration][Effect]
@@ -538,9 +539,10 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][53][Applets][59][Configuration]
-PreloadWeight=84
+PreloadWeight=89
 
 [Containments][53][Applets][59][Configuration][General]
+currentTab=streams
 raiseMaximumVolume=true
 
 [Containments][53][Applets][60]
@@ -581,6 +583,9 @@ PreloadWeight=0
 [Containments][53][Applets][74]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
+
+[Containments][53][Applets][74][Configuration]
+PreloadWeight=10
 
 [Containments][53][ConfigDialog]
 DialogHeight=541
@@ -668,6 +673,9 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
 
+[Containments][8][Applets][75][Configuration]
+PreloadWeight=10
+
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.clipboard
@@ -709,4 +717,4 @@ opacity=80
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/2,0,desktop:/azMdZ5b_460svav1.m4v,0,desktop:/1.,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/Screenshot_20210423_131425.png,0,desktop:/2021-04-11_12-36.png,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/simplescreenrecorder-2021-05-30_21.41.38.m4v,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/video_driver/proprietario,0,desktop:/simplescreenrecorder-2021-05-23_21.47.28.m4v,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/video_driver/video_driver.sh,0,desktop:/video_driver/open_surce,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/pywall_widget color,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0
+screenMapping=desktop:/2,0,desktop:/pywall_widget color,0,desktop:/video_driver/video_driver.sh,0,desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/simplescreenrecorder-2021-05-30_21.41.38.m4v,0,desktop:/video_driver/open_surce,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/2021-06-10_23:45:41.mp3,0,desktop:/1.,0,desktop:/azMdZ5b_460svav1.m4v,0,desktop:/video_driver/proprietario,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/Cruella.2021.720p.DSNP.WEBRip.DDP5.1.Atmos.x264-TOMMY.srt,0,desktop:/Screenshot_20210423_131425.png,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/simplescreenrecorder-2021-05-23_21.47.28.m4v,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/2021-06-10_23:45:32.mp3,0,desktop:/2021-04-11_12-36.png,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0

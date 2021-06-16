@@ -13,7 +13,6 @@ if [ -z "$(pgrep kdialog)" ]; then
     if [[ $reddit -eq 1 && $converter -eq 1 ]]; then
         find /tmp/youtube_reddit/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" " | xargs rm
     fi
-    
     qdbus $dbusRef close
     exit
 fi

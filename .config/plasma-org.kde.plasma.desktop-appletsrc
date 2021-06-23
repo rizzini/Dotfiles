@@ -197,123 +197,6 @@ PreloadWeight=0
 [Containments][2][General]
 AppletOrder=25;5;45;30;28;26;24;7;16;17;46
 
-[Containments][34]
-ItemGeometries-1920x1080=Applet-42:80,128,672,96,0;Applet-73:1200,160,272,272,0;
-ItemGeometriesHorizontal=Applet-42:80,128,672,96,0;Applet-73:1200,160,272,272,0;
-activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][34][Applets][42]
-immutability=1
-plugin=org.kde.NowPlaying
-
-[Containments][34][Applets][42][Configuration]
-PreloadWeight=0
-
-[Containments][34][Applets][42][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][34][Applets][42][Configuration][General]
-fontFamily=Cantarell
-preferredSource=spotify
-
-[Containments][34][Applets][73]
-immutability=1
-plugin=org.kde.plasma.notes
-
-[Containments][34][Applets][73][Configuration]
-PreloadWeight=0
-
-[Containments][34][Applets][73][Configuration][General]
-fontSize=9
-noteId=e2b97588-e228-4a66-a12d-86ffbfe737
-
-[Containments][34][ConfigDialog]
-DialogHeight=657
-DialogWidth=809
-
-[Containments][34][Configuration]
-PreloadWeight=0
-
-[Containments][34][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=485
-positions=1,17,desktop:/georgia1.mp4,0,6,desktop:/1.kdenlive,0,4,desktop:/georgia.mp4,0,5
-sortMode=-1
-
-[Containments][34][Wallpaper][org.kde.image][General]
-Blur=true
-Image=file:///home/lucas/Imagens/Wallpaper/nebula_invertido.png
-SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers
-
-[Containments][37]
-activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
-formfactor=0
-immutability=1
-lastScreen=3
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][37][Configuration]
-PreloadWeight=0
-
-[Containments][37][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
-
-[Containments][38]
-activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][38][Configuration]
-PreloadWeight=0
-
-[Containments][38][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
-
-[Containments][39]
-ItemGeometriesHorizontal=
-activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
-formfactor=0
-immutability=1
-lastScreen=4
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][39][Configuration]
-PreloadWeight=0
-
-[Containments][39][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
-
-[Containments][41]
-ItemGeometriesHorizontal=
-activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
-formfactor=0
-immutability=1
-lastScreen=2
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][41][Configuration]
-PreloadWeight=0
-
-[Containments][41][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
-
 [Containments][47]
 activityId=
 formfactor=2
@@ -331,7 +214,7 @@ plugin=org.kde.plasma.icontasks
 PreloadWeight=0
 
 [Containments][47][Applets][50][Configuration][General]
-launchers=applications:smartcode-stremio.desktop?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAHOklEQVRogbVabWxT1xl-3uN77Ws7aUkMDaESH23IBxuQjYw1CYNUVSt1miZRYf5M27T9SDWp66RCgp2YuIFp6rZ2hUA7uaq2Sas2CVfqtNGk39iQQVkHmzTqUZFpGU0_VCDBSew49j3n7IeTKCFxfO_1zfMv8tV5n-ec57zvec8JYYUQbjujeKtvHJSM6D9XR5996dLjuZWI41iJQcNtZxRP9c0OEMIA9qz2efkm10PvX_rstLA7FrN7QADwrvuiEyR7CKQRSBMkQjWbKw8BILtj2Tpg-46Ien9t5UEAR4igLPhRQodE79C10Z_baSfbLDRHnmQPETkXfUBgILT4fB6-r-Wh909fssdOtggII8zWtq3vACFMIG2ZTxUQWjLTGm-9suWvccRlqbFLtlCkPaImJyoOgOinMD4hHEBPKief7Y3uz5YSv6QVyJP3HZjJNottUxgMErtUBr21wX8xnohyqxwsCwgjzHjths68bbCcbZYGQSFQq8qgl2InSxaa3bAEHAWVvI-4lBReVX7rF4-_ZD47mQ7eviOi1tRVdhTMNubBiNCSybqkv_nhC2azk9lCRjV1lR0S8nCRbGMWGoF1jU9WBmDSFYY_bt8RUTfX-joF5NOLipRdkNCJcOSustFnjNrJkIXynq_olCRDNtlmaRAYgGYzdioqIIwwq27bGJAkQ4ZsQwAkSqkwCoGap6c1tFzZcq5YdlpWQNh_yultrAqA0EsoPvNEwK59X8LUZBbp5LRZ4vOhgGi388tVsqVh34Xl6kRBAWH_KafXQZ0AQiCoRqISATu_VYemb9Yik8rh5sg4hJAga6vBALSoRGht8BcUsaSAMMLMu60qAEIIBJfRiETAltb1qNpYgU3bqlBWoWHko1vgusVzG0EhoNnJIAvZaZGAsP-U09O4JkhETxud-TsFVFSVgTkYqjZVYOO2Kty8nsTE6JRlESDscW2tQkv94pVYICDSHlGF7g4SWLdZ8ncKyP9NKFvlRs2OddCzHF_87zaktQMDQaJZdUhqrd9_fr6I-YWMkhMVQYC6zNimeGzAc5cLD353Ox754VfhLreYhQkukizgVtAtIed2lQPIz_w36r4fItBhkKlT5cIYd6zAfDBGuGfDKtz_lWrc-mQC4zfTVkQoBNo1uPVDR2uD_3w8EeWOSPvf1WQqGyQgWAr5YgLyvxPc5S5sbloHfVrHjY_HwXUBMpOmCIxADygMrLXBf175ZPzf3SqUAFC6bRgjSCxvciKC5nWi7TvbUV3jw9u_v4yJZMZsKBcBhyQJUv6Z-vTuST7NigU2AsYID-tNuM_AtxISI9nbODN-DePj5jMUAY5ypt2tjE_cE2Te63Ka609YyTzzwSRBFJkIKSUmUxm8_Mp7-Mubl5HJZM1ZCAAkchpTXnTeUoMsFvtBRqREl-ZQXwBg-8XTgrhS4r_XbyB49I949c8XMT2dM08eEG6m_to3Vh6MXnhqigFALNab8XnqD2pM7SNAt586oOscr791GT8O_Ab_-NewpTEI0N2knuRpfiB64akpYF4diEb3c5HiQY3sFSGlxNjtFI5F-vHLF07jdtJC-sQMeaaerBwrC8RivXP8FnRksVhvhqd5t0ZqX4m85_DR0GcIHPkDXnv9A-i65csHuJh6smK0rGt25mexqKWcEXHIzZTnSlmJbFbHn_o_wJPB3-LK1Y-tDgMCdI2U55Ofj3TeSR4ocBodHo6Ltau_fU7TuJtD7ITB3pmI8MiD2-FyKjj58ht45dVBa1lmAXm1zzdWHnrnbz9bssEo2A-MjLypr13TOKhpXrcO0QwDPRYRYf261Yj87h1cvDw00wtYb83cpB6rHCsLLTXzczGLDeL3n3KMTV59Zgq5n0gUrxNEgBCw2sTMktI1phznKbFgwy6Foj1xIhGVdZv3niXKenQpdhq5yCqJvETOyRwnRFqGYrHeovemhm4lhoYGeH3NY2fJkfPqUjyAFXiomIHQmHJCpmV3LNZr6IBk-GZuaGiAf-_a7nc_rVPKdCG-ZsOV4kLkjwcnfN4rHf39Lxq-YjRFIo64rK_Ze5axrGcmO9kiYiZV9okp0W2GPKwQmLMTZT06RAtKt5PUoBwTUyJk1DbzYWkGh4YGeFPjmvf0XLWbQ3wdFh8LCdA1qM_7yhoC_f1PWHo3s2yBRCIhN9y7e1B1OVw8v7FNiZitsGJK9FglD5To4eHhuL7h3j2DTpfq0iVvhQk7ecj5HE_zHiu2mY-SN-HwcFxvavzRGT035jaysQnQPUz9lZ7mXUbyfDHYkkUSiaisr9l7jijn5ssUOwJyLqYe5yl-2A7ygI3vxPnstPccsaynwNlJuMnRJ9LWsk0h2FqM8sVuz7uf1zq8848dJJFzO5Tjlf0fHuofNpfni8H2f_aIIy7raraeJVbu5lLsJIJwORzHRUoetps8sHJnGjz6aJ8rR8mjIEmqWBUaGHiypAeDQvg_pHXp9N-q3tsAAAAASUVORK5CYII%3D,applications:Diablo 3-2.desktop,applications:Diablo 3.desktop,applications:genymobile-genymotion.desktop,preferred://browser,applications:spotify.desktop
+launchers=applications:smartcode-stremio.desktop?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAHOklEQVRogbVabWxT1xl-3uN77Ws7aUkMDaESH23IBxuQjYw1CYNUVSt1miZRYf5M27T9SDWp66RCgp2YuIFp6rZ2hUA7uaq2Sas2CVfqtNGk39iQQVkHmzTqUZFpGU0_VCDBSew49j3n7IeTKCFxfO_1zfMv8tV5n-ec57zvec8JYYUQbjujeKtvHJSM6D9XR5996dLjuZWI41iJQcNtZxRP9c0OEMIA9qz2efkm10PvX_rstLA7FrN7QADwrvuiEyR7CKQRSBMkQjWbKw8BILtj2Tpg-46Ien9t5UEAR4igLPhRQodE79C10Z_baSfbLDRHnmQPETkXfUBgILT4fB6-r-Wh909fssdOtggII8zWtq3vACFMIG2ZTxUQWjLTGm-9suWvccRlqbFLtlCkPaImJyoOgOinMD4hHEBPKief7Y3uz5YSv6QVyJP3HZjJNottUxgMErtUBr21wX8xnohyqxwsCwgjzHjths68bbCcbZYGQSFQq8qgl2InSxaa3bAEHAWVvI-4lBReVX7rF4-_ZD47mQ7eviOi1tRVdhTMNubBiNCSybqkv_nhC2azk9lCRjV1lR0S8nCRbGMWGoF1jU9WBmDSFYY_bt8RUTfX-joF5NOLipRdkNCJcOSustFnjNrJkIXynq_olCRDNtlmaRAYgGYzdioqIIwwq27bGJAkQ4ZsQwAkSqkwCoGap6c1tFzZcq5YdlpWQNh_yultrAqA0EsoPvNEwK59X8LUZBbp5LRZ4vOhgGi388tVsqVh34Xl6kRBAWH_KafXQZ0AQiCoRqISATu_VYemb9Yik8rh5sg4hJAga6vBALSoRGht8BcUsaSAMMLMu60qAEIIBJfRiETAltb1qNpYgU3bqlBWoWHko1vgusVzG0EhoNnJIAvZaZGAsP-U09O4JkhETxud-TsFVFSVgTkYqjZVYOO2Kty8nsTE6JRlESDscW2tQkv94pVYICDSHlGF7g4SWLdZ8ncKyP9NKFvlRs2OddCzHF_87zaktQMDQaJZdUhqrd9_fr6I-YWMkhMVQYC6zNimeGzAc5cLD353Ox754VfhLreYhQkukizgVtAtIed2lQPIz_w36r4fItBhkKlT5cIYd6zAfDBGuGfDKtz_lWrc-mQC4zfTVkQoBNo1uPVDR2uD_3w8EeWOSPvf1WQqGyQgWAr5YgLyvxPc5S5sbloHfVrHjY_HwXUBMpOmCIxADygMrLXBf175ZPzf3SqUAFC6bRgjSCxvciKC5nWi7TvbUV3jw9u_v4yJZMZsKBcBhyQJUv6Z-vTuST7NigU2AsYID-tNuM_AtxISI9nbODN-DePj5jMUAY5ypt2tjE_cE2Te63Ka609YyTzzwSRBFJkIKSUmUxm8_Mp7-Mubl5HJZM1ZCAAkchpTXnTeUoMsFvtBRqREl-ZQXwBg-8XTgrhS4r_XbyB49I949c8XMT2dM08eEG6m_to3Vh6MXnhqigFALNab8XnqD2pM7SNAt586oOscr791GT8O_Ab_-NewpTEI0N2knuRpfiB64akpYF4diEb3c5HiQY3sFSGlxNjtFI5F-vHLF07jdtJC-sQMeaaerBwrC8RivXP8FnRksVhvhqd5t0ZqX4m85_DR0GcIHPkDXnv9A-i65csHuJh6smK0rGt25mexqKWcEXHIzZTnSlmJbFbHn_o_wJPB3-LK1Y-tDgMCdI2U55Ofj3TeSR4ocBodHo6Ltau_fU7TuJtD7ITB3pmI8MiD2-FyKjj58ht45dVBa1lmAXm1zzdWHnrnbz9bssEo2A-MjLypr13TOKhpXrcO0QwDPRYRYf261Yj87h1cvDw00wtYb83cpB6rHCsLLTXzczGLDeL3n3KMTV59Zgq5n0gUrxNEgBCw2sTMktI1phznKbFgwy6Foj1xIhGVdZv3niXKenQpdhq5yCqJvETOyRwnRFqGYrHeovemhm4lhoYGeH3NY2fJkfPqUjyAFXiomIHQmHJCpmV3LNZr6IBk-GZuaGiAf-_a7nc_rVPKdCG-ZsOV4kLkjwcnfN4rHf39Lxq-YjRFIo64rK_Ze5axrGcmO9kiYiZV9okp0W2GPKwQmLMTZT06RAtKt5PUoBwTUyJk1DbzYWkGh4YGeFPjmvf0XLWbQ3wdFh8LCdA1qM_7yhoC_f1PWHo3s2yBRCIhN9y7e1B1OVw8v7FNiZitsGJK9FglD5To4eHhuL7h3j2DTpfq0iVvhQk7ecj5HE_zHiu2mY-SN-HwcFxvavzRGT035jaysQnQPUz9lZ7mXUbyfDHYkkUSiaisr9l7jijn5ssUOwJyLqYe5yl-2A7ygI3vxPnstPccsaynwNlJuMnRJ9LWsk0h2FqM8sVuz7uf1zq8848dJJFzO5Tjlf0fHuofNpfni8H2f_aIIy7raraeJVbu5lLsJIJwORzHRUoetps8sHJnGjz6aJ8rR8mjIEmqWBUaGHiypAeDQvg_pHXp9N-q3tsAAAAASUVORK5CYII%3D,applications:Diablo 3.desktop,applications:genymobile-genymotion.desktop,preferred://browser,applications:spotify.desktop
 
 [Containments][47][Applets][51]
 immutability=1
@@ -345,7 +228,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][47][Applets][52][Configuration]
-PreloadWeight=92
+PreloadWeight=88
 SystrayContainmentId=53
 
 [Containments][47][Applets][61]
@@ -369,42 +252,12 @@ plugin=org.kde.paneltransparencybutton
 [Containments][47][Applets][66][Configuration]
 PreloadWeight=0
 
-[Containments][47][Applets][66][Configuration][Appearance]
-transparencyEnabled=true
-
-[Containments][47][Applets][67]
-immutability=1
-plugin=panon
-
-[Containments][47][Applets][67][Configuration][Backend]
-backendIndex=1
-pulseaudioDevice=alsa_output.pci-0000_00_1b.0.analog-stereo.monitor
-reduceBass=false
-
-[Containments][47][Applets][67][Configuration][Colors]
-hslHueFrom=510
-hslHueTo=510
-hslLightness=52
-hslSaturation=90
-hsluvHueFrom=370
-
-[Containments][47][Applets][67][Configuration][ConfigDialog]
-DialogHeight=558
-DialogWidth=720
-
-[Containments][47][Applets][67][Configuration][Effect]
-effectArgValues=2,2,0.8,#5a28c6ae,#00ffffff,5,15,0.8,0.5,0.2,1,2.5
-visualEffect=0.rbn42-32px-snow
-
-[Containments][47][Applets][67][Configuration][General]
-preferredWidth=1200
-
 [Containments][47][Applets][68]
 immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][47][Applets][68][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][47][Applets][68][Configuration][ConfigDialog]
 DialogHeight=540
@@ -429,52 +282,52 @@ global=Alt+F1
 immutability=1
 plugin=org.kde.netspeedWidget
 
+[Containments][47][Applets][69][Configuration]
+PreloadWeight=10
+
+[Containments][47][Applets][69][Configuration][Advanced]
+interfacesWhitelist=enp3s0
+interfacesWhitelistEnabled=true
+
 [Containments][47][Applets][69][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=558
 DialogWidth=720
 
 [Containments][47][Applets][69][Configuration][General]
 byteColor=204,201,179
-customColors=true
-fontSize=75
 gigabyteColor=204,202,179
 kilobyteColor=204,202,179
 megabyteColor=204,202,179
-showIcons=false
-
-[Containments][47][Applets][70]
-immutability=1
-plugin=com.github.zren.commandoutput
-
-[Containments][47][Applets][70][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][47][Applets][70][Configuration][General]
-command=bash -c '/usr/local/bin/disk_monitor_'
-fixedWidth=127
-fontSize=9
-interval=0
-textColor=#ccc9b3
+speedLayout=rows
 
 [Containments][47][Applets][71]
 immutability=1
 plugin=com.github.zren.commandoutput
 
+[Containments][47][Applets][71][Configuration]
+PreloadWeight=10
+
 [Containments][47][Applets][71][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=558
 DialogWidth=720
 
 [Containments][47][Applets][71][Configuration][General]
 command=/home/lucas/Documentos/scripts/cpu_gpu_temp.sh
 fixedWidth=61
-fontSize=9
-textColor=#ccc9b3
+fontSize=8
+textColor=#ffffff
 useFixedWidth=true
 
 [Containments][47][Applets][72]
 immutability=1
 plugin=org.kde.plasma.systemloadviewer
+
+[Containments][47][Applets][72][Configuration]
+PreloadWeight=10
+
+[Containments][47][Applets][72][Configuration][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
 
 [Containments][47][ConfigDialog]
 DialogHeight=84
@@ -484,7 +337,7 @@ DialogWidth=1920
 PreloadWeight=0
 
 [Containments][47][General]
-AppletOrder=68;50;67;71;70;51;69;72;52;66;61;62
+AppletOrder=68;50;71;51;69;72;52;66;61;62
 
 [Containments][53]
 activityId=
@@ -539,7 +392,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][53][Applets][59][Configuration]
-PreloadWeight=92
+PreloadWeight=68
 
 [Containments][53][Applets][59][Configuration][General]
 raiseMaximumVolume=true
@@ -577,7 +430,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][53][Applets][73][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][53][Applets][74]
 immutability=1
@@ -597,6 +450,39 @@ PreloadWeight=0
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault
 knownItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.vault
 shownItems=org.kde.plasma.bluetooth
+
+[Containments][76]
+ItemGeometries-1920x1080=Applet-77:656,128,272,272,0;
+ItemGeometriesHorizontal=Applet-77:656,128,272,272,0;
+activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][76][Applets][77]
+immutability=1
+plugin=org.kde.plasma.notes
+
+[Containments][76][Applets][77][Configuration]
+PreloadWeight=10
+
+[Containments][76][Applets][77][Configuration][General]
+fontSize=9
+noteId=a9e8f7b4-3621-4a4f-98da-eddc62fa1b
+
+[Containments][76][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
+
+[Containments][76][Configuration]
+PreloadWeight=10
+
+[Containments][76][Wallpaper][org.kde.image][General]
+Image=file:///home/lucas/Imagens/Wallpaper/wallhaven-pko39m.jpg
+SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers
 
 [Containments][8]
 activityId=
@@ -716,4 +602,4 @@ opacity=80
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/georgia1.mp4,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0,desktop:/simplescreenrecorder-2021-05-30_21.41.38.m4v,0,desktop:/azMdZ5b_460svav1.m4v,0,desktop:/1.mp4,0,desktop:/georgia.m4v,0,desktop:/IMG-20210509-WA0030.jpg,0,desktop:/1.kdenlive,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/video_driver/video_driver.sh,0,desktop:/Screenshot_20210423_131425.png,0,desktop:/19780489_10207132797837957_8388738946212622965_o_10207132797837957.jpg,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0,desktop:/georgia.mp4,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/video_driver/proprietario,0,desktop:/2,0,desktop:/video_driver/open_surce,0,desktop:/2021-04-11_12-36.png,0,desktop:/IMG-20210509-WA0040.jpg,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/pywall_widget color,0,desktop:/simplescreenrecorder-2021-05-23_21.47.28.m4v,0,desktop:/IMG-20210509-WA0024.jpg,0,desktop:/1.,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0
+screenMapping=desktop:/2021-06-21_14-41.png,0,desktop:/aula 13.odt,0,desktop:/simplescreenrecorder-2021-05-23_21.47.28.m4v,0,desktop:/pc-intel-core-i5-2400mhz-16gb-ram-hd-500gb-teclmousmoni-D_NQ_NP_668700-MLB40725819378_022020-F.png,0,desktop:/Screenshot_20210622_211416.png,0,desktop:/video_driver/open_surce,0,desktop:/19780489_10207132797837957_8388738946212622965_o_10207132797837957.jpg,0,desktop:/simplescreenrecorder-2021-04-08_10.50.32.m4v,0,desktop:/_home_lucas_.config_Archlinux-icon-crystal-64.png,0,desktop:/aLpzdXW_460svav1.m4v,0,desktop:/video_driver/proprietario,0,desktop:/Screenshot_20210622_211517.png,0,desktop:/simplescreenrecorder-2021-04-16_17.47.24.m4v,0,desktop:/aMKBOnx_460svav1.m4v,0,desktop:/video_driver/video_driver.sh,0,desktop:/simplescreenrecorder-2021-04-29_16.59.36.mkv,0,desktop:/2021-06-21_15:17:31.mp3,0,desktop:/video_driver/proprietario/nvidia-340xx-340.108-18-x86_64.pkg.tar.zst,0,desktop:/1.,0,desktop:/simplescreenrecorder-2021-05-15_23.02.02.mkv,0,desktop:/IMG-20210509-WA0040.jpg,0,desktop:/Estudo - CCNA,0,desktop:/simplescreenrecorder-2021-04-08_16.57.40.m4v,0,desktop:/simplescreenrecorder-2021-05-15_23.10.03.mkv,0,desktop:/simplescreenrecorder-2021-04-18_14.44.07.m4v,0,desktop:/simplescreenrecorder-2021-05-30_21.41.38.m4v,0,desktop:/2021-04-11_12-36.png,0,desktop:/IMG-20210509-WA0030.jpg,0,desktop:/2,0,desktop:/Promising.Young.Woman.2020.[WEB-DL+WEBRip+HDRip] - renomeie para seu release.srt,0,desktop:/azMdZ5b_460svav1.m4v,0,desktop:/Screenshot_20210423_131254.png,0,desktop:/georgia.m4v,0,desktop:/2021-06-17_07-28.png,0,desktop:/1.mp4,0,desktop:/simplescreenrecorder-2021-04-14_14.16.51.m4v,0,desktop:/IMG-20210509-WA0024.jpg,0,desktop:/simplescreenrecorder-2021-04-15_00.03.12.m4v,0,desktop:/Screenshot_20210423_131425.png,0,desktop:/simplescreenrecorder-2021-04-14_14.07.42.m4v,0,desktop:/pywall_widget color,0,desktop:/Screenshot_20210423_131446.png,0,desktop:/Screenshot_20210621_162047.png,0,desktop:/video_driver/proprietario/nvidia-340xx-utils-340.108-1-x86_64.pkg.tar.zst,0,desktop:/Sem título 1.odt,0

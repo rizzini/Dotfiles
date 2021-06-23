@@ -18,7 +18,7 @@ fi
 sleep 40 &&
 
 if [ -n "$(wmctrl -l | grep "Diablo III")" ]; then
-    killall -9 plasmashell
+#     killall -9 plasmashell
     /home/lucas/Documentos/scripts/c_diablo_xb.sh &
     xbindkeys &
 fi

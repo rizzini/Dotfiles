@@ -97,7 +97,7 @@ alias ls='exa -al --color=always --group-directories-first --icons' # preferred 
 [ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
 
 # Common use
-
+alias dt='disown $last_pid'
 alias upd='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist && sudo pacman -Syu && fish_update_completions && sudo updatedb'
 alias ..='cd ..'
 alias ...='cd ../..'

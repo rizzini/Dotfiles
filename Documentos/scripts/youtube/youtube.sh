@@ -70,7 +70,7 @@ if [[ $string =~ $regex ]]; then
     elif [ $reddit -eq 1 ]; then
         dbusRef=`kdialog --title "Reddit" --progressbar "Iniciando download.." 100`
         qdbus $dbusRef setLabelText "Baixando vídeo do Reddit"
-        youtube-dl --newline --max-downloads 3 -f mp4 -o  "/tmp/youtube_reddit/%(title)s" --restrict-filenames -- $string 2>&1 \
+        youtube-dl --newline --max-downloads 3 -o  "/tmp/youtube_reddit/%(title)s.mp4" --restrict-filenames -- $string 2>&1 \
         | while read -r line; do
             matar_se_cancelado
             if [[ "$(echo $line | grep '[0-9]*%')" ]];then
@@ -86,7 +86,7 @@ if [[ $string =~ $regex ]]; then
             kdialog --yesno 'Deseja converter o vídeo do Reddit?'
             if [ $? = "0" ]; then
                 converter=1
-                arquivo_baixado=$(find /tmp/youtube_reddit/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" " )  
+                arquivo_baixado=$(find /tmp/youtube_reddit/ -type f -printf '%T@ %p\n'  | head -1 | cut -f2- -d" ")  
                 qdbus $dbusRef setLabelText "Convertendo.."
                 HandBrakeCLI --json  -i $arquivo_baixado -o "/tmp/youtube_reddit/"$(echo $arquivo_baixado | cut -c21-999 | sed 's/.*/convertido_&/') -e x264 2>&1 \
                 | while read -r line; do

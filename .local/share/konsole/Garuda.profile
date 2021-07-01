@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=klorax.dracula-transparent
-Font=DroidSansMono Nerd Font,9,-1,5,50,0,0,0,0,0
+Font=DroidSansMono Nerd Font,8,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]
@@ -24,6 +24,7 @@ UnderlineFilesEnabled=true
 KeyBindings=linux
 
 [Scrolling]
+HighlightScrolledLines=false
 HistoryMode=2
 
 [Terminal Features]

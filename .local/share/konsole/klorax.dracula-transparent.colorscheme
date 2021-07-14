@@ -1,5 +1,5 @@
 [Background]
-Color=40,42,54
+Color=35,38,54
 
 [BackgroundFaint]
 Color=40,42,54
@@ -89,7 +89,7 @@ Color=248,248,242
 Color=230,230,230
 
 [General]
-Blur=true
+Blur=false
 Bold=false
 ColorRandomization=false
 Description=Klorax. Dracula Transparent

@@ -1,7 +1,6 @@
 #!/bin/bash
 contador=0
 
-
 if test -f "/tmp/wallpaper.pywall.tmp"; then
     rm /tmp/wallpaper.pywall.tmp;
 fi
@@ -11,8 +10,7 @@ touch /tmp/wallpaper.pywall.tmp
 while :; do   
     {
     while read line; do    
-        contador=$(($contador + 1))    
-         
+        contador=$(($contador + 1))             
         if [[ "$line" == *"34"* && "$line" == *"Wallpaper"* ]]; then
             soma_dez_linhas=0
             linha_atual=0
@@ -59,7 +57,6 @@ while :; do
             atual=$(echo $atual | cut -d' ' -f1)    
             } > /dev/null
                 
-
             cor_final=$(cat /home/lucas/.cache/wal/colors | tail -9 | head -1 | tr -d '#')
             disk=$(cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | grep 'textColor=#' | head -1 | cut -c12-17)
             temp=$(cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | grep 'textColor=#' | tail -1 | cut -c12-17)

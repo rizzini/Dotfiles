@@ -3,9 +3,10 @@ set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 source ~/.profile
 
+export PATH="/opt/VirtualGL/bin/:$PATH"
 
-set -x WINEFSYNC 0
-set -x WINEESYNC 0
+# set -x WINEFSYNC 0
+# set -x WINEESYNC 0
 
 if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
     set -x __GL_YIELD USLEEP
@@ -15,7 +16,6 @@ if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
     set -x __GL_THREADED_OPTIMIZATION 1
     set -x __GL_SHADER_DISK_CACHE 1
     set -x __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/'
-
 end
 
 ## Add ~/.local/bin to PATH
@@ -97,13 +97,8 @@ alias ls='exa -al --color=always --group-directories-first --icons' # preferred 
 [ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
 
 # Common use
-alias dt='disown $last_pid'
 alias upd='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist && sudo pacman -Syu && fish_update_completions && sudo updatedb'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
+
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -112,7 +107,7 @@ alias egrep='egrep --color=auto'
 alias hw='hwinfo --short'                                   # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
-
+alias intel='vglrun -d :1'
 
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'

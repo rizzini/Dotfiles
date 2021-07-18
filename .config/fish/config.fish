@@ -3,6 +3,15 @@ set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 source ~/.profile
 
+if test $DISPLAY = ':0' 
+    if ! string match -q "*archlinux/opengl_libs/nvidia/*" $LD_LIBRARY_PATH
+        set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/"
+    end
+end
+if test $DISPLAY = ':1' 
+    set -e LD_LIBRARY_PATH
+end
+
 export PATH="/opt/VirtualGL/bin/:$PATH"
 
 # set -x WINEFSYNC 0
@@ -86,7 +95,7 @@ end
 
 ##Custon
 # alias h='__fzf_search_history'
-alias mpv='mpv --geometry=50%:50% --autofit-larger=70%x70% --profile=gpu-hq --video-sync=display-resample --hwdec=vaapi --vo=gpu'
+alias mpv='mpv --geometry=50%:50% --autofit-larger=70%x70% --video-sync=display-resample'
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'
 # Replace ls with exa
@@ -107,7 +116,6 @@ alias egrep='egrep --color=auto'
 alias hw='hwinfo --short'                                   # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
-alias intel='vglrun -d :1'
 
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'

@@ -189,6 +189,7 @@ usb_storage
 usb_wwan
 usbhid
 uvcvideo
+v4l2loopback
 veth
 vfat
 vfio

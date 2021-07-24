@@ -1,0 +1,12 @@
+2021/07/11-13:11:15.683 f7f Reusing MANIFEST /home/lucas/.config/whatsapp-nativefier-d40211/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/11-13:11:15.684 f7f Recovering log #7
+2021/07/11-13:11:15.825 f7f Reusing old log /home/lucas/.config/whatsapp-nativefier-d40211/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000007.log 
+2021/07/11-13:26:38.987 f90 Level-0 table #12: started
+2021/07/11-13:26:39.084 f90 Level-0 table #12: 1342078 bytes OK
+2021/07/11-13:26:39.105 f90 Delete type=0 #7
+2021/07/11-13:27:12.339 f7f Compacting 1@1 + 1@2 files
+2021/07/11-13:27:12.391 f7f Generated table #13@1: 25659 keys, 1254712 bytes
+2021/07/11-13:27:12.391 f7f Compacted 1@1 + 1@2 files => 1254712 bytes
+2021/07/11-13:27:12.395 f7f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/11-13:27:12.395 f7f Delete type=2 #9
+2021/07/11-13:27:12.395 f7f Delete type=2 #12

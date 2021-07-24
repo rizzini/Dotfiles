@@ -108,17 +108,14 @@ alias ls='exa -al --color=always --group-directories-first --icons' # preferred 
 # Common use
 alias upd='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist && sudo pacman -Syu && fish_update_completions && sudo updatedb'
 
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
+alias dir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hw='hwinfo --short'                                   # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
-
-#Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
+alias firefox_i="/bin/bash -c 'LD_LIBRARY_PATH='' DISPLAY=:1 vglrun -d :1  /usr/lib/firefox/firefox --display=:0' disown $last_pid"
 
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"

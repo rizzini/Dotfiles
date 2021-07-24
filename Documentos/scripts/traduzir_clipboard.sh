@@ -13,4 +13,4 @@ do
     traduzir+="$i"'%20'
 done
 
-google-chrome-stable --new-window $url_prefixo$traduzir$url_sufixo &
+firefox --new-window $url_prefixo$traduzir$url_sufixo &

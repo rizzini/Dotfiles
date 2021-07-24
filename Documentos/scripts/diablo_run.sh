@@ -10,9 +10,9 @@ if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /
 fi
 
 if [ "$1" == 'BR' ]; then
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &
+    WINEDEBUG=-all WINEFSYNC=0 WINEESYNC=0 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &
 elif [ "$1" == 'US' ]; then 
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
+    WINEDEBUG=-all WINEFSYNC=0 WINEESYNC=0 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
 fi
 
 sleep 40 &&

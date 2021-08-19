@@ -5,6 +5,8 @@ complete -c lvm-lvpoll -s A -l autobackup
 complete -c lvm-lvpoll -l commandprofile
 complete -c lvm-lvpoll -l config
 complete -c lvm-lvpoll -s d -l debug
+complete -c lvm-lvpoll -l devices
+complete -c lvm-lvpoll -l devicesfile
 complete -c lvm-lvpoll -l driverloaded
 complete -c lvm-lvpoll -l handlemissingpvs
 complete -c lvm-lvpoll -s h -l help

@@ -6,5 +6,5 @@ complete -c genccode -s d -l destdir -d 'Set the destination directory to R dest
 complete -c genccode -s n -l name -d 'Set the data name to  name instead of the default'
 complete -c genccode -s f -l filename -d 'Normally, an ICU data file such as mydata. icu will be turned into mydata_icu'
 complete -c genccode -s e -l entrypoint -d 'Set the data entry point (used for linking against the data in a shared libra…'
-complete -c genccode -s t -l type -d 'option).  VERSION 68. 2 COPYRIGHT Copyright (C) 2000-2004 IBM, Inc'
+complete -c genccode -s t -l type -d 'option).  VERSION 69. 1 COPYRIGHT Copyright (C) 2000-2004 IBM, Inc'
 

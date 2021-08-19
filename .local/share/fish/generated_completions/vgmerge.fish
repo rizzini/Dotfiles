@@ -4,6 +4,8 @@ complete -c vgmerge -s A -l autobackup
 complete -c vgmerge -l commandprofile
 complete -c vgmerge -l config
 complete -c vgmerge -s d -l debug
+complete -c vgmerge -l devices
+complete -c vgmerge -l devicesfile
 complete -c vgmerge -l driverloaded
 complete -c vgmerge -s h -l help
 complete -c vgmerge -s l -l list

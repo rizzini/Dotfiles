@@ -4,6 +4,8 @@ complete -c lvmconfig -l atversion
 complete -c lvmconfig -l commandprofile
 complete -c lvmconfig -l config
 complete -c lvmconfig -s d -l debug
+complete -c lvmconfig -l devices
+complete -c lvmconfig -l devicesfile
 complete -c lvmconfig -l driverloaded
 complete -c lvmconfig -s f -l file
 complete -c lvmconfig -s h -l help

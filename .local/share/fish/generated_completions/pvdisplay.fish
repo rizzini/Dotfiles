@@ -9,6 +9,8 @@ complete -c pvdisplay -l commandprofile
 complete -c pvdisplay -l config
 complete -c pvdisplay -l configreport
 complete -c pvdisplay -s d -l debug
+complete -c pvdisplay -l devices
+complete -c pvdisplay -l devicesfile
 complete -c pvdisplay -l driverloaded
 complete -c pvdisplay -l foreign
 complete -c pvdisplay -s h -l help

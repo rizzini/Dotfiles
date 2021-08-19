@@ -83,7 +83,7 @@ complete -c orterun -o report-pid -l report-pid -d 'Print out mpirun\'s PID duri
 complete -c orterun -o report-uri -l report-uri -d 'Print out mpirun\'s URI during startup'
 complete -c orterun -o show-progress -l show-progress -d 'Output a brief periodic report on launch progress'
 complete -c orterun -o terminate -l terminate -d 'Terminate the DVM'
-complete -c orterun -o use-hwthread-cpus -l use-hwthread-cpus -d 'Use hardware threads as independent cpus'
+complete -c orterun -o use-hwthread-cpus -l use-hwthread-cpus -d 'Use hardware threads as independent CPUs'
 complete -c orterun -o use-regexp -l use-regexp -d 'Use regular expressions for launch'
 complete -c orterun -s d -l debug-devel -d 'Enable debugging of the OmpiRTE (the run-time layer in Open MPI)'
 complete -c orterun -l debug-daemons -d 'Enable debugging of any OmpiRTE daemons used by this application'

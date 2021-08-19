@@ -17,7 +17,7 @@ complete -c systemd -l log-color -d 'Highlight important log messages.  See syst
 complete -c systemd -l log-level -d 'Set log level.  See systemd. log_level above'
 complete -c systemd -l log-location -d 'Include code location in log messages.  See systemd. log_location above'
 complete -c systemd -l log-target -d 'Set log target.  See systemd. log_target above'
-complete -c systemd -l log-time -d 'Prefix messages with timestamp.  See systemd. log_time above'
+complete -c systemd -l log-time -d 'Prefix console messages with timestamp.  See systemd. log_time above'
 complete -c systemd -l machine-id -d 'Override the machine-id set on the hard drive.  See systemd'
 complete -c systemd -l service-watchdogs -d 'Globally enable/disable all service watchdog timeouts and emergency actions'
 complete -c systemd -l default-standard-output -l default-standard-error -d 'Sets the default output or error output for all services and sockets, respect…'

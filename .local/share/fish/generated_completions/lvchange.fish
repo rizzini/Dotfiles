@@ -16,6 +16,8 @@ complete -c lvchange -s d -l debug
 complete -c lvchange -l deduplication
 complete -c lvchange -l deltag
 complete -c lvchange -l detachprofile
+complete -c lvchange -l devices
+complete -c lvchange -l devicesfile
 complete -c lvchange -l discards
 complete -c lvchange -l driverloaded
 complete -c lvchange -l errorwhenfull
@@ -48,6 +50,7 @@ complete -c lvchange -l reportformat
 complete -c lvchange -l resync
 complete -c lvchange -s S -l select
 complete -c lvchange -s k -l setactivationskip
+complete -c lvchange -l setautoactivation
 complete -c lvchange -l syncaction
 complete -c lvchange -l sysinit
 complete -c lvchange -s t -l test

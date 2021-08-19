@@ -7,6 +7,7 @@ complete -c systemd-repart -l size -d 'Takes a size in bytes, using the usual K,
 complete -c systemd-repart -l factory-reset -d 'Takes boolean'
 complete -c systemd-repart -l can-factory-reset -d 'If this switch is specified the disk is not re-partitioned'
 complete -c systemd-repart -l root -d 'Takes a path to a directory to use as root file system when searching for rep…'
+complete -c systemd-repart -l image -d 'Takes a path to a disk image file or device to mount and use in a similar fas…'
 complete -c systemd-repart -l seed -d 'Takes a UUID as argument or the special value random'
 complete -c systemd-repart -l pretty -d 'Takes a boolean argument'
 complete -c systemd-repart -l definitions -d 'Takes a file system path.  If specified the *'

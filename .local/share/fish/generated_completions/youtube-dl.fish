@@ -80,7 +80,7 @@ complete -c youtube-dl -l load-info-json -d 'JSON file containing the video info
 complete -c youtube-dl -l cookies -d 'File to read cookies from and dump cookie jar in . RS . RE'
 complete -c youtube-dl -l cache-dir -d 'Location in the filesystem where youtube-dl can store some downloaded informa…'
 complete -c youtube-dl -l no-cache-dir -d 'Disable filesystem caching . RS . RE'
-complete -c youtube-dl -l rm-cache-dir -d 'Delete all filesystem cache files . RS . RE . SS Thumbnail images:'
+complete -c youtube-dl -l rm-cache-dir -d 'Delete all filesystem cache files . RS . RE . SS Thumbnail Options:'
 complete -c youtube-dl -l write-thumbnail -d 'Write thumbnail image to disk . RS . RE'
 complete -c youtube-dl -l write-all-thumbnails -d 'Write all thumbnail image formats to disk . RS . RE'
 complete -c youtube-dl -l list-thumbnails -d 'Simulate and list all available thumbnail formats . RS . RE '

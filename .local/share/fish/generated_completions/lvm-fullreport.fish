@@ -7,6 +7,8 @@ complete -c lvm-fullreport -l commandprofile
 complete -c lvm-fullreport -l config
 complete -c lvm-fullreport -l configreport
 complete -c lvm-fullreport -s d -l debug
+complete -c lvm-fullreport -l devices
+complete -c lvm-fullreport -l devicesfile
 complete -c lvm-fullreport -l driverloaded
 complete -c lvm-fullreport -l foreign
 complete -c lvm-fullreport -s h -l help

@@ -17,6 +17,8 @@ complete -c btrfs-inspect-internal -l follow
 complete -c btrfs-inspect-internal -l dfs
 complete -c btrfs-inspect-internal -l bfs
 complete -c btrfs-inspect-internal -l hide-names
+complete -c btrfs-inspect-internal -l csum-headers
+complete -c btrfs-inspect-internal -l csum-items
 complete -c btrfs-inspect-internal -l noscan
 complete -c btrfs-inspect-internal -s t
 complete -c btrfs-inspect-internal -s v

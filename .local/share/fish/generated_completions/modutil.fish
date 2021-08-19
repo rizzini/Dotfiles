@@ -17,7 +17,7 @@ complete -c modutil -o rawlist -d 'Display the module specs for a specified modu
 complete -c modutil -o undefault -d 'Specify the security mechanisms for which the named module will not be a defa…'
 complete -c modutil -o ciphers -d 'Enable specific ciphers in a module that is being added to the database'
 complete -c modutil -o dbdir -d 'Specify the database directory in which to access or create security module d…'
-complete -c modutil -l dbprefix -d 'Specify the prefix used on the database files, such as my_ for my_cert8. db'
+complete -c modutil -l dbprefix -d 'Specify the prefix used on the database files, such as my_ for my_cert9. db'
 complete -c modutil -o installdir -d 'Specify the root installation directory relative to which files will be insta…'
 complete -c modutil -o libfile -d 'Specify a path to a library file containing the implementation of the PKCS #1…'
 complete -c modutil -o mechanisms -d 'Specify the security mechanisms for which a particular module will be flagged…'

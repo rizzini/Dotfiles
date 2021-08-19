@@ -32,6 +32,7 @@ complete -c pacman -l noprogressbar
 complete -c pacman -l noscriptlet
 complete -c pacman -s p -l print
 complete -c pacman -l print-format -d 'to specify how targets are displayed'
+complete -c pacman -s w -l downloadonly
 complete -c pacman -l asdeps
 complete -c pacman -l asexplicit
 complete -c pacman -l recursive -d 'remove operation'
@@ -61,7 +62,6 @@ complete -c pacman -l unneeded
 complete -c pacman -l clean
 complete -c pacman -l sysupgrade
 complete -c pacman -o Su -d 'will do a system upgrade and install/upgrade the "foo" package in the same op…'
-complete -c pacman -s w -l downloadonly
 complete -c pacman -s y -l refresh
 complete -c pacman -s x -l regex
 complete -c pacman -l machinereadable -d instead

@@ -8,6 +8,7 @@ complete -c lstopo -l export-synthetic-flags -d 'Enforce flags when exporting to
 complete -c lstopo -s v -l verbose -d 'Include additional detail'
 complete -c lstopo -s s -l silent -d 'Reduce the amount of details to show'
 complete -c lstopo -l distances -d 'Only display distance matrices'
+complete -c lstopo -l distances-transform -d 'Try applying a transformation to distances structures before displaying them'
 complete -c lstopo -l memattrs -d 'Only display memory attributes'
 complete -c lstopo -l cpukinds -d 'Only display CPU kinds'
 complete -c lstopo -s f -l force -d 'If the destination file already exists, overwrite it'

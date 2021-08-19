@@ -8,6 +8,7 @@ complete -c hwloc-ls -l export-synthetic-flags -d 'Enforce flags when exporting 
 complete -c hwloc-ls -s v -l verbose -d 'Include additional detail'
 complete -c hwloc-ls -s s -l silent -d 'Reduce the amount of details to show'
 complete -c hwloc-ls -l distances -d 'Only display distance matrices'
+complete -c hwloc-ls -l distances-transform -d 'Try applying a transformation to distances structures before displaying them'
 complete -c hwloc-ls -l memattrs -d 'Only display memory attributes'
 complete -c hwloc-ls -l cpukinds -d 'Only display CPU kinds'
 complete -c hwloc-ls -s f -l force -d 'If the destination file already exists, overwrite it'

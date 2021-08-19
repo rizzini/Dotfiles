@@ -6,7 +6,7 @@ complete -c lvmpolld -s l -l log -d 'Select the type of log messages to generate
 complete -c lvmpolld -s p -l pidfile -d 'Path to the pidfile.  This overrides both the built-in default (/run/lvmpolld'
 complete -c lvmpolld -s s -l socket -d 'Path to the socket file'
 complete -c lvmpolld -s t -l timeout -d 'The daemon may shutdown after being idle for the given time (in seconds)'
-complete -c lvmpolld -s B -l binary -d 'Optional path to alternative LVM binary (default: /usr/lvm)'
+complete -c lvmpolld -s B -l binary -d 'Optional path to alternative LVM binary (default: /usr/bin/lvm)'
 complete -c lvmpolld -s V -l version -d 'Display the version of lvmpolld daemon'
 complete -c lvmpolld -l dump -d 'Contact the running lvmpolld daemon to obtain the complete state and print it…'
 

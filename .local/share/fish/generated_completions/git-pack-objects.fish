@@ -5,6 +5,7 @@ complete -c git-pack-objects -l revs -d 'Read the revision arguments from the st
 complete -c git-pack-objects -l unpacked -d 'This implies --revs'
 complete -c git-pack-objects -l all -d 'This implies --revs'
 complete -c git-pack-objects -l include-tag -d 'Include unasked-for annotated tags if the object they reference was included …'
+complete -c git-pack-objects -l stdin-packs -d 'Read the basenames of packfiles (e. g. , pack-1234abcd'
 complete -c git-pack-objects -l window -l depth -d 'These two options affect how the objects contained in the pack are stored usi…'
 complete -c git-pack-objects -l window-memory -d 'This option provides an additional limit on top of --window; the window size …'
 complete -c git-pack-objects -l max-pack-size -d 'In unusual scenarios, you may not be able to create files larger than a certa…'

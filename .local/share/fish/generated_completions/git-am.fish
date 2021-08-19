@@ -6,6 +6,7 @@ complete -c git-am -l keep-non-patch -d 'Pass -b flag to git mailinfo (see git-m
 complete -c git-am -l keep-cr -d 'With --keep-cr, call git mailsplit (see git-mailsplit(1)) with the same optio…'
 complete -c git-am -s c -l scissors -d 'Remove everything in body before a scissors line (see git-mailinfo(1))'
 complete -c git-am -l no-scissors -d 'Ignore scissors lines (see git-mailinfo(1))'
+complete -c git-am -l quoted-cr -d 'This flag will be passed down to git mailinfo (see git-mailinfo(1))'
 complete -c git-am -s m -l message-id -d 'Pass the -m flag to git mailinfo (see git-mailinfo(1)), so that the Message-I…'
 complete -c git-am -l no-message-id -d 'Do not add the Message-ID header to the commit message'
 complete -c git-am -s q -l quiet -d 'Be quiet.  Only print error messages'

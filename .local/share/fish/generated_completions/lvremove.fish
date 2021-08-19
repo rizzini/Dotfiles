@@ -4,6 +4,8 @@ complete -c lvremove -s A -l autobackup
 complete -c lvremove -l commandprofile
 complete -c lvremove -l config
 complete -c lvremove -s d -l debug
+complete -c lvremove -l devices
+complete -c lvremove -l devicesfile
 complete -c lvremove -l driverloaded
 complete -c lvremove -s f -l force
 complete -c lvremove -s h -l help

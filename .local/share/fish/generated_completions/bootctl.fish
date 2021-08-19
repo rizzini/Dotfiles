@@ -6,6 +6,7 @@ complete -c bootctl -s p -l print-esp-path -d 'This option modifies the behaviou
 complete -c bootctl -s x -l print-boot-path -d 'This option modifies the behaviour of status'
 complete -c bootctl -l no-variables -d 'Do not touch the firmware\\*(Aqs boot loader list stored in EFI variables'
 complete -c bootctl -l graceful -d 'Ignore failure when the EFI System Partition cannot be found, or when EFI var…'
+complete -c bootctl -l make-machine-id-directory -d 'Control creation and deletion of the top-level machine ID directory on the fi…'
 complete -c bootctl -l no-pager -d 'Do not pipe output into a pager'
 complete -c bootctl -s h -l help -d 'Print a short help text and exit'
 complete -c bootctl -l version -d 'Print a short version string and exit'

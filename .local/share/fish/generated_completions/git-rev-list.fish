@@ -67,6 +67,7 @@ complete -c git-rev-list -l object-names -d 'Only useful with --objects; print t
 complete -c git-rev-list -l no-object-names -d 'Only useful with --objects; does not print the names of the object IDs that a…'
 complete -c git-rev-list -l filter -d 'Only useful with one of the --objects*; omits objects (usually blobs) from th…'
 complete -c git-rev-list -l no-filter -d 'Turn off any previous --filter= argument'
+complete -c git-rev-list -l filter-provided-objects -d 'Filter the list of explicitly provided objects, which would otherwise always …'
 complete -c git-rev-list -l filter-print-omitted -d 'Only useful with --filter=; prints a list of the objects omitted by the filter'
 complete -c git-rev-list -l missing -d 'A debug option to help with future "partial clone" development'
 complete -c git-rev-list -l exclude-promisor-objects -d '(For internal use only. ) Prefilter object traversal at promisor boundary'

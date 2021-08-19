@@ -5,6 +5,8 @@ complete -c lvresize -s A -l autobackup
 complete -c lvresize -l commandprofile
 complete -c lvresize -l config
 complete -c lvresize -s d -l debug
+complete -c lvresize -l devices
+complete -c lvresize -l devicesfile
 complete -c lvresize -l driverloaded
 complete -c lvresize -s l -l extents -o ']Number'
 complete -c lvresize -s f -l force

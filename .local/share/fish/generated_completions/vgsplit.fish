@@ -5,6 +5,8 @@ complete -c vgsplit -s A -l autobackup
 complete -c vgsplit -l commandprofile
 complete -c vgsplit -l config
 complete -c vgsplit -s d -l debug
+complete -c vgsplit -l devices
+complete -c vgsplit -l devicesfile
 complete -c vgsplit -l driverloaded
 complete -c vgsplit -s h -l help
 complete -c vgsplit -l lockopt

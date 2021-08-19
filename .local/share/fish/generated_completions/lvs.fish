@@ -7,6 +7,8 @@ complete -c lvs -l commandprofile
 complete -c lvs -l config
 complete -c lvs -l configreport
 complete -c lvs -s d -l debug
+complete -c lvs -l devices
+complete -c lvs -l devicesfile
 complete -c lvs -l driverloaded
 complete -c lvs -l foreign
 complete -c lvs -s h -l help

@@ -18,9 +18,11 @@ complete -c git-repack -l keep-pack -d 'Exclude the given pack from repacking.  
 complete -c git-repack -l unpack-unreachable -d 'When loosening unreachable objects, do not bother loosening any objects older…'
 complete -c git-repack -s k -l keep-unreachable -d 'When used with -ad, any unreachable objects from existing packs will be appen…'
 complete -c git-repack -s i -l delta-islands -d 'Pass the --delta-islands option to git-pack-objects, see git-pack-objects(1)'
+complete -c git-repack -s g -l geometric -d 'Arrange resulting pack structure so that each successive pack contains at lea…'
 complete -c git-repack -l local -d 'option to git pack-objects.  See git-pack-objects(1)'
 complete -c git-repack -l no-reuse-delta -d 'option to git-pack-objects, see git-pack-objects(1)'
 complete -c git-repack -l no-reuse-object -d 'option to git-pack-objects, see git-pack-objects(1)'
 complete -c git-repack -l 'window;' -d '<n> bytes in memory'
 complete -c git-repack -o ad
+complete -c git-repack -l unpacked -d 'is specified, loose objects are implicitly included in this "roll-up", withou…'
 

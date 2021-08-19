@@ -7,6 +7,8 @@ complete -c vgs -l commandprofile
 complete -c vgs -l config
 complete -c vgs -l configreport
 complete -c vgs -s d -l debug
+complete -c vgs -l devices
+complete -c vgs -l devicesfile
 complete -c vgs -l driverloaded
 complete -c vgs -l foreign
 complete -c vgs -s h -l help

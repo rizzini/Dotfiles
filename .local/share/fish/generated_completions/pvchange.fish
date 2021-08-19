@@ -8,6 +8,8 @@ complete -c pvchange -l commandprofile
 complete -c pvchange -l config
 complete -c pvchange -s d -l debug
 complete -c pvchange -l deltag
+complete -c pvchange -l devices
+complete -c pvchange -l devicesfile
 complete -c pvchange -l driverloaded
 complete -c pvchange -s f -l force
 complete -c pvchange -s h -l help

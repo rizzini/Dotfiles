@@ -3,6 +3,7 @@
 complete -c sgdisk -s a -l set-alignment -d 'Set the sector alignment multiple'
 complete -c sgdisk -s A -l attributes -d 'View or set partition attributes'
 complete -c sgdisk -s b -l backup -d 'Save partition data to a backup file'
+complete -c sgdisk -s B -l byte-swap-name -d 'Swap the byte order for the name of the specified partition'
 complete -c sgdisk -s c -l change-name -d 'Change the GPT name of a partition'
 complete -c sgdisk -s C -l recompute-chs -d 'Recompute CHS values in protective or hybrid MBR'
 complete -c sgdisk -s d -l delete -d 'Delete a partition'

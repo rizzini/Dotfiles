@@ -5,7 +5,7 @@ complete -c systemd-tty-ask-password-agent -l query -d 'Process all currently pe
 complete -c systemd-tty-ask-password-agent -l watch -d 'Continuously process password requests'
 complete -c systemd-tty-ask-password-agent -l wall -d 'Forward password requests to wall(1) instead of querying the user on the call…'
 complete -c systemd-tty-ask-password-agent -l plymouth -d 'Ask question with plymouth(8) instead of querying the user on the calling TTY'
-complete -c systemd-tty-ask-password-agent -l console -d 'Ask question on /dev/console instead of querying the user on the calling TTY'
+complete -c systemd-tty-ask-password-agent -l console -d 'Ask question on TTY DEVICE instead of querying the user on the calling TTY'
 complete -c systemd-tty-ask-password-agent -s h -l help -d 'Print a short help text and exit'
 complete -c systemd-tty-ask-password-agent -l version -d 'Print a short version string and exit'
 

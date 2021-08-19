@@ -20,6 +20,8 @@ complete -c lvcreate -l config
 complete -c lvcreate -s C -l contiguous
 complete -c lvcreate -s d -l debug
 complete -c lvcreate -l deduplication
+complete -c lvcreate -l devices
+complete -c lvcreate -l devicesfile
 complete -c lvcreate -l discards
 complete -c lvcreate -l driverloaded
 complete -c lvcreate -l errorwhenfull
@@ -54,6 +56,7 @@ complete -c lvcreate -s r -l readahead
 complete -c lvcreate -s R -l regionsize
 complete -c lvcreate -l reportformat
 complete -c lvcreate -s k -l setactivationskip
+complete -c lvcreate -l setautoactivation
 complete -c lvcreate -s L -l size
 complete -c lvcreate -s s -l snapshot
 complete -c lvcreate -s i -l stripes

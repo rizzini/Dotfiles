@@ -3,6 +3,8 @@
 complete -c vgmknodes -l commandprofile
 complete -c vgmknodes -l config
 complete -c vgmknodes -s d -l debug
+complete -c vgmknodes -l devices
+complete -c vgmknodes -l devicesfile
 complete -c vgmknodes -l driverloaded
 complete -c vgmknodes -s h -l help
 complete -c vgmknodes -l ignorelockingfailure

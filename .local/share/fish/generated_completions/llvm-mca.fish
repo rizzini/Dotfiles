@@ -27,4 +27,5 @@ complete -c llvm-mca -o all-stats -d 'Print all hardware statistics'
 complete -c llvm-mca -o all-views -d 'Enable all the view'
 complete -c llvm-mca -o instruction-tables -d 'Prints resource pressure information based on the static information availabl…'
 complete -c llvm-mca -o bottleneck-analysis -d 'Print information about bottlenecks that affect the throughput'
+complete -c llvm-mca -o json -d 'Print the requested views in JSON format'
 

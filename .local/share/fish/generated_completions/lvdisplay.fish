@@ -9,6 +9,8 @@ complete -c lvdisplay -l commandprofile
 complete -c lvdisplay -l config
 complete -c lvdisplay -l configreport
 complete -c lvdisplay -s d -l debug
+complete -c lvdisplay -l devices
+complete -c lvdisplay -l devicesfile
 complete -c lvdisplay -l driverloaded
 complete -c lvdisplay -l foreign
 complete -c lvdisplay -s h -l help

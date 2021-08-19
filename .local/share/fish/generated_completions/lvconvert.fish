@@ -17,8 +17,11 @@ complete -c lvconvert -l compression
 complete -c lvconvert -l config
 complete -c lvconvert -s d -l debug
 complete -c lvconvert -l deduplication
+complete -c lvconvert -l devices
+complete -c lvconvert -l devicesfile
 complete -c lvconvert -l discards
 complete -c lvconvert -l driverloaded
+complete -c lvconvert -l errorwhenfull
 complete -c lvconvert -s f -l force
 complete -c lvconvert -s h -l help
 complete -c lvconvert -s i -l interval

@@ -72,6 +72,7 @@ complete -c qmicli -l dms-swi-get-usb-composition -d 'Get current and supported 
 complete -c qmicli -l dms-swi-set-usb-composition -d 'Set USB composition (Sierra Wireless specific)'
 complete -c qmicli -l dms-foxconn-change-device-mode -d 'Change device mode (Foxconn specific)'
 complete -c qmicli -l dms-foxconn-get-firmware-version -d 'Get firmware version (Foxconn specific)'
+complete -c qmicli -l dms-foxconn-set-fcc-authentication -d 'Set FCC authentication (Foxconn specific)'
 complete -c qmicli -l dms-get-mac-address -d 'Get default MAC address'
 complete -c qmicli -l dms-reset -d 'Reset the service state'
 complete -c qmicli -l dms-noop -d 'Just allocate or release a DMS client'

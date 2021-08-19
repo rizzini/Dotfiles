@@ -8,6 +8,8 @@ complete -c pvmove -s b -l background
 complete -c pvmove -l commandprofile
 complete -c pvmove -l config
 complete -c pvmove -s d -l debug
+complete -c pvmove -l devices
+complete -c pvmove -l devicesfile
 complete -c pvmove -l driverloaded
 complete -c pvmove -s h -l help
 complete -c pvmove -s i -l interval

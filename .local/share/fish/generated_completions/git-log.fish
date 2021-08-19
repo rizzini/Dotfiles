@@ -127,7 +127,7 @@ complete -c git-log -l cumulative
 complete -c git-log -l dirstat-by-file
 complete -c git-log -l patch-with-stat
 complete -c git-log -s z
-complete -c git-log -l diff-filter -d 'option on what the status letters mean'
+complete -c git-log -l diff-filter -d 'option on what the status letters mean.  Just like'
 complete -c git-log -l submodule
 complete -c git-log -l no-color
 complete -c git-log -l color-moved

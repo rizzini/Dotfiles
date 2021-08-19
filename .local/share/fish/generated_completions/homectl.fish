@@ -29,6 +29,9 @@ complete -c homectl -l language
 complete -c homectl -l ssh-authorized-keys
 complete -c homectl -l pkcs11-token-uri
 complete -c homectl -l fido2-device -d 'option below'
+complete -c homectl -l fido2-with-client-pin
+complete -c homectl -l fido2-with-user-presence
+complete -c homectl -l fido2-with-user-verification
 complete -c homectl -l recovery-key
 complete -c homectl -l locked
 complete -c homectl -l not-before -l not-after

@@ -9,6 +9,8 @@ complete -c vgcreate -l config
 complete -c vgcreate -l dataalignment
 complete -c vgcreate -l dataalignmentoffset
 complete -c vgcreate -s d -l debug
+complete -c vgcreate -l devices
+complete -c vgcreate -l devicesfile
 complete -c vgcreate -l driverloaded
 complete -c vgcreate -s f -l force
 complete -c vgcreate -s h -l help
@@ -27,6 +29,7 @@ complete -c vgcreate -l profile
 complete -c vgcreate -l pvmetadatacopies
 complete -c vgcreate -s q -l quiet
 complete -c vgcreate -l reportformat
+complete -c vgcreate -l setautoactivation
 complete -c vgcreate -l shared
 complete -c vgcreate -l systemid
 complete -c vgcreate -s t -l test

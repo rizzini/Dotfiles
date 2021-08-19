@@ -3,6 +3,8 @@
 complete -c lvmdiskscan -l commandprofile
 complete -c lvmdiskscan -l config
 complete -c lvmdiskscan -s d -l debug
+complete -c lvmdiskscan -l devices
+complete -c lvmdiskscan -l devicesfile
 complete -c lvmdiskscan -l driverloaded
 complete -c lvmdiskscan -s h -l help
 complete -c lvmdiskscan -l lockopt

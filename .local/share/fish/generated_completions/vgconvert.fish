@@ -4,6 +4,8 @@ complete -c vgconvert -l bootloaderareasize
 complete -c vgconvert -l commandprofile
 complete -c vgconvert -l config
 complete -c vgconvert -s d -l debug
+complete -c vgconvert -l devices
+complete -c vgconvert -l devicesfile
 complete -c vgconvert -l driverloaded
 complete -c vgconvert -s f -l force
 complete -c vgconvert -s h -l help

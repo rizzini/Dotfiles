@@ -10,7 +10,9 @@ complete -c pk12util -s h
 complete -c pk12util -s k
 complete -c pk12util -s K
 complete -c pk12util -s m -l key-len
-complete -c pk12util -s n -l cert-key-len
+complete -c pk12util -s M
+complete -c pk12util -l cert-key-len
+complete -c pk12util -s n
 complete -c pk12util -s P
 complete -c pk12util -s r
 complete -c pk12util -s v

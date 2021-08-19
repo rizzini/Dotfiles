@@ -28,6 +28,7 @@ complete -c udevadm -s y -l sysname-match -d 'Trigger events for devices for whi
 complete -c udevadm -l name-match -d 'Trigger events for devices with a matching device path'
 complete -c udevadm -s b -l parent-match -d 'Trigger events for all children of a given device'
 complete -c udevadm -l settle -d 'Apart from triggering events, also waits for those events to finish'
+complete -c udevadm -l uuid -d 'Trigger the synthetic device events, and associate a randomized UUID with each'
 complete -c udevadm -l wait-daemon -d 'Before triggering uevents, wait for systemd-udevd daemon to be initialized'
 complete -c udevadm -l timeout -d 'Maximum number of seconds to wait for the event queue to become empty'
 complete -c udevadm -s E -l exit-if-exists -d 'Stop waiting if file exists'

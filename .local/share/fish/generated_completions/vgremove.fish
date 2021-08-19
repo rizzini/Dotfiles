@@ -3,6 +3,8 @@
 complete -c vgremove -l commandprofile
 complete -c vgremove -l config
 complete -c vgremove -s d -l debug
+complete -c vgremove -l devices
+complete -c vgremove -l devicesfile
 complete -c vgremove -l driverloaded
 complete -c vgremove -s f -l force
 complete -c vgremove -s h -l help

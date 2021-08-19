@@ -6,6 +6,7 @@ complete -c dcb -s b -l batch -d 'Read commands from provided file or standard i
 complete -c dcb -s f -l force -d 'Don\'t terminate dcb on errors in batch mode'
 complete -c dcb -s i -l iec -d 'When showing rates, use ISO/IEC 1024-based prefixes (Ki, Mi, Bi) instead of t…'
 complete -c dcb -s j -l json -d 'Generate JSON output'
+complete -c dcb -s N -l Numeric -d 'If the subtool in question translates numbers to symbolic names in some way, …'
 complete -c dcb -s p -l pretty -d 'When combined with -j generate a pretty JSON output'
 complete -c dcb -s s -l statistics -d 'If the object in question contains any statistical counters, shown them as pa…'
 

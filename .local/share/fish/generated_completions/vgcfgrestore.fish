@@ -3,6 +3,8 @@
 complete -c vgcfgrestore -l commandprofile
 complete -c vgcfgrestore -l config
 complete -c vgcfgrestore -s d -l debug
+complete -c vgcfgrestore -l devices
+complete -c vgcfgrestore -l devicesfile
 complete -c vgcfgrestore -l driverloaded
 complete -c vgcfgrestore -s f -l file
 complete -c vgcfgrestore -l force

@@ -13,6 +13,7 @@ complete -c llvm-cov -s p -l preserve-paths -d 'Preserve path components when na
 complete -c llvm-cov -s u -l unconditional-branches -d 'Include unconditional branches in the output for the --branch-probabilities o…'
 complete -c llvm-cov -o version -d 'Display the version of llvm-cov'
 complete -c llvm-cov -s x -l hash-filenames -d 'Use md5 hash of file name when naming the coverage output files'
+complete -c llvm-cov -o show-branches -d 'Show coverage for branch conditions in terms of either count or percentage'
 complete -c llvm-cov -o show-line-counts -d 'Show the execution counts for each line.  Defaults to true, unless another'
 complete -c llvm-cov -o show
 complete -c llvm-cov -o show-expansions -d 'Expand inclusions, such as preprocessor macros or textual inclusions, inline …'
@@ -35,6 +36,7 @@ complete -c llvm-cov -o line-coverage-lt -d 'Show code coverage only for functio
 complete -c llvm-cov -o region-coverage-gt -d 'Show code coverage only for functions with region coverage greater than the g…'
 complete -c llvm-cov -o region-coverage-lt -d 'Show code coverage only for functions with region coverage less than the give…'
 complete -c llvm-cov -o path-equivalence -d 'Map the paths in the coverage data to local source file paths'
+complete -c llvm-cov -o show-branch-summary -d 'Show statistics for all branch conditions.  Defaults to true'
 complete -c llvm-cov -o show-functions -d 'Show coverage summaries for each function.  Defaults to false'
 complete -c llvm-cov -o show-instantiation-summary -d 'Show statistics for all function instantiations.  Defaults to false'
 complete -c llvm-cov -o summary-only -d 'Export only summary information for each file in the coverage data'

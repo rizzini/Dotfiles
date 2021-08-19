@@ -5,7 +5,7 @@ complete -c pip-freeze -s f -l find-links -d 'URL for finding packages, which wi
 complete -c pip-freeze -s l -l local -d 'If in a virtualenv that has global access, do not output globally-installed p…'
 complete -c pip-freeze -l user -d 'Only output packages installed in user-site'
 complete -c pip-freeze -l path -d 'Restrict to the specified installation path for listing packages (can be used…'
-complete -c pip-freeze -l all -d 'Do not skip these packages in the output: distribute, wheel, setuptools, pip'
+complete -c pip-freeze -l all -d 'Do not skip these packages in the output: wheel, pip, setuptools, distribute'
 complete -c pip-freeze -l exclude-editable -d 'Exclude editable package from output'
 complete -c pip-freeze -l exclude -d 'Exclude specified package from the output'
 

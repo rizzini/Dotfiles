@@ -4,6 +4,8 @@ complete -c vgimport -s a -l all
 complete -c vgimport -l commandprofile
 complete -c vgimport -l config
 complete -c vgimport -s d -l debug
+complete -c vgimport -l devices
+complete -c vgimport -l devicesfile
 complete -c vgimport -l driverloaded
 complete -c vgimport -s f -l force
 complete -c vgimport -s h -l help

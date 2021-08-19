@@ -4,6 +4,8 @@ complete -c vgexport -s a -l all
 complete -c vgexport -l commandprofile
 complete -c vgexport -l config
 complete -c vgexport -s d -l debug
+complete -c vgexport -l devices
+complete -c vgexport -l devicesfile
 complete -c vgexport -l driverloaded
 complete -c vgexport -s h -l help
 complete -c vgexport -l lockopt

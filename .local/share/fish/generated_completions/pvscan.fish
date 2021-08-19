@@ -5,6 +5,8 @@ complete -c pvscan -l cache
 complete -c pvscan -l commandprofile
 complete -c pvscan -l config
 complete -c pvscan -s d -l debug
+complete -c pvscan -l devices
+complete -c pvscan -l devicesfile
 complete -c pvscan -l driverloaded
 complete -c pvscan -s e -l exported
 complete -c pvscan -s h -l help

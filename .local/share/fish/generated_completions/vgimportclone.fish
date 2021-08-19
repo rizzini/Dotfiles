@@ -4,9 +4,12 @@ complete -c vgimportclone -s n -l basevgname
 complete -c vgimportclone -l commandprofile
 complete -c vgimportclone -l config
 complete -c vgimportclone -s d -l debug
+complete -c vgimportclone -l devices
+complete -c vgimportclone -l devicesfile
 complete -c vgimportclone -l driverloaded
 complete -c vgimportclone -s h -l help
 complete -c vgimportclone -s i -l import
+complete -c vgimportclone -l importdevices
 complete -c vgimportclone -l lockopt
 complete -c vgimportclone -l longhelp
 complete -c vgimportclone -l nolocking

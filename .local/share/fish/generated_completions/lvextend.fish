@@ -5,6 +5,8 @@ complete -c lvextend -s A -l autobackup
 complete -c lvextend -l commandprofile
 complete -c lvextend -l config
 complete -c lvextend -s d -l debug
+complete -c lvextend -l devices
+complete -c lvextend -l devicesfile
 complete -c lvextend -l driverloaded
 complete -c lvextend -s l -l extents
 complete -c lvextend -s f -l force

@@ -8,4 +8,5 @@ complete -c git-mailinfo -s n -d 'Disable all charset re-coding of the metadata'
 complete -c git-mailinfo -s m -l message-id -d 'Copy the Message-ID header at the end of the commit message'
 complete -c git-mailinfo -l scissors -d 'Remove everything in body before a scissors line (e. g.  "-- >8 --")'
 complete -c git-mailinfo -l no-scissors -d 'Ignore scissors lines.  Useful for overriding mailinfo. scissors settings'
+complete -c git-mailinfo -l quoted-cr -d 'Action when processes email messages sent with base64 or quoted-printable enc…'
 

@@ -5,6 +5,8 @@ complete -c lvscan -s b -l blockdevice
 complete -c lvscan -l commandprofile
 complete -c lvscan -l config
 complete -c lvscan -s d -l debug
+complete -c lvscan -l devices
+complete -c lvscan -l devicesfile
 complete -c lvscan -l driverloaded
 complete -c lvscan -s h -l help
 complete -c lvscan -l ignorelockingfailure

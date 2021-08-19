@@ -21,7 +21,7 @@ complete -c llc -l load -d 'Dynamically load dso_path (a path to a dynamically s
 complete -c llc -o meabi -d 'Specify which EABI version should conform to'
 complete -c llc -o stack-size-section -d 'Emit the . stack_sizes section which contains stack size metadata'
 complete -c llc -o remarks-section -d 'Emit the __remarks (MachO) section which contains metadata about remark diagn…'
-complete -c llc -l print-machineinstrs -d 'Print generated machine code between compilation phases (useful for debugging)'
+complete -c llc -l print-after-isel -d 'Print generated machine code after instruction selection (useful for debuggin…'
 complete -c llc -l regalloc -d 'Specify the register allocator to use.  Valid register allocators are: '
 complete -c llc -l spiller -d 'Specify the spiller to use for register allocators that support it'
 complete -c llc -l x86-asm-syntax -d 'Specify whether to emit assembly code in AT&T syntax (the default) or Intel s…'

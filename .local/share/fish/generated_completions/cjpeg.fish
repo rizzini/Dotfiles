@@ -14,6 +14,7 @@ complete -c cjpeg -o smooth -d 'Smooth the input image to eliminate dithering no
 complete -c cjpeg -o maxmemory -d 'Set limit for amount of memory to use in processing large images'
 complete -c cjpeg -o outfile -d 'Send output image to the named file, not to standard output'
 complete -c cjpeg -o memdst -d 'Compress to memory instead of a file'
+complete -c cjpeg -o report -d 'Report compression progress'
 complete -c cjpeg -o verbose -d 'Enable debug printout.   More  -v \'s give more output'
 complete -c cjpeg -o debug -d 'Same as  -verbose '
 complete -c cjpeg -o version -d 'Print version information and exit'

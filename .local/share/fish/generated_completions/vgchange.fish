@@ -10,6 +10,8 @@ complete -c vgchange -l config
 complete -c vgchange -s d -l debug
 complete -c vgchange -l deltag
 complete -c vgchange -l detachprofile
+complete -c vgchange -l devices
+complete -c vgchange -l devicesfile
 complete -c vgchange -l driverloaded
 complete -c vgchange -s f -l force
 complete -c vgchange -s h -l help
@@ -38,6 +40,7 @@ complete -c vgchange -l refresh
 complete -c vgchange -l reportformat
 complete -c vgchange -s x -l resizeable
 complete -c vgchange -s S -l select
+complete -c vgchange -l setautoactivation
 complete -c vgchange -l sysinit
 complete -c vgchange -l systemid
 complete -c vgchange -s t -l test

@@ -11,6 +11,7 @@ complete -c sudo_sendlog -s n -d 'If specified, the server\'s certificate will n
 complete -c sudo_sendlog -s p -d 'Use the specified network port when connecting to the log server instead of t…'
 complete -c sudo_sendlog -s r -d 'Restart an interrupted connection to the log server'
 complete -c sudo_sendlog -s R -d 'Send a reject event for the command using the specified reject-reason, even t…'
+complete -c sudo_sendlog -s s -d 'Stop sending log records and close the connection when stop-point is reached'
 complete -c sudo_sendlog -s t -d 'Open number simultaneous connections to the log server and send the specified…'
 complete -c sudo_sendlog -s V -d 'Print the sudo_sendlog version and exit'
 

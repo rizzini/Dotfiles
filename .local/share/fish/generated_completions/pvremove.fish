@@ -3,6 +3,8 @@
 complete -c pvremove -l commandprofile
 complete -c pvremove -l config
 complete -c pvremove -s d -l debug
+complete -c pvremove -l devices
+complete -c pvremove -l devicesfile
 complete -c pvremove -l driverloaded
 complete -c pvremove -s f -l force
 complete -c pvremove -s h -l help

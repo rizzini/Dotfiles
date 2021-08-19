@@ -9,6 +9,8 @@ complete -c vgdisplay -l commandprofile
 complete -c vgdisplay -l config
 complete -c vgdisplay -l configreport
 complete -c vgdisplay -s d -l debug
+complete -c vgdisplay -l devices
+complete -c vgdisplay -l devicesfile
 complete -c vgdisplay -l driverloaded
 complete -c vgdisplay -l foreign
 complete -c vgdisplay -s h -l help

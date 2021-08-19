@@ -4,6 +4,8 @@ complete -c lvreduce -s A -l autobackup
 complete -c lvreduce -l commandprofile
 complete -c lvreduce -l config
 complete -c lvreduce -s d -l debug
+complete -c lvreduce -l devices
+complete -c lvreduce -l devicesfile
 complete -c lvreduce -l driverloaded
 complete -c lvreduce -s l -l extents
 complete -c lvreduce -s f -l force

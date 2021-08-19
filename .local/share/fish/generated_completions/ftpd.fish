@@ -11,7 +11,7 @@ complete -c ftpd -l non-rfc2577 -d 'neglect RFC 2577 by giving info on missing u
 complete -c ftpd -s p -l pidfile -d 'change default location of pidfile'
 complete -c ftpd -s q -l no-version -d 'do not display version in banner'
 complete -c ftpd -s t -l timeout -d 'set default idle timeout'
-complete -c ftpd -s T -l max-timeout -d 'reset maximum value of timeout allowed'
+complete -c ftpd -s T -l max-timeout -d 'set maximum value of timeout allowed'
 complete -c ftpd -s u -l umask -d 'set default umask P AUTH can be one of the following:'
 complete -c ftpd -s '?' -l help -d 'give this help list'
 complete -c ftpd -l usage -d 'give a short usage message'

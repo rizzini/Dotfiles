@@ -83,7 +83,7 @@ complete -c mpiexec -o report-pid -l report-pid -d 'Print out mpirun\'s PID duri
 complete -c mpiexec -o report-uri -l report-uri -d 'Print out mpirun\'s URI during startup'
 complete -c mpiexec -o show-progress -l show-progress -d 'Output a brief periodic report on launch progress'
 complete -c mpiexec -o terminate -l terminate -d 'Terminate the DVM'
-complete -c mpiexec -o use-hwthread-cpus -l use-hwthread-cpus -d 'Use hardware threads as independent cpus'
+complete -c mpiexec -o use-hwthread-cpus -l use-hwthread-cpus -d 'Use hardware threads as independent CPUs'
 complete -c mpiexec -o use-regexp -l use-regexp -d 'Use regular expressions for launch'
 complete -c mpiexec -s d -l debug-devel -d 'Enable debugging of the OmpiRTE (the run-time layer in Open MPI)'
 complete -c mpiexec -l debug-daemons -d 'Enable debugging of any OmpiRTE daemons used by this application'

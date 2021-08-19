@@ -3,6 +3,8 @@
 complete -c pvresize -l commandprofile
 complete -c pvresize -l config
 complete -c pvresize -s d -l debug
+complete -c pvresize -l devices
+complete -c pvresize -l devicesfile
 complete -c pvresize -l driverloaded
 complete -c pvresize -s h -l help
 complete -c pvresize -l lockopt

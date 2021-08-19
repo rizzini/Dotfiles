@@ -4,6 +4,8 @@ complete -c vgrename -s A -l autobackup
 complete -c vgrename -l commandprofile
 complete -c vgrename -l config
 complete -c vgrename -s d -l debug
+complete -c vgrename -l devices
+complete -c vgrename -l devicesfile
 complete -c vgrename -l driverloaded
 complete -c vgrename -s f -l force
 complete -c vgrename -s h -l help

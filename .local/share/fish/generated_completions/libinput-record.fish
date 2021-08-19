@@ -6,7 +6,8 @@ complete -c libinput-record -l autorestart -d 'Terminate the current recording a
 complete -c libinput-record -l output-file -d 'Specifies the output file to use'
 complete -c libinput-record -l grab -d 'Exclusively grab all opened devices'
 complete -c libinput-record -l show-keycodes -d 'Show keycodes as-is in the recording'
+complete -c libinput-record -l with-libinput -d 'Record libinput events alongside device events'
 complete -c libinput-record -s o
-complete -c libinput-record -l with-libinput -d 'Record libinput events alongside device events.  THIS FEATURE IS EXPERIMENTAL'
+complete -c libinput-record -l with-hidraw -d 'Record hidraw events alongside device events.  DO NOT TYPE SENSITIVE DATA'
 complete -c libinput-record -l multiple
 

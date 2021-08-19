@@ -8,7 +8,7 @@ if test -f /tmp/c_diablo_xb_macro_on.pid.tmp; then
 fi
 sleep 10 &&
 while [ -n "$(pgrep Diablo)" ]; do    
-    if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]; then       
+    if [ $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Default - Wine desktop') ]; then       
         if [ -f "/tmp/c_diablo_xb_macro_on.pid.tmp" ]; then
             /home/lucas/Documentos/scripts/macro_d3_wiz.sh &
             aberto=0
@@ -23,13 +23,13 @@ while [ -n "$(pgrep Diablo)" ]; do
             xbindkeys
         fi
     if [ $aberto -eq 1 ]; then        
-        if [[ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
+        if [[ -n "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Default - Wine desktop') ]]; then
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_on.png' &
         fi
     fi    
     if [ $aberto -eq 0 ]; then
-        if [[ -z "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Diablo III') ]]; then
+        if [[ -z "$(ps -aux | grep macro_off| grep wine_d3 | awk '{print $2;}')" && $(xdotool getwindowfocus) -eq $(xdotool search --sync --name 'Default - Wine desktop') ]]; then
             killall -9 pqiv
             pqiv --click-through --keep-above --transparent-background --hide-info-box '/home/lucas/.wine_d3/macro_off.png' &
         fi

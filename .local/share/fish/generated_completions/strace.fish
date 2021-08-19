@@ -50,6 +50,7 @@ complete -c strace -s X -d 'TQ  "--const-print-style" = format Set the format fo
 complete -c strace -s y -d 'TQ  --decode-fds '
 complete -c strace -o yy -d 'TQ  --decode-fds = all Print all available information associated with file d…'
 complete -c strace -l pidns-translation -d 'If strace and tracee are in different PID namespaces, print PIDs in strace\'s …'
+complete -c strace -l secontext -d 'if \'\'#\' When SELinux is available and is not disabled, '
 complete -c strace -s c -d 'TQ  --summary-only Count time, calls, and errors for each system call and rep…'
 complete -c strace -s C -d 'TQ  --summary Like  -c but also print regular output while processes are runn…'
 complete -c strace -s O -d 'TQ  "--summary-syscall-overhead " = overhead Set the overhead for tracing sys…'

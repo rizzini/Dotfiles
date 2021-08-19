@@ -21,7 +21,7 @@ complete -c ss -s E -l events -d 'Continually display sockets as they are destro
 complete -c ss -s Z -l context -d 'As the  -p option but also shows process security context'
 complete -c ss -s z -l contexts -d 'As the  -Z option but also shows the socket context'
 complete -c ss -s N -l net -d 'Switch to the specified network namespace name'
-complete -c ss -s b -l bpf -d 'Show socket BPF filters (only administrators are allowed to get these informa…'
+complete -c ss -s b -l bpf -d 'Show socket classic BPF filters (only administrators are allowed to get these…'
 complete -c ss -s 4 -l ipv4 -d 'Display only IP version 4 sockets (alias for -f inet)'
 complete -c ss -s 6 -l ipv6 -d 'Display only IP version 6 sockets (alias for -f inet6)'
 complete -c ss -s 0 -l packet -d 'Display PACKET sockets (alias for -f link)'

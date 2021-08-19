@@ -3,6 +3,8 @@
 complete -c vgck -l commandprofile
 complete -c vgck -l config
 complete -c vgck -s d -l debug
+complete -c vgck -l devices
+complete -c vgck -l devicesfile
 complete -c vgck -l driverloaded
 complete -c vgck -s h -l help
 complete -c vgck -l lockopt

@@ -5,6 +5,7 @@ complete -c llvm-exegesis -o opcode-index -d 'Specify the opcode to measure, by 
 complete -c llvm-exegesis -o opcode-name -d 'Specify the opcode to measure, by name'
 complete -c llvm-exegesis -o snippets-file -d 'Specify the custom code snippet to measure.  See example 2 for details'
 complete -c llvm-exegesis -o mode -d 'Specify the run mode'
+complete -c llvm-exegesis -o x86-lbr-sample-period -d 'Specify the LBR sampling period - how many branches before we take a sample'
 complete -c llvm-exegesis -o repetition-mode -d 'Specify the repetition mode'
 complete -c llvm-exegesis -o num-repetitions -d 'Specify the number of repetitions of the asm snippet'
 complete -c llvm-exegesis -o max-configs-per-opcode -d 'Specify the maximum configurations that can be generated for each opcode'

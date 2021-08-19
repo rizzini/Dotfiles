@@ -34,6 +34,7 @@ complete -c git-pull -l negotiation-tip -d 'By default, Git will report, to the 
 complete -c git-pull -l dry-run -d 'Show what would be done, without making any changes'
 complete -c git-pull -s f -l force -d 'When git fetch is used with <src>:<dst> refspec it may refuse to update the l…'
 complete -c git-pull -s k -l keep -d 'Keep downloaded pack'
+complete -c git-pull -l prefetch -d 'Modify the configured refspec to place all refs into the refs/prefetch/ names…'
 complete -c git-pull -s p -l prune -d 'Before fetching, remove any remote-tracking references that no longer exist o…'
 complete -c git-pull -l no-tags -d 'By default, tags that point at objects that are downloaded from the remote re…'
 complete -c git-pull -l refmap -d 'When fetching refs listed on the command line, use the specified refspec (can…'

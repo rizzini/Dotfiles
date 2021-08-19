@@ -3,6 +3,8 @@
 complete -c vgscan -l commandprofile
 complete -c vgscan -l config
 complete -c vgscan -s d -l debug
+complete -c vgscan -l devices
+complete -c vgscan -l devicesfile
 complete -c vgscan -l driverloaded
 complete -c vgscan -s h -l help
 complete -c vgscan -l ignorelockingfailure

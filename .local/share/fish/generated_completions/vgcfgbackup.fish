@@ -3,6 +3,8 @@
 complete -c vgcfgbackup -l commandprofile
 complete -c vgcfgbackup -l config
 complete -c vgcfgbackup -s d -l debug
+complete -c vgcfgbackup -l devices
+complete -c vgcfgbackup -l devicesfile
 complete -c vgcfgbackup -l driverloaded
 complete -c vgcfgbackup -s f -l file
 complete -c vgcfgbackup -l foreign

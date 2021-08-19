@@ -52,6 +52,7 @@ complete -c llvm-readobj -l codeview-merged-types -d 'Display the merged CodeVie
 complete -c llvm-readobj -l codeview-subsection-bytes -d 'Dump raw contents of CodeView debug sections and records'
 complete -c llvm-readobj -l coff-basereloc -d 'Display the . reloc section'
 complete -c llvm-readobj -l coff-debug-directory -d 'Display the debug directory'
+complete -c llvm-readobj -l coff-tls-directory -d 'Display the TLS directory'
 complete -c llvm-readobj -l coff-directives -d 'Display the . drectve section'
 complete -c llvm-readobj -l coff-exports -d 'Display the export table'
 complete -c llvm-readobj -l coff-imports -d 'Display the import table'

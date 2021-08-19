@@ -15,6 +15,7 @@ complete -c scdaemon -l debug-assuan-log-cats -d 'Changes the active Libassuan l
 complete -c scdaemon -l no-detach -d 'Don\'t detach the process from the console'
 complete -c scdaemon -l listen-backlog -d 'Set the size of the queue for pending connections.   The default is 64'
 complete -c scdaemon -l log-file -d 'Append all logging output to file'
+complete -c scdaemon -l pcsc-shared -d 'Use shared mode to access the card via PC/SC'
 complete -c scdaemon -l pcsc-driver -d 'Use library to access the smartcard reader'
 complete -c scdaemon -l ctapi-driver -d 'Use library to access the smartcard reader'
 complete -c scdaemon -l disable-ccid -d 'Disable the integrated support for CCID compliant readers'

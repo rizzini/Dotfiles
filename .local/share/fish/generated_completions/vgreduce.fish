@@ -5,6 +5,8 @@ complete -c vgreduce -s A -l autobackup
 complete -c vgreduce -l commandprofile
 complete -c vgreduce -l config
 complete -c vgreduce -s d -l debug
+complete -c vgreduce -l devices
+complete -c vgreduce -l devicesfile
 complete -c vgreduce -l driverloaded
 complete -c vgreduce -s f -l force
 complete -c vgreduce -s h -l help

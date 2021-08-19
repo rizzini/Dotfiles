@@ -55,7 +55,7 @@ complete -c git-show -l patch-with-stat
 complete -c git-show -s z
 complete -c git-show -l name-only
 complete -c git-show -l name-status
-complete -c git-show -l diff-filter -d 'option on what the status letters mean'
+complete -c git-show -l diff-filter -d 'option on what the status letters mean.  Just like'
 complete -c git-show -l submodule
 complete -c git-show -l no-color
 complete -c git-show -l color-moved

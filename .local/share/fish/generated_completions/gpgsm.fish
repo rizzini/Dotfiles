@@ -3,6 +3,7 @@
 complete -c gpgsm -l options -d 'Reads configuration from file instead of from the default per-user configurat…'
 complete -c gpgsm -l homedir -d 'Set the name of the home directory to dir'
 complete -c gpgsm -l verbose -d 'Outputs additional information while running'
+complete -c gpgsm -l ldapserver -d 'TQ   --keyserver string Add an LDAP server to use for X'
 complete -c gpgsm -l policy-file -d 'Change the default name of the policy file to filename'
 complete -c gpgsm -l agent-program -d 'Specify an agent program to be used for secret key operations'
 complete -c gpgsm -l dirmngr-program -d 'Specify a dirmngr program to be used for CRL checks'
@@ -85,6 +86,7 @@ complete -c gpgsm -l learn-card -d 'Read information about the private keys from
 complete -c gpgsm -l change-passphrase
 complete -c gpgsm -l passwd -d 'Change the passphrase of the private key belonging to the certificate specifi…'
 complete -c gpgsm -s v
+complete -c gpgsm -l keyserver -d 'Add an LDAP server to use for X. 509 certificate and CRL lookup'
 complete -c gpgsm -l disable-policy-checks -d 'By default policy checks are enabled'
 complete -c gpgsm -l disable-crl-checks -d 'By default the CRL checks are enabled and the DirMngr is used to check for re…'
 complete -c gpgsm -l disable-trusted-cert-crl-check -d 'By default the CRL for trusted root certificates are checked like for any oth…'

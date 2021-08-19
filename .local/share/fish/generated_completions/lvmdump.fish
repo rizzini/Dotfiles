@@ -7,5 +7,5 @@ complete -c lvmdump -s l -d 'Include lvmetad(8) daemon dump if it is running'
 complete -c lvmdump -s m -d 'Gather LVM metadata from the PVs This option generates a 1:1 dump of the meta…'
 complete -c lvmdump -s p -d 'Include lvmpolld(8) daemon dump if it is running'
 complete -c lvmdump -s s -d 'Gather system info and context'
-complete -c lvmdump -s u -d OPTIONS
+complete -c lvmdump -s u -d 'Gather udev info and context: /etc/udev/udev'
 

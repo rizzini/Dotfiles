@@ -26,6 +26,7 @@ complete -c mpg123 -l index-size -d 'Set the number of entries in the seek frame
 complete -c mpg123 -l preframes -d 'Set the number of frames to be read as lead-in before a seeked-to position'
 complete -c mpg123 -s o -l output -d 'Select audio output module'
 complete -c mpg123 -l list-modules -d 'List the available modules'
+complete -c mpg123 -l list-devices -d 'List the available output devices for given output module'
 complete -c mpg123 -s a -l audiodevice -d 'Specify the audio device to use'
 complete -c mpg123 -s s -l stdout -d 'The decoded audio samples are written to standard output, instead of playing …'
 complete -c mpg123 -s O -l outfile -d 'Write raw output into a file (instead of simply redirecting standard output t…'

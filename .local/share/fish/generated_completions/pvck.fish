@@ -6,6 +6,8 @@ complete -c pvck -l repairtype
 complete -c pvck -l commandprofile
 complete -c pvck -l config
 complete -c pvck -s d -l debug
+complete -c pvck -l devices
+complete -c pvck -l devicesfile
 complete -c pvck -l driverloaded
 complete -c pvck -l dump
 complete -c pvck -s f -l file

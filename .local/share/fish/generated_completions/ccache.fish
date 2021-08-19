@@ -34,6 +34,7 @@ complete -c ccache -o Wdocumentation -d 'limit_multiple (CCACHE_LIMIT_MULTIPLE)'
 complete -c ccache -o fdirectives-only -d '(for GCC) or'
 complete -c ccache -o frewrite-includes -d '(for Clang) to the compiler'
 complete -c ccache -o index-store-path -d 'and its argument when computing the manifest hash'
+complete -c ccache -o ivfsoverlay -d 'and its argument'
 complete -c ccache -o fmodules -d 'is used since it cannot hash the state of compiler\'s internal representation …'
 complete -c ccache -s E -d 'oc o 2. 3'
 complete -c ccache -o include

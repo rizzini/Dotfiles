@@ -3,6 +3,8 @@
 complete -c userdbctl -l output -d 'Choose the output mode, takes one of "classic", "friendly", "table", "json"'
 complete -c userdbctl -l service -s s -d 'Controls which services to query for users/groups'
 complete -c userdbctl -l with-nss -d 'Controls whether to include classic glibc/NSS user/group lookups in the output'
+complete -c userdbctl -l with-varlink -d 'Controls whether to include Varlink user/group lookups in the output, i. e'
+complete -c userdbctl -l with-dropin -d 'Controls whether to include user/group lookups in the output that are defined…'
 complete -c userdbctl -l synthesize -d 'Controls whether to synthesize records for the root and nobody users/groups i…'
 complete -c userdbctl -s N -d 'This option is short for --with-nss=no --synthesize=no'
 complete -c userdbctl -l no-pager -d 'Do not pipe output into a pager'

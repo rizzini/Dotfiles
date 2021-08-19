@@ -6,6 +6,8 @@ complete -c pvcreate -l config
 complete -c pvcreate -l dataalignment
 complete -c pvcreate -l dataalignmentoffset
 complete -c pvcreate -s d -l debug
+complete -c pvcreate -l devices
+complete -c pvcreate -l devicesfile
 complete -c pvcreate -l driverloaded
 complete -c pvcreate -s f -l force
 complete -c pvcreate -s h -l help

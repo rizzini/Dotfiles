@@ -22,7 +22,7 @@ complete -c git-diff-index -l dirstat-by-file -d 'Synonym for --dirstat=files,pa
 complete -c git-diff-index -l summary -d 'Output a condensed summary of extended header information such as creations, …'
 complete -c git-diff-index -l patch-with-stat -d 'Synonym for -p --stat'
 complete -c git-diff-index -s z -d 'When --raw, --numstat, --name-only or --name-status has been given, do not mu…'
-complete -c git-diff-index -l name-only -d 'Show only names of changed files'
+complete -c git-diff-index -l name-only -d 'Show only names of changed files.  The file names are often encoded in UTF-8'
 complete -c git-diff-index -l name-status -d 'Show only names and status of changed files'
 complete -c git-diff-index -l submodule -d 'Specify how differences in submodules are shown'
 complete -c git-diff-index -l color -d 'Show colored diff.  --color (i. e'

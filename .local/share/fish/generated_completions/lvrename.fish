@@ -4,6 +4,8 @@ complete -c lvrename -s A -l autobackup
 complete -c lvrename -l commandprofile
 complete -c lvrename -l config
 complete -c lvrename -s d -l debug
+complete -c lvrename -l devices
+complete -c lvrename -l devicesfile
 complete -c lvrename -l driverloaded
 complete -c lvrename -s h -l help
 complete -c lvrename -l lockopt

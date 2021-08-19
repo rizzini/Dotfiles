@@ -7,6 +7,8 @@ complete -c pvs -l commandprofile
 complete -c pvs -l config
 complete -c pvs -l configreport
 complete -c pvs -s d -l debug
+complete -c pvs -l devices
+complete -c pvs -l devicesfile
 complete -c pvs -l driverloaded
 complete -c pvs -l foreign
 complete -c pvs -s h -l help

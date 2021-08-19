@@ -25,6 +25,7 @@ complete -c certutil -s W
 complete -c certutil -l merge
 complete -c certutil -l upgrade-merge
 complete -c certutil -s a
+complete -c certutil -l simple-self-signed
 complete -c certutil -s b
 complete -c certutil -s c
 complete -c certutil -l dump-ext-val
@@ -85,6 +86,6 @@ complete -c certutil -l upgrade-token-name
 complete -c certutil -s @
 complete -c certutil -l 'ext*' -d 'options set certificate extensions that can be added to the certificate when …'
 complete -c certutil -l ---BEGIN -d 'MIIB1DCCAT2gAwIBAgICDkIwDQYJKoZIhvcNAQEFBQAwFTETMBEGA1UEAxMKRXhh bXBsZSBDQTAe…'
-complete -c certutil -l ---END -d 'For a human-readable display $ certutil -L -d sql:$HOME/nssdb -n my-ca-cert C…'
+complete -c certutil -l ---END -d 'For a human-readable display $ certutil -L -d $HOME/nssdb -n my-ca-cert Certi…'
 complete -c certutil -l -merge -d command
 

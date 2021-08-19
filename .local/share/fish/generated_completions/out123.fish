@@ -3,6 +3,7 @@
 complete -c out123 -l name -d 'Set the name of this instance, possibly used in various places'
 complete -c out123 -s o -l output -d 'Select audio output module'
 complete -c out123 -l list-modules -d 'List the available modules'
+complete -c out123 -l list-devices -d 'List the available output devices for given output module'
 complete -c out123 -s a -l audiodevice -d 'Specify the audio device to use'
 complete -c out123 -s s -l stdout -d 'The audio samples are written to standard output, instead of playing them thr…'
 complete -c out123 -s S -l STDOUT -d 'This variant additionally writes the data to stdout, while still playing it o…'

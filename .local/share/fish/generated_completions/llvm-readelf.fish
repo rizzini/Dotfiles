@@ -29,6 +29,7 @@ complete -c llvm-readelf -l raw-relr -d 'Do not decode relocations in RELR reloc
 complete -c llvm-readelf -l relocations -l relocs -s r -d 'Display the relocation entries in the file'
 complete -c llvm-readelf -l sections -l section-headers -s S -d 'Display all sections'
 complete -c llvm-readelf -l section-data -d 'When used with \\%--sections, display section data for each section shown'
+complete -c llvm-readelf -l section-details -s t -d 'Display all section details.  Used as an alternative to \\%--sections'
 complete -c llvm-readelf -l section-mapping -d 'Display the section to segment mapping'
 complete -c llvm-readelf -l section-relocations -d 'When used with \\%--sections, display relocations for each section shown'
 complete -c llvm-readelf -l section-symbols -d 'When used with \\%--sections, display symbols for each section shown'

@@ -22,7 +22,7 @@ complete -c git-diff-tree -l dirstat-by-file -d 'Synonym for --dirstat=files,par
 complete -c git-diff-tree -l summary -d 'Output a condensed summary of extended header information such as creations, …'
 complete -c git-diff-tree -l patch-with-stat -d 'Synonym for -p --stat'
 complete -c git-diff-tree -s z -d 'When --raw, --numstat, --name-only or --name-status has been given, do not mu…'
-complete -c git-diff-tree -l name-only -d 'Show only names of changed files'
+complete -c git-diff-tree -l name-only -d 'Show only names of changed files.  The file names are often encoded in UTF-8'
 complete -c git-diff-tree -l name-status -d 'Show only names and status of changed files'
 complete -c git-diff-tree -l submodule -d 'Specify how differences in submodules are shown'
 complete -c git-diff-tree -l color -d 'Show colored diff.  --color (i. e'

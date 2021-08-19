@@ -9,6 +9,7 @@ complete -c portablectl -l cat -d 'When inspecting portable service images, show
 complete -c portablectl -l enable -d 'Immediately enable/disable the portable service after attaching/detaching'
 complete -c portablectl -l now -d 'Immediately start/stop/restart the portable service after attaching/before de…'
 complete -c portablectl -l no-block -d 'Don\\*(Aqt block waiting for attach --now to complete'
+complete -c portablectl -l extension -d 'Add an additional image PATH as an overlay on top of IMAGE when attaching/det…'
 complete -c portablectl -s H -l host -d 'Execute the operation remotely'
 complete -c portablectl -s M -l machine -d 'Execute operation on a local container'
 complete -c portablectl -l no-pager -d 'Do not pipe output into a pager'

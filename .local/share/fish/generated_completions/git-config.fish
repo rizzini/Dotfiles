@@ -54,7 +54,8 @@ complete -c git-config -l preserve-merges -d 'along to git rebase so that locall
 complete -c git-config -s w -d 'option in git-help(1)) or a working repository in gitweb (see git-instaweb(1))'
 complete -c git-config -l guess -d or
 complete -c git-config -l no-guess -d 'option in git checkout and git switch.  See git-switch(1) and git-checkout(1)'
-complete -c git-config -l origin -d 'command-line option to git-clone(1).  color. advice'
+complete -c git-config -l origin -d 'command-line option to git-clone(1).  clone. rejectShallow'
+complete -c git-config -l reject-shallow -d 'in command line.  See git-clone(1) color. advice'
 complete -c git-config -l color -d 'option.  color. diff. <slot>'
 complete -c git-config -l color-moved -d 'in git-diff(1) for details), contextDimmed, oldDimmed, newDimmed, contextBold…'
 complete -c git-config -s A
@@ -104,7 +105,8 @@ complete -c git-config -l abbrev-commit
 complete -c git-config -l no-abbrev-commit -d 'log. date'
 complete -c git-config -l decorate -d 'option of the git log.  log. excludeDecoration'
 complete -c git-config -l decorate-refs-exclude -d 'command-line option, but the config option can be overridden by the'
-complete -c git-config -l decorate-refs -d 'option.  log. follow'
+complete -c git-config -l decorate-refs -d 'option.  log. diffMerges'
+complete -c git-config -l diff-merges -d 'in git-log(1) for details.  Defaults to separate.  log. follow'
 complete -c git-config -l follow -d 'option was used when a single <path> is given'
 complete -c git-config -l show-signature -d 'log. mailmap'
 complete -c git-config -l use-mailmap
@@ -128,7 +130,7 @@ complete -c git-config -l signed -d 'is passed to git-push(1)'
 complete -c git-config -l push-option -d 'argument is given from the command line, git push behaves as if each <value> …'
 complete -c git-config -l recurse-submodules -d 'no is used by default, unless submodule'
 complete -c git-config -l force-if-includes -d 'as an option to git-push(1) in the command line.  Adding'
-complete -c git-config -l no-force-if-includes -d 'at the time of push overrides this configuration setting.  rebase. useBuiltin'
+complete -c git-config -l no-force-if-includes -d 'at the time of push overrides this configuration setting.  push. negotiate'
 complete -c git-config -l autosquash -d 'option by default.  rebase. autoStash'
 complete -c git-config -l exec -d 'option was provided).  This is the same as specifying the'
 complete -c git-config -l reschedule-failed-exec -d 'option.  rebase. forkPoint'

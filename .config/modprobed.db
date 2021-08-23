@@ -10,6 +10,7 @@ blake2b_generic
 bluetooth
 bnep
 bpf_preload
+br_netfilter
 bridge
 btbcm
 btintel
@@ -115,6 +116,7 @@ nf_conntrack_ftp
 nf_conntrack_h323
 nf_conntrack_irc
 nf_conntrack_netbios_ns
+nf_conntrack_netlink
 nf_conntrack_pptp
 nf_conntrack_sip
 nf_conntrack_tftp

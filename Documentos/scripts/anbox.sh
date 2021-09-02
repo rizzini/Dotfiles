@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-export DISPLAY=:1
+export DISPLAY=':1'
 export LD_LIBRARY_PATH=''
 while [ -z "$(ps auxm | grep Xorg | grep ':1')" ];
 do
@@ -12,7 +12,6 @@ while [[ "$(DISPLAY=:1 xrandr | head -3 | tail -1 | awk '{print $3}')" != *"1024
     sleep 1
     echo 'aguardando xrandr..'
 done
-
 
 xinput set-int-prop $(xinput --list | grep 'USB Optical Mouse' | awk '{ print $6 }' | tr -d 'id=') "Device Enabled" 8 0
 keyboard+=($(xinput --list | grep 'Microsoft Wired Keyboard 600' | awk '{ print $6 }' | tr -d 'id=' | head -2 | tail -1))

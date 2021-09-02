@@ -136,6 +136,7 @@ nf_reject_ipv4
 nf_reject_ipv6
 nfnetlink
 nfnetlink_log
+nls_utf8
 nouveau
 ofpart
 option

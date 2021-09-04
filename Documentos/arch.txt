@@ -1,0 +1,5 @@
+Don't confuse "unstable" with "unreliable". Arch is unstable in that package versions are always changing. Contrast it with something like RHEL where you know that if you install RHEL6, it will always be kernel version 2.6.32-x and python will always be 2.6.x.
+
+Arch can be super reliable or it can be bleeding edge, it's really up to how you choose to do things. If you stick to the core repositories and do some minor due diligence before updates then it can be just as reliable as any "enterprise" Linux. If you choose to pull in packages from Testing, AUR, or third party repos then you might experience some breakage. There is also the possibility that even in core repos, packages might get abandoned/orphaned and you'll have to figure out how to deal with that when it happens (this problem isn't exclusive to Arch but typically it is easier to deal with).
+
+To me one of the major reasons for using Arch is that since it is a rolling release, you never have to reinstall it, which can be a real hassle in more traditional distros (having to reinstall apps, move data, etc).

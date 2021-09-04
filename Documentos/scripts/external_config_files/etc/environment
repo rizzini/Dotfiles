@@ -1,0 +1,7 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+#QT_X11_NO_MITSHM=1
+IGNORE_CC_MISMATCH=1 

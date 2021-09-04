@@ -1,0 +1,62 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum
+
+[1]
+Description=Configurações de aplicativo para diablo iii.exe
+blockcompositing=true
+blockcompositingrule=2
+noborder=true
+noborderrule=2
+position=9,293
+positionrule=2
+size=1292,746
+sizerule=2
+wmclass=diablo iii.exe
+wmclassmatch=1
+
+[2]
+Description=Configurações de aplicativo para steam_app_470220
+blockcompositing=true
+blockcompositingrule=2
+position=-4,520
+positionrule=2
+size=964,525
+sizerule=2
+title=UNO
+titlematch=1
+wmclass=uno.exe steam_app_470220
+wmclasscomplete=true
+wmclassmatch=1
+
+[3]
+Description=Configurações de janela para Prime Video
+position=960,-126
+positionrule=2
+size=960,650
+sizerule=2
+title=Prime Video - Chromium
+titlematch=1
+wmclass=chromium chromium
+wmclasscomplete=true
+wmclassmatch=2
+
+[4]
+Description=Configurações de nova janela
+skiptaskbar=true
+skiptaskbarrule=2
+wmclass=nwjs_kjlcknihpadniagphehmpojkkdigigjp streamlink-twitch-gui
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Configurações de janela para 💬┃geral - Discord
+noborder=true
+noborderrule=2
+title=💬┃geral - Discord
+windowrole=browser-window
+wmclass=discord discord
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=5

@@ -113,7 +113,7 @@ alias egrep='egrep --color=auto'
 alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
 alias firefox_i="/bin/bash -c 'LD_LIBRARY_PATH='' DISPLAY=:1 vglrun -d :1  /usr/lib/firefox/firefox --display=:0 & disown $last_pid'"
-alias dolphin='dolphin . & disown $last_pid'
+alias dolphin='dolphin . &> /dev/null & disown $last_pid'
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 

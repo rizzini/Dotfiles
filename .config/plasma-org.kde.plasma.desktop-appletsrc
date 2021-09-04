@@ -766,7 +766,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][90][Applets][91][Configuration]
-PreloadWeight=2
+PreloadWeight=7
 
 [Containments][90][Applets][92]
 immutability=1
@@ -789,7 +789,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][90][Applets][96][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][97][Configuration]
 PreloadWeight=42
@@ -799,7 +799,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=84
+PreloadWeight=89
 
 [Containments][90][Applets][98][Configuration][General]
 raiseMaximumVolume=true

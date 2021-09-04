@@ -24,7 +24,7 @@ if [ -n "$(wmctrl -l | grep 'Default - Wine desktop')" ]; then
 fi
 
 while [ -n "$(wmctrl -l | grep 'Default - Wine desktop')" ]; do
-    sleep 1;
+    sleep ;
 done
 
 if [ ! "$(pgrep plasmashell)" ]; then

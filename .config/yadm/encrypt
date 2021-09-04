@@ -10,3 +10,13 @@
 .Documentos/scripts/external_config_files/etc/ufw/ufw.conf
 .Documentos/scripts/external_config_files/etc/ufw/user.rules
 .Documentos/scripts/external_config_files/etc/ufw/user6.rules
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-bittorent
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-chat
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-directoryserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-dnsserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-fileserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-loginserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-mailserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-printserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-proxyserver
+.Documentos/scripts/external_config_files/etc/ufw/applications.d/ufw-webserver

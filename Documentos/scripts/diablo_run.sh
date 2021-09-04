@@ -37,7 +37,7 @@ if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /
     xdotool key XF86Calculator;
 fi
 
-while [[ -n "$(pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$(pgrep Diablo)" || -n "$(pgrep xdotool)" || -n "$(pgrep xbindkeys)" ]]; do
-    killall -9 c_diablo_xb.sh pqiv xdotool xbindkeys;
-    kill -9 $(pgrep Diablo);
-done
+# while [[ -n "$(pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$(pgrep Diablo)" || -n "$(pgrep xdotool)" || -n "$(pgrep xbindkeys)" ]]; do
+#     killall -9 c_diablo_xb.sh pqiv xdotool xbindkeys;
+#     kill -9 $(pgrep Diablo);
+# done

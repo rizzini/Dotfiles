@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-export DISPLAY=':1'
+export DISPLAY=:1
 export LD_LIBRARY_PATH=''
 while [ -z "$(ps auxm | grep Xorg | grep ':1')" ];
 do

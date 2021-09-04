@@ -2,3 +2,11 @@
 .gnupg/*
 .bash_history
 .local/share/fish/fish_history
+.Documentos/scripts/external_config_files/etc/ufw/after.rules
+.Documentos/scripts/external_config_files/etc/ufw/after6.rules
+.Documentos/scripts/external_config_files/etc/ufw/before.rules
+.Documentos/scripts/external_config_files/etc/ufw/before6.rules
+.Documentos/scripts/external_config_files/etc/ufw/sysctl.conf
+.Documentos/scripts/external_config_files/etc/ufw/ufw.conf
+.Documentos/scripts/external_config_files/etc/ufw/user.rules
+.Documentos/scripts/external_config_files/etc/ufw/user6.rules

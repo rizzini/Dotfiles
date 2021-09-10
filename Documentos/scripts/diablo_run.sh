@@ -21,9 +21,9 @@ sleep 40 &&
 if [ -n "$( wmctrl -l | grep 'Default - Wine desktop')" ]; then
 #     killall -9 plasmashell
     xbindkeys &
-    /home/lucas/Documentos/scripts/c_diablo_xb.sh &
-    sleep 1 &&
-    renice -n 20 -p $(pgrep c_diablo_xb.sh)
+#     /home/lucas/Documentos/scripts/c_diablo_xb.sh &
+#     sleep 1 &&
+#     renice -n 20 -p $(pgrep c_diablo_xb.sh)
 
 fi
 

@@ -48,5 +48,5 @@ while [ -n "$(pgrep Diablo)" ]; do
         fi
         killall -9 macro_d3_wiz.sh xdotool xbindkeys pqiv
     fi
-    sleep 0.5
+    sleep 4
 done

@@ -138,9 +138,11 @@ nfnetlink
 nfnetlink_log
 nls_utf8
 nouveau
+ns
 ofpart
 option
 pcspkr
+qrtr
 r8169
 raid6_pq
 rapl

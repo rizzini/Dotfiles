@@ -91,38 +91,26 @@ function copy
     end
 end
 
+# Replace some more things with better alternatives
+[ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
 
-## Useful aliases
-
-##Custon
 # alias h='__fzf_search_history'
 alias mpv='mpv --geometry=50%:50% --autofit-larger=70%x70% --video-sync=display-resample'
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'
 # Replace ls with exa
 alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-
-
-# Replace some more things with better alternatives
-[ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
-
-# Common use
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
-alias gitpkg='pacman -Q | grep -i "\-git" '			# List amount of -git packages
+alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB (expac must be installed)
+alias gitpkg='pacman -Q | grep -i "\-git" ' # List amount of -git packages
 alias firefox_i="/bin/bash -c 'LD_LIBRARY_PATH='' DISPLAY=:1 vglrun -d :1  /usr/lib/firefox/firefox --display=:0 & disown $last_pid'"
 alias dolphin='dolphin . &> /dev/null & disown $last_pid'
-#get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
-# Replace yay with paru
-[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
-
 
 ## Import colorscheme from 'wal' asynchronously
 # if type "wal" >> /dev/null 2>&1

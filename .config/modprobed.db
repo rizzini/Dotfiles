@@ -86,6 +86,7 @@ iptable_filter
 iptable_mangle
 iptable_nat
 irqbypass
+isofs
 jbd2
 joydev
 kvm

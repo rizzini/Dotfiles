@@ -11,7 +11,7 @@ set -x EDITOR nano
 
 
 if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
-    set -x KWIN_TRIPLE_BUFFER1
+    set -x KWIN_TRIPLE_BUFFER 1
     set -x __GL_YIELD USLEEP
     set -x __GL_MaxFramesAllowed 1
     set -x KWIN_COMPOSE O2ES

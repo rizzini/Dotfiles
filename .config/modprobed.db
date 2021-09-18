@@ -39,6 +39,8 @@ dm_mod
 drm
 drm_kms_helper
 drm_ttm_helper
+ebtable_filter
+ebtables
 ecc
 ecdh_generic
 ehci_hcd
@@ -213,6 +215,7 @@ vfio_virqfd
 vhost
 vhost_iotlb
 vhost_net
+vhost_vsock
 video
 videobuf2_common
 videobuf2_memops

@@ -1,9 +1,9 @@
 #!/bin/bash
 killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;
-kill -9 "$( pgrep Diablo)";
+kill -9 "$(pgrep Diablo)";
 
 if [[ -z "$1" ]] || [[ "$1" != 'BR' && "$1" != 'US' ]]; then
-    exit;
+    exit 1;
 fi
 
 if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"false"* ]]; then
@@ -11,14 +11,14 @@ if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /
 fi
 
 if [ "$1" == 'BR' ]; then
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &
+    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &
 elif [ "$1" == 'US' ]; then 
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
+    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
 fi
-
+killall winedevice.exe
 sleep 40 &&
-
-if [ -n "$( wmctrl -l | grep 'Default - Wine desktop')" ]; then
+killall winedevice.exe
+if [ -n "$( wmctrl -l | grep 'Diablo III')" ]; then
 #     killall -9 plasmashell
     xbindkeys &
 #     /home/lucas/Documentos/scripts/c_diablo_xb.sh &
@@ -27,7 +27,7 @@ if [ -n "$( wmctrl -l | grep 'Default - Wine desktop')" ]; then
 
 fi
 
-while [ -n "$( wmctrl -l | grep 'Default - Wine desktop')" ]; do
+while [ -n "$( wmctrl -l | grep 'Diablo III')" ]; do
     sleep 2
 done
 

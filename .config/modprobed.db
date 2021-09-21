@@ -128,6 +128,7 @@ nf_defrag_ipv6
 nf_log_common
 nf_log_ipv4
 nf_log_ipv6
+nf_log_syslog
 nf_nat
 nf_nat_ftp
 nf_nat_h323
@@ -170,6 +171,7 @@ snd_hda_intel
 snd_hwdep
 snd_intel_dspcfg
 snd_intel_nhlt
+snd_intel_sdw_acpi
 snd_pcm
 snd_pcm_dmaengine
 snd_rawmidi
@@ -230,6 +232,7 @@ vmw_vsock_vmci_transport
 vmxnet3
 vsock
 vsock_loopback
+winesync
 wmi
 x86_pkg_temp_thermal
 x_tables

@@ -15,8 +15,7 @@ if [ "$1" == 'BR' ]; then
 elif [ "$1" == 'US' ]; then 
     WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
 fi
-killall winedevice.exe
-sleep 40 &&
+sleep 30 &&
 killall winedevice.exe
 if [ -n "$( wmctrl -l | grep 'Diablo III')" ]; then
 #     killall -9 plasmashell
@@ -31,6 +30,8 @@ while [ -n "$( wmctrl -l | grep 'Diablo III')" ]; do
     sleep 2
 done
 
+WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /opt/wine_tkg/bin/wineboot -k
+
 if [ ! "$( pgrep plasmashell)" ]; then
     /usr/bin/plasmashell &> /dev/null & disown $! &
 fi
@@ -41,7 +42,10 @@ if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /
     xdotool key XF86Calculator;
 fi
 
-while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" ]]; do
+while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
     killall -9 c_diablo_xb.sh pqiv xdotool xbindkeys;
     kill -9 $(pgrep Diablo);
+    kill -9 $(pgrep .exe)
+    kill -9 $(pgrep wine)
 done
+

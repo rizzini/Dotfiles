@@ -47,5 +47,6 @@ while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Dia
     kill -9 $(pgrep Diablo);
     kill -9 $(pgrep .exe)
     kill -9 $(pgrep wine)
+    kill -9 $(ps -aux | grep -E "wine|windows" | sed '$d' |  awk '{print $2}')
 done
 

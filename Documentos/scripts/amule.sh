@@ -1,6 +1,6 @@
 #!/bin/bash
 while :;do
-    if [ -z "$(pgrep amule)" ];then
+    if [ -z "$(pgrep -x amule)" ];then
         sleep 1
         /usr/bin/amule &> /dev/null &
         sleep 5

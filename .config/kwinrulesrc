@@ -53,5 +53,16 @@ wmclass=diablo iii.exe diablo iii.exe
 wmclasscomplete=true
 wmclassmatch=1
 
+[6]
+Description=Configurações de janela para Pornhub Download
+size=761,587
+sizerule=2
+title=Pornhub Download
+titlematch=2
+windowrole=browser
+wmclass=chromium chromium
+wmclasscomplete=true
+wmclassmatch=1
+
 [General]
-count=5
+count=6

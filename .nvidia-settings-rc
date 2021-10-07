@@ -2,7 +2,7 @@
 # /home/lucas/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sat Sep 25 15:08:59 2021
+# Generated on Tue Oct  5 08:40:48 2021
 #
 
 # ConfigProperties:
@@ -44,15 +44,15 @@ Timer = PowerMizer_Monitor_(GPU_0),No,1000
 [DPY:DVI-I-1]/DitheringMode=0
 [DPY:DVI-I-1]/DitheringDepth=0
 [DPY:DVI-I-1]/SynchronousPaletteUpdates=0
-[DPY:HDMI-0]/RedBrightness=0.000000
-[DPY:HDMI-0]/GreenBrightness=0.000000
-[DPY:HDMI-0]/BlueBrightness=0.000000
+[DPY:HDMI-0]/RedBrightness=0.020525
+[DPY:HDMI-0]/GreenBrightness=0.020525
+[DPY:HDMI-0]/BlueBrightness=0.020525
 [DPY:HDMI-0]/RedContrast=0.000000
 [DPY:HDMI-0]/GreenContrast=0.000000
 [DPY:HDMI-0]/BlueContrast=0.000000
-[DPY:HDMI-0]/RedGamma=1.000000
-[DPY:HDMI-0]/GreenGamma=1.000000
-[DPY:HDMI-0]/BlueGamma=1.000000
+[DPY:HDMI-0]/RedGamma=1.040724
+[DPY:HDMI-0]/GreenGamma=1.040724
+[DPY:HDMI-0]/BlueGamma=1.040724
 [DPY:HDMI-0]/Dithering=0
 [DPY:HDMI-0]/DitheringMode=0
 [DPY:HDMI-0]/DitheringDepth=0

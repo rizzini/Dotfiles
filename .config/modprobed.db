@@ -110,6 +110,7 @@ mei_hdcp
 mei_me
 mii
 mousedev
+mptcp_diag
 mtd
 mxm_wmi
 nbd
@@ -138,8 +139,12 @@ nf_nat_sip
 nf_nat_tftp
 nf_reject_ipv4
 nf_reject_ipv6
+nf_tables
 nfnetlink
 nfnetlink_log
+nft_chain_nat
+nft_counter
+nft_masq
 nls_utf8
 nouveau
 ns
@@ -150,6 +155,7 @@ qrtr
 r8169
 raid6_pq
 rapl
+raw_diag
 rc_core
 realtek
 rfcomm
@@ -198,10 +204,13 @@ tpm
 trusted
 ttm
 tun
+tunnel4
+tunnel6
 uas
 udf
 udp_diag
 uinput
+unix_diag
 usb_storage
 usb_wwan
 usbhid
@@ -236,6 +245,8 @@ winesync
 wmi
 x86_pkg_temp_thermal
 x_tables
+xfrm6_tunnel
+xfrm_interface
 xfs
 xhci_hcd
 xhci_pci

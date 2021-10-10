@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ -n "$1" ]; then
-	/usr/bin/kate -n $1 &> /dev/null &
-else
-	/usr/bin/kate -n &> /dev/null &
-fi
-

@@ -106,7 +106,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages accordi
 alias gitpkg='pacman -Q | grep -i "\-git" ' # List amount of -git packages
 alias dolphin='dolphin . &> /dev/null & disown $last_pid'
 alias jctl="journalctl -p 3 -xb"
-
+alias syadm="sudo yadm -Y /etc/yadm"
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 

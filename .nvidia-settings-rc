@@ -2,7 +2,7 @@
 # /home/lucas/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Fri Oct  8 21:12:03 2021
+# Generated on Wed Oct 13 19:32:39 2021
 #
 
 # ConfigProperties:
@@ -14,13 +14,13 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = PowerMizer_Monitor_(GPU_0),No,1000
-Timer = Thermal_Monitor_(GPU_0),No,1000
 Timer = Memory_Used_(GPU_0),No,3000
+Timer = Thermal_Monitor_(GPU_0),No,1000
+Timer = PowerMizer_Monitor_(GPU_0),No,1000
 
 # Attributes:
 
-0/SyncToVBlank=0
+0/SyncToVBlank=1
 0/LogAniso=0
 0/FSAA=0
 0/TextureSharpen=0
@@ -44,15 +44,15 @@ Timer = Memory_Used_(GPU_0),No,3000
 [DPY:DVI-I-1]/DitheringMode=0
 [DPY:DVI-I-1]/DitheringDepth=0
 [DPY:DVI-I-1]/SynchronousPaletteUpdates=0
-[DPY:HDMI-0]/RedBrightness=0.018293
-[DPY:HDMI-0]/GreenBrightness=0.018293
-[DPY:HDMI-0]/BlueBrightness=0.018293
+[DPY:HDMI-0]/RedBrightness=0.000000
+[DPY:HDMI-0]/GreenBrightness=0.000000
+[DPY:HDMI-0]/BlueBrightness=0.000000
 [DPY:HDMI-0]/RedContrast=0.000000
 [DPY:HDMI-0]/GreenContrast=0.000000
 [DPY:HDMI-0]/BlueContrast=0.000000
-[DPY:HDMI-0]/RedGamma=0.884756
-[DPY:HDMI-0]/GreenGamma=0.884756
-[DPY:HDMI-0]/BlueGamma=0.884756
+[DPY:HDMI-0]/RedGamma=1.000000
+[DPY:HDMI-0]/GreenGamma=1.000000
+[DPY:HDMI-0]/BlueGamma=1.000000
 [DPY:HDMI-0]/Dithering=0
 [DPY:HDMI-0]/DitheringMode=0
 [DPY:HDMI-0]/DitheringDepth=0

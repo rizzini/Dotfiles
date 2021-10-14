@@ -2,5 +2,4 @@
 .gnupg/*
 .bash_history
 .local/share/fish/fish_history
-Documentos/scripts/external_config_files/etc/ufw/*
-Documentos/scripts/external_config_files/aur_vote/*
+

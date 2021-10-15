@@ -5,5 +5,10 @@
 if [ -n "$(lsmod | grep nouveau)" ]; then
     /usr/bin/printf "GPU: ""$(/usr/bin/sensors | /usr/bin/grep 'temp1:' | /usr/bin/tail -1 | /usr/bin/cut -c 16-17)""ºc""\n"
 else
-    /usr/bin/printf "GPU: ""$(/usr/bin/echo $(nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv,nounits,noheader | cut -c1-2))""ºc""\n"
+    temp_gpu=$(nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv,nounits,noheader | cut -c1-2)
+    if [ $temp_gpu -ge 70 ];then
+        /usr/bin/printf "GPU: ""$(/usr/bin/echo 'ALERTA!')""\n"
+    else
+        /usr/bin/printf "GPU: ""$(/usr/bin/echo $temp_gpu)""ºc""\n"
+    fi
 fi

@@ -1,3 +1,0 @@
-[submodule ".sys_dotfiles"]
-	path = .sys_dotfiles
-	url = git@github.com:rizzini/Dotfiles.git

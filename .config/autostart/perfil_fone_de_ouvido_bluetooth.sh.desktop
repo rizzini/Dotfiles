@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/lucas/Documentos/scripts/perfil_fone_de_ouvido_bluetooth.sh
+Icon=dialog-scripts
+Name=perfil_fone_de_ouvido_bluetooth.sh
+Path=
+Type=Application
+X-KDE-AutostartScript=true

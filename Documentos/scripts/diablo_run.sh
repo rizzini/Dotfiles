@@ -30,7 +30,7 @@ while [ -n "$( wmctrl -l | grep 'Diablo III')" ]; do
     sleep 2
 done
 
-WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /opt/wine_tkg/bin/wineboot -k
+#WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /opt/wine_tkg/bin/wineboot -k
 
 if [ ! "$( pgrep plasmashell)" ]; then
     /usr/bin/plasmashell &> /dev/null & disown $! &

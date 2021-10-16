@@ -43,7 +43,7 @@ if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /
 fi
 
 while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
-    killall -9 c_diablo_xb.sh pqiv xdotool xbindkeys;
+    killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;
     kill -9 $(pgrep Diablo);
     kill -9 $(pgrep .exe)
     kill -9 $(pgrep wine)

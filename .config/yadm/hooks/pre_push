@@ -1,5 +1,5 @@
 #!/bin/bash
-yadm commit -m "atualizando"
+yadm commit -a -m "atualizando"
 if [ ! $? -eq 0 ]; then
     exit 0
 fi

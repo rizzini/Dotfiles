@@ -17,6 +17,7 @@ if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
     set -x KWIN_COMPOSE O2ES
     set -x KWIN_OPENGL_INTERFACE egl
     set -x __GL_THREADED_OPTIMIZATION 1
+    set -x KWIN_USE_BUFFER_AGE 0
     set -x __GL_SHADER_DISK_CACHE 1
     set -x __GL_SHADER_DISK_CACHE_PATH '/tmp/'
 end

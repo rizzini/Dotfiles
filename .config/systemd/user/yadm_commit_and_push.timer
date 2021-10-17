@@ -1,0 +1,8 @@
+[Unit]
+Description=Atualiza repositório Dotfiles(https://github.com/rizzini/Dotfiles)
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target

@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Dependencies: scrot tesseract-ocr imagemagick
 language=${1:-eng}
-set -e
+# set -e
 image_file=/tmp/clipboard.png
 output_file=/tmp/clipboard
 trap 'rm $image_file*' EXIT

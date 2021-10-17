@@ -1,5 +1,5 @@
 [$Version]
-update_info=kwinrules.upd:replace-placement-string-to-enum
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
 Description=Configurações de janela para Prime Video
@@ -52,3 +52,4 @@ wmclassmatch=1
 
 [General]
 count=5
+rules=1,2,3,4,5

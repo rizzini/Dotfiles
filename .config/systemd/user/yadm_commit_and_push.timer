@@ -3,6 +3,7 @@ Description=Atualiza repositório Dotfiles(https://github.com/rizzini/Dotfiles)
 
 [Timer]
 OnCalendar=hourly
+OnBootSec=1min
 
 [Install]
 WantedBy=timers.target

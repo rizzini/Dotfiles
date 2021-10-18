@@ -2,6 +2,3 @@
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     yadm commit -a -m "atualizando"
 fi
-
-
-

@@ -1,4 +1,6 @@
 #!/bin/bash
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     yadm commit -a -m "atualizando"
+else
+    echo "Você não está no subvolume ROOT. push não realizado"
 fi

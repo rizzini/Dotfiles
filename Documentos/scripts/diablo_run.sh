@@ -17,7 +17,7 @@ elif [ "$1" == 'US' ]; then
 fi
 
 counter=0
-while [ ! $counter -eq 120 ]; do
+while [ ! $counter -eq 80 ]; do
     counter=$(($counter + 2))
     killall -9 winedevice.exe
     sleep 2
@@ -43,12 +43,6 @@ if [ ! "$( pgrep plasmashell)" ]; then
     /usr/bin/plasmashell &> /dev/null & disown $! &
 fi
 
-sleep 1 &&
-
-if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"true"* ]]; then
-    xdotool key XF86Calculator;
-fi
-
 while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
     killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;
     kill -9 $(pgrep Diablo);
@@ -56,4 +50,8 @@ while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Dia
     kill -9 $(pgrep wine)
     kill -9 $(ps -aux | grep -E "wine|windows" | sed '$d' |  awk '{print $2}')
 done
+
+if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"true"* ]]; then
+    xdotool key XF86Calculator;
+fi
 

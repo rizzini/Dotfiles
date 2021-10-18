@@ -17,13 +17,12 @@ elif [ "$1" == 'US' ]; then
 fi
 
 counter=0
-while [ ! $counter -eq 80 ]; do
+while [ $counter -le 60 ]; do
     counter=$(($counter + 2))
     killall -9 winedevice.exe
     sleep 2
 done
 
-killall winedevice.exe
 if [ -n "$( wmctrl -l | grep 'Diablo III')" ]; then
 #     killall -9 plasmashell
     xbindkeys &

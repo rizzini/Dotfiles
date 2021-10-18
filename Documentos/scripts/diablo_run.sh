@@ -15,7 +15,14 @@ if [ "$1" == 'BR' ]; then
 elif [ "$1" == 'US' ]; then 
     WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
 fi
-sleep 240 &&
+
+counter=0
+while [ ! $counter -eq 120 ]; do
+    counter=$(($counter + 2))
+    killall -9 winedevice.exe
+    sleep 2
+done
+
 killall winedevice.exe
 if [ -n "$( wmctrl -l | grep 'Diablo III')" ]; then
 #     killall -9 plasmashell

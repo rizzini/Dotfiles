@@ -23,24 +23,35 @@ while [ $counter -le 60 ]; do
     sleep 2
 done
 
-if [ -n "$( wmctrl -l | grep 'Diablo III')" ]; then
-#     killall -9 plasmashell
-    xbindkeys &
-#     /home/lucas/Documentos/scripts/c_diablo_xb.sh &
-#     sleep 1 &&
-#     renice -n 20 -p $(pgrep c_diablo_xb.sh)
-
+if [ -n "$(pgrep kwin)" ];then 
+    if [ -n "$(pgrep 'Diablo III.exe')" ]; then 
+        xbindkeys &
+    fi
+    while [ -n "$(pgrep 'Diablo III.exe')" ]; do
+        sleep 2
+    done
+else
+    if [ -n "$(wmctrl -l | grep 'Diablo III')" ]; then
+        xbindkeys &
+    fi
+    while [ -n "$(wmctrl -l | grep 'Diablo III')" ]; do
+        sleep 2
+    done
 fi
 
-while [ -n "$( wmctrl -l | grep 'Diablo III')" ]; do
-    sleep 2
-done
+
 
 #WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /opt/wine_tkg/bin/wineboot -k
 
 if [ ! "$( pgrep plasmashell)" ]; then
     /usr/bin/plasmashell &> /dev/null & disown $! &
 fi
+
+if [ ! "$( pgrep plasmashell)" ]; then
+    /usr/bin/kwin_x11 --replace &> /dev/null & disown $! &
+fi
+
+
 
 while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
     killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;

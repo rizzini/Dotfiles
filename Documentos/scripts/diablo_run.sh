@@ -47,8 +47,6 @@ if [ ! "$( pgrep plasmashell)" ]; then
     /usr/bin/kwin_x11 --replace &> /dev/null & disown $! &
 fi
 
-
-
 while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Diablo)" || -n "$( pgrep xdotool)" || -n "$( pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
     killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;
     kill -9 $(pgrep Diablo);
@@ -60,4 +58,3 @@ done
 if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"true"* ]]; then
     xdotool key XF86Calculator;
 fi
-

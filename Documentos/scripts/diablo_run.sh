@@ -13,9 +13,9 @@ if [ "$( pgrep plasmashell)" ]; then
 fi
 
 if [ "$1" == 'BR' ]; then
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &
+    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch &> /dev/null &
 elif [ "$1" == 'US' ]; then 
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &
+    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/Diablo\ III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &> /dev/null &
 fi
 
 counter=0
@@ -36,9 +36,7 @@ else
     if [ -n "$(pgrep 'Diablo III.exe')" ]; then
         xbindkeys &
     fi
-    while [ -n "$(pgrep 'Diablo III.exe')" ]; do
-        sleep 2
-    done
+    kdialog --msgbox 'Fechar Diablo III'
 fi
 
 if [ -z "$(pgrep plasmashell)" ]; then

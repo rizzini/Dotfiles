@@ -6,8 +6,10 @@ if [[ -z "$1" ]] || [[ "$1" != 'BR' && "$1" != 'US' ]]; then
     exit 1;
 fi
 
-if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"false"* ]]; then
-    xdotool key XF86Calculator;
+if [ "$( pgrep plasmashell)" ]; then
+	if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"false"* ]]; then
+	    xdotool key XF86Calculator;
+	fi
 fi
 
 if [ "$1" == 'BR' ]; then
@@ -55,6 +57,8 @@ while [[ -n "$( pgrep c_diablo_xb.sh)" || -n "$(pgrep pqiv)" || -n "$( pgrep Dia
     kill -9 $(ps -aux | grep -E "wine|windows" | sed '$d' |  awk '{print $2}')
 done
 
-if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"true"* ]]; then
-    xdotool key XF86Calculator;
+if [ "$( pgrep plasmashell)" ]; then
+	if [[ $(dbus-send --session --dest=org.freedesktop.Notifications --print-reply /org/freedesktop/Notifications org.freedesktop.DBus.Properties.Get string:org.freedesktop.Notifications  string:Inhibited) == *"true"* ]]; then
+	    xdotool key XF86Calculator;
+	fi
 fi

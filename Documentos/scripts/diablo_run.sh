@@ -41,11 +41,11 @@ else
     done
 fi
 
-if [ ! "$( pgrep plasmashell)" ]; then
+if [ -z "$(pgrep plasmashell)" ]; then
     /usr/bin/plasmashell &> /dev/null & disown $! &
 fi
 
-if [ ! "$( pgrep plasmashell)" ]; then
+if [ -z "$(ps -ef | grep kwin | grep -v grep | grep -v  defunct | awk '{print $2}')" ]; then
     /usr/bin/kwin_x11 --replace &> /dev/null & disown $! &
 fi
 

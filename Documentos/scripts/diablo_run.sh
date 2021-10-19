@@ -24,17 +24,17 @@ while [ $counter -le 60 ]; do
 done
 
 if [ -n "$(pgrep kwin)" ];then 
-    if [ -n "$(pgrep 'Diablo III.exe')" ]; then 
-        xbindkeys &
-    fi
-    while [ -n "$(pgrep 'Diablo III.exe')" ]; do
-        sleep 2
-    done
-else
-    if [ -n "$(wmctrl -l | grep 'Diablo III')" ]; then
+    if [ -n "$(wmctrl -l | grep 'Diablo III')" ]; then 
         xbindkeys &
     fi
     while [ -n "$(wmctrl -l | grep 'Diablo III')" ]; do
+        sleep 2
+    done
+else
+    if [ -n "$(pgrep 'Diablo III.exe')" ]; then
+        xbindkeys &
+    fi
+    while [ -n "$(pgrep 'Diablo III.exe')" ]; do
         sleep 2
     done
 fi

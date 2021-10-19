@@ -25,7 +25,7 @@ while [ $counter -le 60 ]; do
     sleep 2
 done
 
-if [ -n "$(pgrep kwin)" ];then 
+if [ -n "$(ps -ef | grep kwin | grep -v grep | grep -v  defunct | awk '{print $2}')" ];then 
     if [ -n "$(wmctrl -l | grep 'Diablo III')" ]; then 
         xbindkeys &
     fi

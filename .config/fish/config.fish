@@ -94,7 +94,6 @@ end
 [ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
 
 # alias h='__fzf_search_history'
-alias mpv='mpv --geometry=100%:100% --autofit-larger=90%x90% --video-sync=display-resample'
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'
 # Replace ls with exa

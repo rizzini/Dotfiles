@@ -31,6 +31,15 @@ wmclass=discord discord
 wmclasscomplete=true
 wmclassmatch=1
 
+[3b9d91a2-b7e1-4c7d-b9a6-3c1461a6bbb1]
+Description=Configurações para zenity zenity
+position=247,683
+positionrule=3
+types=32
+wmclass=zenity zenity
+wmclasscomplete=true
+wmclassmatch=1
+
 [4]
 Description=Configurações de janela para Diablo III
 noborder=true
@@ -50,6 +59,15 @@ wmclass=chromium chromium
 wmclasscomplete=true
 wmclassmatch=1
 
+[6]
+Description=Configurações para zenity zenity
+position=247,683
+positionrule=3
+types=32
+wmclass=zenity zenity
+wmclasscomplete=true
+wmclassmatch=1
+
 [General]
-count=5
-rules=1,2,3,4,5
+count=6
+rules=1,2,3,4,5,6

@@ -108,7 +108,7 @@ alias jctl="journalctl -p 3 -xb"
 alias syadm="sudo yadm -Y /etc/yadm"
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
+alias disown='disown $last_pid'
 ## Import colorscheme from 'wal' asynchronously
 # if type "wal" >> /dev/null 2>&1
 #      /usr/bin/cat ~/.cache/wal/sequences

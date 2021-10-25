@@ -4,7 +4,6 @@
 while :;do
     test -f /tmp/antigo && touch /tmp/antigo
     atual=$(xclip -o)
-    echo $atual
     antigo=$(cat /tmp/antigo)
     regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
     if [[ $atual =~ $regex ]];    then 
@@ -13,11 +12,12 @@ while :;do
             cat $atual &> /tmp/antigo
             cd /home/lucas/Downloads/
             youtube-dl  "$atual" &> /dev/null &
+            echo "Download iniciado. Downloads em andamento: $(ps aux | grep yout | wc -l)"
         else
-            echo "EQUAL"
+            echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
         fi
     
     fi    
-
+echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
 sleep 1
 done

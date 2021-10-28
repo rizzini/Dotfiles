@@ -90,9 +90,6 @@ function copy
     end
 end
 
-# Replace some more things with better alternatives
-[ ! -x /usr/bin/bat ] && [ -x /usr/bin/cat ] && alias cat='bat'
-
 # alias h='__fzf_search_history'
 alias k=kate
 alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid'
@@ -109,7 +106,9 @@ alias syadm="sudo yadm -Y /etc/yadm"
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias disown='disown $last_pid'
-alias transmission-cli='transmission-cli --download-dir=/home/lucas/Downloads/ '
+alias transmission-cli='transmission-cli --download-dir=/home/lucas/Downloads/'
+alias cat='bat'
+
 ## Import colorscheme from 'wal' asynchronously
 # if type "wal" >> /dev/null 2>&1
 #      /usr/bin/cat ~/.cache/wal/sequences

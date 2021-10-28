@@ -1,6 +1,10 @@
 #!/bin/bash
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     yadm commit -a -m "atualizando"
+    if [ "$?" != "0" ]; then
+        echo -e "ARQUIVOS MODIFICADOS:\n$(yadm diff --name-only)\n"
+        yadm diff
+    fi
 else
-    echo "Você não está no subvolume ROOT. push não realizado"
+    echo -e "Você não está no subvolume ROOT. push não realizado"
 fi

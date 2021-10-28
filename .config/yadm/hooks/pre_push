@@ -1,14 +1,17 @@
 #!/bin/bash
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     if [ -n "$(yadm diff --name-only)" ]; then
-        yadm diff
+        yadm diff;
         if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
-            echo -e "\nARQUIVOS MODIFICADOS:\n~/$(yadm diff --name-only)\n"
+            echo -e "\nARQUIVOS MODIFICADOS:\n";
+            for i in "$(yadm diff --name-only)"; do
+                echo -e "$i";
+            done            
         else
-            echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"
+            echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n";
         fi
     fi
-    yadm commit -a -m "atualizando"
+    yadm commit -a -m "atualizando";
 else
-    echo -e "Você não está no subvolume ROOT. push não realizado"
+    echo -e "Você não está no subvolume ROOT. push não realizado";
 fi

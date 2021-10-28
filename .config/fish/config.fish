@@ -1,4 +1,4 @@
-set fish_greeting;
+# set fish_greeting "";
 set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;
 
@@ -13,8 +13,8 @@ end
 
 export PATH="/opt/VirtualGL/bin/:$PATH";
 
-set -x WINEFSYNC 1;
-set -x WINEESYNC 1;
+# set -x WINEFSYNC 1;
+# set -x WINEESYNC 1;
 
 # if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
 #     set -x __GL_YIELD USLEEP

@@ -7,9 +7,6 @@ set -x TERM konsole
 set -x VISUAl nano
 set -x EDITOR nano
 
-
-
-
 if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
     set -x KWIN_TRIPLE_BUFFER 1
     set -x __GL_YIELD USLEEP

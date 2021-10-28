@@ -1,4 +1,4 @@
-# set fish_greeting "";
+set fish_greeting;
 set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;
 
@@ -33,7 +33,6 @@ if test -d ~/.local/bin
         set -p PATH ~/.local/bin
     end
 end
-
 
 ## Starship prompt
 source ("/usr/bin/starship" init fish --print-full-init | psub);

@@ -4,7 +4,7 @@ source ~/.profile
 
 if test $DISPLAY = ':0' 
     if ! string match -q "*archlinux/opengl_libs/nvidia/*" $LD_LIBRARY_PATH
-        set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/"
+    LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/"
     end
 end
 if test $DISPLAY = ':1' 
@@ -16,16 +16,16 @@ export PATH="/opt/VirtualGL/bin/:$PATH"
 set -x WINEFSYNC 1
 set -x WINEESYNC 1
 
-if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
-    set -x __GL_YIELD USLEEP
-    set -x __GL_MaxFramesAllowed 1
-    set -x KWIN_COMPOSE O2ES
-    set -x __GL_THREADED_OPTIMIZATION 1
-    set -x KWIN_OPENGL_INTERFACE egl
-    set -x __GL_SHADER_DISK_CACHE 1
-    set -x __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/'
-    set -x KWIN_TRIPLE_BUFFER 1
-end
+# if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia') ;
+# __GL_YIELD USLEEP
+# __GL_MaxFramesAllowed 1
+# KWIN_COMPOSE O2ES
+# __GL_THREADED_OPTIMIZATION 1
+# KWIN_OPENGL_INTERFACE egl
+# __GL_SHADER_DISK_CACHE 1
+# __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/'
+# KWIN_TRIPLE_BUFFER 1
+# end
 
 ## Add ~/.local/bin to PATH
 if test -d ~/.local/bin
@@ -67,28 +67,6 @@ else
   bind '$' __history_previous_command_arguments
 end
 
-
-## Fish command history
-function history
-    builtin history --show-time='%F %T '
-end
-
-function backup --argument filename
-    cp $filename $filename.bak
-end
-
-
-## Copy DIR1 DIR2
-function copy
-    set count (count $argv | tr -d \n)
-    if test "$count" = 2; and test -d "$argv[1]"
-	set from (echo $argv[1] | trim-right /)
-	set to (echo $argv[2])
-        command cp -r $from $to
-    else
-        command cp $argv
-    end
-end
 
 # alias h='__fzf_search_history'
 alias k=kate

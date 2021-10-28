@@ -1,6 +1,6 @@
 #!/bin/bash
 counter=0
-
+mkdir -p /home/lucas/Downloads/xxx/
 while :;do
     counter=$(($counter + 1))
     test -f /tmp/antigo && touch /tmp/antigo
@@ -22,8 +22,6 @@ while :;do
 if [ $((counter%2)) -eq 0 ];
 then
     echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
-else
-    echo "odd";
 fi
 sleep 1
 done

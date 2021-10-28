@@ -39,11 +39,9 @@ end
 source ("/usr/bin/starship" init fish --print-full-init | psub);
 
 alias k=kate;
-alias plasmashell='killall plasmashell & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid';
+alias plasmashell='killall plasmashell &> /dev/null & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid';
 alias ls='exa -al --color=always --group-directories-first --icons';
 alias grep='grep --color=auto';
-alias fgrep='fgrep --color=auto';
-alias egrep='egrep --color=auto';
 alias big="expac -H M '%m\t%n' | sort -h | nl";
 alias gitpkg='pacman -Q | grep -i "\-git" ';
 alias dolphin='dolphin . &> /dev/null & disown $last_pid';

@@ -3,9 +3,9 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     if [ -n "$(yadm diff --name-only)" ]; then
         yadm diff
         if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
-            echo -e "\nARQUIVOS MODIFICADOS:\n$(yadm diff --name-only)\n"
+            echo -e "\nARQUIVOS MODIFICADOS:\n/$(yadm diff --name-only)\n"
         else
-            echo -e "\nARQUIVO MODIFICADO:\n$(yadm diff --name-only)\n"
+            echo -e "\nARQUIVO MODIFICADO:\n/$(yadm diff --name-only)\n"
         fi
     fi
     yadm commit -a -m "atualizando"

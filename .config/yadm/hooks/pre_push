@@ -2,9 +2,12 @@
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     if [ -n "$(yadm diff --name-only)" ]; then
         yadm diff;
-        if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
+        if [ -z "$(yadm diff --name-only)" ]; then
+            echo 'NENHUM ARQUIVO MODIFICADO'
+            exit 1
+        elif [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
             echo -e "\nARQUIVOS MODIFICADOS:";
-            for i in "$(yadm diff --name-only)"; do
+            for i in $(yadm diff --name-only); do
                 echo -e "$i";
             done            
         else

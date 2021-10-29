@@ -1,6 +1,7 @@
 ac97_bus
 aesni_intel
 af_alg
+af_key
 agpgart
 ahci
 algif_hash

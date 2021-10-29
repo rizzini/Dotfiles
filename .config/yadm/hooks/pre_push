@@ -5,10 +5,10 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
             echo -e "\nARQUIVOS MODIFICADOS:"
             for i in $(yadm diff --name-only); do
-                echo -e "/$i";
+                echo -e "~/$i";
             done
         else
-            echo -e "\nARQUIVO MODIFICADO:\n/$(yadm diff --name-only)\n"
+            echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"
         fi
     else
         echo -e "\nNENHUM ARQUIVO MODIFICADO\n"
@@ -16,10 +16,10 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     if [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -ge 2 ]; then
         echo -e "\nARQUIVOS ADICIONADOS:"
         for i in $(yadm status --porcelain | grep "^A" | cut -c 4-); do
-            echo -e "/$i";
+            echo -e "~/$i";
         done
     elif [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -eq 1 ]; then
-        echo -e "\nARQUIVO ADICIONADO:\n/$(yadm status --porcelain | grep "^A" | cut -c 4-)\n"
+        echo -e "\nARQUIVO ADICIONADO:\n~/$(yadm status --porcelain | grep "^A" | cut -c 4-)\n"
     else
         echo -e "\nNENHUM ARQUIVO ADICIONADO\n"
     fi

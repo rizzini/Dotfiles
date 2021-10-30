@@ -102,6 +102,7 @@ libphy
 llc
 loop
 lpc_ich
+lzo_rle
 mac_hid
 mbcache
 mc
@@ -268,3 +269,4 @@ xt_recent
 xt_state
 xt_tcpudp
 xt_u32
+zram

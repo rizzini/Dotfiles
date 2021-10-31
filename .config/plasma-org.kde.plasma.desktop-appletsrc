@@ -5,7 +5,7 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
-ss
+
 [Containments][147]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=

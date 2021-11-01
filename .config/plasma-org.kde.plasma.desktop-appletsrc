@@ -631,7 +631,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=99
+PreloadWeight=100
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558

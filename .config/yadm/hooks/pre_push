@@ -14,6 +14,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
                     echo -e "~/$i";
                 fi
             done
+            echo -e "\n"
         else
             if [[ ! "$(yadm diff --name-only)" == *"appletsrc"* ]]; then
                 echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"

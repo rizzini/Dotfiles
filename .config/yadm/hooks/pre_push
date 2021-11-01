@@ -14,7 +14,9 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
                 fi
             done
         else
-            echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"
+            if [[ ! "$(yadm diff --name-only)" == *"appletsrc"* ]]; then
+                echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"
+            fi
         fi
     fi
     if [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -ge 2 ]; then
@@ -26,7 +28,6 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         echo -e "\nARQUIVO ADICIONADO:\n~/$(yadm status --porcelain | grep "^A" | cut -c 4-)\n"
     fi
     yadm commit -a -m "atualizando"
-    echo 'atualizou'
 
 else
     echo -e "Você não está no subvolume ROOT. push não realizado"

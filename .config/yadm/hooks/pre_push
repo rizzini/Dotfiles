@@ -2,7 +2,7 @@
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then
-             yadm diff | filterdiff -p 1 -x .config/plasma-org.kde.plasma.desktop-appletsrc
+            yadm diff | filterdiff -p 1 -x .config/plasma-org.kde.plasma.desktop-appletsrc
         else
             yadm diff
         fi

@@ -26,6 +26,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         for i in $(yadm status --porcelain | grep "^A" | cut -c 4-); do
             echo -e "~/$i";
         done
+        echo -e "\n"
     elif [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -eq 1 ]; then
         echo -e "\nARQUIVO ADICIONADO:\n~/$(yadm status --porcelain | grep "^A" | cut -c 4-)\n"
     fi

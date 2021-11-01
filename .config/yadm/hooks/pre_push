@@ -1,4 +1,5 @@
 #!/bin/bash
+#checar ultimo item da lista e pular uma linhda
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then

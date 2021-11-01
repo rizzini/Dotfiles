@@ -14,9 +14,9 @@ while :;do
             cd /home/lucas/Downloads/xxx/
             youtube-dl  "$atual" &> /dev/null &
             disown $!
-            echo "Download iniciado. Downloads em andamento: $(ps aux | grep yout | wc -l)"
+            echo "Download iniciado."
         else
-            echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
+            echo "Downloads em andamento: $(($(ps aux | grep yout | grep -v color | wc -l) - 1))"
         fi
     
     fi    

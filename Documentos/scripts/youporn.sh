@@ -7,9 +7,9 @@ historico=''
     atual=$(xclip -o)
     regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
     if [[ $atual =~ $regex && $atual == *"pornhub"* ]];    then 
-        grep -q "$(echo "$atual" | cut -d "=" -f2 )" /tmp/historico
+        grep -q "$(echo "$atual" | cut -d "=" -f2 )" /home/lucas/Documentos/scripts/youporn_historico
         if [ "$?" == "1" ];then
-            echo "$atual" | cut -d "=" -f2  >> /tmp/historico
+            echo "$atual" | cut -d "=" -f2  >> /home/lucas/Documentos/scripts/youporn_historico
             cd /home/lucas/Downloads/xxx/
             youtube-dl  "$atual" &> /dev/null &
             disown $!

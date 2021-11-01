@@ -15,15 +15,13 @@ while :;do
             youtube-dl  "$atual" &> /dev/null &
             disown $!
             timeout 1 cvlc /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
-            echo "Download iniciado."
-        else
-            echo "Downloads em andamento: $(($(ps aux | grep yout | grep -v color | wc -l) - 1))"
         fi
     
     fi    
 if [ $((counter%2)) -eq 0 ];
 then
-    echo "Downloads em andamento: $(($(ps aux | grep yout | grep -v color | wc -l) - 1))"
+    
+    echo -ne "Downloads em andamento: ""$(($(ps aux | grep yout | grep -v color | wc -l) - 1))\033[0K\r"
 fi
 sleep 1
 done

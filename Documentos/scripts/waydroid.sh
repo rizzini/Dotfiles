@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$(systemctl is-active waydroid-container.service)" == 'active' ];then
+    sudo systemctl stop waydroid-container.service
+    exit 0
+fi
 sudo systemctl restart waydroid-container.service
 if [ -z "$(pgrep weston)" ]; then
     weston --xwayland &> /dev/null &
@@ -10,6 +14,4 @@ konsole --new-tab --hide-tabbar --hide-menubar -e '/usr/bin/waydroid show-full-u
 while [ -n "$(pgrep weston)" ];do
     sleep 1
 done
-sudo systemctl restart waydroid-container.service
-    
-
+sudo systemctl stop waydroid-container.service

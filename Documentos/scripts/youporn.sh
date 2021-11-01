@@ -13,6 +13,7 @@ while :;do
             cat $atual &> /tmp/antigo
             cd /home/lucas/Downloads/xxx/
             youtube-dl  "$atual" &> /dev/null &
+            disown $!
             echo "Download iniciado. Downloads em andamento: $(ps aux | grep yout | wc -l)"
         else
             echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
@@ -21,7 +22,7 @@ while :;do
     fi    
 if [ $((counter%2)) -eq 0 ];
 then
-    echo "Downloads em andamento: $(ps aux | grep yout | wc -l)"
+    echo "Downloads em andamento: $(($(ps aux | grep yout | grep -v color | wc -l) - 1))"
 fi
 sleep 1
 done

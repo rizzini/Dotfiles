@@ -2,7 +2,7 @@
 if [ "$(systemctl is-active waydroid-container.service)" == 'active' ];then
     killall -9 weston
     sudo systemctl stop waydroid-container.service
-    exit 0
+    exit
 fi
 killall -9 weston
 sudo systemctl restart waydroid-container.service

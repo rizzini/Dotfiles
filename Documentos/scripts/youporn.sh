@@ -14,6 +14,7 @@ while :;do
             cd /home/lucas/Downloads/xxx/
             youtube-dl  "$atual" &> /dev/null &
             disown $!
+            timeout 1 cvlc /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             echo "Download iniciado."
         else
             echo "Downloads em andamento: $(($(ps aux | grep yout | grep -v color | wc -l) - 1))"

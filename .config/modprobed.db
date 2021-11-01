@@ -2,6 +2,7 @@ ac97_bus
 aesni_intel
 af_alg
 af_key
+af_packet_diag
 agpgart
 ahci
 algif_hash
@@ -116,6 +117,7 @@ mptcp_diag
 mtd
 mxm_wmi
 nbd
+netlink_diag
 nf_conntrack
 nf_conntrack_broadcast
 nf_conntrack_ftp
@@ -242,6 +244,7 @@ vmw_vsock_virtio_transport_common
 vmw_vsock_vmci_transport
 vmxnet3
 vsock
+vsock_diag
 vsock_loopback
 winesync
 wmi
@@ -254,6 +257,7 @@ xhci_hcd
 xhci_pci
 xhci_pci_renesas
 xor
+xsk_diag
 xt_CHECKSUM
 xt_LOG
 xt_MASQUERADE

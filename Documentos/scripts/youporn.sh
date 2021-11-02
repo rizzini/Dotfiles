@@ -1,17 +1,19 @@
 #!/bin/bash
 counter=0
-mkdir -p /home/lucas/Downloads/xxx/
+mkdir -p /home/lucas/Downloads/xxx/xvideos
+mkdir -p /home/lucas/Downloads/xxx/xnxx
+mkdir -p /home/lucas/Downloads/xxx/pornhub
 while :;do
 historico=''
     counter=$(($counter + 1)) 
     atual=$(xclip -o)
     regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
-    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* ]];    then 
+    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* || $atual == *"xnxx"* ]];    then 
         if [[ $atual == *"pornhub"* ]];then
             grep -q "$(echo "$atual" | cut -d "=" -f2 )" /home/lucas/Documentos/scripts/youporn_historico
             if [ "$?" == "1" ];then
                 echo "$atual" | cut -d "=" -f2  >> /home/lucas/Documentos/scripts/youporn_historico
-                cd /home/lucas/Downloads/xxx/
+                cd /home/lucas/Downloads/xxx/pornhub/
                 youtube-dl  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
@@ -20,7 +22,16 @@ historico=''
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xvideos_historico
             if [ "$?" == "1" ];then
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico
-                cd /home/lucas/Downloads/xxx/
+                cd /home/lucas/Downloads/xxx/xvideos/
+                youtube-dl  "$atual" &> /dev/null &
+                disown $!
+                timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
+            fi
+        elif [[ $atual == *"xnxx"* ]];then
+            grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xnxx_historico
+            if [ "$?" == "1" ];then
+                echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico
+                cd /home/lucas/Downloads/xxx/xnxx/
                 youtube-dl  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &

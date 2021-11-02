@@ -48,17 +48,6 @@ wmclass=diablo iii.exe diablo iii.exe
 wmclasscomplete=true
 wmclassmatch=1
 
-[5]
-Description=Configurações de janela para Pornhub Download
-size=761,587
-sizerule=2
-title=Pornhub Download
-titlematch=2
-windowrole=browser
-wmclass=chromium chromium
-wmclasscomplete=true
-wmclassmatch=1
-
 [6]
 Description=Configurações para zenity zenity
 position=247,683
@@ -70,4 +59,13 @@ wmclassmatch=1
 
 [General]
 count=6
-rules=1,2,3,4,5,6
+rules=1,2,3,4,6,d4586b6d-421b-4658-be33-771c9b434c5c
+
+[d4586b6d-421b-4658-be33-771c9b434c5c]
+Description=Configurações de janela para UNO
+size=600,400
+sizerule=2
+title=UNO
+wmclass=steam_app_470220 steam_app_470220
+wmclasscomplete=true
+wmclassmatch=1

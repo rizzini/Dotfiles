@@ -14,7 +14,7 @@ historico=''
                 cd /home/lucas/Downloads/xxx/
                 youtube-dl  "$atual" &> /dev/null &
                 disown $!
-                timeout 1 cvlc /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
+                timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             fi 
         elif [[ $atual == *"xvideos"* ]];then
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xvideos_historico
@@ -23,7 +23,7 @@ historico=''
                 cd /home/lucas/Downloads/xxx/
                 youtube-dl  "$atual" &> /dev/null &
                 disown $!
-                timeout 1 cvlc /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
+                timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             fi
         fi
     fi    

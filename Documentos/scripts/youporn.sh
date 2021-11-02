@@ -8,7 +8,7 @@ historico=''
     counter=$(($counter + 1)) 
     atual=$(xclip -o)
     regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
-    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* || $atual == *"xnxx"* ]];    then 
+    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* || $atual == *"xnxx"* || $atual == *"xhamster"* ]];    then 
         if [[ $atual == *"pornhub"* ]];then
             grep -q "$(echo "$atual" | cut -d "=" -f2 )" /home/lucas/Documentos/scripts/youporn_historico
             if [ "$?" == "1" ];then
@@ -31,6 +31,15 @@ historico=''
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xnxx_historico
             if [ "$?" == "1" ];then
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico
+                cd /home/lucas/Downloads/xxx/xnxx/
+                youtube-dl  "$atual" &> /dev/null &
+                disown $!
+                timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
+            fi
+        elif [[ $atual == *"xhamster"* ]];then
+            grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xhamster_historico
+            if [ "$?" == "1" ];then
+                echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico
                 cd /home/lucas/Downloads/xxx/xnxx/
                 youtube-dl  "$atual" &> /dev/null &
                 disown $!

@@ -3,7 +3,7 @@ update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-vir
 
 [1]
 Description=Configurações de janela para Prime Video
-position=960,-147
+position=960,-146
 positionrule=2
 size=960,671
 sizerule=2
@@ -18,16 +18,6 @@ Description=Configurações de nova janela
 skiptaskbar=true
 skiptaskbarrule=2
 wmclass=nwjs_kjlcknihpadniagphehmpojkkdigigjp streamlink-twitch-gui
-wmclasscomplete=true
-wmclassmatch=1
-
-[3]
-Description=Configurações de janela para 💬┃geral - Discord
-noborder=true
-noborderrule=2
-title=💬┃geral - Discord
-windowrole=browser-window
-wmclass=discord discord
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -68,8 +58,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,2,3,4,5,6
+count=5
+rules=1,2,4,5,6
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

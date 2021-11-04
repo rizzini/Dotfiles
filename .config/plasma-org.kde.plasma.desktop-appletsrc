@@ -662,7 +662,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][106][Configuration][General]
-fontSize=115
+fontSize=117
 
 [Containments][84][Applets][112]
 immutability=1
@@ -702,8 +702,8 @@ DialogWidth=640
 
 [Containments][84][Applets][150][Configuration][General]
 command=~/Documentos/scripts/cpu_gpu_temp.sh
-fixedWidth=66
-fontSize=9
+fixedWidth=102
+fontSize=10
 
 [Containments][84][Applets][151]
 immutability=1
@@ -718,8 +718,8 @@ DialogWidth=640
 
 [Containments][84][Applets][151][Configuration][General]
 command=/usr/local/bin/disk_monitor_
-fixedWidth=126
-fontSize=9
+fixedWidth=142
+fontSize=10
 useFixedWidth=true
 
 [Containments][84][Applets][87]

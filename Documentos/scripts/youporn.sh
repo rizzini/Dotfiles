@@ -48,11 +48,10 @@ historico=''
             fi
         fi
     fi    
-if [ $((counter%2)) -eq 0 ];
-then    
-    RED='\033[1;35m'
+if [ $((counter%2)) -eq 0 ]; then    
+    COLOR='\033[1;35m'
     NOCOLOR='\033[0m'
-    echo -ne "Downloads em andamento: ""${RED}$(($(ps aux | grep yout | grep -v color | wc -l) - 1))\033[0K\r${NOCOLOR}"
+    echo -ne "Downloads em andamento: ""${COLOR}$(($(ps aux | grep yout | grep -v color | wc -l) - 1))\033[0K\r${NOCOLOR}"
 fi
 sleep 1
 done

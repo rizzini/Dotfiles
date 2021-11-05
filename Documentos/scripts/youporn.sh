@@ -1,14 +1,14 @@
 #!/bin/bash
 counter=0
-while :;do
+while :; do
 historico=''
     counter=$(($counter + 1)) 
     atual=$(xclip -o)
     regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
-    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* || $atual == *"xnxx"* || $atual == *"xhamster"* ]];    then 
-        if [[ $atual == *"pornhub"* ]];then
+    if [[ $atual =~ $regex ]] && [[ $atual == *"pornhub"* || $atual == *"xvideos"* || $atual == *"xnxx"* || $atual == *"xhamster"* ]]; then 
+        if [[ $atual == *"pornhub"* ]]; then
             grep -q "$(echo "$atual" | cut -d "=" -f2 )" /home/lucas/Documentos/scripts/pornhub_historico
-            if [ "$?" == "1" ];then
+            if [ "$?" == "1" ]; then
                 mkdir -p /home/lucas/Downloads/xxx/pornhub
                 echo "$atual" | cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico
                 cd /home/lucas/Downloads/xxx/pornhub/
@@ -16,9 +16,9 @@ historico=''
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi 
-        elif [[ $atual == *"xvideos"* ]];then
+        elif [[ $atual == *"xvideos"* ]]; then
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xvideos_historico
-            if [ "$?" == "1" ];then
+            if [ "$?" == "1" ]; then
                 mkdir -p /home/lucas/Downloads/xxx/xvideos
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico
                 cd /home/lucas/Downloads/xxx/xvideos/
@@ -26,9 +26,9 @@ historico=''
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
-        elif [[ $atual == *"xnxx"* ]];then
+        elif [[ $atual == *"xnxx"* ]]; then
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xnxx_historico
-            if [ "$?" == "1" ];then
+            if [ "$?" == "1" ]; then
                 mkdir -p /home/lucas/Downloads/xxx/xnxx
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico
                 cd /home/lucas/Downloads/xxx/xnxx/
@@ -36,9 +36,9 @@ historico=''
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
-        elif [[ $atual == *"xhamster"* ]];then
+        elif [[ $atual == *"xhamster"* ]]; then
             grep -q "$(echo "$atual" | cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xhamster_historico
-            if [ "$?" == "1" ];then
+            if [ "$?" == "1" ]; then
                 mkdir -p /home/lucas/Downloads/xxx/xhamster
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico
                 cd /home/lucas/Downloads/xxx/xhamster/

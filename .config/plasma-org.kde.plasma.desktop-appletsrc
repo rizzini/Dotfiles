@@ -27,7 +27,7 @@ PreloadWeight=0
 [Containments][147][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=543
-positions=1,18,desktop:/The.Sinner.S04E03.1080p.WEB.H264-CAKES.srt,0,5,desktop:/2021-10-29_17-31.png,0,2,desktop:/Estudo - CCNA,0,0,desktop:/filmes,0,1
+positions=1,18,desktop:/2021-10-29_17-31.png,0,2,desktop:/The.Sinner.S04E03.1080p.WEB.H264-CAKES.srt,0,3,desktop:/Estudo - CCNA,0,0,desktop:/filmes,0,1
 sortMode=-1
 
 [Containments][147][Wallpaper][org.kde.image][General]
@@ -631,7 +631,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558

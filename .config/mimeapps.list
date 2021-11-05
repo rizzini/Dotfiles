@@ -1,0 +1,65 @@
+[Added Associations]
+application/json=org.kde.kate.desktop;firefox.desktop;libreoffice-writer.desktop;vim.desktop;nvim.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-partial-download=mpv.desktop;
+application/xhtml+xml=firefox.desktop;
+application/xml=org.kde.kate.desktop;google-chrome.desktop;firefox.desktop;libreoffice-writer.desktop;nvim.desktop;vim.desktop;
+audio/mpeg=mpv.desktop;fr.handbrake.ghb.desktop;
+audio/x-opus+ogg=mpv.desktop;fr.handbrake.ghb.desktop;
+image/gif=org.kde.gwenview.desktop;chromium.desktop;
+image/jpeg=org.kde.gwenview.desktop;Adobe Photoshop CS6.desktop;chromium.desktop;
+image/png=org.kde.gwenview.desktop;Adobe Photoshop CS6-2.desktop;chromium.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/html=firefox.desktop;
+video/mp4=mpv.desktop;fr.handbrake.ghb.desktop;
+video/mpeg=mpv.desktop;fr.handbrake.ghb.desktop;audacity.desktop;
+video/x-matroska=mpv.desktop;fr.handbrake.ghb.desktop;
+video/x-ms-wmv=mpv.desktop;
+video/x-msvideo=mpv.desktop;fr.handbrake.ghb.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+x-scheme-handler/http=google-chrome.desktop;firefox.desktop;
+x-scheme-handler/https=google-chrome.desktop;firefox.desktop;
+
+[Default Applications]
+application/json=org.kde.kate.desktop;
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-partial-download=mpv.desktop;
+application/xhtml+xml=firefox.desktop
+application/xml=org.kde.kate.desktop;
+audio/mpeg=mpv.desktop;
+audio/x-opus+ogg=mpv.desktop;
+image/gif=org.kde.gwenview.desktop;
+image/jpeg=org.kde.gwenview.desktop;
+image/png=org.kde.gwenview.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/html=chromium.desktop
+video/mp4=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/x-ms-wmv=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/callto=skypeforlinux.desktop
+x-scheme-handler/chrome=firefox.desktop
+x-scheme-handler/http=google-chrome.desktop;
+x-scheme-handler/https=google-chrome.desktop;
+x-scheme-handler/mailto=chromium.desktop
+x-scheme-handler/skype=skypeforlinux.desktop
+x-scheme-handler/tel=skypeforlinux.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+
+[Removed Associations]
+image/gif=wine-extension-gif.desktop;pqiv.desktop;
+image/jpeg=wine-extension-jpe.desktop;pqiv.desktop;wine-extension-jfif.desktop;
+image/png=Adobe Photoshop CS6.desktop;pqiv.desktop;wine-extension-png.desktop;
+video/mp4=smartcode-stremio.desktop;pqiv.desktop;
+video/mpeg=mpv.desktop;
+video/x-matroska=pqiv.desktop;

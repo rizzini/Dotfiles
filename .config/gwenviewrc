@@ -46,15 +46,17 @@ File2[$e]=$HOME/Imagens/se_nao_gostou_morra
 File3[$e]=$HOME/Imagens/Wallpaper/wallhaven-83do1o.jpg
 File4[$e]=$HOME/Imagens/u8ax8vqwwed71.png
 File5[$e]=$HOME/Área de Trabalho/2021-10-29_17-31.png
-File6[$e]=$HOME/Área de Trabalho/D_NQ_NP_965960-MLB44398172725_122020-O.jpg
-File7[$e]=$HOME/Área de Trabalho/2x-Memrias-Desktop-16GB-DDR3-1600-MHz-AMD-LEIA-O-20210105190049.0811380015.jpg
+File6[$e]=$HOME/Documentos/2x-Memrias-Desktop-16GB-DDR3-1600-MHz-AMD-LEIA-O-20210105190049.0811380015.jpg
+File7[$e]=$HOME/Documentos/D_NQ_NP_965960-MLB44398172725_122020-O.jpg
+File8[$e]=$HOME/Documentos/D_NQ_NP_965960-MLB44398172725_122020-O.png
 Name1[$e]=20f7a12.jpg
 Name2[$e]=se_nao_gostou_morra
 Name3[$e]=wallhaven-83do1o.jpg
 Name4[$e]=u8ax8vqwwed71.png
 Name5[$e]=2021-10-29_17-31.png
-Name6[$e]=D_NQ_NP_965960-MLB44398172725_122020-O.jpg
-Name7[$e]=2x-Memrias-Desktop-16GB-DDR3-1600-MHz-AMD-LEIA-O-20210105190049.0811380015.jpg
+Name6[$e]=2x-Memrias-Desktop-16GB-DDR3-1600-MHz-AMD-LEIA-O-20210105190049.0811380015.jpg
+Name7[$e]=D_NQ_NP_965960-MLB44398172725_122020-O.jpg
+Name8[$e]=D_NQ_NP_965960-MLB44398172725_122020-O.png
 
 [SideBar]
 IsVisible ViewMode=true

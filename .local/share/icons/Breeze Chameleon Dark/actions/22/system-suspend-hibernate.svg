@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="system-suspend-hibernate.svg"
+   id="svg9"
+   version="1.1"
+   viewBox="0 0 22 22">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg9"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="11"
+     inkscape:cx="11"
+     inkscape:zoom="28.545455"
+     showgrid="false"
+     id="namedview11"
+     inkscape:window-height="1015"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <style
+     id="current-color-scheme"
+     type="text/css">
+        .ColorScheme-Text {
+            color:#eff0f1;
+        }
+    </style>
+  <g
+     id="g7"
+     fill="currentColor"
+     class="ColorScheme-Text">
+    <path
+       style="fill:#5a2ca0;fill-opacity:1"
+       id="path3"
+       d="M6.79 3.707l-.868.5 1.646 2.85-2.248-.602-.26.967 3.215.861L9.845 11H6.708L4.354 8.646l-.708.708L5.293 11H2v1h3.293l-1.647 1.646.708.708L6.707 12H9.84l-1.567 2.713-3.214.861.257.967 2.25-.604L5.92 18.79l.865.5 1.647-2.852.603 2.25.965-.26-.861-3.216L10.994 12H11l1.857 3.219-.86 3.215.966.257.601-2.248 1.647 2.852.867-.5-1.646-2.852 2.248.602.26-.965-3.215-.861L12.155 12h3.138l2.353 2.354.708-.708L16.707 12H20v-1h-3.293l1.647-1.646-.051-.06H17L15.293 11H11v-.002l-.004-.002-1.853-3.213.86-3.215-.966-.26-.601 2.25zM16 3v1h2.293l-2 2-.293.293V7h4V6h-2.293l2-2L20 3.707V3h-.707z" />
+    <path
+       style="fill:#5a2ca0;fill-opacity:1"
+       id="path5"
+       d="M11 5v1h2.293l-2 2-.293.293V9h4V8h-2.293l2-2L15 5.707V5h-.707z" />
+  </g>
+</svg>

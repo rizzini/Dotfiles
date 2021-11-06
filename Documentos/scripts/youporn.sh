@@ -12,7 +12,7 @@ historico=''
                 mkdir -p /home/lucas/Downloads/xxx/pornhub
                 echo "$atual" | cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico
                 cd /home/lucas/Downloads/xxx/pornhub/
-                youtube-dl  "$atual" &> /dev/null &
+                yt-dlp  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi 
@@ -22,7 +22,7 @@ historico=''
                 mkdir -p /home/lucas/Downloads/xxx/xvideos
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico
                 cd /home/lucas/Downloads/xxx/xvideos/
-                youtube-dl  "$atual" &> /dev/null &
+                yt-dlp  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -32,7 +32,7 @@ historico=''
                 mkdir -p /home/lucas/Downloads/xxx/xnxx
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico
                 cd /home/lucas/Downloads/xxx/xnxx/
-                youtube-dl  "$atual" &> /dev/null &
+                yt-dlp  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -42,7 +42,7 @@ historico=''
                 mkdir -p /home/lucas/Downloads/xxx/xhamster
                 echo "$atual" | cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico
                 cd /home/lucas/Downloads/xxx/xhamster/
-                youtube-dl  "$atual" &> /dev/null &
+                yt-dlp  "$atual" &> /dev/null &
                 disown $!
                 timeout 1 mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             fi
@@ -51,7 +51,7 @@ historico=''
 if [ $((counter%2)) -eq 0 ]; then    
     COLOR='\033[1;35m'
     NOCOLOR='\033[0m'
-    echo -ne "Downloads em andamento: ""${COLOR}$(($(ps aux | grep yout | grep -v color | wc -l) - 1))\033[0K\r${NOCOLOR}"
+    echo -ne "Downloads em andamento: ""${COLOR}$(($(ps aux | grep yt-dlp | grep -v color | wc -l) - 1))\033[0K\r${NOCOLOR}"
 fi
 sleep 1
 done

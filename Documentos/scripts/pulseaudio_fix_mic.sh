@@ -2,12 +2,12 @@
 if [ -z "$(/usr/bin/ls /dev/dri/ | /usr/bin/grep card1)" ];then
     /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh intel
     /usr/bin/echo 'iGPU desativada. Copiando arquivo pertinente(default.pa_intel).'
-    /usr/bin/exit 0
+    exit 0
 fi  
 contador=0
 if [[ -n "$( /usr/bin/pactl list sources | /usr/bin/grep 'hw:2')" || -n "$( /usr/bin/pactl list sources | /usr/bin/grep 'hw:1')" ]];then
     if [ -z "$( /usr/bin/pactl list sources | /usr/bin/grep -E 'USB|CAMERA')" ];then
-        /usr/bin/exit 0;
+        exit 0;
     fi
 fi
 while :;do

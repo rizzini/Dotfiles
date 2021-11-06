@@ -1,4 +1,7 @@
 #!/bin/bash
+
+{
+set -x
 if [ -z "$(/usr/bin/ls /dev/dri/ | /usr/bin/grep card1)" ];then
     /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh intel
     /usr/bin/echo 'iGPU desativada. Copiando arquivo pertinente(default.pa_intel).'
@@ -25,3 +28,4 @@ while :;do
         fi
     fi
 done
+} &> /home/lucas/Documentos/scripts/logs/pulseaudio_fix_mic.log

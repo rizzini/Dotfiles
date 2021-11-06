@@ -9,7 +9,7 @@ if ! set -q (lspci -v | grep 'Kernel driver in use: nvidia'); and test "$DISPLAY
     set -x KWIN_COMPOSE O2ES;
     set -x __GL_THREADED_OPTIMIZATION 1;
     set -x __GL_SHADER_DISK_CACHE 1;
-    set -x __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/gl_shader/';
+    set -x __GL_SHADER_DISK_CACHE_PATH '/home/lucas/.cache/';
 end
 
 if test $DISPLAY = ':0' 

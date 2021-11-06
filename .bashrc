@@ -16,5 +16,5 @@ if [[ -n "$(lspci -v | grep 'Kernel driver in use: nvidia')" && "$DISPLAY" == ":
     export KWIN_COMPOSE=O2ES;
     export __GL_THREADED_OPTIMIZATION=1;
     export __GL_SHADER_DISK_CACHE=1;
-    export __GL_SHADER_DISK_CACHE_PATH='/home/lucas/.cache/gl_shader/';
+    export __GL_SHADER_DISK_CACHE_PATH='/home/lucas/.cache/';
 fi

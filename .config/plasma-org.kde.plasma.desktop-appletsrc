@@ -701,9 +701,10 @@ DialogHeight=496
 DialogWidth=640
 
 [Containments][84][Applets][150][Configuration][General]
-command=~/Documentos/scripts/cpu_gpu_temp.sh
+command=~/Documentos/scripts/cpu_gpu_temp_taskbar.sh
 fixedWidth=102
 fontSize=10
+interval=3000
 
 [Containments][84][Applets][151]
 immutability=1
@@ -749,7 +750,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -843,7 +844,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496

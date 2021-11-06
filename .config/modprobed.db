@@ -84,11 +84,13 @@ ip6t_rt
 ip6table_filter
 ip6table_mangle
 ip6table_nat
+ip6table_raw
 ip_tables
 ipt_REJECT
 iptable_filter
 iptable_mangle
 iptable_nat
+iptable_raw
 irqbypass
 isofs
 jbd2

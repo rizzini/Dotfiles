@@ -364,7 +364,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_18Actions0]
-CommandURL=/bin/bash -c 'sudo /usr/local/bin/intel_service'
+CommandURL=/bin/bash -c 'sudo /home/lucas/Documentos/scripts/intel_xorg_distinct_instance_for_anbox.sh'
 Type=COMMAND_URL
 
 [Data_18Conditions]

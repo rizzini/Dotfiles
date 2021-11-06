@@ -17,8 +17,7 @@ while :;do
     else
         /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh 1
     fi
-#     /usr/bin/pulseaudio -k
-    echo '@@@@@@@@@@@@@reiniciou pulseaudio@@@@@@@@@@@@@'
+    /usr/bin/pulseaudio -k
     /usr/bin/sleep 0.2
     if [[ -n "$( /usr/bin/pactl list sources | /usr/bin/grep 'hw:2')" || -n "$( /usr/bin/pactl list sources | /usr/bin/grep 'hw:1')" ]];then
         if [ -z "$( /usr/bin/pactl list sources | /usr/bin/grep -E 'USB|CAMERA')" ];then

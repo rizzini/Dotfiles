@@ -19,7 +19,7 @@ elif [ "$1" == 'US' ]; then
 fi
 
 counter=0
-while [ $counter -le 60 ]; do
+while [ $counter -le 40 ]; do
     counter=$(($counter + 2))
     killall -9 winedevice.exe
     sleep 2

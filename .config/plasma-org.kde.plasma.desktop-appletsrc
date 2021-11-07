@@ -719,7 +719,7 @@ DialogWidth=640
 
 [Containments][84][Applets][151][Configuration][General]
 command=~/Documentos/scripts/disk_monitor_taskbar.sh
-fixedWidth=142
+fixedWidth=141
 fontSize=10
 interval=0
 useFixedWidth=true

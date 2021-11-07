@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ "$1" == 'play_pause' ]; then
     if [ -n "$(pgrep -x spotify)" ];
     then

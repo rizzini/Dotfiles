@@ -49,9 +49,7 @@ historico=''
         fi
     fi    
 if [ $((counter%2)) -eq 0 ]; then    
-    COLOR='\033[1;35m'
-    NOCOLOR='\033[0m'
-    echo -ne "Downloads em andamento: ""${COLOR}$(($(ps aux | grep yt-dlp | grep -v color | wc -l) - 1))\r${NOCOLOR}"
+    echo -ne "Downloads em andamento: ""\033[1;35m$(($(ps aux | grep yt-dlp | grep -v color | wc -l) - 1))\r\033[0m"
 fi
 sleep 1
 done

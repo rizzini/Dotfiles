@@ -3,7 +3,6 @@
 [ ! -f '/home/lucas/Documentos/scripts/pornhub_historico' ] && touch /home/lucas/Documentos/scripts/pornhub_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xvideos_historico' ] && touch /home/lucas/Documentos/scripts/xvideos_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xnxx_historico' ] && touch /home/lucas/Documentos/scripts/xnxx_historico;
-
 counter=0;
 while :; do
     historico='';

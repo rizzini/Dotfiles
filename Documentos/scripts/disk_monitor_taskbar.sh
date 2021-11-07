@@ -1,9 +1,9 @@
 #!/bin/bash
 if [ -b "/dev/sdb" ]; then
-    sdb="1"
+    sdb="1";
 fi
 if [ -b "/dev/sdc" ]; then
-    sdc="1"
+    sdc="1";
 fi    
 data1_read_sda2=$(cat /proc/diskstats | grep -w sda | awk '{print $6}');
 data1_write_sda2=$(cat /proc/diskstats | grep -w sda | awk '{print $10}');

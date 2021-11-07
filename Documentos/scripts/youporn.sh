@@ -8,8 +8,10 @@ while :; do
     historico='';
     counter=$(($counter + 1)); 
     clipboard=$(xclip -o);
-    regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]';
+    regex='(https?)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]';
     if [[ $clipboard =~ $regex ]] && [[ $clipboard == *"pornhub"* || $clipboard == *"xvideos"* || $clipboard == *"xnxx"* || $clipboard == *"xhamster"* ]]; then 
+    echo 11
+    exit
         if [[ $clipboard == *"pornhub"* ]]; then
             grep -q "$(echo "$clipboard" | cut -d "=" -f2 )" /home/lucas/Documentos/scripts/pornhub_historico;
             if [ "$?" == "1" ]; then

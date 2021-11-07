@@ -34,7 +34,7 @@ if [ -n "$sdc" ]; then
 fi
 printf "SSD|""R: "$(echo "$((${read_sda2%% *} / 1024))MB/s")" W: "$(echo "$(( ${write_sda2%% *} / 1024))MB/s")"\n" ;
 if [ -n "$sdb" ]; then
-    printf "sdb|""R: "$(echo "$((${read_sdb%% *} / 1024))MB/s")" W: "$(echo "$(( ${write_sdb%% *} / 1024))MB/s");
+    printf "sdb|""R: "$(echo "$((${read_sdb%% *} / 1024))MB/s")" W: "$(echo "$(( ${write_sdb%% *} / 1024))MB/s")"\n";
 fi
 if [ -n "$sdc" ]; then
     printf "sdc|""R: "$(echo "$((${read_sdc%% *} / 1024))MB/s")" W: "$(echo "$(( ${write_sdc%% *} / 1024))MB/s")"\n";

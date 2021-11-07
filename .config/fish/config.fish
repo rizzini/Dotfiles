@@ -8,7 +8,6 @@ if test $DISPLAY = ':0'
     end
 end
 
-
 export PATH="/opt/VirtualGL/bin/:$PATH";
 
 if test -d ~/.local/bin

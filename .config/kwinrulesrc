@@ -68,9 +68,21 @@ wmclass=uno.exe steam_app_470220
 wmclasscomplete=true
 wmclassmatch=1
 
+[8c965414-c2fc-4963-9ac9-f70f59487ad7]
+Description=Configurações de janela para BandNews TV Ao Vivo
+position=960,-295
+positionrule=2
+size=964,813
+sizerule=2
+title=BandNews TV Ao Vivo
+titlematch=2
+wmclass=chromium
+wmclasscomplete=true
+wmclassmatch=2
+
 [General]
-count=5
-rules=1,2,3,4,5
+count=6
+rules=1,2,3,4,5,8c965414-c2fc-4963-9ac9-f70f59487ad7
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

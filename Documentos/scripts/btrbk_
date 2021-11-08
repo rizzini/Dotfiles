@@ -16,5 +16,6 @@ do
 done
 btrbk -c /etc/btrbk/btrbk_home.conf -q run;
 btrbk -c /etc/btrbk/btrbk_root.conf -q run;  
+btrbk -c /etc/btrbk/btrbk_waydroid.conf -q run;
 rm /tmp/btrbk.sh.pid;
 

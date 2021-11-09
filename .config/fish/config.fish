@@ -16,14 +16,14 @@ export PATH="/opt/VirtualGL/bin/:$PATH";
 
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
-        set -p PATH ~/.local/bin
+#         set -p PATH ~/.local/bin
     end
 end
 
 source ("/usr/bin/starship" init fish --print-full-init | psub);
 
 alias k=kate;
-alias plasmashell='killall plasmashell &> /dev/null & sleep 1 && /usr/bin/plasmashell &> /dev/null & disown $last_pid';
+alias plasmashell='kquitapp5 plasmashell &> /dev/null & sleep 1 && kstart5 /usr/bin/plasmashell &> /dev/null & disown $last_pid';
 alias ls='exa -al --color=always --group-directories-first --icons';
 alias grep='grep --color=auto';
 alias big="expac -H M '%m\t%n' | sort -h | nl";

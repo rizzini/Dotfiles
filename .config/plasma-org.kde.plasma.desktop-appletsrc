@@ -7,8 +7,8 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][147]
-ItemGeometries-1920x1080=Applet-152:560,256,240,240,0;
-ItemGeometriesHorizontal=Applet-152:560,256,240,240,0;
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
 activityId=4a812986-4c5f-45f6-8b53-87122ec8620f
 formfactor=0
 immutability=1
@@ -16,14 +16,6 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
-
-[Containments][147][Applets][152]
-immutability=1
-plugin=org.kde.plasma.notes
-
-[Containments][147][Applets][152][Configuration][General]
-fontSize=8
-noteId=5f90c440-20bb-452d-a201-a3036adb1a
 
 [Containments][147][ConfigDialog]
 DialogHeight=496

@@ -1553,6 +1553,9 @@ Version=2
 [PreviewSettings]
 MaximumRemoteSize[$d]
 
+[Shortcuts]
+FindNext[$d]
+
 [Voice]
 Shortcut=
 

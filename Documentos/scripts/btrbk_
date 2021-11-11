@@ -16,4 +16,4 @@ do
 done
 btrbk -c /etc/btrbk/btrbk_home.conf -q run;
 btrbk -c /etc/btrbk/btrbk_root.conf -q run;  
-1rm /tmp/btrbk.sh.pid;
+rm /tmp/btrbk.sh.pid;

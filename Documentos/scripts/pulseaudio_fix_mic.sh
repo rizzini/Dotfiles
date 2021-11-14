@@ -1,5 +1,5 @@
 #!/bin/bash
-# {
+{
 set -x
 contador=0
 if [ -z "$(/usr/bin/ls /dev/dri/ | /usr/bin/grep card1)" ];then
@@ -36,4 +36,4 @@ while :;do
         fi
     fi
 done
-# } &> /home/lucas/Documentos/scripts/logs/pulseaudio_fix_mic.log
+} &> /home/lucas/Documentos/scripts/logs/pulseaudio_fix_mic.log

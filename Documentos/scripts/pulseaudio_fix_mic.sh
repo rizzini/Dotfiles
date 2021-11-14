@@ -1,10 +1,18 @@
 #!/bin/bash
-{
+# {
 set -x
 contador=0
 if [ -z "$(/usr/bin/ls /dev/dri/ | /usr/bin/grep card1)" ];then
-    /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh intel;
-    /usr/bin/echo 'iGPU desativada. Copiando arquivo pertinente(default.pa_intel).';
+    if [ -z "$(pactl list sources | grep 'device.description = "Áudio interno"')" ];then
+        /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh 0;
+        systemctl --user restart pulseaudio.service &
+        sleep 2
+    fi
+    if [ -z "$(pactl list sources | grep 'device.description = "Áudio interno"')" ];then
+        /usr/bin/sudo /home/lucas/Documentos/scripts/pulseaudio_fix_mic_copy_files_sudo.sh 1;
+        systemctl --user restart pulseaudio.service &
+    fi
+    
     exit;
 fi  
 
@@ -28,4 +36,4 @@ while :;do
         fi
     fi
 done
-} &> /home/lucas/Documentos/scripts/logs/pulseaudio_fix_mic.log
+# } &> /home/lucas/Documentos/scripts/logs/pulseaudio_fix_mic.log

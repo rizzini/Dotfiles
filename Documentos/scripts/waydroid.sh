@@ -7,7 +7,7 @@ fi
 killall -9 weston
 sudo systemctl restart waydroid-container.service
 if [ -z "$(pgrep weston)" ]; then
-    weston --width=700 --height=330 --xwayland &> /dev/null &
+    weston --width=700 --height=345 --xwayland &> /dev/null &
 fi
 export XDG_SESSION_TYPE='wayland'
 export DISPLAY=':1'

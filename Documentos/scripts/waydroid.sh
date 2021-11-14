@@ -9,6 +9,7 @@ sudo systemctl restart waydroid-container.service
 if [ -z "$(pgrep weston)" ]; then
     weston --width=700 --height=345 --xwayland &> /dev/null &
 fi
+sleep 1 &&
 export XDG_SESSION_TYPE='wayland'
 export DISPLAY=':1'
 konsole --new-tab --hide-tabbar --hide-menubar -e '/usr/bin/waydroid show-full-ui' &

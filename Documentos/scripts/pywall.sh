@@ -2,10 +2,10 @@
 contador=0
 
 if test -f "/tmp/wallpaper.pywall.tmp"; then
-    rm /tmp/wallpaper.pywall.tmp;
+    /usr/bin/rm /tmp/wallpaper.pywall.tmp;
 fi
 
-touch /tmp/wallpaper.pywall.tmp
+/usr/bin/touch /tmp/wallpaper.pywall.tmp
 
 while :; do   
     {
@@ -19,21 +19,21 @@ while :; do
             contador=0
             break
         fi        
-        done < /home/$(whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc        
+        done < /home/$(/usr/bin/whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc        
         while IFS= read -r line; do
             if [[ "$line" == *'Image='* ]];then
                 atual=$line
-                atual=$(echo $atual | cut -c7-999 | perl -MURI -MURI::Escape -lne 'print uri_unescape(URI->new($_)->path)')
+                atual=$(echo $atual | /usr/bin/cut -c7-999 | /usr/bin/perl -MURI -MURI::Escape -lne 'print uri_unescape(URI->new($_)->path)')
             fi
-        done <<< $(sed -n $linha_atual,$soma_dez_linhas'p' /home/$(whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc)   
-        atual=$(echo $atual | cut -d' ' -f1)    
+        done <<< $(/usr/bin/sed -n $linha_atual,$soma_dez_linhas'p' /home/$(/usr/bin/whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc)   
+        atual=$(/usr/bin/echo $atual | /usr/bin/cut -d' ' -f1)    
         } > /dev/null
 
     if !  test -f "/tmp/wallpaper.pywall.tmp"; then
         echo -e "$atual"  > /tmp/wallpaper.pywall.tmp
     else
-        if [ "$(cat /tmp/wallpaper.pywall.tmp)" != "$atual" ]; then
-            wal -q -e -t -n -i $atual
+        if [ "$(/usr/bin/cat /tmp/wallpaper.pywall.tmp)" != "$atual" ]; then
+            /usr/bin/wal -q -e -t -n -i $atual
             {
             while read line; do   
                 soma_dez_linhas=0
@@ -47,28 +47,28 @@ while :; do
                     contador=0
                     break
                 fi        
-            done < /home/$(whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc        
+            done < /home/$(/usr/bin/whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc        
             while IFS= read -r line; do
                 if [[ "$line" == *'Image='* ]];then
                     atual=$line
-                    atual=$(echo $atual | cut -c7-999 | perl -MURI -MURI::Escape -lne 'print uri_unescape(URI->new($_)->path)')
+                    atual=$(/usr/bin/echo $atual | /usr/bin/cut -c7-999 | /usr/bin/perl -MURI -MURI::Escape -lne 'print uri_unescape(URI->new($_)->path)')
                 fi
-            done <<< $(sed -n $linha_atual,$soma_dez_linhas'p' /home/$(whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc)   
-            atual=$(echo $atual | cut -d' ' -f1)    
+            done <<< $(/usr/bin/sed -n $linha_atual,$soma_dez_linhas'p' /home/$(/usr/bin/whoami)/.config/./plasma-org.kde.plasma.desktop-appletsrc)   
+            atual=$(/usr/bin/echo $atual | /usr/bin/cut -d' ' -f1)    
             } > /dev/null
                 
-            cor_final=$(cat /home/lucas/.cache/wal/colors | tail -9 | head -1 | tr -d '#')
-            disk=$(cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | grep 'textColor=#' | head -1 | cut -c12-17)
-            temp=$(cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | grep 'textColor=#' | tail -1 | cut -c12-17)
+            cor_final=$(/usr/bin/cat /home/lucas/.cache/wal/colors | /usr/bin/tail -9 | /usr/bin/head -1 | /usr/bin/tr -d '#')
+            disk=$(/usr/bin/cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | /usr/bin/grep 'textColor=#' | /usr/bin/head -1 | /usr/bin/cut -c12-17)
+            temp=$(/usr/bin/cat /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc | /usr/bin/grep 'textColor=#' | /usr/bin/tail -1 | /usr/bin/cut -c12-17)
 
-            perl -pi -e 's/'"$(echo 'textColor=#'$disk)"'/'"$(echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
+            /usr/bin/perl -pi -e 's/'"$(/usr/bin/echo 'textColor=#'$disk)"'/'"$(/usr/bin/echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
 
-            perl -pi -e 's/'"$(echo 'textColor=#'$temp)"'/'"$(echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
+            /usr/bin/perl -pi -e 's/'"$(/usr/bin/echo 'textColor=#'$temp)"'/'"$(/usr/bin/echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
             /bin/bash -c 'killall plasmashell & sleep 0.2 && /usr/bin/plasmashell &> /dev/null & disown $!' &
         fi
     fi
     
-    sleep 1
-    echo -e "$atual" > /tmp/wallpaper.pywall.tmp
-    sleep 5
+    /usr/bin/sleep 1
+    /usr/bin/echo -e "$atual" > /tmp/wallpaper.pywall.tmp
+    /usr/bin/sleep 5
 done

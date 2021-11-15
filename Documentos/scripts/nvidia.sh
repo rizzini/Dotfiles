@@ -1,4 +1,4 @@
 #!/bin/bash
-sleep 4 &&
+/usr/bin/sleep 2 &&
 export DISPLAY=:0
-nvidia-settings --load-config-only
+/usr/bin/nvidia-settings --load-config-only

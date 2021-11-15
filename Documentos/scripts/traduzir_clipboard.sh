@@ -1,5 +1,5 @@
 #!/bin/bash
-clipboard=$(xclip -o -sel clip)
+clipboard=$(/usr/bin/xclip -o -sel clip)
 texto+=($clipboard)
 url_prefixo='https://translate.google.com/?sl=en&tl=pt&text='
 url_sufixo='&op=translate'
@@ -8,7 +8,7 @@ url_sufixo='&op=translate'
 for i in "${texto[@]}"
 do  
     if [[ "$i" == *'%'* ]]; then
-        i=$(echo $i'25')
+        i=$(/usr/bin/echo $i'25')
     fi
     traduzir+="$i"'%20'
 done

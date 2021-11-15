@@ -1,19 +1,19 @@
 #!/bin/bash
-if [ "$(systemctl is-active waydroid-container.service)" == 'active' ];then
-    killall -9 weston
-    sudo systemctl stop waydroid-container.service
+if [ "$(/usr/bin/systemctl is-active waydroid-container.service)" == 'active' ];then
+    /usr/bin/killall -9 weston
+    /usr/bin/sudo /usr/bin/systemctl stop waydroid-container.service
     exit
 fi
-killall -9 weston
-sudo systemctl restart waydroid-container.service
-if [ -z "$(pgrep weston)" ]; then
-    weston --width=700 --height=345 --xwayland &> /dev/null &
+/usr/bin/killall -9 weston
+/usr/bin/sudo /usr/bin/systemctl restart waydroid-container.service
+if [ -z "$(/usr/bin/pgrep weston)" ]; then
+    /usr/bin/weston --width=700 --height=345 --xwayland &> /dev/null &
 fi
-sleep 1 &&
-export XDG_SESSION_TYPE='wayland'
+/usr/bin/sleep 1 &&
+/usr/bin/export XDG_SESSION_TYPE='wayland'
 export DISPLAY=':1'
-konsole --new-tab --hide-tabbar --hide-menubar -e '/usr/bin/waydroid show-full-ui' &
-while [ -n "$(pgrep weston)" ];do
-    sleep 1
+/usr/bin/konsole --new-tab --hide-tabbar --hide-menubar -e '/usr/bin/waydroid show-full-ui' &
+while [ -n "$(/usr/bin/pgrep weston)" ];do
+    /usr/bin/sleep 1
 done
-sudo systemctl stop waydroid-container.service
+/usr/bin/sudo /usr/bin/systemctl stop waydroid-container.service

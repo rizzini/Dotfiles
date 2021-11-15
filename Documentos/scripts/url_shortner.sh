@@ -1,13 +1,13 @@
 #!/bin/bash
 re='^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
-url=$(xclip -o)
+url=$(/usr/bin/xclip -o)
 if [[ $url =~ $re ]]; then 
-    surl -c "$url" | xclip -selection clipboard
+    /usr/bin/surl -c "$url" | /usr/bin/xclip -selection clipboard
     if [ $? -eq 0 ];then
-        notify-send "Url encurtada com sucesso."
+        /usr/bin/notify-send "Url encurtada com sucesso."
     else
-        notify-send "Link válido, mas houve algum problema ao encurtar o link"
+        /usr/bin/notify-send "Link válido, mas houve algum problema ao encurtar o link"
     fi
 else
-    notify-send "Link inválido."
+    /usr/bin/notify-send "Link inválido."
 fi

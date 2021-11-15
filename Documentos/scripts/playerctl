@@ -1,33 +1,33 @@
 #!/bin/bash
 if [ "$1" == 'play_pause' ]; then
-    if [ -n "$(pgrep -x spotify)" ];
+    if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        playerctl --player=spotify play-pause;
-    elif [ -n "$(pgrep -x ncspot)" ];then
-        if [ "$(playerctl --player=ncspot status)" == "Playing" ]; then
-            playerctl --player=ncspot pause;
-        elif [ "$(playerctl --player=ncspot status)" == "Paused" ]; then
-            playerctl --player=ncspot play;
+        /usr/bin/playerctl --player=spotify play-pause;
+    elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
+        if [ "$(/usr/bin/playerctl --player=ncspot status)" == "Playing" ]; then
+            /usr/bin/playerctl --player=ncspot pause;
+        elif [ "$(/usr/bin/playerctl --player=ncspot status)" == "Paused" ]; then
+            /usr/bin/playerctl --player=ncspot play;
         fi
     else
-        playerctl play-pause;
+        /usr/bin/playerctl play-pause;
     fi
 elif [ "$1" == 'previous' ]; then
-    if [ -n "$(pgrep -x spotify)" ];
+    if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        playerctl --player=spotify previous;
-    elif [ -n "$(pgrep -x ncspot)" ];then
-        playerctl --player=ncspot previous;  
+        /usr/bin/playerctl --player=spotify previous;
+    elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
+        /usr/bin/playerctl --player=ncspot previous;  
     else
-        playerctl previous;
+        /usr/bin/playerctl previous;
     fi
 elif [ "$1" == 'next' ]; then
-    if [ -n "$(pgrep -x spotify)" ];
+    if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        playerctl --player=spotify next;
-    elif [ -n "$(pgrep -x ncspot)" ];then
-        playerctl --player=ncspot next;  
+        /usr/bin/playerctl --player=spotify next;
+    elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
+        /usr/bin/playerctl --player=ncspot next;  
     else
-        playerctl next;
+        /usr/bin/playerctl next;
     fi
 fi

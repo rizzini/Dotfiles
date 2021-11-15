@@ -64,7 +64,7 @@ while :; do
             /usr/bin/perl -pi -e 's/'"$(/usr/bin/echo 'textColor=#'$disk)"'/'"$(/usr/bin/echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
 
             /usr/bin/perl -pi -e 's/'"$(/usr/bin/echo 'textColor=#'$temp)"'/'"$(/usr/bin/echo 'textColor=#'$cor_final)"'/g' /home/lucas/.config/plasma-org.kde.plasma.desktop-appletsrc 
-            /bin/bash -c 'killall plasmashell & sleep 0.2 && /usr/bin/plasmashell &> /dev/null & disown $!' &
+            /bin/bash -c '/usr/bin/killall plasmashell & /usr/bin/sleep 0.2 && /usr/bin/plasmashell &> /dev/null & disown $!' &
         fi
     fi
     

@@ -1,9 +1,9 @@
 #!/bin/bash
 while :;do
-    if [ -z "$(pgrep -x amule)" ];then
-        sleep 1
+    if [ -z "$(/usr/bin/pgrep -x amule)" ];then
+        /usr/bin/sleep 1
         /usr/bin/amule &> /dev/null &
-        sleep 5
+        /usr/bin/sleep 5
     fi
-    sleep 2
+    /usr/bin/sleep 2
 done

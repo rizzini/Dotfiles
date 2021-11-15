@@ -10,7 +10,7 @@ if [ -z "$(/usr/bin/pgrep weston)" ]; then
     /usr/bin/weston --width=700 --height=345 --xwayland &> /dev/null &
 fi
 /usr/bin/sleep 1 &&
-/usr/bin/export XDG_SESSION_TYPE='wayland'
+export XDG_SESSION_TYPE='wayland'
 export DISPLAY=':1'
 /usr/bin/konsole --new-tab --hide-tabbar --hide-menubar -e '/usr/bin/waydroid show-full-ui' &
 while [ -n "$(/usr/bin/pgrep weston)" ];do

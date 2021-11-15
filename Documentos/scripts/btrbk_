@@ -1,19 +1,19 @@
 #!/bin/bash
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root";
+    /usr/bin/echo "Please run as root";
     exit
 fi
-touch /tmp/btrbk.sh.pid
-if [[ ! "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]]; then
-    notify-send 'Você não está no subvolume ROOT. Snapshot não foi criado.';
-    echo 'Você não está no subvolume ROOT. Snapshot não foi criado.'
-    rm /tmp/btrbk.sh.pid;
+/usr/bin/touch /tmp/btrbk.sh.pid
+if [[ ! "$(/usr/bin/mount | /usr/bin/grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]]; then
+    /usr/bin/notify-send 'Você não está no subvolume ROOT. Snapshot não foi criado.';
+    /usr/bin/echo 'Você não está no subvolume ROOT. Snapshot não foi criado.'
+    /usr/bin/rm /tmp/btrbk.sh.pid;
     exit 1
 fi
-while [ -n "$(pgrep UNO)" ] || [ -n "$(pgrep Diablo)" ] ||  [ -n "$(pgrep qemu)" ];
+while [ -n "$(pgrep UNO)" ] || [ -n "$(/usr/bin/pgrep Diablo)" ] ||  [ -n "$(/usr/bin/pgrep qemu)" ];
 do
-   sleep 10;
+   /usr/bin/sleep 10;
 done
-btrbk -c /etc/btrbk/btrbk_home.conf -q run;
-btrbk -c /etc/btrbk/btrbk_root.conf -q run;  
-rm /tmp/btrbk.sh.pid;
+/usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run;
+/usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run;  
+/usr/bin/rm /tmp/btrbk.sh.pid;

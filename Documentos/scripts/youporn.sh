@@ -16,7 +16,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/pornhub;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico;
                 cd /home/lucas/Downloads/xxx/pornhub/;
-                /usr/bin/yt-dlp  "$clipboard" &> /dev/null &
+                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi 
@@ -26,7 +26,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xvideos;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico;
                 cd /home/lucas/Downloads/xxx/xvideos/;
-                /usr/bin/yt-dlp  "$clipboard" &> /dev/null &
+                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -36,7 +36,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xnxx;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico;
                 cd /home/lucas/Downloads/xxx/xnxx/;
-                /usr/bin/yt-dlp  "$clipboard" &> /dev/null &
+                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -46,7 +46,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xhamster;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico;
                 cd /home/lucas/Downloads/xxx/xhamster/;
-                /usr/bin/yt-dlp  "$clipboard" &> /dev/null &
+                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             fi

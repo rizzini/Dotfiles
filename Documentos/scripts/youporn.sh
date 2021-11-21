@@ -16,7 +16,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/pornhub;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico;
                 cd /home/lucas/Downloads/xxx/pornhub/;
-                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi 
@@ -26,7 +26,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xvideos;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico;
                 cd /home/lucas/Downloads/xxx/xvideos/;
-                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -36,7 +36,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xnxx;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico;
                 cd /home/lucas/Downloads/xxx/xnxx/;
-                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -46,14 +46,14 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xhamster;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico;
                 cd /home/lucas/Downloads/xxx/xhamster/;
-                /home/lucas/Documentos/scripts/yt-dlp --concurrent-fragments=10  "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/mpg123 /home/lucas/Documentos/scripts/youporn.mp3 &> /dev/null &
             fi
         fi
     fi    
 if [ $((counter%2)) -eq 0 ]; then    
-    /usr/bin/echo -ne "Downloads em andamento: ""\033[1;35m$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r\033[0m";
+    /usr/bin/echo -ne "Espaço livre: $(df -h | grep sda2 | head -1 | awk '{print $4}') / Downloads em andamento: ""\033[1;35m$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r\033[0m";
 fi
 /usr/bin/sleep 1
 done

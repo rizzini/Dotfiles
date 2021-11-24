@@ -16,7 +16,7 @@ export PATH="/opt/VirtualGL/bin/:$PATH";
 
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
-#         set -p PATH ~/.local/bin
+        set -p PATH ~/.local/bin
     end
 end
 

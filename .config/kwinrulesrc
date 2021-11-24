@@ -7,9 +7,10 @@ position=960,-146
 positionrule=2
 size=960,671
 sizerule=2
-title=Prime Video - Chromium
+title=Prime Video - Google Chrome
 titlematch=1
-wmclass=chromium chromium
+windowrole=browser
+wmclass=google-chrome google-chrome
 wmclasscomplete=true
 wmclassmatch=2
 

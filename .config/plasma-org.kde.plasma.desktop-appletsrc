@@ -753,7 +753,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=73
+PreloadWeight=78
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -847,7 +847,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=73
+PreloadWeight=78
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496

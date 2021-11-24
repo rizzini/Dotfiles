@@ -3,13 +3,13 @@ set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;
 
 
-# if test -n "$DISPLAY"
-#     if test "$DISPLAY" = ":0" 
-#         if ! string match -q "*archlinux/opengl_libs/nvidia/*" $LD_LIBRARY_PATH
-#             set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/";
-#         end
-#     end
-# end
+if test -n "$DISPLAY"
+    if test "$DISPLAY" = ":1" 
+        if ! string match -q "*archlinux/opengl_libs/nvidia/*" $LD_LIBRARY_PATH
+            set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/";
+        end
+    end
+end
 
 
 export PATH="/opt/VirtualGL/bin/:$PATH";

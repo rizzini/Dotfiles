@@ -6,7 +6,7 @@ set XORG (grep nvidia /etc/X11/xorg.conf)
 if test -n "$DISPLAY"
     if test "$DISPLAY" = ":0"; and ! set -q $XORG;
         if ! string match -q "*opengl_libs*" $LD_LIBRARY_PATH
-            set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/";
+            set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/";
         end
     end
 end

@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=21
+DataCount=22
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -474,14 +474,14 @@ Type=ACTION_DATA_GROUP
 [Data_20]
 Comment=Comentário
 Enabled=true
-Name=identifica_texto
+Name=waydroid
 Type=SIMPLE_ACTION_DATA
 
 [Data_20Actions]
 ActionsCount=1
 
 [Data_20Actions0]
-CommandURL=/home/lucas/Documentos/scripts/identifica_texto_copia_para_area_de_transferencia.sh
+CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
 Type=COMMAND_URL
 
 [Data_20Conditions]
@@ -493,21 +493,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_20Triggers0]
-Key=
+Key=Meta+W
 Type=SHORTCUT
-Uuid={b15d5ce1-475b-4091-b610-e6bdd29fc40a}
+Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
 
 [Data_21]
 Comment=Comentário
 Enabled=true
-Name=waydroid
+Name=Xorg NVIDIA
 Type=SIMPLE_ACTION_DATA
 
 [Data_21Actions]
 ActionsCount=1
 
 [Data_21Actions0]
-CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
+CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh nvidia'
 Type=COMMAND_URL
 
 [Data_21Conditions]
@@ -519,9 +519,35 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_21Triggers0]
-Key=Meta+W
+Key=Meta+N
 Type=SHORTCUT
-Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
+Uuid={bbc43786-7e69-40f9-8030-b7183ba64079}
+
+[Data_22]
+Comment=Comentário
+Enabled=true
+Name=Xorg Intel
+Type=SIMPLE_ACTION_DATA
+
+[Data_22Actions]
+ActionsCount=1
+
+[Data_22Actions0]
+CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh intel'
+Type=COMMAND_URL
+
+[Data_22Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_22Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_22Triggers0]
+Key=Meta+I
+Type=SHORTCUT
+Uuid={4b98d936-eb89-44be-bb80-27e760b4e269}
 
 [Data_2Conditions]
 Comment=
@@ -1476,7 +1502,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_9Triggers0]
-Key=Media Play
+Key=
 Type=SHORTCUT
 Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
 

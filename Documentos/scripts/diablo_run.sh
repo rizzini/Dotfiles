@@ -20,8 +20,10 @@ fi
 
 counter=0
 while [ $counter -le 40 ]; do
-    counter=$(($counter + 2))
-    /usr/bin/killall -9 winedevice.exe;
+    counter=$(($counter + 1))
+    if [ $((counter % 2)) -eq 0 ];then
+        /usr/bin/killall -9 winedevice.exe; 
+    fi
     /usr/bin/sleep 2;
 done
 

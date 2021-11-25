@@ -13,4 +13,4 @@ do
     traduzir+="$i"'%20'
 done
 
-/usr/bin/chromium $url_prefixo$traduzir$url_sufixo &
+/usr/bin/xdg-open $url_prefixo$traduzir$url_sufixo &

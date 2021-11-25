@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$1" == 'taskbar' ];then
+    /usr/bin/echo -ne "Espaço livre: $(df -h | grep sda2 | head -1 | awk '{print $4}') / Downloads em andamento: ""$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r";
+    exit
+fi
 [ ! -f '/home/lucas/Documentos/scripts/xhamster_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xhamster_historico;
 [ ! -f '/home/lucas/Documentos/scripts/pornhub_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/pornhub_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xvideos_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xvideos_historico;

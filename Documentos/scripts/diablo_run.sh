@@ -19,7 +19,7 @@ elif [ "$1" == 'US' ]; then
 fi
 
 counter=0
-while [ $counter -le 40 ]; do
+while [ $counter -le 20 ]; do
     counter=$(($counter + 1))
     if [ $((counter % 2)) -eq 0 ];then
         /usr/bin/killall -9 winedevice.exe; 

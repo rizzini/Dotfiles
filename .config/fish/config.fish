@@ -2,17 +2,17 @@ set fish_greeting;
 set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;
 
-
+set XORG (grep nvidia /etc/X11/xorg.conf)
 if test -n "$DISPLAY"
-    if test "$DISPLAY" = ":1" 
-        if ! string match -q "*archlinux/opengl_libs/nvidia/*" $LD_LIBRARY_PATH
-            set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/nvidia/";
+    if test "$DISPLAY" = ":0"; and ! set -q $XORG;
+        if ! string match -q "*opengl_libs*" $LD_LIBRARY_PATH
+            set -x LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/mnt/archlinux/opengl_libs/";
         end
     end
 end
 
 
-export PATH="/opt/VirtualGL/bin/:$PATH";
+# export PATH="/opt/VirtualGL/bin/:$PATH";
 
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH

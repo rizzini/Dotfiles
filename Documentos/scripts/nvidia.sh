@@ -1,4 +1,5 @@
 #!/bin/bash
-# /usr/bin/sleep 2 &&
-export DISPLAY=:0
-/usr/bin/nvidia-settings --load-config-only
+if [ -n "$(grep nvidia /etc/X11/xorg.conf)" ];then
+    export DISPLAY=:0
+    /usr/bin/nvidia-settings --load-config-only
+fi

@@ -1,0 +1,38 @@
+#!/bin/bash
+if [ -n "$1" ];then
+    kill -9 $(ps auxm | grep Xorg | grep ':1' | grep -v 'color' | awk '{print $2}') &> /dev/null &
+else
+    if [ -z "$(ps auxm | grep Xorg | grep ':1' | grep -v 'color' | awk '{print $2}')" ];then
+        echo 'Iniciando'
+        contador=0
+        while [[ -n "$(ps auxm | grep Xorg | grep ':1' | grep -v 'color' | awk '{print $2}')" && -n "$(pgrep "plasmashell")" && -n "$(pgrep "kwin_x11")" ]];do
+            contador=$(($contador + 1))
+            if [ $contador -ge 5 ];then
+                echo 'Error o encerrar Xorg.'
+                exit 1
+            fi
+            killall -9 kwin_x11 plasmashell x0vncserver &> /dev/null &
+            sudo /home/lucas/Documentos/scripts/nvidia_display.sh kill_xorg            
+        done
+        /usr/bin/X :1 -noreset -seat seat1 -sharevts -config nvidia/xorg.conf &> /dev/null &
+        sleep 4 
+        x0vncserver -display :1 -PasswordFile /home/lucas/.vnc/passwd &> /dev/null &
+        DISPLAY=:1 LD_LIBRARY_PATH='/mnt/archlinux/opengl_libs/nvidia/'  kwin_x11 --replace &> /dev/null & 
+        DISPLAY=:1 LD_LIBRARY_PATH='/mnt/archlinux/opengl_libs/nvidia/'  plasmashell &> /dev/null  & 
+    else
+        echo 'Interrompendo'
+        contador=0
+        while [[ -n "$(ps auxm | grep Xorg | grep ':1' | grep -v 'color' | awk '{print $2}')" && -n "$(pgrep "plasmashell")" && -n "$(pgrep "kwin_x11")" ]];do
+        contador=$(($contador + 1))
+            if [ $contador -ge 5 ];then
+                echo 'Error o encerrar Xorg.'
+                exit 1
+            fi
+            killall -9 kwin_x11 plasmashell x0vncserver &> /dev/null &
+            sudo /home/lucas/Documentos/scripts/nvidia_display.sh kill_xorg
+        done
+        XDG_RUNTIME_DIR=/run/user/1000 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus DISPLAY=:0 LD_LIBRARY_PATH='' kwin_x11 --replace &> /dev/null &
+        XDG_RUNTIME_DIR=/run/user/1000 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus DISPLAY=:0 LD_LIBRARY_PATH='' plasmashell &> /dev/null &
+    fi
+fi
+

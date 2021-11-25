@@ -21,8 +21,8 @@ fi
 counter=0
 while [ $counter -le 40 ]; do
     counter=$(($counter + 2))
-    /usr/bin/killall -9 winedevice.exe
-    /usr/bin/sleep 2
+    /usr/bin/killall -9 winedevice.exe;
+    /usr/bin/sleep 2;
 done
 
 if [ -n "$(ps -ef | /usr/bin/grep kwin | /usr/bin/grep -v grep | /usr/bin/grep -v  defunct | /usr/bin/awk '{print $2}')" ];then 
@@ -30,13 +30,13 @@ if [ -n "$(ps -ef | /usr/bin/grep kwin | /usr/bin/grep -v grep | /usr/bin/grep -
         /usr/bin/xbindkeys &
     fi
     while [ -n "$(/usr/bin/wmctrl -l | /usr/bin/grep -E 'Diablo III|Default - Wine desktop' | grep -v 'Konsole')" ]; do
-        /usr/bin/sleep 2
+        /usr/bin/sleep 2;
     done
 else
     if [ -n "$(/usr/bin/pgrep 'Diablo III.exe')" ]; then
         /usr/bin/xbindkeys &
     fi
-    /usr/bin/kdialog --msgbox 'Fechar Diablo III'
+    /usr/bin/kdialog --msgbox 'Fechar Diablo III';
 fi
 
 if [ -z "$(pgrep plasmashell)" ]; then
@@ -50,9 +50,9 @@ fi
 while [[ -n "$(/usr/bin/pgrep c_diablo_xb.sh)" || -n "$(/usr/bin/pgrep pqiv)" || -n "$(/usr/bin/pgrep Diablo)" || -n "$(/usr/bin/pgrep xdotool)" || -n "$(/usr/bin/pgrep xbindkeys)" || -n "$(pgrep wine)" || -n "$( pgrep .exe)" ]]; do
     /usr/bin/killall -9 macro_d3_wiz.sh c_diablo_xb.sh pqiv xdotool xbindkeys;
     /usr/bin/kill -9 $(/usr/bin/pgrep Diablo);
-    /usr/bin/kill -9 $(/usr/bin/pgrep .exe)
-    /usr/bin/kill -9 $(/usr/bin/pgrep wine)
-    /usr/bin/kill -9 $(/usr/bin/ps -aux | /usr/bin/grep -E "wine|windows" | /usr/bin/sed '$d' |  /usr/bin/awk '{print $2}')
+    /usr/bin/kill -9 $(/usr/bin/pgrep .exe);
+    /usr/bin/kill -9 $(/usr/bin/pgrep wine);
+    /usr/bin/kill -9 $(/usr/bin/ps -aux | /usr/bin/grep -E "wine|windows" | /usr/bin/sed '$d' | /usr/bin/awk '{print $2}');
 done
 
 if [ "$(/usr/bin/pgrep plasmashell)" ]; then

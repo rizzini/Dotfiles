@@ -25,7 +25,7 @@ DialogWidth=916
 PreloadWeight=42
 
 [Containments][153][Wallpaper][org.kde.image][General]
-Image=file:///home/lucas/Imagens/Wallpaper/nebula.jpg
+Image=/home/lucas/Imagens/Wallpaper/nebula_invertido.png
 SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers
 
 [Containments][2]
@@ -625,7 +625,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558
@@ -748,7 +748,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=20
+PreloadWeight=30
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -778,7 +778,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][90][Applets][102][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][103]
 immutability=1
@@ -842,7 +842,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=20
+PreloadWeight=25
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496

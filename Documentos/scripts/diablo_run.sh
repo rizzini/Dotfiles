@@ -26,10 +26,10 @@ while [ $counter -le 40 ]; do
 done
 
 if [ -n "$(ps -ef | /usr/bin/grep kwin | /usr/bin/grep -v grep | /usr/bin/grep -v  defunct | /usr/bin/awk '{print $2}')" ];then 
-    if [[ -n "$(wmctrl -l | /usr/bin/grep -E 'Diablo III|Default - Wine desktop')" ]]; then 
+    if [[ -n "$(wmctrl -l | /usr/bin/grep -E 'Diablo III|Default - Wine desktop' | grep -v 'Konsole')" ]]; then 
         /usr/bin/xbindkeys &
     fi
-    while [ -n "$(/usr/bin/wmctrl -l | /usr/bin/grep -E 'Diablo III|Default - Wine desktop')" ]; do
+    while [ -n "$(/usr/bin/wmctrl -l | /usr/bin/grep -E 'Diablo III|Default - Wine desktop' | grep -v 'Konsole')" ]; do
         /usr/bin/sleep 2
     done
 else

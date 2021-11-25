@@ -101,8 +101,8 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [General]
-Blur=true
+Blur=false
 ColorRandomization=false
 Description=Nordian-Konsole
-Opacity=0.9
+Opacity=1
 Wallpaper=

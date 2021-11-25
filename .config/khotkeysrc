@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=22
+DataCount=21
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -149,14 +149,14 @@ Type=ACTION_DATA_GROUP
 [Data_10]
 Comment=Comentário
 Enabled=true
-Name=playerctl next
+Name=playerctl previous
 Type=SIMPLE_ACTION_DATA
 
 [Data_10Actions]
 ActionsCount=1
 
 [Data_10Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl next
+CommandURL=/home/lucas/Documentos/scripts/playerctl previous
 Type=COMMAND_URL
 
 [Data_10Conditions]
@@ -168,21 +168,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_10Triggers0]
-Key=Ctrl+Volume Up
+Key=Ctrl+Volume Down
 Type=SHORTCUT
-Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
+Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
 
 [Data_11]
 Comment=Comentário
 Enabled=true
-Name=playerctl previous
+Name=ligar/desligar segunda saida HDMI
 Type=SIMPLE_ACTION_DATA
 
 [Data_11Actions]
 ActionsCount=1
 
 [Data_11Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl previous
+CommandURL=/home/lucas/Documentos/scripts/ativar_segundo_monitor.sh
 Type=COMMAND_URL
 
 [Data_11Conditions]
@@ -194,21 +194,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_11Triggers0]
-Key=Ctrl+Volume Down
+Key=Alt+F11
 Type=SHORTCUT
-Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
+Uuid={1cbb8b59-1ed2-4afb-af45-8d12089213b1}
 
 [Data_12]
 Comment=Comentário
 Enabled=true
-Name=ligar/desligar segunda saida HDMI
+Name=simplescreenrecorder
 Type=SIMPLE_ACTION_DATA
 
 [Data_12Actions]
 ActionsCount=1
 
 [Data_12Actions0]
-CommandURL=/home/lucas/Documentos/scripts/ativar_segundo_monitor.sh
+CommandURL=simplescreenrecorder --start-hidden --start-recording --settingsfile='/home/lucas/.ssr/input-profiles/tela_cheia.conf'
 Type=COMMAND_URL
 
 [Data_12Conditions]
@@ -220,21 +220,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_12Triggers0]
-Key=Alt+F11
+Key=Alt+R
 Type=SHORTCUT
-Uuid={1cbb8b59-1ed2-4afb-af45-8d12089213b1}
+Uuid={d25d2b46-c561-48a1-892f-19c27aa90846}
 
 [Data_13]
 Comment=Comentário
 Enabled=true
-Name=simplescreenrecorder
+Name=traduzir
 Type=SIMPLE_ACTION_DATA
 
 [Data_13Actions]
 ActionsCount=1
 
 [Data_13Actions0]
-CommandURL=simplescreenrecorder --start-hidden --start-recording --settingsfile='/home/lucas/.ssr/input-profiles/tela_cheia.conf'
+CommandURL=/home/lucas/Documentos/scripts/traduzir_clipboard.sh
 Type=COMMAND_URL
 
 [Data_13Conditions]
@@ -246,21 +246,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_13Triggers0]
-Key=Alt+R
+Key=Ctrl+R
 Type=SHORTCUT
-Uuid={d25d2b46-c561-48a1-892f-19c27aa90846}
+Uuid={2c10b720-01ed-433a-b5f2-8c8f66765bb2}
 
 [Data_14]
 Comment=Comentário
 Enabled=true
-Name=traduzir
+Name=gravar mic
 Type=SIMPLE_ACTION_DATA
 
 [Data_14Actions]
 ActionsCount=1
 
 [Data_14Actions0]
-CommandURL=/home/lucas/Documentos/scripts/traduzir_clipboard.sh
+CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
 Type=COMMAND_URL
 
 [Data_14Conditions]
@@ -272,21 +272,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_14Triggers0]
-Key=Ctrl+R
+Key=Meta+R
 Type=SHORTCUT
-Uuid={2c10b720-01ed-433a-b5f2-8c8f66765bb2}
+Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
 
 [Data_15]
 Comment=Comentário
 Enabled=true
-Name=gravar mic
+Name=url shortnet\s
 Type=SIMPLE_ACTION_DATA
 
 [Data_15Actions]
 ActionsCount=1
 
 [Data_15Actions0]
-CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
+CommandURL=bash -c '/home/lucas/Documentos/scripts/url_shortner.sh'
 Type=COMMAND_URL
 
 [Data_15Conditions]
@@ -298,21 +298,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_15Triggers0]
-Key=Meta+R
+Key=Ctrl+B
 Type=SHORTCUT
-Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
+Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
 
 [Data_16]
 Comment=Comentário
 Enabled=true
-Name=url shortnet\s
+Name=whatsapp
 Type=SIMPLE_ACTION_DATA
 
 [Data_16Actions]
 ActionsCount=1
 
 [Data_16Actions0]
-CommandURL=bash -c '/home/lucas/Documentos/scripts/url_shortner.sh'
+CommandURL=/usr/bin/whatsapp-nativefier
 Type=COMMAND_URL
 
 [Data_16Conditions]
@@ -324,21 +324,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_16Triggers0]
-Key=Ctrl+B
+Key=
 Type=SHORTCUT
-Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
+Uuid={b56e6d5d-8ac8-45fa-b426-19fb949c7729}
 
 [Data_17]
 Comment=Comentário
 Enabled=true
-Name=whatsapp
+Name=anbox
 Type=SIMPLE_ACTION_DATA
 
 [Data_17Actions]
 ActionsCount=1
 
 [Data_17Actions0]
-CommandURL=/usr/bin/whatsapp-nativefier
+CommandURL=/bin/bash -c 'sudo /home/lucas/Documentos/scripts/intel_xorg_distinct_instance_for_anbox.sh'
 Type=COMMAND_URL
 
 [Data_17Conditions]
@@ -350,21 +350,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_17Triggers0]
-Key=
+Key=Meta+A
 Type=SHORTCUT
-Uuid={b56e6d5d-8ac8-45fa-b426-19fb949c7729}
+Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
 
 [Data_18]
 Comment=Comentário
 Enabled=true
-Name=anbox
+Name=youporn
 Type=SIMPLE_ACTION_DATA
 
 [Data_18Actions]
 ActionsCount=1
 
 [Data_18Actions0]
-CommandURL=/bin/bash -c 'sudo /home/lucas/Documentos/scripts/intel_xorg_distinct_instance_for_anbox.sh'
+CommandURL=/home/lucas/Documentos/scripts/youporn.sh
 Type=COMMAND_URL
 
 [Data_18Conditions]
@@ -376,21 +376,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_18Triggers0]
-Key=Meta+A
+Key=Alt+P
 Type=SHORTCUT
-Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
+Uuid={866b9c15-ab3c-480b-b9b7-6bf0226301ad}
 
 [Data_19]
 Comment=Comentário
 Enabled=true
-Name=youporn
+Name=waydroid
 Type=SIMPLE_ACTION_DATA
 
 [Data_19Actions]
 ActionsCount=1
 
 [Data_19Actions0]
-CommandURL=/home/lucas/Documentos/scripts/youporn.sh
+CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
 Type=COMMAND_URL
 
 [Data_19Conditions]
@@ -402,9 +402,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_19Triggers0]
-Key=Alt+P
+Key=Meta+W
 Type=SHORTCUT
-Uuid={866b9c15-ab3c-480b-b9b7-6bf0226301ad}
+Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
 
 [Data_1Conditions]
 Comment=
@@ -474,14 +474,14 @@ Type=ACTION_DATA_GROUP
 [Data_20]
 Comment=Comentário
 Enabled=true
-Name=waydroid
+Name=Xorg NVIDIA
 Type=SIMPLE_ACTION_DATA
 
 [Data_20Actions]
 ActionsCount=1
 
 [Data_20Actions0]
-CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
+CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh nvidia'
 Type=COMMAND_URL
 
 [Data_20Conditions]
@@ -493,21 +493,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_20Triggers0]
-Key=Meta+W
+Key=Meta+N
 Type=SHORTCUT
-Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
+Uuid={bbc43786-7e69-40f9-8030-b7183ba64079}
 
 [Data_21]
 Comment=Comentário
 Enabled=true
-Name=Xorg NVIDIA
+Name=Xorg Intel
 Type=SIMPLE_ACTION_DATA
 
 [Data_21Actions]
 ActionsCount=1
 
 [Data_21Actions0]
-CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh nvidia'
+CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh intel'
 Type=COMMAND_URL
 
 [Data_21Conditions]
@@ -519,32 +519,6 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_21Triggers0]
-Key=Meta+N
-Type=SHORTCUT
-Uuid={bbc43786-7e69-40f9-8030-b7183ba64079}
-
-[Data_22]
-Comment=Comentário
-Enabled=true
-Name=Xorg Intel
-Type=SIMPLE_ACTION_DATA
-
-[Data_22Actions]
-ActionsCount=1
-
-[Data_22Actions0]
-CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh intel'
-Type=COMMAND_URL
-
-[Data_22Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_22Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_22Triggers0]
 Key=Meta+I
 Type=SHORTCUT
 Uuid={4b98d936-eb89-44be-bb80-27e760b4e269}
@@ -1405,14 +1379,14 @@ Uuid={fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}
 [Data_6]
 Comment=Comentário
 Enabled=true
-Name=luks
+Name=Flameshot
 Type=SIMPLE_ACTION_DATA
 
 [Data_6Actions]
 ActionsCount=1
 
 [Data_6Actions0]
-CommandURL=sudo -A /usr/local/bin/xxx
+CommandURL=/usr/bin/flameshot gui
 Type=COMMAND_URL
 
 [Data_6Conditions]
@@ -1424,21 +1398,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_6Triggers0]
-Key=Alt+F12
+Key=Print
 Type=SHORTCUT
-Uuid={f178b638-75eb-4e48-bbd9-b1b384ff8259}
+Uuid={74f6823a-28f0-4525-a917-c84e7ad418b1}
 
 [Data_7]
 Comment=Comentário
 Enabled=true
-Name=Flameshot
+Name=Youtube
 Type=SIMPLE_ACTION_DATA
 
 [Data_7Actions]
 ActionsCount=1
 
 [Data_7Actions0]
-CommandURL=/usr/bin/flameshot gui
+CommandURL=/home/lucas/Documentos/scripts/youtube/youtube.sh
 Type=COMMAND_URL
 
 [Data_7Conditions]
@@ -1450,21 +1424,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_7Triggers0]
-Key=Print
+Key=Ctrl+Y
 Type=SHORTCUT
-Uuid={74f6823a-28f0-4525-a917-c84e7ad418b1}
+Uuid={623fd3d2-1b05-4a1f-a894-500881d7f2dc}
 
 [Data_8]
 Comment=Comentário
 Enabled=true
-Name=Youtube
+Name=playerctl play-pause
 Type=SIMPLE_ACTION_DATA
 
 [Data_8Actions]
 ActionsCount=1
 
 [Data_8Actions0]
-CommandURL=/home/lucas/Documentos/scripts/youtube/youtube.sh
+CommandURL=/home/lucas/Documentos/scripts/playerctl play_pause
 Type=COMMAND_URL
 
 [Data_8Conditions]
@@ -1476,21 +1450,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=Ctrl+Y
+Key=
 Type=SHORTCUT
-Uuid={623fd3d2-1b05-4a1f-a894-500881d7f2dc}
+Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
 
 [Data_9]
 Comment=Comentário
 Enabled=true
-Name=playerctl play-pause
+Name=playerctl next
 Type=SIMPLE_ACTION_DATA
 
 [Data_9Actions]
 ActionsCount=1
 
 [Data_9Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl play_pause
+CommandURL=/home/lucas/Documentos/scripts/playerctl next
 Type=COMMAND_URL
 
 [Data_9Conditions]
@@ -1502,15 +1476,16 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_9Triggers0]
-Key=
+Key=Ctrl+Volume Up
 Type=SHORTCUT
-Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
+Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
 
 [DirSelect Dialog]
 DirSelectDialog Size[$d]
 History Items[$d]
 
 [General]
+AccentColor[$d]
 BrowserApplication[$d]
 ColorScheme[$d]
 Name[$d]

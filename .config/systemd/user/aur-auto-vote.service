@@ -3,6 +3,5 @@ Description=Automates voting on installed and uninstalled AUR packages
 
 [Service]
 Type=simple
-# enter your username and password here
 ExecStart=/home/lucas/Documentos/scripts/aur_vote.sh
 

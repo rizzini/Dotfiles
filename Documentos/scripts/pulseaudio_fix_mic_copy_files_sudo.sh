@@ -8,7 +8,7 @@ elif [ "$1" == "1_intel" ]; then
 elif [ "$1" == "1_nvidia" ]; then
     /usr/bin/cp /etc/pulse/default.pa_1_nvidia /etc/pulse/default.pa;
 elif [ "$1" == "2_intel" ]; then
-    /usr/bin/cp /etc/pulse/default.pa_2_intel/etc/pulse/default.pa;
+    /usr/bin/cp /etc/pulse/default.pa_2_intel /etc/pulse/default.pa;
 elif [ "$1" == "2_nvidia" ]; then
     /usr/bin/cp /etc/pulse/default.pa_2_nvidia /etc/pulse/default.pa;
 fi

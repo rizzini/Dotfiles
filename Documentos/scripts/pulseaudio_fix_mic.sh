@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 contador=0
 while [ -z "$(/usr/bin/pactl list sources | /usr/bin/grep 'device.description = "Áudio interno"')" ];do
     contador=$(($contador + 1))
@@ -24,4 +23,3 @@ while [ -z "$(/usr/bin/pactl list sources | /usr/bin/grep 'device.description = 
     fi    
     /usr/bin/sleep 1
 done
-

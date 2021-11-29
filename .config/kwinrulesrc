@@ -2,17 +2,16 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Configurações de janela para Prime Video
+Description=Configurações de aplicativo para supertuxkart
+clientmachine=localhost
 position=960,-146
-positionrule=2
-size=960,671
+size=832,600
 sizerule=2
-title=Prime Video - Google Chrome
-titlematch=1
+title=SuperTuxKart
 windowrole=browser
-wmclass=google-chrome google-chrome
+wmclass=supertuxkart supertuxkart
 wmclasscomplete=true
-wmclassmatch=2
+wmclassmatch=1
 
 [18d6f5c5-da06-4526-8cdd-668186fa1a3d]
 Description=Configurações de janela para Lords Mobile
@@ -24,18 +23,25 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [2]
+Description=Configurações de janela para Prime Video
+position=960,-146
+positionrule=2
+size=960,671
+sizerule=2
+skiptaskbar=true
+title=Prime Video - Google Chrome
+titlematch=1
+windowrole=browser
+wmclass=google-chrome google-chrome
+wmclasscomplete=true
+wmclassmatch=2
+
+[3]
 Description=Configurações de nova janela
+noborder=true
 skiptaskbar=true
 skiptaskbarrule=2
 wmclass=nwjs_kjlcknihpadniagphehmpojkkdigigjp streamlink-twitch-gui
-wmclasscomplete=true
-wmclassmatch=1
-
-[3]
-Description=Configurações de janela para Diablo III
-noborder=true
-noborderrule=2
-wmclass=diablo iii.exe diablo iii.exe
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -49,18 +55,28 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [4]
-Description=Configurações para zenity zenity
+Description=Configurações de janela para Diablo III
 noborder=true
+noborderrule=2
+position=247,683
+wmclass=diablo iii.exe diablo iii.exe
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Configurações para zenity zenity
 position=247,683
 positionrule=3
+size=600,400
+title=UNO
 types=32
 wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
-[5]
+[6]
 Description=Configurações de janela para UNO
-position=247,683
+position=960,-295
 size=600,400
 sizerule=2
 title=UNO
@@ -68,7 +84,7 @@ wmclass=steam_app_470220 steam_app_470220
 wmclasscomplete=true
 wmclassmatch=1
 
-[6]
+[7]
 Description=Configurações de janela para BandNews TV Ao Vivo
 position=960,-295
 positionrule=2
@@ -80,7 +96,7 @@ wmclass=chromium
 wmclasscomplete=true
 wmclassmatch=2
 
-[7]
+[8]
 Description=Configurações de janela para Lords Mobile
 size=870,432
 sizerule=2
@@ -103,7 +119,7 @@ wmclassmatch=2
 
 [General]
 count=8
-rules=d4f079d3-69f8-4f88-891a-cd4560f8abc3,1,2,3,4,5,6,7
+rules=1,2,3,4,5,6,7,8
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

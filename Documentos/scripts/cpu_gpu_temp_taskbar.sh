@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -n "$(/usr/bin/pgrep youporn.sh)" ];then
+if [ -n "$(/usr/bin/pgrep yt-dlp)" ];then
     /home/lucas/Documentos/scripts/youporn.sh taskbar
 else
     if [ -n "$(/usr/bin/pgrep amule)" ];then

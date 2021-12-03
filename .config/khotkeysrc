@@ -174,7 +174,7 @@ Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
 
 [Data_11]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=ligar/desligar segunda saida HDMI
 Type=SIMPLE_ACTION_DATA
 
@@ -200,7 +200,7 @@ Uuid={1cbb8b59-1ed2-4afb-af45-8d12089213b1}
 
 [Data_12]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=simplescreenrecorder
 Type=SIMPLE_ACTION_DATA
 
@@ -473,7 +473,7 @@ Type=ACTION_DATA_GROUP
 
 [Data_20]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=Xorg NVIDIA
 Type=SIMPLE_ACTION_DATA
 
@@ -499,7 +499,7 @@ Uuid={bbc43786-7e69-40f9-8030-b7183ba64079}
 
 [Data_21]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=Xorg Intel
 Type=SIMPLE_ACTION_DATA
 
@@ -1450,7 +1450,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=
+Key=Media Play
 Type=SHORTCUT
 Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
 

@@ -20,7 +20,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/pornhub;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico;
                 cd /home/lucas/Downloads/xxx/pornhub/;
-                nice 0 /usr/bin/yt-dlp "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/ffplay  -nodisp -autoexit -volume 45 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi 
@@ -30,7 +30,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xvideos;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico;
                 cd /home/lucas/Downloads/xxx/xvideos/;
-                nice 0 /usr/bin/yt-dlp "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/ffplay  -nodisp -autoexit -volume 45 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -40,7 +40,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xnxx;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico;
                 cd /home/lucas/Downloads/xxx/xnxx/;
-                nice 0 /usr/bin/yt-dlp "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/ffplay  -nodisp -autoexit -volume 45 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi
@@ -50,7 +50,7 @@ while :; do
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xhamster;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico;
                 cd /home/lucas/Downloads/xxx/xhamster/;
-                nice 0 /usr/bin/yt-dlp "$clipboard" &> /dev/null &
+                /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                 disown $!;
                 /usr/bin/timeout 1 /usr/bin/ffplay  -nodisp -autoexit -volume 45 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null &
             fi

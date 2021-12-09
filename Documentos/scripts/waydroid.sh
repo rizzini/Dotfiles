@@ -8,7 +8,7 @@ fi
 /usr/bin/sudo /usr/bin/systemctl restart waydroid-container.service
 if [ -z "$(/usr/bin/pgrep kwin_wayland)" ]; then
 #   /usr/bin/weston --width=780 --height=425 --xwayland &> /dev/null &
-    /usr/bin/kwin_wayland --no-lockscreen --width=780 --height=420 --xwayland &> /dev/null &
+    /usr/bin/kwin_wayland --no-lockscreen --width=780 --height=425 --xwayland &> /dev/null &
 fi
 /usr/bin/sleep 1 &&
 export XDG_SESSION_TYPE='wayland'

@@ -165,6 +165,7 @@ ColorScheme=BreezeLight
 LookAndFeelPackage=com.github.vinceliuice.Orchis-dark
 ShowDeleteCommand=false
 contrast=4
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false

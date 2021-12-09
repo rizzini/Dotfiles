@@ -1,4 +1,5 @@
 #!/bin/bash
+# implement kwin_wayland instead Weston.
 if [ "$(/usr/bin/systemctl is-active waydroid-container.service)" == 'active' ];then
     /usr/bin/killall -9 weston
     /usr/bin/sudo /usr/bin/systemctl stop waydroid-container.service

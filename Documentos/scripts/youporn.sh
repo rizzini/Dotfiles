@@ -7,6 +7,9 @@ fi
 [ ! -f '/home/lucas/Documentos/scripts/pornhub_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/pornhub_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xvideos_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xvideos_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xnxx_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xnxx_historico;
+[ ! -d '/home/lucas/Downloads/megasync' ] && /usr/bin/mkdir -p /home/lucas/Downloads/megasync/;
+
+
 counter=0;
 while :; do
     historico='';
@@ -57,7 +60,8 @@ while :; do
             fi
         fi
     fi    
-if [ $((counter%2)) -eq 0 ]; then    
+if [ $((counter%2)) -eq 0 ]; then
+    /usr/bin/find /home/lucas/Downloads/xxx/ -iname "*.mp4" -exec mv {} /home/lucas/Downloads/megasync/ \;
     /usr/bin/echo -ne "Espaço livre: $(/usr/bin/df -h | /usr/bin/grep sda2 | /usr/bin/head -1 | /usr/bin/awk '{print $4}') / Downloads em andamento: ""\033[1;35m$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r\033[0m";
 fi
 /usr/bin/sleep 1

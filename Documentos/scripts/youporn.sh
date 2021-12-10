@@ -8,8 +8,6 @@ fi
 [ ! -f '/home/lucas/Documentos/scripts/xvideos_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xvideos_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xnxx_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xnxx_historico;
 [ ! -d '/home/lucas/Downloads/megasync' ] && /usr/bin/mkdir -p /home/lucas/Downloads/megasync/;
-
-
 counter=0;
 while :; do
     historico='';

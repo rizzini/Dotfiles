@@ -16,4 +16,6 @@ do
 done
 /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run;
 /usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run;  
+/usr/bin/btrbk -c /etc/btrbk/btrbk_simcity.conf -q run;  
 /usr/bin/rm /tmp/btrbk.sh.pid;
+

@@ -4261,10 +4261,10 @@ text-renderer=any
 #rt-offset=0
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
-#loop=0
+loop=1
 
 # Repeat current item (boolean)
 #repeat=0

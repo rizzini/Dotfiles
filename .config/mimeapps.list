@@ -7,6 +7,7 @@ application/x-extension-shtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-partial-download=mpv.desktop;
+application/x-wine-extension-ini=org.kde.kate.desktop;
 application/xhtml+xml=firefox.desktop;
 application/xml=org.kde.kate.desktop;google-chrome.desktop;firefox.desktop;libreoffice-writer.desktop;nvim.desktop;vim.desktop;
 audio/mpeg=mpv.desktop;fr.handbrake.ghb.desktop;
@@ -41,6 +42,7 @@ application/x-extension-shtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-partial-download=mpv.desktop;
+application/x-wine-extension-ini=org.kde.kate.desktop;
 application/xhtml+xml=firefox.desktop
 application/xml=org.kde.kate.desktop;
 audio/mpeg=mpv.desktop;
@@ -72,6 +74,7 @@ x-scheme-handler/tel=skypeforlinux.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]
+application/x-wine-extension-ini=wine-extension-ini.desktop;
 image/bmp=
 image/gif=wine-extension-gif.desktop;
 image/jpeg=wine-extension-jpe.desktop;wine-extension-jfif.desktop;

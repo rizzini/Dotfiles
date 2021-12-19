@@ -1,6 +1,7 @@
 [Added Associations]
 application/json=org.kde.kate.desktop;firefox.desktop;libreoffice-writer.desktop;vim.desktop;nvim.desktop;
 application/octet-stream=org.kde.kate.desktop;
+application/x-compressed-tar=org.kde.ark.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
@@ -36,6 +37,7 @@ x-scheme-handler/mailto=chromium.desktop;
 [Default Applications]
 application/json=org.kde.kate.desktop;
 application/octet-stream=org.kde.kate.desktop;
+application/x-compressed-tar=org.kde.ark.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
@@ -72,8 +74,10 @@ x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
 
 [Removed Associations]
+application/x-compressed-tar=org.kde.kate.desktop;
 application/x-wine-extension-ini=wine-extension-ini.desktop;
 image/bmp=
 image/gif=wine-extension-gif.desktop;

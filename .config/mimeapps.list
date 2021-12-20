@@ -75,6 +75,7 @@ x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
+x-scheme-handler/discord-863127630534148136=discord-863127630534148136.desktop
 
 [Removed Associations]
 application/x-compressed-tar=org.kde.kate.desktop;

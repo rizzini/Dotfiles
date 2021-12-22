@@ -1,5 +1,5 @@
 #!/bin/bash
-while :;do
+while [ ! $(df | grep sda2 | head -1 | awk '{print $5}' | tr -d '%') -lt 2 ];do
     if [ -z "$(/usr/bin/pgrep -x amule)" ];then
         /usr/bin/sleep 1
         /usr/bin/amule &> /dev/null &
@@ -7,3 +7,4 @@ while :;do
     fi
     /usr/bin/sleep 2
 done
+killall -9 amule

@@ -64,4 +64,5 @@ if [ $((counter%2)) -eq 0 ]; then
     /usr/bin/echo -ne "Espaço livre: $(/usr/bin/df -h | /usr/bin/grep sda2 | /usr/bin/head -1 | /usr/bin/awk '{print $4}') / Downloads em andamento: ""\033[1;35m$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r\033[0m";
 fi
 /usr/bin/sleep 1
+printf "$(ps auxm | grep 'yt-dlp' | awk '{print $13}')\n" &> /home/lucas/Downloads/xxx/links.txt
 done

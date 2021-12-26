@@ -116,6 +116,14 @@ wmclass=steam_app_1041320 steam_app_1041320
 wmclasscomplete=true
 wmclassmatch=1
 
+[820952b7-4ef5-4514-86f6-08412e931eb9]
+Description=Configurações de janela para JIT64
+size=800,616
+sizerule=2
+title=JIT64
+titlematch=2
+wmclassmatch=2
+
 [8c965414-c2fc-4963-9ac9-f70f59487ad7]
 Description=Configurações de janela para BandNews TV Ao Vivo
 position=960,-295
@@ -129,8 +137,8 @@ wmclasscomplete=true
 wmclassmatch=2
 
 [General]
-count=7
-rules=1,2,3,4,5,6,7
+count=8
+rules=1,2,3,4,5,6,7,820952b7-4ef5-4514-86f6-08412e931eb9
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

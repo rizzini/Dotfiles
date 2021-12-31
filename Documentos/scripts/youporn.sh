@@ -7,7 +7,7 @@ fi
 [ ! -f '/home/lucas/Documentos/scripts/pornhub_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/pornhub_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xvideos_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xvideos_historico;
 [ ! -f '/home/lucas/Documentos/scripts/xnxx_historico' ] && /usr/bin/touch /home/lucas/Documentos/scripts/xnxx_historico;
-[ ! -d '/home/lucas/Downloads/megasync' ] && /usr/bin/mkdir -p /home/lucas/Downloads/megasync/;
+[ ! -d '/home/lucas/Downloads/megasync_temp/' ] && /usr/bin/mkdir -p /home/lucas/Downloads/megasync_temp/;
 [ ! -d '/home/lucas/Downloads/xxx' ] && /usr/bin/mkdir -p /home/lucas/Downloads/xxx/;
 counter=0;
 while :; do
@@ -19,7 +19,7 @@ while :; do
         if [[ $clipboard == *"pornhub"* ]]; then
             /usr/bin/grep -q "$(echo "$clipboard" | /usr/bin/cut -d "=" -f2 )" /home/lucas/Documentos/scripts/pornhub_historico;
             if [ "$?" == "1" ]; then
-                /usr/bin/ffplay  -nodisp -autoexit -volume 40 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
+                /usr/bin/ffplay  -nodisp -autoexit -volume 30 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/pornhub;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico;
                 cd /home/lucas/Downloads/xxx/pornhub/;
@@ -30,7 +30,7 @@ while :; do
         elif [[ $clipboard == *"xvideos"* ]]; then
             /usr/bin/grep -q "$(/usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xvideos_historico;
             if [ "$?" == "1" ]; then
-                /usr/bin/ffplay  -nodisp -autoexit -volume 40 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
+                /usr/bin/ffplay  -nodisp -autoexit -volume 30 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xvideos;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xvideos_historico;
                 cd /home/lucas/Downloads/xxx/xvideos/;
@@ -40,7 +40,7 @@ while :; do
         elif [[ $clipboard == *"xnxx"* ]]; then
             /usr/bin/grep -q "$(/usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xnxx_historico;
             if [ "$?" == "1" ]; then
-                /usr/bin/ffplay  -nodisp -autoexit -volume 40 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
+                /usr/bin/ffplay  -nodisp -autoexit -volume 30 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xnxx;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xnxx_historico;
                 cd /home/lucas/Downloads/xxx/xnxx/;
@@ -50,7 +50,7 @@ while :; do
         elif [[ $clipboard == *"xhamster"* ]]; then
             /usr/bin/grep -q "$(/usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xhamster_historico;
             if [ "$?" == "1" ]; then
-                /usr/bin/ffplay  -nodisp -autoexit -volume 40 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
+                /usr/bin/ffplay  -nodisp -autoexit -volume 30 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
                 /usr/bin/mkdir -p /home/lucas/Downloads/xxx/xhamster;
                 /usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5  >> /home/lucas/Documentos/scripts/xhamster_historico;
                 cd /home/lucas/Downloads/xxx/xhamster/;
@@ -60,7 +60,7 @@ while :; do
         fi
     fi    
 if [ $((counter%2)) -eq 0 ]; then
-    /usr/bin/find /home/lucas/Downloads/xxx/ -iname "*.mp4" -exec mv {} /home/lucas/Downloads/megasync/ \;
+    /usr/bin/find /home/lucas/Downloads/xxx/ -iname "*.mp4" -exec mv {} /home/lucas/Downloads/megasync_temp/ \;
     /usr/bin/echo -ne "Espaço livre: $(/usr/bin/df -h | /usr/bin/grep sda2 | /usr/bin/head -1 | /usr/bin/awk '{print $4}') / Downloads em andamento: ""\033[1;35m$(($(/usr/bin/ps aux | /usr/bin/grep yt-dlp | /usr/bin/grep -v color | /usr/bin/wc -l) - 1))\r\033[0m";
 fi
 /usr/bin/sleep 1

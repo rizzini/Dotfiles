@@ -62,5 +62,5 @@ ElectricBorderMaximize=false
 MaximizeButtonRightClickCommand=Maximize (vertical only)
 
 [org.kde.kdecoration2]
-library=org.kde.oxygen
-theme=Oxygen
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__Ant-Dark

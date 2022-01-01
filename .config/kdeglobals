@@ -3,146 +3,110 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=150,150,150
+Color=112,111,110
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.65
 ContrastEffect=1
 Enable=
 IntensityAmount=0.1
-IntensityEffect=2
+IntensityEffect=0
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=150,150,150
+Color=112,111,110
 ColorAmount=0.025
 ColorEffect=2
 ContrastAmount=0.1
 ContrastEffect=2
-Enable=false
+Enable=true
 IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=90,90,90
-BackgroundNormal=77,77,77
+BackgroundAlternate=62,62,62
+BackgroundNormal=73,73,73
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=223,223,223,100
+ForegroundInactive=160,160,160
 ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Complementary]
-BackgroundAlternate=48,48,48
-BackgroundNormal=40,40,40
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=239,240,241,100
 ForegroundLink=61,212,37
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
-ForegroundPositive=17,209,22
-ForegroundVisited=61,174,230
-
-[Colors:Header]
-BackgroundAlternate=51,51,51
-BackgroundNormal=44,44,44
-DecorationFocus=61,212,37
-DecorationHover=61,212,37
-ForegroundActive=61,212,37
-ForegroundInactive=223,223,223,100
-ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
-
-[Colors:Header][Inactive]
-BackgroundAlternate=48,48,48
-BackgroundNormal=42,42,42
-DecorationFocus=0,120,215
-DecorationHover=66,156,227
-ForegroundActive=61,174,233
-ForegroundInactive=223,223,223,70
-ForegroundLink=66,133,244
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223,150
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
 
 [Colors:Selection]
-BackgroundAlternate=53,113,43
-BackgroundNormal=53,113,43
+BackgroundAlternate=52,112,42
+BackgroundNormal=52,112,42
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=255,255,255,150
+ForegroundInactive=160,160,160
 ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
 ForegroundNormal=255,255,255
-ForegroundPositive=1,162,153
-ForegroundVisited=189,195,199
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Tooltip]
-BackgroundAlternate=40,40,40
-BackgroundNormal=40,40,40
+BackgroundAlternate=0,0,0
+BackgroundNormal=0,0,0
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=223,223,223,150
+ForegroundInactive=225,225,225
 ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:View]
-BackgroundAlternate=48,48,48
-BackgroundNormal=48,48,48
+BackgroundAlternate=56,56,56
+BackgroundNormal=46,46,46
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=223,223,223,100
+ForegroundInactive=160,160,160
 ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Window]
-BackgroundAlternate=48,48,48
-BackgroundNormal=40,40,40
+BackgroundAlternate=49,49,49
+BackgroundNormal=61,61,62
 DecorationFocus=61,212,37
 DecorationHover=61,212,37
 ForegroundActive=61,212,37
-ForegroundInactive=223,223,223,100
+ForegroundInactive=160,160,160
 ForegroundLink=61,212,37
-ForegroundNegative=218,68,83
-ForegroundNeutral=255,109,0
-ForegroundNormal=223,223,223
-ForegroundPositive=1,162,153
-ForegroundVisited=0,188,212
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [DirSelect Dialog]
 DirSelectDialog Size=830,592
-History Items[$e]=file:$HOME/Downloads/Nova pasta,file:$HOME/Downloads/1,file:$HOME/Downloads/megasync/1,file:///mnt/archlinux/gamecube,file:$HOME/Downloads,file:///mnt/archlinux/gamecube/mariokart,file:$HOME/Downloads/amule/final,file:$HOME,file:///mnt/archlinux/NFU2/Need for Speed Underground 2,file:$HOME/Downloads/Mario Kart - Double Dash,file:$HOME/Downloads,file:///mnt/archlinux/Need for Speed Underground 2,file:///mnt/archlinux/SIMCITY/Apps,file:$HOME/Downloads,file:$HOME/Downloads/vm,file:$HOME/Downloads,file:$HOME/Downloads/vms,file:$HOME/Downloads/megasync,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Imagens/Wallpaper,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///run/media/lucas/DEFAULTNTSC_SCN,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/hdd/VM,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads/temp,file:$HOME/Downloads,file:///mnt/HDD/Videos,file:$HOME/.themes/Sweet-Mars-transparent-toolbar/,file:$HOME/Downloads,file:///mnt/archlinux/btrbk_snapshots,file:$HOME/.wine_d3,file:///tmp/XXX/final,file:///mnt/archlinux,file:$HOME/.wine,file:$HOME/Área de Trabalho,file:$HOME/.themes/Sweet-transparent-toolbar,file:$HOME/.themes/Sweet-Mars-transparent-toolbar/,file:$HOME,file:///share/themes/Kvantum,trash:/,file:///mnt/HDD2/XXX/normal,file:///mnt/HDD2/amule/XXX
+History Items[$e]=file:$HOME/.config/Kvantum/Orchis-dark,file:$HOME/Downloads/Nova pasta,file:$HOME/Downloads/1,file:$HOME/Downloads/megasync/1,file:///mnt/archlinux/gamecube,file:$HOME/Downloads,file:///mnt/archlinux/gamecube/mariokart,file:$HOME/Downloads/amule/final,file:$HOME,file:///mnt/archlinux/NFU2/Need for Speed Underground 2,file:$HOME/Downloads/Mario Kart - Double Dash,file:$HOME/Downloads,file:///mnt/archlinux/Need for Speed Underground 2,file:///mnt/archlinux/SIMCITY/Apps,file:$HOME/Downloads,file:$HOME/Downloads/vm,file:$HOME/Downloads,file:$HOME/Downloads/vms,file:$HOME/Downloads/megasync,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Imagens/Wallpaper,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///run/media/lucas/DEFAULTNTSC_SCN,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/hdd/VM,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads/temp,file:$HOME/Downloads,file:///mnt/HDD/Videos,file:$HOME/.themes/Sweet-Mars-transparent-toolbar/,file:$HOME/Downloads,file:///mnt/archlinux/btrbk_snapshots,file:$HOME/.wine_d3,file:///tmp/XXX/final,file:///mnt/archlinux,file:$HOME/.wine,file:$HOME/Área de Trabalho,file:$HOME/.themes/Sweet-transparent-toolbar,file:$HOME/.themes/Sweet-Mars-transparent-toolbar/,file:$HOME,file:///share/themes/Kvantum,trash:/,file:///mnt/HDD2/XXX/normal
 
 [General]
 AccentColor=61,212,37
 BrowserApplication=google-chrome.desktop
-ColorScheme=OrchisDark
+ColorScheme=Kvantum
 Name[pt_BR]=Breeze Dark
 Name=Nord-Dark-Color
 XftAntialias=true
@@ -157,7 +121,7 @@ toolBarFont=Noto Sans,8,-1,5,50,0,0,0,0,0
 widgetStyle=Breeze
 
 [Icons]
-Theme=Tela-circle-green-dark
+Theme=breeze-dark
 
 [KDE]
 AnimationDurationFactor=0.5
@@ -179,7 +143,7 @@ Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
-Show hidden files=false
+Show hidden files=true
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
@@ -200,13 +164,13 @@ MaximumRemoteSize=0
 FindNext=
 
 [WM]
-activeBackground=40,40,40
-activeBlend=40,40,40
+activeBackground=61,61,62
+activeBlend=61,61,62
 activeFont=Noto Sans,8,-1,5,50,0,0,0,0,0
-activeForeground=223,223,223
-inactiveBackground=50,50,50
-inactiveBlend=50,50,50
-inactiveForeground=223,223,223,100
+activeForeground=255,255,255
+inactiveBackground=61,61,62
+inactiveBlend=61,61,62
+inactiveForeground=155,155,155
 
 [Zoom]
 view_zoom_in=Meta+Num+*; Ctrl+=

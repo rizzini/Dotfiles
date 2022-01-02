@@ -34,7 +34,7 @@ end
 
 source ("/usr/bin/starship" init fish --print-full-init | psub);
 
-#alias k=kate;
+alias k=kate;
 alias plasmashell='kquitapp5 plasmashell &> /dev/null & sleep 1 && kstart5 /usr/bin/plasmashell &> /dev/null & disown $last_pid';
 alias ls='exa -al --color=always --group-directories-first --icons';
 alias grep='grep --color=auto';

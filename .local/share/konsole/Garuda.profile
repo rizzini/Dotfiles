@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=Nord-Konsole
-Font=Anonymice Nerd Font,9,-1,5,50,0,0,0,0,0
+ColorScheme=Nordian-Konsole
+Font=DroidSansMono Nerd Font,8,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]

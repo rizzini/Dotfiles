@@ -65,4 +65,5 @@ if [ $((counter%2)) -eq 0 ]; then
 fi
 /usr/bin/sleep 1
 printf "$(ps auxm | grep 'yt-dlp' | awk '{print $13}')\n" &> /home/lucas/Downloads/xxx/links.txt
+killall -9 ffmpeg &> /dev/null &
 done

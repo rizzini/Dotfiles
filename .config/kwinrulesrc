@@ -3,9 +3,9 @@ update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-vir
 
 [1]
 Description=Configurações de janela para Prime Video
-position=960,-146
+position=960,-140
 positionrule=2
-size=960,671
+size=960,679
 sizerule=2
 title=Prime Video - Google Chrome
 titlematch=1

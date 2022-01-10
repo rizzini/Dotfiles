@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=21
+DataCount=18
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -174,15 +174,15 @@ Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
 
 [Data_11]
 Comment=Comentário
-Enabled=false
-Name=ligar/desligar segunda saida HDMI
+Enabled=true
+Name=traduzir
 Type=SIMPLE_ACTION_DATA
 
 [Data_11Actions]
 ActionsCount=1
 
 [Data_11Actions0]
-CommandURL=/home/lucas/Documentos/scripts/ativar_segundo_monitor.sh
+CommandURL=/home/lucas/Documentos/scripts/traduzir_clipboard.sh
 Type=COMMAND_URL
 
 [Data_11Conditions]
@@ -194,21 +194,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_11Triggers0]
-Key=Alt+F11
+Key=Ctrl+R
 Type=SHORTCUT
-Uuid={1cbb8b59-1ed2-4afb-af45-8d12089213b1}
+Uuid={2c10b720-01ed-433a-b5f2-8c8f66765bb2}
 
 [Data_12]
 Comment=Comentário
-Enabled=false
-Name=simplescreenrecorder
+Enabled=true
+Name=gravar mic
 Type=SIMPLE_ACTION_DATA
 
 [Data_12Actions]
 ActionsCount=1
 
 [Data_12Actions0]
-CommandURL=simplescreenrecorder --start-hidden --start-recording --settingsfile='/home/lucas/.ssr/input-profiles/tela_cheia.conf'
+CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
 Type=COMMAND_URL
 
 [Data_12Conditions]
@@ -220,21 +220,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_12Triggers0]
-Key=Alt+R
+Key=Meta+R
 Type=SHORTCUT
-Uuid={d25d2b46-c561-48a1-892f-19c27aa90846}
+Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
 
 [Data_13]
 Comment=Comentário
 Enabled=true
-Name=traduzir
+Name=url shortnet\s
 Type=SIMPLE_ACTION_DATA
 
 [Data_13Actions]
 ActionsCount=1
 
 [Data_13Actions0]
-CommandURL=/home/lucas/Documentos/scripts/traduzir_clipboard.sh
+CommandURL=bash -c '/home/lucas/Documentos/scripts/url_shortner.sh'
 Type=COMMAND_URL
 
 [Data_13Conditions]
@@ -246,21 +246,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_13Triggers0]
-Key=Ctrl+R
+Key=Ctrl+B
 Type=SHORTCUT
-Uuid={2c10b720-01ed-433a-b5f2-8c8f66765bb2}
+Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
 
 [Data_14]
 Comment=Comentário
 Enabled=true
-Name=gravar mic
+Name=whatsapp
 Type=SIMPLE_ACTION_DATA
 
 [Data_14Actions]
 ActionsCount=1
 
 [Data_14Actions0]
-CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
+CommandURL=/usr/bin/whatsapp-nativefier
 Type=COMMAND_URL
 
 [Data_14Conditions]
@@ -272,21 +272,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_14Triggers0]
-Key=Meta+R
+Key=
 Type=SHORTCUT
-Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
+Uuid={b56e6d5d-8ac8-45fa-b426-19fb949c7729}
 
 [Data_15]
 Comment=Comentário
 Enabled=true
-Name=url shortnet\s
+Name=anbox
 Type=SIMPLE_ACTION_DATA
 
 [Data_15Actions]
 ActionsCount=1
 
 [Data_15Actions0]
-CommandURL=bash -c '/home/lucas/Documentos/scripts/url_shortner.sh'
+CommandURL=/bin/bash -c 'sudo /home/lucas/Documentos/scripts/intel_xorg_distinct_instance_for_anbox.sh'
 Type=COMMAND_URL
 
 [Data_15Conditions]
@@ -298,21 +298,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_15Triggers0]
-Key=Ctrl+B
+Key=Meta+A
 Type=SHORTCUT
-Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
+Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
 
 [Data_16]
 Comment=Comentário
 Enabled=true
-Name=whatsapp
+Name=youporn
 Type=SIMPLE_ACTION_DATA
 
 [Data_16Actions]
 ActionsCount=1
 
 [Data_16Actions0]
-CommandURL=/usr/bin/whatsapp-nativefier
+CommandURL=/home/lucas/Documentos/scripts/youporn.sh
 Type=COMMAND_URL
 
 [Data_16Conditions]
@@ -324,21 +324,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_16Triggers0]
-Key=
+Key=Alt+P
 Type=SHORTCUT
-Uuid={b56e6d5d-8ac8-45fa-b426-19fb949c7729}
+Uuid={866b9c15-ab3c-480b-b9b7-6bf0226301ad}
 
 [Data_17]
 Comment=Comentário
 Enabled=true
-Name=anbox
+Name=waydroid
 Type=SIMPLE_ACTION_DATA
 
 [Data_17Actions]
 ActionsCount=1
 
 [Data_17Actions0]
-CommandURL=/bin/bash -c 'sudo /home/lucas/Documentos/scripts/intel_xorg_distinct_instance_for_anbox.sh'
+CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
 Type=COMMAND_URL
 
 [Data_17Conditions]
@@ -350,21 +350,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_17Triggers0]
-Key=Meta+A
+Key=Meta+W
 Type=SHORTCUT
-Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
+Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
 
 [Data_18]
 Comment=Comentário
 Enabled=true
-Name=youporn
+Name=Reboot
 Type=SIMPLE_ACTION_DATA
 
 [Data_18Actions]
 ActionsCount=1
 
 [Data_18Actions0]
-CommandURL=/home/lucas/Documentos/scripts/youporn.sh
+CommandURL=/usr/bin/shutdown -r now
 Type=COMMAND_URL
 
 [Data_18Conditions]
@@ -376,35 +376,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_18Triggers0]
-Key=Alt+P
+Key=ScrollLock
 Type=SHORTCUT
-Uuid={866b9c15-ab3c-480b-b9b7-6bf0226301ad}
-
-[Data_19]
-Comment=Comentário
-Enabled=true
-Name=waydroid
-Type=SIMPLE_ACTION_DATA
-
-[Data_19Actions]
-ActionsCount=1
-
-[Data_19Actions0]
-CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
-Type=COMMAND_URL
-
-[Data_19Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_19Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_19Triggers0]
-Key=Meta+W
-Type=SHORTCUT
-Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
+Uuid={d5668542-715c-4531-b162-2ab4479e34e2}
 
 [Data_1Conditions]
 Comment=
@@ -470,58 +444,6 @@ ImportId=kde32b1
 Name=Examples
 SystemGroup=0
 Type=ACTION_DATA_GROUP
-
-[Data_20]
-Comment=Comentário
-Enabled=false
-Name=Xorg NVIDIA
-Type=SIMPLE_ACTION_DATA
-
-[Data_20Actions]
-ActionsCount=1
-
-[Data_20Actions0]
-CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh nvidia'
-Type=COMMAND_URL
-
-[Data_20Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_20Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_20Triggers0]
-Key=Meta+N
-Type=SHORTCUT
-Uuid={bbc43786-7e69-40f9-8030-b7183ba64079}
-
-[Data_21]
-Comment=Comentário
-Enabled=false
-Name=Xorg Intel
-Type=SIMPLE_ACTION_DATA
-
-[Data_21Actions]
-ActionsCount=1
-
-[Data_21Actions0]
-CommandURL=bash -c 'sudo /home/lucas/Documentos/scripts/switch_xorg_nvidia_and_intel_card.sh intel'
-Type=COMMAND_URL
-
-[Data_21Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_21Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_21Triggers0]
-Key=Meta+I
-Type=SHORTCUT
-Uuid={4b98d936-eb89-44be-bb80-27e760b4e269}
 
 [Data_2Conditions]
 Comment=

@@ -12,9 +12,9 @@ rm /home/lucas/Documentos/scripts/xnxx_historico /home/lucas/Documentos/scripts/
 [ ! -d '/home/lucas/Downloads/xxx' ] && /usr/bin/mkdir -p /home/lucas/Downloads/xxx/;
 counter=0;
 while :; do
-#     for i in $(/usr/bin/ls /home/lucas/Downloads/megasync_temp/ | cut -d "[" -f2 | cut -d "]" -f1); do
-#         videos_baixados+=("$i")
-#     done
+    for i in $(/usr/bin/ls /home/lucas/Downloads/megasync_temp/ | cut -d "[" -f2 | cut -d "]" -f1); do
+        videos_baixados+=("$i")
+    done
     historico='';
     ja_baixado=0;
     counter=$(($counter + 1)); 
@@ -24,12 +24,12 @@ while :; do
         if [[ $clipboard == *"pornhub"* ]]; then
             /usr/bin/grep -q "$(echo "$clipboard" | /usr/bin/cut -d "=" -f2 )" /home/lucas/Documentos/scripts/pornhub_historico;
             if [ "$?" == "1" ]; then
-#                 for i in "${videos_baixados[@]}"; do
-#                     if [ "$(echo "$clipboard" | /usr/bin/cut -d "=" -f2 )" == "$i" ];then
-#                         ja_baixado=1
-#                     fi
-#                 done
-#                 if [ $ja_baixado -eq 0 ];then
+                for i in "${videos_baixados[@]}"; do
+                    if [ "$(echo "$clipboard" | /usr/bin/cut -d "=" -f2 )" == "$i" ];then
+                        ja_baixado=1
+                    fi
+                done
+                if [ $ja_baixado -eq 0 ];then
                     /usr/bin/ffplay  -nodisp -autoexit  -volume 40 /home/lucas/Documentos/scripts/notify.mp3 &> /dev/null & 
                     /usr/bin/mkdir -p /home/lucas/Downloads/xxx/pornhub;
                     /usr/bin/echo "$clipboard" | /usr/bin/cut -d "=" -f2  >> /home/lucas/Documentos/scripts/pornhub_historico;
@@ -37,7 +37,7 @@ while :; do
                     /usr/bin/yt-dlp "$clipboard" &> /dev/null &
                     disown $!;
                     clipboard=''
-#                 fi
+                fi
             fi 
         elif [[ $clipboard == *"xvideos"* ]]; then
             /usr/bin/grep -q "$(/usr/bin/echo "$clipboard" | /usr/bin/cut -d "/" -f5 )" /home/lucas/Documentos/scripts/xvideos_historico;

@@ -55,7 +55,7 @@ videowallEnabled=false
 
 [TabBox]
 BorderActivate=9
-ShowTabBox=false
+LayoutName=thumbnails
 
 [Windows]
 ElectricBorderMaximize=false

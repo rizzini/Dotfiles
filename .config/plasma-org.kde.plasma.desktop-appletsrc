@@ -657,7 +657,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=84
+PreloadWeight=100
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558
@@ -768,7 +768,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][87][Configuration][General]
-launchers=applications:spotify.desktop,applications:Bejeweled3.desktop,applications:google-chrome.desktop
+launchers=applications:spotify.desktop,applications:Bejeweled3.desktop,applications:Diablo 3.desktop,applications:org.kde.kpat.desktop,applications:google-chrome.desktop
 wheelEnabled=false
 
 [Containments][84][Applets][88]
@@ -783,7 +783,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=79
+PreloadWeight=84
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -877,7 +877,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=54
+PreloadWeight=59
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496

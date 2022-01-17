@@ -13,9 +13,9 @@ if [ "$( /usr/bin/pgrep plasmashell)" ]; then
 fi
 
 if [ "$1" == 'BR' ]; then
-    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /usr/bin/gamemoderun /opt/wine-tkg-staging-fsync-opt-git-7.0rc6.r0.g0111d074/bin/wine /mnt/archlinux/DIABLO_III/Diablo\ III.exe -launch &> /dev/null &
+    WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /usr/bin/gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/DIABLO_III/Diablo\ III.exe -launch &> /dev/null &
 elif [ "$1" == 'US' ]; then 
-     WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /usr/bin/gamemoderun /opt/wine-tkg-staging-fsync-opt-git-7.0rc6.r0.g0111d074/bin/wine /mnt/archlinux/DIABLO_III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &> /dev/null &
+     WINEDEBUG=-all WINEFSYNC=1 WINEESYNC=1 WINEFSYNC_FUTEX2=1 WINEPREFIX=/home/lucas/.wine_d3/ /usr/bin/gamemoderun /opt/wine_tkg/bin/wine /mnt/archlinux/DIABLO_III/Diablo\ III.exe -launch OnlineService.Matchmaking.ServerPool=Default &> /dev/null &
 fi
 
 counter=0

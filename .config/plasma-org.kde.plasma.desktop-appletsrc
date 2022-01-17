@@ -54,7 +54,7 @@ Color=0,0,0
 
 [Containments][153][Wallpaper][org.kde.image][General]
 FillMode=6
-Image=file:///home/lucas/Imagens/Wallpaper/nebula_invertido.png
+Image=/home/lucas/Imagens/Wallpaper/nebula.jpg
 SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers
 
 [Containments][153][Wallpaper][org.kde.potd][General]
@@ -657,7 +657,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=84
+PreloadWeight=100
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558
@@ -783,7 +783,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=84
+PreloadWeight=89
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -844,7 +844,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][90][Applets][91][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][92]
 immutability=1

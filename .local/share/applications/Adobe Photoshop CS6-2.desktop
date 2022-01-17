@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=/home/lucas/Documentos/scripts/photoshop.sh "%U"
+GenericName[pt_BR]=
+GenericName=
+Icon=0170_Photoshop.0
+MimeType=
+Name[pt_BR]=Adobe Photoshop CS6
+Name=Adobe Photoshop CS6
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=bash -c '/home/lucas/Documentos/scripts/diablo_run.sh US'
+GenericName[pt_BR]=
+GenericName=
+Icon=6897_Diablo III Launcher.0
+MimeType=
+Name[pt_BR]=Diablo 3
+Name=Diablo 3
+NoDisplay=false
+Path=/home/lucas/.wine_d3
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

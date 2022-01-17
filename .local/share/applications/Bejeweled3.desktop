@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_bejeweled3/ wine_tkg Bejeweled3.exe
+GenericName[pt_BR]=
+GenericName=
+Icon=/mnt/archlinux/Bejeweled3/pngwing.com.png
+MimeType=
+Name[pt_BR]=Bejeweled3
+Name=Bejeweled3
+NoDisplay=false
+Path=/mnt/archlinux/Bejeweled3
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

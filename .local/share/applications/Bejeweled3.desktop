@@ -4,12 +4,12 @@ Comment=
 Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_bejeweled3/ wine_tkg Bejeweled3.exe
 GenericName[pt_BR]=
 GenericName=
-Icon=/mnt/archlinux/Bejeweled3/pngwing.com.png
+Icon=/mnt/archlinux/Games/Bejeweled3/pngwing.com.png
 MimeType=
 Name[pt_BR]=Bejeweled3
 Name=Bejeweled3
 NoDisplay=false
-Path=/mnt/archlinux/Bejeweled3
+Path=/mnt/archlinux/Games/Bejeweled3
 StartupNotify=true
 Terminal=false
 TerminalOptions=

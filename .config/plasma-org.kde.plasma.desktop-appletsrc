@@ -843,7 +843,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][90][Applets][91][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][92]
 immutability=1
@@ -883,7 +883,6 @@ DialogHeight=496
 DialogWidth=640
 
 [Containments][90][Applets][98][Configuration][General]
-currentTab=streams
 raiseMaximumVolume=true
 volumeStep=3
 

@@ -34,6 +34,18 @@ Mode Set By User=false
 Time=2022,1,23,20,22,52.107
 URL=file:///home/lucas/.ccache/ccache.conf
 
+[file:///home/lucas/.config/dconf/user]
+Bookmarks=
+Checksum=f57636f5c8d917e6e508b2c16865cdbf786167c9
+Encoding=ISO-8859-15
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,1,23,23,22,5.756
+URL=file:///home/lucas/.config/dconf/user
+
 [file:///home/lucas/.config/frogminer/linux-tkg.cfg]
 Bookmarks=
 Checksum=5a7fa45effbccea3dc415912d496ad8deb34d6ba

@@ -107,8 +107,8 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=/boot/,/etc/,/usr/,/var/,syadm add etc/
-Search History=font,flags, boot/,etc/,usr/,var/
+Replace History=yadm add ,yadm add,/boot/,/etc/,/usr/,/var/,syadm add etc/
+Search History=\s,font,flags, boot/,etc/,usr/,var/
 
 [MainWindow]
 HDMI-1 Height 1920x1080=492

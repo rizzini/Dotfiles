@@ -1,0 +1,107 @@
+[file:///etc/fstab]
+Bookmarks=
+Checksum=b823255f7d77039cb74f91b5455f4479aed9b598
+Encoding=UTF-8
+Highlighting=fstab
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=fstab
+Mode Set By User=false
+Time=2022,1,23,20,40,44.199
+URL=file:///etc/fstab
+
+[file:///etc/makepkg.conf]
+Bookmarks=
+Checksum=95e0aa7e4c7eb4c336b021b9ec7ad789f8c89497
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,1,23,21,23,29.301
+URL=file:///etc/makepkg.conf
+
+[file:///home/lucas/.ccache/ccache.conf]
+Bookmarks=
+Checksum=46d35bdff03c0ae6b9d5f0e3d344173edb7f36e8
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,1,23,20,22,52.107
+URL=file:///home/lucas/.ccache/ccache.conf
+
+[file:///home/lucas/.config/frogminer/linux-tkg.cfg]
+Bookmarks=
+Checksum=5a7fa45effbccea3dc415912d496ad8deb34d6ba
+Encoding=UTF-8
+Highlighting=Nagios
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Nagios
+Mode Set By User=false
+Time=2022,1,23,21,22,36.757
+URL=file:///home/lucas/.config/frogminer/linux-tkg.cfg
+
+[file:///home/lucas/.config/frogminer/wine-tkg.cfg]
+Bookmarks=
+Checksum=ba55094100b9afd5e647cb73d66813b22d662584
+Encoding=UTF-8
+Highlighting=Nagios
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Nagios
+Mode Set By User=false
+Time=2022,1,23,23,15,28.785
+URL=file:///home/lucas/.config/frogminer/wine-tkg.cfg
+
+[file:///home/lucas/.config/legendary/config.ini]
+Bookmarks=
+Checksum=23638e36cd37eea0296d0c95268eb99b4d82eddc
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=INI Files
+Mode Set By User=false
+Time=2022,1,23,22,53,0.924
+URL=file:///home/lucas/.config/legendary/config.ini
+
+[file:///home/lucas/.ssh/id_rsa.pub]
+Bookmarks=
+Checksum=56a9d7d8474bb30a98069616bb466096e451a225
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,1,23,20,37,23.375
+URL=file:///home/lucas/.ssh/id_rsa.pub
+
+[file:///home/lucas/Documentos/scripts/traduzir_clipboard.sh]
+Bookmarks=
+Checksum=7fd1d5bed2bc1a12156bc7070041fd23db060fd5
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2022,1,23,22,23,8.519
+URL=file:///home/lucas/Documentos/scripts/traduzir_clipboard.sh
+
+[file:///usr/lib/systemd/system/refind-btrfs.timer]
+Bookmarks=
+Checksum=b20dca1db7f16b95fc58afdb89950251e748b84d
+Encoding=UTF-8
+Highlighting=systemd unit
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=systemd unit
+Mode Set By User=false
+Time=2022,1,23,20,25,0.389
+URL=file:///usr/lib/systemd/system/refind-btrfs.timer

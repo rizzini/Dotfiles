@@ -60,7 +60,3 @@ LayoutName=thumbnails
 [Windows]
 ElectricBorderMaximize=false
 MaximizeButtonRightClickCommand=Maximize (vertical only)
-
-[org.kde.kdecoration2]
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Ant-Dark

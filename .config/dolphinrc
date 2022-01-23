@@ -1,0 +1,11 @@
+[General]
+Version=201
+ViewPropsTimestamp=2022,1,23,19,58,28.35
+
+[MainWindow]
+HDMI-1 Height 1920x1080=501
+HDMI-1 Width 1920x1080=1112
+HDMI-1 XPosition 1920x1080=148
+HDMI-1 YPosition 1920x1080=549
+MenuBar=Disabled
+ToolBarsMovable=Disabled

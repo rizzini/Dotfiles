@@ -141,6 +141,7 @@ History Items[$e]=file:$HOME/.themes/Layan,file:$HOME/.wine_photoshop,file:$HOME
 
 [General]
 BrowserApplication=google-chrome.desktop
+ColorScheme=Layan
 Name[pt_BR]=Breeze Dark
 Name=Nord-Dark-Color
 XftAntialias=true
@@ -153,6 +154,9 @@ shadeSortColumn=true
 smallestReadableFont=Noto Sans,7,-1,5,50,0,0,0,0,0
 toolBarFont=Noto Sans,8,-1,5,50,0,0,0,0,0
 widgetStyle=Breeze
+
+[Icons]
+Theme=Tela-dark
 
 [KDE]
 AnimationDurationFactor=0.5

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=The Expendabros
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/312990
+Icon=steam_icon_312990
+Terminal=false
+Type=Application
+Categories=Game;

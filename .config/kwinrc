@@ -50,6 +50,7 @@ kwin4_effect_logoutEnabled=false
 kwin4_effect_maximizeEnabled=true
 minimizeallEnabled=false
 shakeEnabled=false
+slideEnabled=false
 synchronizeskipswitcherEnabled=false
 videowallEnabled=false
 

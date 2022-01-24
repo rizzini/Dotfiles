@@ -21,7 +21,7 @@
 	"sortby": "votes",
 	"searchby": "name-desc",
 	"gitflags": "",
-	"removemake": "ask",
+	"removemake": "yes",
 	"sudobin": "sudo",
 	"sudoflags": "",
 	"requestsplitn": 150,

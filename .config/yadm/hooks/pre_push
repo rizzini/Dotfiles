@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
     #Monitora pasta ~/.theme
-    for i in $(yadm stun /home/lucas/.themes/ --porcelain | grep -v "^A" | awk '{print $2}' | cut -c9-99)
+    for i in $(yadm stun /home/lucas/.themes/* --porcelain | grep -v "^A" | awk '{print $2}' | cut -c9-99)
     do
         if [ -n "$i" ];then
             yadm add "/home/lucas/themes/$i"

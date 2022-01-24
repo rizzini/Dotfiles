@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/home/lucas/Documentos/scripts/photoshop.sh %U
+Icon=A35F_Photoshop.0
+Name=Adobe Photoshop CS6
+NoDisplay=false
+Path[$e]=$HOME/.wine_photoshop
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

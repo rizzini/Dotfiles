@@ -45,6 +45,11 @@ ctime=1642966533
 done=gtk_theme,dont_use_gtk_css_for_window_decorations
 mtime=1641291805
 
+[gwenview.upd]
+ctime=1642986649
+done=SideBar_StatusBar_Rename,ImageView_AlphaBackgroundMode_Update,DeleteThumbnailSetting_Rename
+mtime=1641293337
+
 [icons_remove_effects.upd]
 ctime=1642966543
 done=IconsRemoveEffects

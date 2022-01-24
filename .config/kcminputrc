@@ -6,3 +6,6 @@ KeyRepeat=repeat
 NumLock=0
 RepeatDelay=180
 RepeatRate=35.56
+
+[Mouse]
+cursorTheme=tetris

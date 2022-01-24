@@ -58,21 +58,21 @@ _k_friendly_name=Gerenciamento de sessão
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção
 Decrease Opacity=none,,Diminuir a opacidade da janela ativa em 5%
-Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
-ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
-ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
+Expose=Ctrl+F9,Ctrl+F9,Alternar as janelas presentes (área de trabalho atual)
+ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Alternar as janelas presentes (todas as áreas de trabalho)
+ExposeClass=Ctrl+F7,Ctrl+F7,Alternar as janelas presentes (classe de janelas)
 Increase Opacity=none,,Aumentar a opacidade da janela ativa em 5%
 Invert Screen Colors=none,,Inverter cores da tela
 Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Matar janela
-MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
-MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
-MoveZoomDown=none,none,Move Zoomed Area Downwards
-MoveZoomLeft=none,none,Move Zoomed Area to Left
-MoveZoomRight=none,none,Move Zoomed Area to Right
-MoveZoomUp=none,none,Move Zoomed Area Upwards
+MoveMouseToCenter=Meta+F6,Meta+F6,Mover o mouse para o centro
+MoveMouseToFocus=Meta+F5,Meta+F5,Mover o mouse para o foco
+MoveZoomDown=none,none,Mover a área ampliada para baixo
+MoveZoomLeft=none,none,Mover a área ampliada para a esquerda
+MoveZoomRight=none,none,Mover a área ampliada para a direita
+MoveZoomUp=none,none,Mover a área ampliada para cima
 Setup Window Shortcut=none,,Configurar atalhos para a janela
 Show Desktop=Meta+D,Meta+D,Exibir a área de trabalho
-ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Show Desktop Grid
+ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Mostrar a grade de áreas de trabalho
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspender composição
 Switch One Desktop Down=none,Meta+Ctrl+Down,Mudar para a área de trabalho abaixo
 Switch One Desktop Up=none,Meta+Ctrl+Up,Mudar para a área de trabalho acima
@@ -197,9 +197,9 @@ Window to Screen 5=none,,Janela para a tela 5
 Window to Screen 6=none,,Janela para a tela 6
 Window to Screen 7=none,,Janela para a tela 7
 _k_friendly_name=KWin
-view_actual_size=none,Meta+0,Actual Size
-view_zoom_in=Meta+=,Meta+=,Zoom In
-view_zoom_out=Meta+-,Meta+-,Zoom Out
+view_actual_size=none,Meta+0,Tamanho real
+view_zoom_in=Meta+=,Meta+=,Ampliar
+view_zoom_out=Meta+-,Meta+-,Reduzir
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin

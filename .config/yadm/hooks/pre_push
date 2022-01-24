@@ -1,27 +1,22 @@
 #!/bin/bash
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
-    #for i in $(yadm stun /home/lucas/.themes/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ]; then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/aurorae/themes/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/color-schemes/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/icons/* --porcelain | grep -v "^A" | awk '{print $2}' | tr -d '"'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-        #Too many files. It takes to long to veryfy all of them every time I push my changes. It's already on Github anyway..
-    #for i in $(yadm stun /home/lucas/.local/share/konsole/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.config/autostart-scripts/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.config/Kvantum/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.config/systemd/user/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    #for i in $(yadm stun /home/lucas/Imagens/Wallpaper/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-
-
-
-CURRENTIFS=$IFS
-IFS=$(echo -en "\n\b")
-for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-IFS=$CURRENTIFS
-
-
+    CURRENTIFS=$IFS
+    IFS=$(echo -en "\n\b")
+    for i in $(yadm stun /home/lucas/.themes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/aurorae/themes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/color-schemes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    #for i in $(yadm stun /home/lucas/.local/share/icons/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+        #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
+    for i in $(yadm stun /home/lucas/.local/share/konsole/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/autostart-scripts/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/Kvantum/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/systemd/user/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/Imagens/Wallpaper/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    IFS=$CURRENTIFS
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then
             yadm diff | filterdiff -p 1 -x .config/plasma-org.kde.plasma.desktop-appletsrc

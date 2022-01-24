@@ -3,6 +3,7 @@ CommandList=
 HDMI-1 XPosition 1920x1080=415
 HDMI-1 YPosition 1920x1080=275
 HostList=
+RestorePositionForNextInstance=false
 SelectedSheets[$e]=ProcessTable.sgrd,SystemLoad2.sgrd
 SplitterSizeList=10,90
 State=AAAA/wAAAAD9AAAAAAAAAyAAAAInAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA

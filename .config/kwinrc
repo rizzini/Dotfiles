@@ -62,5 +62,7 @@ ElectricBorderMaximize=false
 MaximizeButtonRightClickCommand=Maximize (vertical only)
 
 [org.kde.kdecoration2]
+BorderSize=Tiny
+BorderSizeAuto=false
 library=org.kde.kwin.aurorae
 theme=__aurorae__svg__MoeDark

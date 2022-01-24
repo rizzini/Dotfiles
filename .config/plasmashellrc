@@ -3,6 +3,10 @@ Recent Files[$e]=nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg
 Recent URLs[$e]=file:$HOME/Imagens/Wallpaper/
 iconViewIconSize=64
 
+[KPropertiesDialog]
+HDMI-1 Height 1920x1080=468
+HDMI-1 Width 1920x1080=423
+
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 

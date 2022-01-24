@@ -1,3 +1,7 @@
 [user]
 	email = lucasrizzini@hotmail.com
 	name = Lucas Rizzini
+[alias]
+	stun = status -unormal
+[status]
+	showUntrackedFiles = no

@@ -12,7 +12,13 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
     for i in $(yadm stun /home/lucas/.config/systemd/user/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
     for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
-    for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
+
+CURRENTIFS=$IFS
+IFS=$(echo -en "\n\b")
+for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
+IFS=$CURRENTIFS
+
+    for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | cut -c4-99); do if [ -n "$i" ];then yadm add "/home/lucas/$(echo $i | tr -d '"')"; fi done
     for i in $(yadm stun /home/lucas/Imagens/Wallpaper/* --porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then

@@ -3,9 +3,6 @@ Recent Files[$e]=nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg
 Recent URLs[$e]=file:$HOME/Imagens/Wallpaper/
 iconViewIconSize=64
 
-[PlasmaTransientsConfig]
-PreloadWeight=42
-
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 

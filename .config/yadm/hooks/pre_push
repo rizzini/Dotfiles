@@ -15,7 +15,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     /home/lucas/.local/share/plasma/look-and-feel/ \
     /home/lucas/.config/autostart-scripts/* --porcelain); do
         if [ -n "$i" ];then
-            yadm add "/home/lucas/$(echo "$i" |  awk -F '[ "]' '/??/{print $3}')";
+            yadm add "/home/lucas/$(echo "$i" | awk -F '[ "]' '/??/{print $3}')";
         fi
     done
     if [ -n "$(yadm diff --name-only)" ]; then

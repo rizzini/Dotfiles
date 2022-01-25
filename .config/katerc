@@ -106,7 +106,7 @@ Scroll Bar Mini Map Width=60
 Scroll Bar MiniMap=true
 Scroll Bar Preview=true
 Scroll Past End=false
-Search/Replace Flags=140
+Search/Replace Flags=268
 Show Line Count=true
 Show Scrollbars=0
 Show Word Count=true
@@ -120,12 +120,12 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=| grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done,,org.kde.gwenview.desktop;Adobe Photoshop CS6.desktop,Adobe Photoshop CS6,yadm add ,yadm add,/boot/,/etc/,/usr/,/var/,syadm add etc/
-Search History=| grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done,PaddingTop,opacity,heigh,opac,transp,exec,wine,org.kde.gwenview.desktop,Adobe Photoshop CS6-2,gwen, ,font,flags, boot/,etc/,usr/,var/
+Replace History=--porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /$i; fi done,,| grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done,org.kde.gwenview.desktop;Adobe Photoshop CS6.desktop,Adobe Photoshop CS6,yadm add ,yadm add,/boot/,/etc/,/usr/,/var/,syadm add etc/
+Search History=Kinglet,36,--porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/$i"; fi done,--porcelain | grep "^ ??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /$i; fi done,| grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done,PaddingTop,opacity,heigh,opac,transp,exec,wine,org.kde.gwenview.desktop,Adobe Photoshop CS6-2,gwen, ,font,flags, boot/,etc/,usr/,var/
 
 [MainWindow]
-HDMI-1 Height 1920x1080=618
-HDMI-1 Width 1920x1080=1781
+HDMI-1 Height 1920x1080=619
+HDMI-1 Width 1920x1080=1464
 
 [UiSettings]
 ColorScheme=

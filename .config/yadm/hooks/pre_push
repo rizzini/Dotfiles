@@ -1,21 +1,21 @@
 #!/bin/bash
-if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then 
+if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     CURRENTIFS=$IFS
     IFS=$(echo -en "\n\b")
-    for i in $(yadm stun /home/lucas/.themes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/aurorae/themes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/color-schemes/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    #for i in $(yadm stun /home/lucas/.local/share/icons/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.themes/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/aurorae/themes/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/color-schemes/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    #for i in $(yadm stun /home/lucas/.local/share/icons/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
         #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
-    for i in $(yadm stun /home/lucas/.local/share/konsole/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.config/autostart-scripts/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.config/Kvantum/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.config/systemd/user/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/Imagens/Wallpaper/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-    for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -v "^A" | grep -v "^D" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/konsole/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/autostart-scripts/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/Kvantum/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.config/systemd/user/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/Imagens/Wallpaper/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
+    for i in $(yadm stun /home/lucas/.local/share/applications/* --porcelain | grep -E '^ ??|^??' | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
     IFS=$CURRENTIFS
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then
@@ -26,7 +26,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
             echo -e "\nARQUIVOS MODIFICADOS:"
             for i in $(yadm diff --name-only); do
-                if [[ ! "$i" == *"appletsrc"* ]]; then                
+                if [[ ! "$i" == *"appletsrc"* ]]; then
                     echo -e "~/$i";
                 fi
             done

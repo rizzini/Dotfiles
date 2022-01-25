@@ -1,5 +1,9 @@
 [Applications][google-chrome]
 Seen=true
 
+[DoNotDisturb]
+NotificationSoundsMuted=true
+Until=2022,1,25,3,54,0.842
+
 [Notifications]
 PopupPosition=BottomCenter

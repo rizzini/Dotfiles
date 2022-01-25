@@ -16,8 +16,6 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     for i in $(yadm stun /home/lucas/.local/share/aurorae/themes/* --porcelain | grep "??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
     for i in $(yadm stun /home/lucas/.local/share/plasma/plasmoids/* --porcelain | grep "??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
     for i in $(yadm stun /home/lucas/.local/share/plasma/look-and-feel/* --porcelain | grep "??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done
-
-
     IFS=$CURRENTIFS
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then

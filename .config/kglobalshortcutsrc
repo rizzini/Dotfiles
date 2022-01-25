@@ -256,7 +256,7 @@ show-on-mouse-pos=Alt+S,Meta+V,Abrir o Klipper na posição do mouse
 stop current activity=Meta+S,Meta+S,Parar a atividade atual
 switch to next activity=none,,Mudar para a próxima atividade
 switch to previous activity=none,,Mudar para a atividade anterior
-toggle do not disturb=none,,Alternar o "Não perturbe"
+toggle do not disturb=Launch (1),,Alternar o "Não perturbe"
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings

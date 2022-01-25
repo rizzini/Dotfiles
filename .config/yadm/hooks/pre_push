@@ -1,6 +1,6 @@
 #!/bin/bash
+IFS=$(echo -en "\n\b")
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
-    CURRENTIFS=$IFS; IFS=$(echo -en "\n\b")
     #/home/lucas/.local/share/icons/* #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
     for i in $(yadm stun /home/lucas/.themes/* \
     /home/lucas/.config/Kvantum/* \
@@ -18,7 +18,6 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
             yadm add "/home/lucas/$(echo "$i" | grep "??" | tr -d '??' | tr -d '"' | cut -c2-)";
         fi
     done
-
     if [ -n "$(yadm diff --name-only)" ]; then
         if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then
             yadm diff | filterdiff -p 1 -x .config/plasma-org.kde.plasma.desktop-appletsrc

@@ -25,6 +25,10 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
             yadm diff
         fi
         if [ $(yadm diff --name-only | wc -l) -ge 2 ]; then
+#             if [ -n "$(yadm diff | grep deleted)"  ];then
+#                 echo -e "\nARQUIVOS DELETADOS:"
+
+
             echo -e "\nARQUIVOS MODIFICADOS:"
             for i in $(yadm diff --name-only); do
                 if [[ ! "$i" == *"appletsrc"* ]]; then

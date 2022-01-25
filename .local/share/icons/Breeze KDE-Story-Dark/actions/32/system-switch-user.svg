@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="6.3499999mm"
+   height="6.3499999mm"
+   viewBox="0 0 6.3499999 6.3499999"
+   version="1.1"
+   id="svg3424"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="system-switch-user.svg">
+  <defs
+     id="defs3418">
+    <radialGradient
+       gradientTransform="matrix(0.26458333,0,0,0.26458333,-20.727269,17.193675)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient908"
+       id="radialGradient910"
+       cx="102"
+       cy="12"
+       fx="102"
+       fy="12"
+       r="11"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient908">
+      <stop
+         style="stop-color:#008080;stop-opacity:1;"
+         offset="0"
+         id="stop904" />
+      <stop
+         style="stop-color:#008080;stop-opacity:0;"
+         offset="1"
+         id="stop906" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="28.675656"
+     inkscape:cy="6.9171815"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3421">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.1080012,-17.194)">
+    <rect
+       y="17.194"
+       x="3.1080012"
+       height="6.3499999"
+       width="6.3499999"
+       id="rect4570-7-1"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.01000001;fill:#000000;fill-opacity:0.00392157;stroke:none;stroke-width:1.32291663;marker:none;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 4.143564,17.458258 h 4.2333333 c 0.5291667,0 0.79375,0.264584 0.79375,0.79375 v 4.233334 c 0,0.529166 -0.2645833,0.79375 -0.79375,0.79375 H 4.143564 c -0.5291666,0 -0.79375,-0.264584 -0.79375,-0.79375 v -4.233334 c 0,-0.529166 0.2645834,-0.79375 0.79375,-0.79375 z m 1.1925565,2.790589 c -0.1466467,0.14245 -0.3199683,0.207041 -0.5310913,0.207041 -0.2111116,0 -0.3852436,-0.06638 -0.5318932,-0.208825 -0.2306277,0.083 -0.5064125,0.294193 -0.506739,0.663064 l -8.202e-4,0.688041 c 0,0.124738 0.092955,0.225715 0.2078866,0.225715 h 1.6630949 c 0.115167,0 0.2078876,-0.101896 0.2078876,-0.228459 v -0.68537 c 0,-0.316799 -0.2291588,-0.583884 -0.5083453,-0.663953 z m 0.1540867,-0.709371 c -0.00146,0.912449 -1.369309,0.912449 -1.3706729,0 -0.00135,-0.91518 1.3720387,-0.91518 1.3706729,0 z m 1.4939764,-0.400257 c -0.068387,-0.04019 -1.1397192,0.589572 -1.1397192,0.669947 0,0.08038 1.0713323,0.709732 1.1397192,0.669544 0.024474,-0.01436 0.036891,-0.199096 0.043852,-0.413745 H 8.0833077 V 19.552964 H 7.0280356 c -0.00699,-0.214568 -0.019367,-0.399378 -0.043852,-0.413745 z m 0.630973,1.343147 c -0.024474,0.01436 -0.036888,0.199501 -0.043852,0.414146 H 6.5160351 v 0.511597 h 1.0552695 c 0.00699,0.214648 0.01942,0.399374 0.043852,0.413743 0.068387,0.04019 1.1397245,-0.589166 1.1397245,-0.669541 0,-0.08038 -1.0713376,-0.710134 -1.1397245,-0.669945 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#radialGradient910);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;marker:none;enable-background:accumulate"
+       id="path4106-3-4" />
+  </g>
+</svg>

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Categories=Network;TrayIcon;
-Comment=Tracks your followed channels and notifies when they go live.
-Exec=twitch-indicator
-Icon=twitch-indicator
-Name=Twitch Indicator
-StartupNotify=false
-Terminal=false
-Type=Application

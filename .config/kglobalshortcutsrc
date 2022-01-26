@@ -28,6 +28,7 @@ display=Display\tMeta+P,Display\tMeta+P,Alternar tela
 _k_friendly_name=Serviço de atalhos personalizados
 {22af2176-f96b-48b3-81e2-53c5986f4746}=Ctrl+Alt+T,none,konsole
 {2c10b720-01ed-433a-b5f2-8c8f66765bb2}=Ctrl+R,none,traduzir
+{484d75d9-178b-4d38-973d-1614e27be52a}=,none,anbox
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
 {583c6f8c-18ab-493c-ac1a-cf654d834a97}=none,none,Launch Konsole
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
@@ -204,6 +205,10 @@ view_zoom_out=Meta+-,Meta+-,Reduzir
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
+
+[org.kde.kpat.desktop]
+_k_friendly_name=KPatience
+_launch=none,none,Iniciar KPatience
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents

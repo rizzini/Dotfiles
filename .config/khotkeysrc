@@ -252,7 +252,7 @@ Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
 
 [Data_14]
 Comment=Comentário
-Enabled=false
+Enabled=true
 Name=anbox
 Type=SIMPLE_ACTION_DATA
 

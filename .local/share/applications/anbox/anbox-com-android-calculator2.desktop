@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Calculator
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.calculator2 --component=com.android.calculator2.Calculator 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-calculator2.png

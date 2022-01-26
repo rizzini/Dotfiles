@@ -1,5 +1,8 @@
 [Applications][google-chrome]
 Seen=true
 
+[Applications][modem-manager-gui]
+Seen=true
+
 [Notifications]
 PopupPosition=BottomCenter

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Contacts
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.contacts --component=com.android.contacts.activities.PeopleActivity 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-contacts.png

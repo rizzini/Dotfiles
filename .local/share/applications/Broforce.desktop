@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEPREFIX=/home/lucas/.wine_broforce/ /opt/wine-tkg-staging-fsync-opt-git/bin/wine Broforce_beta.exe
+Icon=/mnt/archlinux/GAMES/Broforce/goggame-1470490225.ico
+Name=Broforce
+NoDisplay=false
+Path[$e]=/mnt/archlinux/GAMES/Broforce
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

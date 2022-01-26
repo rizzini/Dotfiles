@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEPREFIX=/home/lucas/.wine_windjammers2 /opt/wine-tkg-staging-fsync-opt-git/bin/wine Windjammers2.exe\n
+Icon=/mnt/archlinux/GAMES/Windjammers.2/windjammers-2_96u4.300.png
+Name=Windjammers 2
+NoDisplay=false
+Path[$e]=/mnt/archlinux/GAMES/Windjammers.2/
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

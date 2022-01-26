@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Email
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.email --component=com.android.email.activity.Welcome 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-email.png

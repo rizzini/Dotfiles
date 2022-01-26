@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Clock
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.deskclock --component=com.android.deskclock.DeskClock 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-deskclock.png

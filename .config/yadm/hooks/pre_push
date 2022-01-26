@@ -1,5 +1,6 @@
 #!/bin/bash
-IFS=$(echo -en "\n\b")
+IFS=$(echo -en "\n\b");
+arquivo_adicionado=0;
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     #/home/lucas/.local/share/icons/* #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
     for i in $(yadm stun /home/lucas/.themes/* \
@@ -16,11 +17,15 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     /home/lucas/.config/autostart-scripts/* --porcelain); do
         if [ -n "$(echo "$i" | grep '??')" ];then
             yadm add "/home/lucas/$(echo "$i" | cut -d '"' -f2 | tr -d '??' | perl -pe 's/^\s+//')";
+            arquivo_adicionado=1;
         fi
     done
-    yadm status --porcelain
-    read
-    yadm commit -a -m "atualizando"
+    if [[ $arquivo_adicionado -eq 1 || -n "$(yadm diff --name-only)"  ]];then
+        yadm status --porcelain;
+        echo -e "\nPressione qualquer tecla para continuar";
+        read;
+        yadm commit -a -m "atualizando";
+    fi
 else
-    echo -e "Você não está no subvolume ROOT. push não realizado"
+    echo -e "Você não está no subvolume ROOT. push não realizado";
 fi

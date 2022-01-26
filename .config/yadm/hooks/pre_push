@@ -18,6 +18,8 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
             yadm add "/home/lucas/$(echo "$i" | cut -d '"' -f2)";
         fi
     done
+    yadm status --porcelain
+    read
     yadm commit -a -m "atualizando"
 else
     echo -e "Você não está no subvolume ROOT. push não realizado"

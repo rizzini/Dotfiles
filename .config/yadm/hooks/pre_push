@@ -18,43 +18,6 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
             yadm add "/home/lucas/$(echo "$i" | awk -F '[ "]' '/??/{print $3}')";
         fi
     done
-    if [ -n "$(yadm diff --name-only)" ]; then
-        if [[ "$(yadm diff --name-only)" == *"appletsrc"* ]];then
-            yadm diff | filterdiff -p 1 -x .config/plasma-org.kde.plasma.desktop-appletsrc
-        else
-            yadm diff
-        fi
-        if [ $(yadm diff --name-only | wc -l) -ge 1 ]; then
-            if [ -n "$(yadm status --porcelain | grep 'D')"  ];then
-                echo -e "\nARQUIVOS DELETADOS:"
-                for i in $(yadm status --porcelain | grep 'D' | awk '{print $2}'); do
-                    if [ -n "$i" ];then
-                        echo "~/$i";
-                    fi
-                done
-            fi
-            echo -e "\nARQUIVOS MODIFICADOS:"
-            for i in $(yadm diff --name-only); do
-                if [[ ! "$i" == *"appletsrc"* ]]; then
-                    echo -e "~/$i";
-                fi
-            done
-#             echo -e "\n"
-        else
-            if [[ ! "$(yadm diff --name-only)" == *"appletsrc"* ]]; then
-                echo -e "\nARQUIVO MODIFICADO:\n~/$(yadm diff --name-only)\n"
-            fi
-        fi
-    fi
-    if [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -ge 2 ]; then
-        echo -e "\nARQUIVOS ADICIONADOS:"
-        for i in $(yadm status --porcelain | grep "^A" | cut -c 4-); do
-            echo -e "~/$i";
-        done
-        echo -e "\n"
-    elif [ $(yadm status --porcelain | grep "^A" | cut -c 4- | wc -l) -eq 1 ]; then
-        echo -e "\nARQUIVO ADICIONADO:\n~/$(yadm status --porcelain | grep "^A" | cut -c 4-)\n"
-    fi
     yadm commit -a -m "atualizando"
 else
     echo -e "Você não está no subvolume ROOT. push não realizado"

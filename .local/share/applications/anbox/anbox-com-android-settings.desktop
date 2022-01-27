@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Settings
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.settings --component=com.android.settings.Settings 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-settings.png

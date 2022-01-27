@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Camera
-Exec=waydroid app launch com.android.camera2
-Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.camera2.png

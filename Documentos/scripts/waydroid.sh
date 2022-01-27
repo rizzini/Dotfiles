@@ -4,8 +4,11 @@ if [ "$(/usr/bin/systemctl is-active waydroid-container.service)" == 'active' ];
     /usr/bin/sudo /usr/bin/systemctl stop waydroid-container.service
     exit
 fi
+sudo /usr/local/bin/anbox-bridge restart
 /usr/bin/killall -9 weston
 /usr/bin/sudo /usr/bin/systemctl restart waydroid-container.service
+sudo /usr/local/bin/anbox-bridge restart
+
 if [ -z "$(/usr/bin/pgrep weston)" ]; then
     weston --width=780 --height=425 --xwayland &> /dev/null &
 fi

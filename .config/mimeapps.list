@@ -26,6 +26,7 @@ video/mp4=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
 video/mpeg=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
 video/ogg=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
 video/quicktime=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
+video/x-flv=mpv.desktop;vlc.desktop;org.kde.kate.desktop;
 video/x-matroska=mpv.desktop;fr.handbrake.ghb.desktop;
 video/x-ms-wmv=mpv.desktop;
 video/x-msvideo=mpv.desktop;fr.handbrake.ghb.desktop;
@@ -62,6 +63,7 @@ video/mp4=mpv.desktop;
 video/mpeg=mpv.desktop;
 video/ogg=
 video/quicktime=mpv.desktop;
+video/x-flv=mpv.desktop;
 video/x-matroska=mpv.desktop;
 video/x-ms-wmv=mpv.desktop;
 video/x-msvideo=mpv.desktop;
@@ -76,5 +78,3 @@ x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop
 x-scheme-handler/unknown=google-chrome.desktop
-
-[Removed Associations]

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Config.
+Exec=waydroid app launch com.android.settings
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.settings.png

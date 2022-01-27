@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Navegador
+Exec=waydroid app launch org.lineageos.jelly
+Icon=/home/lucas/.local/share/waydroid/data/icons/org.lineageos.jelly.png

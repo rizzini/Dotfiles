@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Arquivos
+Exec=waydroid app launch com.android.documentsui
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.documentsui.png

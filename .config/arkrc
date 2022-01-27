@@ -1,3 +1,14 @@
+[ExtractDialog]
+DirHistory[$e]=/mnt/archlinux/GAMES/Broforce/Saves/
+
+[Extraction]
+closeAfterExtraction=true
+
+[KFileDialog Settings]
+Recent Files[$e]=file:///mnt/archlinux/GAMES/Broforce/Saves,file:///mnt/archlinux/GAMES/Broforce/Saves
+Recent URLs[$e]=file:///mnt/archlinux/GAMES/Broforce/Saves/
+iconViewIconSize=64
+
 [MainWindow]
 HDMI-1 Height 1920x1080=502
 HDMI-1 Width 1920x1080=839

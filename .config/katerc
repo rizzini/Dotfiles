@@ -126,6 +126,8 @@ Search History=version,9989,19736,1q2w3,~,script,for, --porcelain | grep "??" | 
 [MainWindow]
 HDMI-1 Height 1920x1080=751
 HDMI-1 Width 1920x1080=1489
+HDMI1 Height 1920x1080=603
+HDMI1 Width 1920x1080=794
 
 [UiSettings]
 ColorScheme=

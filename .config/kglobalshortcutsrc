@@ -11,7 +11,7 @@ _k_friendly_name=Seletor de layouts de teclado
 
 [Nethogs.desktop]
 _k_friendly_name=Nethogs
-_launch=,none,Iniciar Nethogs
+_launch=none,none,Iniciar Nethogs
 
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Ativar e desativar o leitor de tela

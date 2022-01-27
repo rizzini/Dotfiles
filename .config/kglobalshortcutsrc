@@ -30,6 +30,7 @@ display=Display\tMeta+P,Display\tMeta+P,Alternar tela
 
 [khotkeys]
 _k_friendly_name=Serviço de atalhos personalizados
+{134e66e3-9e84-48b9-a9ea-056d640ce2bf}=Meta+W,none,waydroid
 {22af2176-f96b-48b3-81e2-53c5986f4746}=Ctrl+Alt+T,none,konsole
 {2c10b720-01ed-433a-b5f2-8c8f66765bb2}=Ctrl+R,none,traduzir
 {484d75d9-178b-4d38-973d-1614e27be52a}=Meta+A,none,anbox

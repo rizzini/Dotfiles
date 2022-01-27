@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Email
+Exec=waydroid app launch com.android.email
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.email.png

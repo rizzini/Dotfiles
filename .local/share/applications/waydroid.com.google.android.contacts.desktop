@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Contacts
+Exec=waydroid app launch com.google.android.contacts
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.google.android.contacts.png

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Android Keyboard (AOSP)
+Exec=waydroid app launch com.android.inputmethod.latin
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.inputmethod.latin.png

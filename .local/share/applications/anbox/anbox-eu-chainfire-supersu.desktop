@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=SuperSU
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=eu.chainfire.supersu --component=eu.chainfire.supersu.MainActivity-Material 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-eu-chainfire-supersu.png

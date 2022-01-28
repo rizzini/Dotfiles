@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=WhatsApp
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.whatsapp --component=com.whatsapp.Main 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-whatsapp.png

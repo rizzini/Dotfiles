@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Arquivos
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.documentsui --component=com.android.documentsui.LauncherActivity 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-documentsui.png

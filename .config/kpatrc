@@ -10,7 +10,7 @@ State=AAAA/wAAAAD9AAAAAAAAA/wAAAHqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG
 ToolBarsMovable=Disabled
 
 [Scores]
-loosestreak0=0
+loosestreak0=1
 loosestreak2=1
 maxloosestreak0=1
 maxloosestreak2=1
@@ -18,9 +18,9 @@ maxwinstreak0=1
 maxwinstreak2=0
 minmoves0=121
 minmoves2=-1
-total0=2
+total0=3
 total2=1
-winstreak0=1
+winstreak0=0
 winstreak2=0
 won0=1
 won2=0

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Cry of Fear
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/223710
-Icon=steam_icon_223710
-Terminal=false
-Type=Application
-Categories=Game;

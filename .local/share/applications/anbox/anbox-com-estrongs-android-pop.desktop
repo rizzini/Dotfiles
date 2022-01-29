@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=ES File Explorer
+Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.estrongs.android.pop --component=com.estrongs.android.pop.app.openscreenad.NewSplashActivity 
+Terminal=false
+Categories=Anbox;
+Icon=/home/lucas/.local/share/applications/anbox/anbox-com-estrongs-android-pop.png

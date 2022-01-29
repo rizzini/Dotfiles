@@ -7,8 +7,8 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     /home/lucas/.config/Kvantum/* \
     /home/lucas/Imagens/Wallpaper/* \
     /home/lucas/.config/autostart/* \
-    /home/lucas/.local/share/konsole/* \
     /home/lucas/Documentos/scripts/* \
+    /home/lucas/.local/share/konsole/* \
     /home/lucas/.config/systemd/user/* \
     /home/lucas/.local/share/applications/* \
     /home/lucas/.local/share/color-schemes/* \

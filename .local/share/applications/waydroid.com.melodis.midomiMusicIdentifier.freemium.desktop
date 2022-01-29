@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=SoundHound
+Exec=waydroid app launch com.melodis.midomiMusicIdentifier.freemium
+Icon=/home/lucas/.local/share/waydroid/data/icons/com.melodis.midomiMusicIdentifier.freemium.png

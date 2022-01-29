@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment=
 Exec=WINEPREFIX=/home/lucas/.wine_windjammers2 /opt/wine-tkg-staging-fsync-opt-git/bin/wine Windjammers2.exe\n
-Icon=/mnt/archlinux/GAMES/Windjammers.2/windjammers-2_96u4.300.png
+Icon=/home/lucas/Games/Windjammers.2/windjammers-2_96u4.300.png
 Name=Windjammers 2
 NoDisplay=false
 Path[$e]=/mnt/archlinux/GAMES/Windjammers.2/

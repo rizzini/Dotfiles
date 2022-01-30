@@ -46,6 +46,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
+{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Alt+T,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
 
 [kmix]
@@ -254,6 +255,7 @@ activate task manager entry 7=Meta+7,Meta+7,Ativar entrada 7 do gerenciador de t
 activate task manager entry 8=Meta+8,Meta+8,Ativar entrada 8 do gerenciador de tarefas
 activate task manager entry 9=Meta+9,Meta+9,Ativar entrada 9 do gerenciador de tarefas
 activate widget 104=Alt+F1,none,Ativar o widget Menu de aplicativos
+activate widget 157=,none,Ativar o widget Twitch Indicator
 activate widget 3=none,none,Activate Application Launcher Widget
 clear-history=none,,Limpar histórico da área de transferência
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Habilitar ações da área de transferência

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Contatos
+Name=Contacts
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.contacts --component=com.android.contacts.activities.PeopleActivity 
 Terminal=false
 Categories=Anbox;

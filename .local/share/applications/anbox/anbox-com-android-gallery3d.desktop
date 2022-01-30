@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Galeria
+Name=Gallery
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.gallery3d --component=com.android.gallery3d.app.GalleryActivity 
 Terminal=false
 Categories=Anbox;

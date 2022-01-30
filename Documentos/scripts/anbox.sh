@@ -5,6 +5,7 @@ if [ "$(/usr/bin/systemctl is-active anbox.service)" == 'active' ];then
 
 else
     /usr/bin/sudo /usr/bin/systemctl start anbox-container-manager.service
+    sleep 1
     /usr/bin/sudo /usr/bin/systemctl start anbox.service;
 
 fi

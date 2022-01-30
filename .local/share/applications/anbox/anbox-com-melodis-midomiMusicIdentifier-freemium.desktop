@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=SoundHound
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.melodis.midomiMusicIdentifier.freemium --component=com.soundhound.android.appcommon.activity.SplashScreenActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-com-melodis-midomiMusicIdentifier-freemium.png

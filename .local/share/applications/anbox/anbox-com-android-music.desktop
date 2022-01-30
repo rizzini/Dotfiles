@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Música
+Name=Music
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.music --component=com.android.music.MusicBrowserActivity 
 Terminal=false
 Categories=Anbox;

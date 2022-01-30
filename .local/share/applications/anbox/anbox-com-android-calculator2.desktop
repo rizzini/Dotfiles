@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Calculadora
+Name=Calculator
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.calculator2 --component=com.android.calculator2.Calculator 
 Terminal=false
 Categories=Anbox;

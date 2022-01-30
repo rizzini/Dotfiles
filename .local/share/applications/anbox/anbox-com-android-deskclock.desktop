@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Relógio
+Name=Clock
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.deskclock --component=com.android.deskclock.DeskClock 
 Terminal=false
 Categories=Anbox;

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=E-mail
+Name=Email
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.email --component=com.android.email.activity.Welcome 
 Terminal=false
 Categories=Anbox;

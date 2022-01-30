@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Spotify
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.spotify.music --component=com.spotify.music.MainActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-com-spotify-music.png

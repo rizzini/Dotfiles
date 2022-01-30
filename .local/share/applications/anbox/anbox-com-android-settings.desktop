@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Configurações
+Name=Settings
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.settings --component=com.android.settings.Settings 
 Terminal=false
 Categories=Anbox;

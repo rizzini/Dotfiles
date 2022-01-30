@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Agenda
+Name=Calendar
 Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.calendar --component=com.android.calendar.AllInOneActivity 
 Terminal=false
 Categories=Anbox;

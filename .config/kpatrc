@@ -2,23 +2,24 @@
 Theme=themes/greenblaze.desktop
 
 [MainWindow]
-HDMI-1 Height 1920x1080=589
-HDMI-1 Width 1920x1080=1020
-HDMI-1 XPosition 1920x1080=91
-HDMI-1 YPosition 1920x1080=372
-State=AAAA/wAAAAD9AAAAAAAAA/wAAAHqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+HDMI-1 Height 1920x1080=357
+HDMI-1 Width 1920x1080=658
+HDMI-1 XPosition 1920x1080=179
+HDMI-1 YPosition 1920x1080=677
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAqMAAAGDAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
 [Scores]
-loosestreak0=1
+loosestreak0=4
 loosestreak2=1
-maxloosestreak0=1
+maxloosestreak0=4
 maxloosestreak2=1
 maxwinstreak0=1
 maxwinstreak2=0
 minmoves0=121
 minmoves2=-1
-total0=3
+total0=6
 total2=1
 winstreak0=0
 winstreak2=0

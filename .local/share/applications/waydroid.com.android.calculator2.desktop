@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Calculadora
-Exec=waydroid app launch com.android.calculator2
-Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.calculator2.png

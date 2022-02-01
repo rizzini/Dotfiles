@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Camera
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.camera2 --component=com.android.camera.CameraLauncher 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-camera2.png

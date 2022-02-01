@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Relógio
-Exec=waydroid app launch com.android.deskclock
-Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.deskclock.png

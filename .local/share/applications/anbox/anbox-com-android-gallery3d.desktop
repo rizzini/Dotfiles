@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Gallery
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.android.gallery3d --component=com.android.gallery3d.app.GalleryActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-com-android-gallery3d.png

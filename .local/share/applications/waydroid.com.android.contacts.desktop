@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Contatos
-Exec=waydroid app launch com.android.contacts
-Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.contacts.png

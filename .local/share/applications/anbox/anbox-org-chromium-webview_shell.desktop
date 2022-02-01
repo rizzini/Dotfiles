@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=WebView Shell
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=org.chromium.webview_shell --component=org.chromium.webview_shell.WebViewBrowserActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/lucas/.local/share/applications/anbox/anbox-org-chromium-webview_shell.png

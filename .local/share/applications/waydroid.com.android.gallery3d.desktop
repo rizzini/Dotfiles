@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Galeria
-Exec=waydroid app launch com.android.gallery3d
-Icon=/home/lucas/.local/share/waydroid/data/icons/com.android.gallery3d.png

@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Gravador
-Exec=waydroid app launch org.lineageos.recorder
-Icon=/home/lucas/.local/share/waydroid/data/icons/org.lineageos.recorder.png

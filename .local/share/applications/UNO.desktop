@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=UNO
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/470220
+Icon=steam_icon_470220
+Terminal=false
+Type=Application
+Categories=Game;

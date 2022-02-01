@@ -23,7 +23,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     done
     if [[ $arquivo_adicionado -eq 1 || -n "$(yadm diff --name-only)"  ]];then
         yadm status --porcelain;
-        echo -e "\nPressione qualquer tecla para continuar";
+        echo -e "\nPressione enter para continuar";
         read;
         yadm commit -a -m "atualizando";
     fi

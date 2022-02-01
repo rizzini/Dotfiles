@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/usr/bin/pcsx2 --nogui '/mnt/archlinux/Games/Dragon Ball Z - Budokai 3/DragonBall Z - Budokai 3 (USA).iso'
+Icon=/mnt/archlinux/Games/Dragon Ball Z - Budokai 3/clipart1717180.png
+Name=Dragon Ball Z - Budokai 3
+NoDisplay=false
+Path[$e]=/mnt/archlinux/Games/Dragon Ball Z - Budokai 3
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

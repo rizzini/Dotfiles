@@ -728,6 +728,9 @@ PreloadWeight=0
 DialogHeight=480
 DialogWidth=640
 
+[Containments][84][Applets][112][Configuration][General]
+updateInterval=0.5
+
 [Containments][84][Applets][150]
 immutability=1
 plugin=com.github.zren.commandoutput
@@ -838,7 +841,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=73
+PreloadWeight=88
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -868,14 +871,14 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][90][Applets][102][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][103]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][90][Applets][103][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][105][Configuration]
 PreloadWeight=42
@@ -932,14 +935,13 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=73
+PreloadWeight=88
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496
 DialogWidth=640
 
 [Containments][90][Applets][98][Configuration][General]
-currentTab=streams
 raiseMaximumVolume=true
 volumeStep=3
 

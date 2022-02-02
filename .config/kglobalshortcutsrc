@@ -2,6 +2,10 @@
 _k_friendly_name=Gerenciador de atividades
 switch-to-activity-406be1e9-749e-4bd4-90c9-209c40b1f810=none,none,Alternar para a atividade "Default"
 
+[Broforce.desktop]
+_k_friendly_name=Broforce
+_launch=,none,Iniciar Broforce
+
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)

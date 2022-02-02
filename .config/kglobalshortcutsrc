@@ -4,7 +4,11 @@ switch-to-activity-406be1e9-749e-4bd4-90c9-209c40b1f810=none,none,Alternar para 
 
 [Broforce.desktop]
 _k_friendly_name=Broforce
-_launch=,none,Iniciar Broforce
+_launch=none,none,Iniciar Broforce
+
+[Dragon Ball Z - Budokai 3.desktop]
+_k_friendly_name=Dragon Ball Z - Budokai 3
+_launch=none,none,Iniciar Dragon Ball Z - Budokai 3
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -50,7 +54,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
-{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Alt+T,none,tradutor crow
+{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Meta+T,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
 
 [kmix]
@@ -64,11 +68,11 @@ mute=Volume Mute,Volume Mute,Sem áudio
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção
@@ -247,7 +251,7 @@ Turn Off Screen=none,none,Desligar a tela
 _k_friendly_name=Gerenciamento de energia
 
 [plasmashell]
-_k_friendly_name=Plasma
+_k_friendly_name=Mudança de atividade
 activate task manager entry 1=Meta+1,Meta+1,Ativar entrada 1 do gerenciador de tarefas
 activate task manager entry 10=Meta+0,Meta+0,Ativar entrada 10 do gerenciador de tarefas
 activate task manager entry 2=Meta+2,Meta+2,Ativar entrada 2 do gerenciador de tarefas
@@ -267,8 +271,8 @@ cycleNextAction=none,,Próximo item do histórico
 cyclePrevAction=none,,Item anterior do histórico
 edit_clipboard=none,,Editar conteúdo...
 manage activities=Meta+Q,Meta+Q,Mostrar alternador de atividade
-next activity=Meta+Tab,none,Percorrer as atividades
-previous activity=Meta+Shift+Tab,none,Percorrer as atividades (inverso)
+next activity=Meta+Tab,Meta+Tab,Percorrer as atividades
+previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Percorrer as atividades (inverso)
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Invocar ação manualmente sobre a área de transferência atual
 show dashboard=Ctrl+F12,Ctrl+F12,Mostrar a Área de Trabalho
 show-barcode=none,,Mostrar código de barras...

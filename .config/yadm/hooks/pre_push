@@ -13,7 +13,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     /home/lucas/.local/share/color-schemes/* \
     /home/lucas/.local/share/aurorae/themes/* \
     /home/lucas/.local/share/plasma/plasmoids/* \
-    /home/lucas/.local/share/plasma/look-and-feel/ \
+    /home/lucas/.local/share/plasma/look-and-feel/* \
     /home/lucas/.config/autostart-scripts/* --porcelain); do
         if [ -n "$(echo "$i" | grep '??')" ];then
             yadm add "/home/lucas/$(echo "$i" | cut -d '"' -f2 | tr -d '??' | perl -pe 's/^\s+//')";

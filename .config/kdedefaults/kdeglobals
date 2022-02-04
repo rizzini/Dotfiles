@@ -1,0 +1,8 @@
+[General]
+ColorScheme=ArcDark
+
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+widgetStyle=kvantum

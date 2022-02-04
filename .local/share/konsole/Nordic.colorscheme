@@ -1,5 +1,5 @@
 [Background]
-Color=46,52,64
+Color=40,40,40
 
 [BackgroundFaint]
 Color=46,52,64
@@ -90,6 +90,7 @@ Color=216,222,233
 
 [General]
 Blur=true
+ColorRandomization=false
 Description=Nordic
 Opacity=0.75
 Wallpaper=

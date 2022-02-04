@@ -21,6 +21,9 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
             arquivo_adicionado=1;
         fi
     done
+    if [ -n "$(yadm status --porcelain)" ];then
+        arquivo_adicionado=1;
+    fi
     if [[ $arquivo_adicionado -eq 1 || -n "$(yadm diff --name-only)"  ]];then
         yadm status --porcelain;
         echo -e "\nPressione enter para continuar";

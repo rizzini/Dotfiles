@@ -1,6 +1,5 @@
 #!/bin/bash
 IFS=$(echo -en "\n\b");
-arquivo_adicionado=0;
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     #/home/lucas/.local/share/icons/* #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
     for i in $(yadm stun /home/lucas/.themes/* \
@@ -21,9 +20,6 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         fi
     done
     if [ -n "$(yadm status --porcelain)" ];then
-        arquivo_adicionado=1;
-    fi
-    if [[ $arquivo_adicionado -eq 1 || -n "$(yadm diff --name-only)"  ]];then
         yadm status --porcelain;
         echo -e "\nPressione enter para continuar";
         read;

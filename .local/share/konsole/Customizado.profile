@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Breeze
+ColorScheme=Gruvbox_Dark
 Font=DroidSansMono Nerd Font,8,-1,5,50,0,0,0,0,0
 
 [General]

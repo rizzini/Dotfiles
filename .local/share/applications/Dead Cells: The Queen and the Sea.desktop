@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_deadcell /usr/bin/gamemoderun  /usr/bin/mangohud --dlsym /opt/wine-tkg-staging-fsync-opt-git/bin/wine deadcells_gl.exe
+Icon=9B30_deadcells_gl.0
+Name=Dead Cells: The Queen and the Sea
+NoDisplay=false
+Path[$e]=/mnt/archlinux/Games/Dead Cells The Queen and the Sea
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

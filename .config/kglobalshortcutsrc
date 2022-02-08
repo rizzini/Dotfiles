@@ -21,6 +21,10 @@ _k_friendly_name=Seletor de layouts de teclado
 _k_friendly_name=Nethogs
 _launch=none,none,Iniciar Nethogs
 
+[UNO.desktop]
+_k_friendly_name=UNO
+_launch=none,none,Iniciar UNO
+
 [Windjammers 2.desktop]
 _k_friendly_name=Windjammers 2
 _launch=none,none,Iniciar Windjammers 2
@@ -281,6 +285,19 @@ stop current activity=Meta+S,Meta+S,Parar a atividade atual
 switch to next activity=none,,Mudar para a próxima atividade
 switch to previous activity=none,,Mudar para a atividade anterior
 toggle do not disturb=Launch (1),,Alternar o "Não perturbe"
+
+[steam.desktop]
+BigPicture=none,none,Big Picture
+Community=none,none,Comunidade
+Friends=none,none,Amigos
+Library=none,none,Biblioteca
+News=none,none,Notícias
+Screenshots=none,none,Capturas de tela
+Servers=none,none,Servidores
+Settings=none,none,Configurações
+Store=none,none,Loja
+_k_friendly_name=Steam (Runtime)
+_launch=none,none,Iniciar Steam (Runtime)
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings

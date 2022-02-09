@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/Downloads/vm,file:///mnt/archlinux/Games/Dead Cells
 
 [General]
 BrowserApplication=google-chrome.desktop
-ColorScheme=OrchisDark
+ColorSchemeHash=2dafdb8db7e259fce6399dae70f9cd60076faef2
 Name[pt_BR]=Breeze Dark
 Name=Nord-Dark-Color
 XftAntialias=true

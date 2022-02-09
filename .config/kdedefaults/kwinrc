@@ -4,8 +4,8 @@ DesktopListLayout=org.kde.breeze.desktop
 LayoutName=org.kde.breeze.desktop
 
 [Windows]
-Placement=Smart
+Placement=Centered
 
 [org.kde.kdecoration2]
 library=org.kde.breeze
-theme=__aurorae__svg__Arc-Dark
+theme=Breeze

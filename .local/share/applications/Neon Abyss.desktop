@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_NeonAbyss /opt/wine-tkg-staging-fsync-opt-git/bin/wine NeonAbyss.exe
+Icon=/mnt/archlinux/Games/Neon.Abyss.v1.4.2.5/Icon.ico
+Name=Neon Abyss
+NoDisplay=false
+Path=/mnt/archlinux/Games/Neon.Abyss.v1.4.2.5
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

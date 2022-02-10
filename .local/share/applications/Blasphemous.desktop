@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_blasphemous /opt/wine-tkg-staging-fsync-opt-git/bin/wine Blasphemous.exe
+Icon=/mnt/archlinux/Games/Blasphemous/goggame-2068474256.ico
+Name=Blasphemous
+NoDisplay=false
+Path=/mnt/archlinux/Games/Blasphemous
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

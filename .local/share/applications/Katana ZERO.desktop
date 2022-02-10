@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_teste /opt/wine-tkg-staging-fsync-opt-git/bin/wine Katana\\ ZERO.exe
+Icon=/mnt/archlinux/Games/Katana ZERO/katana_zero_icon_v2_by_andonovmarko_dd4zcjo.png
+Name=Katana ZERO
+NoDisplay=false
+Path=/mnt/archlinux/Games/Katana ZERO
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -2,15 +2,8 @@
 size () {
     local -a units
     local -i scale
-    if [[ "$1" == "-si" ]]
-    then
-        scale=1024
-        units=(B KiB MiB GiB TiB EiB PiB YiB ZiB)
-        shift
-    else
-        scale=1000
-        units=(B KB MB GB TB EB PB YB ZB)
-    fi
+    scale=1000
+    units=(B KB MB GB TB EB PB YB ZB)
     local -i unit=0
     if [ -z "${units[0]}" ]
     then

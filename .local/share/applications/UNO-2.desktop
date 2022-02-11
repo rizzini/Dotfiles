@@ -1,13 +1,20 @@
 [Desktop Entry]
+Comment[pt_BR]=
 Comment=
 Exec=/usr/bin/VBoxManage startvm "Windows 7"
-Icon=steam_icon_470220
+GenericName[pt_BR]=
+GenericName=
+Icon=/home/lucas/Games/vm/UNO_103.ico
+MimeType=
+Name[pt_BR]=UNO
 Name=UNO
 NoDisplay=false
-Path[$e]=
+Path=
 StartupNotify=true
-Terminal=0
+Terminal=false
 TerminalOptions=
 Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
 X-KDE-Username=

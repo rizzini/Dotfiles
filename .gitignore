@@ -1,5 +1,6 @@
 .local/share/icons/
 .local/share/applications/wine/
+.local/share/applications/wine*
 .local/share/applications/anbox/
 .local/share/applications/waydroid*
 Documentos/scripts/pornhub_historico
@@ -7,3 +8,4 @@ Documentos/scripts/xhamster_historico
 Documentos/scripts/xnxx_historico
 Documentos/scripts/xvideos_historico
 Documentos/scripts/youporn.sh
+

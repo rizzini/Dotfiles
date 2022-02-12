@@ -124,8 +124,8 @@ Replace History=yadm rm --cached ,-volume 40 ,/usr/bin/ffplay  -nodisp -autoexit
 Search History=A  ,erro,640,-volume 50 ,/usr/bin/mpg123 /home/lucas/Documentos/scripts/youporn.mp3,org.kde.plasma.volume,volume,fish,197369,playerctl,eng,br,pt,\\,ssd\\,space_cache=v2,vcrun2010,vcrun6,\\,space_cache=v2,clear_cache\\,,core,version,9989,19736,1q2w3,~,script,for, --porcelain | grep "??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done,for i in $(yadm stun , --porcelain | grep "??" | sed 's/^.*\\\\(etc.*\\\\).*$/\\\\1/'); do if [ -n "$i" ];then yadm -Y /etc/yadm add /$i; fi done, /etc/yadm stun ,for i in $(yadm -Y ,tr -d '??' | tr -d '"' | cut -c2-,grep -E '^ ??|^??',grep -E '^ ??|^??,Kinglet,36,--porcelain | grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/$i"; fi done,--porcelain | grep "^ ??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /$i; fi done,| grep -v "^A" | awk '{print $2}'); do if [ -n "$i" ];then yadm add "/home/lucas/$i"; fi done,PaddingTop,opacity,heigh,opac,transp,exec,wine,org.kde.gwenview.desktop,Adobe Photoshop CS6-2,gwen, ,font,flags, boot/,etc/,usr/,var/
 
 [MainWindow]
-HDMI-1 Height 1920x1080=359
-HDMI-1 Width 1920x1080=879
+HDMI-1 Height 1920x1080=842
+HDMI-1 Width 1920x1080=1779
 HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Change wallpaper every boot.
+
+[Service]
+Type=oneshot
+ExecStart=/home/lucas/Documentos/scripts/change_wallpaper_every_boot.sh
+
+[Install]
+WantedBy=default.target

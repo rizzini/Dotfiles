@@ -86,6 +86,16 @@ wmclasscomplete=true
 wmclassmatch=2
 
 [6]
+Description=Cópia de Configurações de janela para UNO [WINE]
+position=960,-295
+size=600,400
+sizerule=2
+title=UNO
+wmclass=steam_proton
+wmclasscomplete=true
+wmclassmatch=2
+
+[7]
 Description=Configurações de janela para BandNews TV Ao Vivo
 position=960,-295
 positionrule=2
@@ -95,14 +105,6 @@ title=BandNews TV Ao Vivo
 titlematch=2
 wmclass=chromium
 wmclasscomplete=true
-wmclassmatch=2
-
-[7]
-Description=Configurações de janela para JIT64
-size=800,616
-sizerule=2
-title=JIT64
-titlematch=2
 wmclassmatch=2
 
 [8]
@@ -133,9 +135,19 @@ wmclass=chromium
 wmclasscomplete=true
 wmclassmatch=2
 
+[8e266161-b932-4e29-a03c-1614c9f8470d]
+Description=Cópia de Configurações de janela para UNO [WINE]
+position=247,683
+size=600,400
+sizerule=2
+title=UNO
+wmclass=steam_proton
+wmclasscomplete=true
+wmclassmatch=2
+
 [General]
-count=7
-rules=1,2,3,4,5,6,7
+count=8
+rules=1,2,3,4,5,6,7,8
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

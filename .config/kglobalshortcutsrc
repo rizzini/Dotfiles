@@ -25,6 +25,10 @@ _k_friendly_name=Seletor de layouts de teclado
 _k_friendly_name=Nethogs
 _launch=none,none,Iniciar Nethogs
 
+[PortProton.desktop]
+_k_friendly_name=PortProton
+_launch=,none,Iniciar PortProton
+
 [UNO.desktop]
 _k_friendly_name=UNO
 _launch=none,none,Iniciar UNO

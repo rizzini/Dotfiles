@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[pt_BR]=
 Comment=
-Exec=sudo /usr/bin/systemctl restart smb nmb & /usr/bin/VBoxManage startvm "Windows 7"
+Exec=/home/lucas/Documentos/scripts/start_Win7_vm_and_samba.sh
 GenericName[pt_BR]=
 GenericName=
 Icon=/home/lucas/Games/vm/UNO_103.ico

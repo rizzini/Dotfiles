@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PortProton
+Exec=env /home/lucas/Downloads/portproton/PortProton/data/scripts/start.sh %F
+Type=Application
+Terminal=False
+Categories=Game
+StartupNotify=true
+MimeType=application/x-ms-dos-executable;application/x-wine-extension-msp;application/x-msi;application/x-msdos-program
+Path=/home/lucas/Downloads/portproton/PortProton/data/scripts/
+Icon=/home/lucas/Downloads/portproton/PortProton/data/img/w.png

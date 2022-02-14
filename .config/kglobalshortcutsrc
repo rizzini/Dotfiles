@@ -27,7 +27,7 @@ _launch=none,none,Iniciar Nethogs
 
 [PortProton.desktop]
 _k_friendly_name=PortProton
-_launch=,none,Iniciar PortProton
+_launch=none,none,Iniciar PortProton
 
 [UNO.desktop]
 _k_friendly_name=UNO

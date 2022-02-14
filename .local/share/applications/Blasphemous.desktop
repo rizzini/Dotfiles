@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[pt_BR]=
 Comment=
-Exec=/mnt/archlinux/Games/Blasphemous/start.sh
+Exec=/home/lucas/Documentos/scripts/blasphemous_auto_push_save_to_github.sh
 GenericName[pt_BR]=
 GenericName=
 Icon=9A98_goggame-2068474256.0

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEPREFIX=/home/lucas/.wine_teste/ gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine x64Vk/Hades.exe
+Icon=D988_Hades.0
+Name=Hades
+NoDisplay=false
+Path=/mnt/archlinux/Games/Hades
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -14,6 +14,17 @@ wmclass=chromium chromium
 wmclasscomplete=true
 wmclassmatch=2
 
+[10]
+Description=Configurações de janela para Blasphemous
+ignoregeometry=true
+ignoregeometryrule=2
+position=46,226
+positionrule=3
+title=Blasphemous
+wmclass=blasphemous blasphemous
+wmclasscomplete=true
+wmclassmatch=1
+
 [15093030-2845-4cdf-875d-d88f92614b91]
 Description=Configurações de aplicativo para dolphin-emu
 clientmachine=localhost
@@ -156,6 +167,17 @@ wmclass=steam_proton
 wmclasscomplete=true
 wmclassmatch=2
 
+[9]
+Description=Configurações de janela para Blasphemous
+ignoregeometry=true
+ignoregeometryrule=2
+position=46,226
+positionrule=3
+title=Blasphemous
+wmclass=blasphemous blasphemous
+wmclasscomplete=true
+wmclassmatch=1
+
 [94bbabc8-2858-4c0f-bb67-216b8ed1cf61]
 Description=Configurações de janela para Children of Morta
 position=17,287
@@ -167,7 +189,7 @@ wmclassmatch=1
 
 [General]
 count=10
-rules=1,2,3,4,5,6,7,8,94bbabc8-2858-4c0f-bb67-216b8ed1cf61,81c566b9-b5bc-4860-9331-f019f8940e03
+rules=1,2,3,4,5,6,7,8,9,e276117a-0cdc-48e3-942d-72747437b97c
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO
@@ -185,5 +207,16 @@ size=832,600
 sizerule=2
 title=SuperTuxKart
 wmclass=supertuxkart supertuxkart
+wmclasscomplete=true
+wmclassmatch=1
+
+[e276117a-0cdc-48e3-942d-72747437b97c]
+Description=Cópia de Configurações de janela para Hades
+ignoregeometry=true
+ignoregeometryrule=2
+position=21,285
+positionrule=3
+title=Blasphemous
+wmclass=blasphemous blasphemous
 wmclasscomplete=true
 wmclassmatch=1

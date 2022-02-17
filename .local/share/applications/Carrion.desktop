@@ -1,7 +1,12 @@
 [Desktop Entry]
+Comment[pt_BR]=
 Comment=
 Exec=WINEDEBUG=-all WINEPREFIX='/mnt/archlinux/Games/Carrion' /opt/wine-tkg-staging-fsync-opt-git/bin/wine Carrion.exe
+GenericName[pt_BR]=
+GenericName=
 Icon=/home/lucas/Games/Carrion/communityIcon_l29pzg03rqj51.png
+MimeType=
+Name[pt_BR]=Carrion
 Name=Carrion
 NoDisplay=false
 Path=/mnt/archlinux/Games/Carrion/drive_c/Carrion/
@@ -9,5 +14,7 @@ StartupNotify=true
 Terminal=false
 TerminalOptions=
 Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
 X-KDE-Username=

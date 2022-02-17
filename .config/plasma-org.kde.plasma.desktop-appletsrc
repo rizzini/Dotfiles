@@ -825,7 +825,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][87][Configuration][General]
-launchers=applications:org.kde.kpat.desktop,applications:UNO-2.desktop,applications:Katana ZERO.desktop,applications:Neon Abyss.desktop,applications:com.github.pulseaudio-equalizer-ladspa.Equalizer.desktop,applications:spotify.desktop,applications:chromium.desktop
+launchers=applications:org.kde.kpat.desktop,applications:UNO-2.desktop,applications:Katana ZERO.desktop,applications:com.github.pulseaudio-equalizer-ladspa.Equalizer.desktop,applications:spotify.desktop,applications:chromium.desktop
 wheelEnabled=false
 
 [Containments][84][Applets][88]

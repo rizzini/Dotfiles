@@ -29,6 +29,10 @@ Switch keyboard layout to Português (Brasil)=none,none,Mudar para o layout de t
 Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Mudar para o próximo layout de teclado
 _k_friendly_name=Seletor de layouts de teclado
 
+[Neon Abyss.desktop]
+_k_friendly_name=Neon Abyss
+_launch=,none,Iniciar Neon Abyss
+
 [Nethogs.desktop]
 _k_friendly_name=Nethogs
 _launch=none,none,Iniciar Nethogs
@@ -74,7 +78,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
-{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Meta+Z,none,tradutor crow
+{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Meta+Q,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
 
 [kmix]
@@ -291,14 +295,14 @@ clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Habilitar ações da área de transferên
 cycleNextAction=none,,Próximo item do histórico
 cyclePrevAction=none,,Item anterior do histórico
 edit_clipboard=none,,Editar conteúdo...
-manage activities=Meta+Q,Meta+Q,Mostrar alternador de atividade
+manage activities=,Meta+Q,Mostrar alternador de atividade
 next activity=Meta+Tab,Meta+Tab,Percorrer as atividades
 previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Percorrer as atividades (inverso)
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Invocar ação manualmente sobre a área de transferência atual
 show dashboard=Ctrl+F12,Ctrl+F12,Mostrar a Área de Trabalho
 show-barcode=none,,Mostrar código de barras...
 show-on-mouse-pos=Alt+S,Meta+V,Abrir o Klipper na posição do mouse
-stop current activity=Meta+S,Meta+S,Parar a atividade atual
+stop current activity=,Meta+S,Parar a atividade atual
 switch to next activity=none,,Mudar para a próxima atividade
 switch to previous activity=none,,Mudar para a atividade anterior
 toggle do not disturb=Launch (1),,Alternar o "Não perturbe"

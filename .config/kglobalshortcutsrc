@@ -4,23 +4,75 @@ switch-to-activity-406be1e9-749e-4bd4-90c9-209c40b1f810=none,none,Alternar para 
 
 [Blasphemous.desktop]
 _k_friendly_name=Blasphemous
-_launch=,none,Iniciar Blasphemous
+_launch=none,none,Iniciar Blasphemous
+
+[Bloodstained Ritual of the Night Classic Mode.desktop]
+_k_friendly_name=Bloodstained Ritual of the Night Classic Mode
+_launch=none,none,Iniciar Bloodstained Ritual of the Night Classic Mode
 
 [Broforce.desktop]
 _k_friendly_name=Broforce
 _launch=none,none,Iniciar Broforce
 
+[Dead Cells (OpenGL).desktop]
+_k_friendly_name=Dead Cells (OpenGL)
+_launch=none,none,Iniciar Dead Cells (OpenGL)
+
+[Dead Cells.desktop]
+_k_friendly_name=Dead Cells
+_launch=none,none,Iniciar Dead Cells
+
 [Dead Cells: The Queen and the Sea.desktop]
 _k_friendly_name=Dead Cells: The Queen and the Sea
 _launch=none,none,Iniciar Dead Cells: The Queen and the Sea
+
+[Deaths Gambit Afterlife Ashes of Vados.desktop]
+_k_friendly_name=Deaths Gambit Afterlife Ashes of Vados
+_launch=none,none,Iniciar Deaths Gambit Afterlife Ashes of Vados
+
+[Desinstalar Blasphemous.desktop]
+_k_friendly_name=Desinstalar Blasphemous
+_launch=none,none,Iniciar Desinstalar Blasphemous
+
+[Desinstalar Children of Morta.desktop]
+_k_friendly_name=Desinstalar Children of Morta
+_launch=none,none,Iniciar Desinstalar Children of Morta
+
+[Desinstalar Dead Cells.desktop]
+_k_friendly_name=Desinstalar Dead Cells
+_launch=none,none,Iniciar Desinstalar Dead Cells
+
+[Desinstalar Door Kickers - Action Squad.desktop]
+_k_friendly_name=Desinstalar Door Kickers - Action Squad
+_launch=none,none,Iniciar Desinstalar Door Kickers - Action Squad
+
+[Desinstalar Trine 3 - Artifacts of Power.desktop]
+_k_friendly_name=Desinstalar Trine 3 - Artifacts of Power
+_launch=none,none,Iniciar Desinstalar Trine 3 - Artifacts of Power
+
+[Door Kickers - Action Squad.desktop]
+_k_friendly_name=Door Kickers - Action Squad
+_launch=none,none,Iniciar Door Kickers - Action Squad
 
 [Dragon Ball Z - Budokai 3.desktop]
 _k_friendly_name=Dragon Ball Z - Budokai 3
 _launch=none,none,Iniciar Dragon Ball Z - Budokai 3
 
+[Dust - An Elysian Tail.desktop]
+_k_friendly_name=Dust - An Elysian Tail
+_launch=none,none,Iniciar Dust - An Elysian Tail
+
+[ENDER LILIES Quietus of the Knights.desktop]
+_k_friendly_name=ENDER LILIES Quietus of the Knights
+_launch=none,none,Iniciar ENDER LILIES Quietus of the Knights
+
 [Hades.desktop]
 _k_friendly_name=Hades
-_launch=,none,Iniciar Hades
+_launch=none,none,Iniciar Hades
+
+[Hitman Absolution.desktop]
+_k_friendly_name=Hitman Absolution
+_launch=none,none,Iniciar Hitman Absolution
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -29,9 +81,21 @@ Switch keyboard layout to Português (Brasil)=none,none,Mudar para o layout de t
 Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Mudar para o próximo layout de teclado
 _k_friendly_name=Seletor de layouts de teclado
 
+[Launch WA.desktop]
+_k_friendly_name=Launch WA
+_launch=none,none,Iniciar Launch WA
+
+[Level Editor.desktop]
+_k_friendly_name=Level Editor
+_launch=none,none,Iniciar Level Editor
+
+[Little Nightmares.desktop]
+_k_friendly_name=Little Nightmares
+_launch=none,none,Iniciar Little Nightmares
+
 [Neon Abyss.desktop]
 _k_friendly_name=Neon Abyss
-_launch=,none,Iniciar Neon Abyss
+_launch=none,none,Iniciar Neon Abyss
 
 [Nethogs.desktop]
 _k_friendly_name=Nethogs
@@ -41,9 +105,53 @@ _launch=none,none,Iniciar Nethogs
 _k_friendly_name=PortProton
 _launch=none,none,Iniciar PortProton
 
+[ReadMe.desktop]
+_k_friendly_name=ReadMe
+_launch=none,none,Iniciar ReadMe
+
+[The Room 4 Old Sins.desktop]
+_k_friendly_name=The Room 4 Old Sins
+_launch=none,none,Iniciar The Room 4 Old Sins
+
+[Trine 3 - Artifacts of Power.desktop]
+_k_friendly_name=Trine 3 - Artifacts of Power
+_launch=none,none,Iniciar Trine 3 - Artifacts of Power
+
 [UNO.desktop]
 _k_friendly_name=UNO
 _launch=none,none,Iniciar UNO
+
+[Uninstall Bloodstained Ritual of the Night Classic Mode.desktop]
+_k_friendly_name=Uninstall Bloodstained Ritual of the Night Classic Mode
+_launch=none,none,Iniciar Uninstall Bloodstained Ritual of the Night Classic Mode
+
+[Uninstall Deaths Gambit Afterlife Ashes of Vados.desktop]
+_k_friendly_name=Uninstall Deaths Gambit Afterlife Ashes of Vados
+_launch=none,none,Iniciar Uninstall Deaths Gambit Afterlife Ashes of Vados
+
+[Uninstall Dust -  An Elysian Tail.desktop]
+_k_friendly_name=Uninstall Dust -  An Elysian Tail
+_launch=none,none,Iniciar Uninstall Dust -  An Elysian Tail
+
+[Uninstall ENDER LILIES Quietus of the Knights.desktop]
+_k_friendly_name=Uninstall ENDER LILIES Quietus of the Knights
+_launch=none,none,Iniciar Uninstall ENDER LILIES Quietus of the Knights
+
+[Uninstall Hades.desktop]
+_k_friendly_name=Uninstall Hades
+_launch=none,none,Iniciar Uninstall Hades
+
+[Uninstall Little Nightmares.desktop]
+_k_friendly_name=Uninstall Little Nightmares
+_launch=none,none,Iniciar Uninstall Little Nightmares
+
+[Uninstall The Room 4 Old Sins.desktop]
+_k_friendly_name=Uninstall The Room 4 Old Sins
+_launch=none,none,Iniciar Uninstall The Room 4 Old Sins
+
+[Uninstall WA.desktop]
+_k_friendly_name=Uninstall WA
+_launch=none,none,Iniciar Uninstall WA
 
 [Windjammers 2.desktop]
 _k_friendly_name=Windjammers 2
@@ -73,7 +181,9 @@ _k_friendly_name=Serviço de atalhos personalizados
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
 {583c6f8c-18ab-493c-ac1a-cf654d834a97}=none,none,Launch Konsole
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
+{84bdac79-f37f-4df1-b574-356c43dd46f4}=Volume Down,none,Diminuir volume
 {bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=Ctrl+Volume Up,none,playerctl next
+{bf7f51ed-0460-4c09-8714-36ea398683e8}=Volume Up,none,Aumentar volume
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
@@ -84,9 +194,9 @@ _k_friendly_name=Serviço de atalhos personalizados
 [kmix]
 _k_friendly_name=Volume do áudio
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Diminuir volume do microfone
-decrease_volume=Volume Down,Volume Down,Diminuir volume
+decrease_volume=,Volume Down,Diminuir volume
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Aumentar volume do microfone
-increase_volume=Volume Up,Volume Up,Aumentar volume
+increase_volume=,Volume Up,Aumentar volume
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Silenciar microfone
 mute=Volume Mute,Volume Mute,Sem áudio
 
@@ -295,14 +405,14 @@ clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Habilitar ações da área de transferên
 cycleNextAction=none,,Próximo item do histórico
 cyclePrevAction=none,,Item anterior do histórico
 edit_clipboard=none,,Editar conteúdo...
-manage activities=,Meta+Q,Mostrar alternador de atividade
+manage activities=none,Meta+Q,Mostrar alternador de atividade
 next activity=Meta+Tab,Meta+Tab,Percorrer as atividades
 previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Percorrer as atividades (inverso)
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Invocar ação manualmente sobre a área de transferência atual
 show dashboard=Ctrl+F12,Ctrl+F12,Mostrar a Área de Trabalho
 show-barcode=none,,Mostrar código de barras...
 show-on-mouse-pos=Alt+S,Meta+V,Abrir o Klipper na posição do mouse
-stop current activity=,Meta+S,Parar a atividade atual
+stop current activity=none,Meta+S,Parar a atividade atual
 switch to next activity=none,,Mudar para a próxima atividade
 switch to previous activity=none,,Mudar para a atividade anterior
 toggle do not disturb=Launch (1),,Alternar o "Não perturbe"

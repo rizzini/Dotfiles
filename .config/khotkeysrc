@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=20
+DataCount=22
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -481,7 +481,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_20Actions0]
-CommandURL=crow & sleep 0.2 && wmctrl -ic $(wmctrl -l | grep 'Crow Translate' | tail -1 | awk '{print $1}')
+CommandURL=crow & sleep 0.4 && wmctrl -ic $(wmctrl -l | grep 'Crow Translate' | tail -1 | awk '{print $1}')
 Type=COMMAND_URL
 
 [Data_20Conditions]
@@ -496,6 +496,58 @@ TriggersCount=1
 Key=Meta+Q
 Type=SHORTCUT
 Uuid={f4804dd4-b377-452a-a4cb-f8024dbf9fee}
+
+[Data_21]
+Comment=Comentário
+Enabled=true
+Name=Aumentar volume
+Type=SIMPLE_ACTION_DATA
+
+[Data_21Actions]
+ActionsCount=1
+
+[Data_21Actions0]
+CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh increase
+Type=COMMAND_URL
+
+[Data_21Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_21Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_21Triggers0]
+Key=Volume Up
+Type=SHORTCUT
+Uuid={bf7f51ed-0460-4c09-8714-36ea398683e8}
+
+[Data_22]
+Comment=Comentário
+Enabled=true
+Name=Diminuir volume
+Type=SIMPLE_ACTION_DATA
+
+[Data_22Actions]
+ActionsCount=1
+
+[Data_22Actions0]
+CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh decrease
+Type=COMMAND_URL
+
+[Data_22Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_22Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_22Triggers0]
+Key=Volume Down
+Type=SHORTCUT
+Uuid={84bdac79-f37f-4df1-b574-356c43dd46f4}
 
 [Data_2Conditions]
 Comment=

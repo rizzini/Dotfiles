@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/home/lucas/Games/Blasphemous/start.sh
+Icon=/mnt/archlinux/Games/Blasphemous/game/files/Blasphemous_Data/Resources/UnityPlayer.png
+Name=Blaphemous
+NoDisplay=false
+Path=/home/lucas/Games/Blasphemous
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

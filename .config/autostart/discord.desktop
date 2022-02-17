@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Network;InstantMessaging;
+Comment[pt_BR]=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+Exec=/opt/discord/Discord
+GenericName[pt_BR]=Internet Messenger
+GenericName=Internet Messenger
+Icon=discord
+MimeType=
+Name[pt_BR]=Discord
+Name=Discord
+Path=/opt/discord/
+StartupNotify=true
+StartupWMClass=discord
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

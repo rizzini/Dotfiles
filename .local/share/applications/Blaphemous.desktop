@@ -1,7 +1,12 @@
 [Desktop Entry]
+Comment[pt_BR]=
 Comment=
-Exec=/home/lucas/Games/Blasphemous/start.sh
+Exec=/home/lucas/Documentos/scripts/blasphemous_auto_push_save_to_github.sh
+GenericName[pt_BR]=
+GenericName=
 Icon=/mnt/archlinux/Games/Blasphemous/game/files/Blasphemous_Data/Resources/UnityPlayer.png
+MimeType=
+Name[pt_BR]=Blaphemous
 Name=Blaphemous
 NoDisplay=false
 Path=/home/lucas/Games/Blasphemous
@@ -9,5 +14,7 @@ StartupNotify=true
 Terminal=false
 TerminalOptions=
 Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
 X-KDE-Username=

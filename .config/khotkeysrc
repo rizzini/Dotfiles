@@ -507,7 +507,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_21Actions0]
-CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume increase
+CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh increase
 Type=COMMAND_URL
 
 [Data_21Conditions]
@@ -533,7 +533,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_22Actions0]
-CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume decrease
+CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh decrease
 Type=COMMAND_URL
 
 [Data_22Conditions]

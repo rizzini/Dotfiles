@@ -3,6 +3,7 @@ IFS=$(echo -en "\n\b");
 if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     #/home/lucas/.local/share/icons/* #Too many files. It takes to long to verify all of them every time I push my changes. Think mothafocka..
     for i in $(yadm stun /home/lucas/.themes/* \
+    /home/lucas/.config/fish/functions/* \
     /home/lucas/.config/Kvantum/* \
     /home/lucas/Imagens/Wallpaper/* \
     /home/lucas/.config/autostart/* \

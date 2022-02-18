@@ -33,7 +33,7 @@ deleted = "x"
 [cmd_duration]
 min_time = 1
 format = "levou [$duration]($style)"
-disabled = false
+disabled = true
 
 
 ## SECOND LINE/ROW: Prompt

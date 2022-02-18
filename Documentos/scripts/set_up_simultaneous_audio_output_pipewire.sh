@@ -1,5 +1,5 @@
 #!/bin/bash
-pactl load-module module-combine-sink sink_name="Simultaneous" slaves=alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1,alsa_output.pci-0000_00_1b.0.analog-stereo
+pactl load-module module-combine-sink sink_name=Simultaneous slaves=alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1,alsa_output.pci-0000_00_1b.0.analog-stereo
 
 # pactl load-module module-null-sink media.class=Audio/Sink sink_name=Simultaneous channel_map=stereo
 # pw-link Simultaneous:monitor_FL alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1:playback_FL

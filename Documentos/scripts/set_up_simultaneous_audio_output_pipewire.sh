@@ -9,6 +9,8 @@ if test -f "/usr/share/wireplumber/main.lua.d/51-alsa-disable.lua"; then
 elif test -f "/usr/share/wireplumber/main.lua.d/51-alsa-disable.lua.tmp"; then
     sudo /usr/bin/mv /usr/share/wireplumber/main.lua.d/51-alsa-disable.lua.tmp /usr/share/wireplumber/main.lua.d/51-alsa-disable.lua
     systemctl --user restart pipewire.service
+    sleep 1
+    pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 50%
 fi
 
 # pactl load-module module-combine-sink sink_name=Simultaneous slaves=alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1,alsa_output.pci-0000_00_1b.0.analog-stereo

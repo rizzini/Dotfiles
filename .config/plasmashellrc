@@ -1,11 +1,11 @@
 [KFileDialog Settings]
-Recent Files[$e]=nebula.jpg,file:$HOME/Games/Carrion/communityIcon_l29pzg03rqj51.png,file:///mnt/archlinux/Games/Katana ZERO/drive_c/Program Files (x86)/Katana Zero/katana_zero_icon_v2_by_andonovmarko_dd4zcjo.png,file:$HOME/.default_wallpaper.jpg,file:$HOME/Games/vm/UNO_103.ico,file:$HOME/Imagens/Wallpaper/wallhaven-m9rk19.png,file:$HOME/.config/archlinux-icon-crystal-64.svg,file:$HOME/Imagens/Wallpaper/wallhaven-m93xqy.jpg,file:$HOME/Imagens/Wallpaper/wallhaven-lmwg12.jpg,file:$HOME/Imagens/Wallpaper/wallhaven-83do1o.jpg,file:$HOME/Imagens/Wallpaper/sombrero-galaxy.jpg,file:$HOME/Imagens/Wallpaper/o0j8khusucg61.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula_invertido.png,file:$HOME/Imagens/Wallpaper/forest_fog_trees_147805_3840x2160.jpg,file:$HOME/Imagens/Wallpaper/ddj64ow-7b05f44f-adde-46aa-b82b-6be9fd14bc65.jpg
-Recent URLs[$e]=file:$HOME/Imagens/Wallpaper/,file:$HOME/Imagens/,file:$HOME/.config/,file:$HOME/,file:$HOME/Documentos/,file:$HOME/Downloads/,file:$HOME/Games/vm/,file:///mnt/archlinux/Games/Katana ZERO/drive_c/Program Files (x86)/Katana Zero/,file:$HOME/Games/Carrion/
+Recent Files[$e]=nebula.jpg,file:///usr/share/help/C/easyeffects/equalizer.png,file:$HOME/Games/Carrion/communityIcon_l29pzg03rqj51.png,file:///mnt/archlinux/Games/Katana ZERO/drive_c/Program Files (x86)/Katana Zero/katana_zero_icon_v2_by_andonovmarko_dd4zcjo.png,file:$HOME/.default_wallpaper.jpg,file:$HOME/Games/vm/UNO_103.ico,file:$HOME/Imagens/Wallpaper/wallhaven-m9rk19.png,file:$HOME/.config/archlinux-icon-crystal-64.svg,file:$HOME/Imagens/Wallpaper/wallhaven-m93xqy.jpg,file:$HOME/Imagens/Wallpaper/wallhaven-lmwg12.jpg,file:$HOME/Imagens/Wallpaper/wallhaven-83do1o.jpg,file:$HOME/Imagens/Wallpaper/sombrero-galaxy.jpg,file:$HOME/Imagens/Wallpaper/o0j8khusucg61.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula_invertido.png,file:$HOME/Imagens/Wallpaper/forest_fog_trees_147805_3840x2160.jpg
+Recent URLs[$e]=file:$HOME/Imagens/Wallpaper/,file:$HOME/Imagens/,file:$HOME/.config/,file:$HOME/,file:$HOME/Documentos/,file:$HOME/Downloads/,file:$HOME/Games/vm/,file:///mnt/archlinux/Games/Katana ZERO/drive_c/Program Files (x86)/Katana Zero/,file:$HOME/Games/Carrion/,file:///usr/share/help/C/easyeffects/
 iconViewIconSize=64
 
 [KPropertiesDialog]
-HDMI-1 Height 1920x1080=514
-HDMI-1 Width 1920x1080=709
+HDMI-1 Height 1920x1080=468
+HDMI-1 Width 1920x1080=456
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=44

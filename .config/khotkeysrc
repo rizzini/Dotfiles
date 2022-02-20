@@ -174,7 +174,7 @@ Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
 
 [Data_11]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=traduzir
 Type=SIMPLE_ACTION_DATA
 
@@ -473,7 +473,7 @@ Type=ACTION_DATA_GROUP
 
 [Data_20]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=tradutor crow
 Type=SIMPLE_ACTION_DATA
 

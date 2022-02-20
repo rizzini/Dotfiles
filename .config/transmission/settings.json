@@ -83,7 +83,7 @@
     "sort-reversed": false,
     "speed-limit-down": 30000,
     "speed-limit-down-enabled": false,
-    "speed-limit-up": 100,
+    "speed-limit-up": 1024,
     "speed-limit-up-enabled": false,
     "start-added-torrents": true,
     "statusbar-stats": "total-transfer",

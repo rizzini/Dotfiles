@@ -176,7 +176,6 @@ display=Display\tMeta+P,Display\tMeta+P,Alternar tela
 _k_friendly_name=Serviço de atalhos personalizados
 {134e66e3-9e84-48b9-a9ea-056d640ce2bf}=Meta+W,none,waydroid
 {22af2176-f96b-48b3-81e2-53c5986f4746}=Ctrl+Alt+T,none,konsole
-{2c10b720-01ed-433a-b5f2-8c8f66765bb2}=Ctrl+R,none,traduzir
 {484d75d9-178b-4d38-973d-1614e27be52a}=Meta+A,none,anbox
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
 {583c6f8c-18ab-493c-ac1a-cf654d834a97}=none,none,Launch Konsole
@@ -188,7 +187,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
-{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Meta+Q,none,tradutor crow
+{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Ctrl+E,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
 
 [kmix]

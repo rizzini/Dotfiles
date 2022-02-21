@@ -1,12 +1,12 @@
 #!/bin/bash
 step=3
 if [ -n "$1" ];then
-    if [ -z "$(pgrep spotify)" ];then
-        mpg123 -q /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga/ &
+    if [ -z "$(/usr/bin/pgrep spotify)" ];then
+        /usr/bin/mpv --really-quiet /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga &
     fi
     if [ $1 == "increase" ];then
-        pactl -- set-sink-volume $(pactl get-default-sink) +$step% &
+        /usr/bin/pactl -- set-sink-volume $(/usr/bin/pactl get-default-sink) +$step% &
     elif [ $1 == "decrease" ];then
-        pactl -- set-sink-volume $(pactl get-default-sink) -$step% &
+        /usr/bin/pactl -- set-sink-volume $(/usr/bin/pactl get-default-sink) -$step% &
     fi
 fi

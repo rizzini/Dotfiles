@@ -187,7 +187,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
-{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Ctrl+E,none,tradutor crow
+{f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Ctrl+R,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
 
 [kmix]

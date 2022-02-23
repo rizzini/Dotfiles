@@ -5,7 +5,7 @@ fi
 /usr/bin/touch "/tmp/check_btrfs_health.sh.tmp";
 error=0
 for i in $(/usr/bin/sudo /usr/bin/btrfs device stats /); do
-    if [[ "$i" != *"/dev/sda2"* && "$i" != 0 ]];then
+    if [[ "$i" != *"/dev/sda2"* && "$i" != 0 && $error -eq 0 ]];then
         error=1;
     fi
 done

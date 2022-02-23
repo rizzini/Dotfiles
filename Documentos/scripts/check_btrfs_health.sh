@@ -1,9 +1,9 @@
 #!/bin/bash
 if test -f "/tmp/check_btrfs_health.sh.tmp"; then
-    exit
+    exit;
 fi
 /usr/bin/touch "/tmp/check_btrfs_health.sh.tmp";
-/usr/bin/sudo /usr/bin/btrfs device stats -c /
+/usr/bin/sudo /usr/bin/btrfs device stats -c /;
 if [ $? != 0 ];then
     DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "$(/usr/bin/sudo /usr/bin/btrfs device stats /)" --title='Device IO error';
 fi

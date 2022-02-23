@@ -1,6 +1,6 @@
 #!/bin/bash
 if test -f "/tmp/check_btrfs_health.sh.tmp"; then
-    exit 1
+    exit
 fi
 /usr/bin/touch "/tmp/check_btrfs_health.sh.tmp";
 for i in $(/usr/bin/sudo /usr/bin/btrfs device stats / | tr -d '/dev/sda2' | grep -o -E '[0-9]+'); do

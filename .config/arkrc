@@ -11,6 +11,7 @@ iconViewIconSize=64
 
 [KTextEditor Document]
 Allow End of Line Detection=true
+Auto Detect Indent=true
 BOM=false
 Backup Local=false
 Backup Prefix=
@@ -91,6 +92,7 @@ Scroll Bar MiniMap=true
 Scroll Bar Preview=true
 Scroll Past End=false
 Search/Replace Flags=140
+Show Focus Frame Around Editor=true
 Show Line Count=false
 Show Scrollbars=0
 Show Word Count=false
@@ -106,8 +108,8 @@ Word Completion Remove Tail=true
 [MainWindow]
 HDMI-1 Height 1920x1080=418
 HDMI-1 Width 1920x1080=775
-HDMI-1 XPosition 1920x1080=189
-HDMI-1 YPosition 1920x1080=506
+HDMI-1 XPosition 1920x1080=1143
+HDMI-1 YPosition 1920x1080=508
 State=AAAA/wAAAAD9AAAAAAAAAwcAAAFUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 ToolBarsMovable=Disabled

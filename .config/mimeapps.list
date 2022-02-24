@@ -27,7 +27,7 @@ image/vnd.adobe.photoshop=Adobe Photoshop CS6.desktop;org.kde.gwenview.desktop;o
 image/webp=org.kde.gwenview.desktop;Adobe Photoshop CS6.desktop;Adobe Photoshop CS6.desktop;chromium.desktop;
 image/wmf=libreoffice-draw.desktop;
 inode/directory=org.kde.dolphin.desktop;
-text/html=firefox.desktop;
+text/html=chromium.desktop;org.kde.kate.desktop;firefox.desktop;
 video/mp4=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
 video/mpeg=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
 video/ogg=mpv.desktop;vlc.desktop;fr.handbrake.ghb.desktop;
@@ -71,7 +71,7 @@ image/vnd.adobe.photoshop=Adobe Photoshop CS6.desktop;
 image/webp=org.kde.gwenview.desktop;Adobe Photoshop CS6.desktop;
 image/wmf=libreoffice-draw.desktop;
 inode/directory=org.kde.dolphin.desktop;
-text/html=chromium.desktop
+text/html=chromium.desktop;
 video/mp4=mpv.desktop;
 video/mpeg=mpv.desktop;
 video/ogg=
@@ -93,4 +93,5 @@ x-scheme-handler/tel=skypeforlinux.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]
+text/html=wine-extension-htm.desktop;wine-extension-txt.desktop;
 video/x-matroska=org.kde.kate.desktop;

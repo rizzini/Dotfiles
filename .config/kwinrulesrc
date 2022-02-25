@@ -64,6 +64,15 @@ wmclass=blasphemous blasphemous
 wmclasscomplete=true
 wmclassmatch=1
 
+[2c7f02df-614e-4cf5-9a88-e11be1157e9a]
+Description=Configurações de janela para Anbox - Android in a Box
+position=960,530
+positionrule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
+wmclasscomplete=true
+wmclassmatch=1
+
 [3]
 Description=Configurações de janela para UNO
 noborder=true
@@ -115,6 +124,15 @@ positionrule=3
 size=600,400
 title=Blasphemous
 wmclass=blasphemous blasphemous
+wmclasscomplete=true
+wmclassmatch=1
+
+[7]
+Description=Configurações de janela para Anbox - Android in a Box
+position=960,530
+positionrule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -180,8 +198,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,2,3,4,5,6
+count=7
+rules=1,2,3,4,5,6,7
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

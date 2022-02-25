@@ -1,6 +1,6 @@
 #!/bin/bash
-if test -h "/usr/share/wireplumber/main.lua.d/51-alsa-disable.lua"; then
-    /usr/bin/sudo /usr/bin/rm -f /usr/share/wireplumber/main.lua.d/51-alsa-disable.lua
+if test -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua"; then
+    /usr/bin/sudo /usr/bin/rm -f /etc/wireplumber/main.lua.d/51-alsa-disable.lua
     /usr/bin/systemctl --user restart pipewire.service
     /usr/bin/sleep 1
     /usr/bin/pactl load-module module-null-sink media.class=Audio/Sink sink_name=Simultaneous channel_map=stereo
@@ -12,7 +12,7 @@ if test -h "/usr/share/wireplumber/main.lua.d/51-alsa-disable.lua"; then
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 127%
     /usr/bin/pactl set-sink-volume Simultaneous 45%
 else
-    /usr/bin/sudo /usr/bin/ln -sf /usr/share/wireplumber/main.lua.d/disable_minisystem/51-alsa-disable.lua /usr/share/wireplumber/main.lua.d/51-alsa-disable.lua
+    /usr/bin/sudo /usr/bin/ln -sf /etc/wireplumber/main.lua.d/disable_minisystem/51-alsa-disable.lua /etc/wireplumber/main.lua.d/51-alsa-disable.lua
     /usr/bin/systemctl --user restart pipewire.service
     /usr/bin/sleep 1
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 40%

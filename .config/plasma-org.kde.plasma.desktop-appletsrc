@@ -863,9 +863,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][87][Configuration][General]
-groupingStrategy=0
 launchers=applications:org.kde.kpat.desktop,applications:UNO-2.desktop,applications:Katana ZERO.desktop,applications:Carrion.desktop,applications:Blaphemous.desktop,applications:com.github.wwmm.easyeffects.desktop,applications:spotify.desktop,applications:chromium.desktop
-wheelEnabled=false
 
 [Containments][84][Applets][88]
 immutability=1

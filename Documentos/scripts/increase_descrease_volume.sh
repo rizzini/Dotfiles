@@ -7,7 +7,6 @@ if [ -n "$1" ];then
         /usr/bin/pactl -- set-sink-volume $(/usr/bin/pactl get-default-sink) -$step% &
     fi
     if [ -z "$(/usr/bin/pgrep spotify)" ];then
-#         /usr/bin/mpv --really-quiet /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-        /home/lucas/Documentos/scripts/increase_descrease_volume &> /dev/null & #I prefer playing sound usin C instead. I downed the time execution from around 204ms to around 15ms.
+        /usr/bin/mpv --really-quiet /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
     fi
 fi

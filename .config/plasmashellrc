@@ -7,6 +7,9 @@ iconViewIconSize=64
 HDMI-1 Height 1920x1080=472
 HDMI-1 Width 1920x1080=424
 
+[PlasmaTransientsConfig]
+PreloadWeight=42
+
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 

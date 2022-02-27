@@ -107,11 +107,11 @@ wmclassmatch=2
 Description=Configurações de janela para Carrion
 ignoregeometry=true
 ignoregeometryrule=2
-position=30,275
-positionrule=2
+position=22,282
+positionrule=3
 size=600,400
-title=Carrion
-wmclass=carrion.exe carrion.exe
+title=Default - Wine desktop
+wmclass=explorer.exe explorer.exe
 wmclasscomplete=true
 wmclassmatch=1
 

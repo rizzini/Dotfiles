@@ -129,7 +129,7 @@ wmclassmatch=1
 
 [7]
 Description=Configurações de janela para Anbox - Android in a Box
-position=960,530
+position=964,525
 positionrule=3
 title=Anbox - Android in a Box
 wmclass=anbox anbox

@@ -13,5 +13,8 @@ Seen=true
 [Applications][modem-manager-gui]
 Seen=true
 
+[DoNotDisturb]
+NotificationSoundsMuted=true
+
 [Notifications]
 PopupPosition=BottomCenter

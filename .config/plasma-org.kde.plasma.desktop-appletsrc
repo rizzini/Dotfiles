@@ -890,7 +890,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=97
+PreloadWeight=100
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -984,7 +984,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=97
+PreloadWeight=100
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496
@@ -1004,6 +1004,7 @@ PreloadWeight=0
 [Containments][90][General]
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod
 knownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod
+pin=true
 shownItems=whatsapp-nativefier-d402111,discord1,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement
 
 [Containments2Appletsts][45][Configuration][Colors]

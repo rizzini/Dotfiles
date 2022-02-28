@@ -10,12 +10,12 @@ create_sink_and_link(){
 
 if [[ $(/usr/bin/uptime -p | /usr/bin/awk '{print $2}' | /usr/bin/tr -d ' ' | /usr/bin/tr -d '\n') -eq 0 && ! -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]];then
     /usr/bin/sleep 5;
-    create_sink_and_link
+    create_sink_and_link;
 else
     if test -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua"; then
         /usr/bin/sudo /usr/bin/rm -f /etc/wireplumber/main.lua.d/51-alsa-disable.lua;
         /usr/bin/systemctl --user restart pipewire.service;
-        create_sink_and_link
+        create_sink_and_link;
         /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo 85%;
         /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 100%;
         /usr/bin/pactl set-sink-volume Simultaneous 45%;

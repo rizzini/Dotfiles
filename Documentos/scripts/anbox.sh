@@ -4,7 +4,7 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus;
 export DISPLAY=:0;
 if [[ -n "$1" && -n "$(DISPLAY=:0 /usr/bin/wmctrl -l | /usr/bin/grep  'Prime Video')"  ]];then
     /usr/bin/killall -9 anbox;
-    /usr/bin/anbox session-manager --single-window --window-size=600,507 &
+    /usr/bin/anbox session-manager --single-window --window-size=600,506 &
     /usr/bin/sleep 1;
     /usr/bin/wmctrl -r 'Anbox - Android in a Box' -e 0,961,543,-1,-1;
     while [ "$(pgrep anbox)" ];do

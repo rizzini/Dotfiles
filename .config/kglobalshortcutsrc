@@ -2,6 +2,10 @@
 _k_friendly_name=Gerenciador de atividades
 switch-to-activity-406be1e9-749e-4bd4-90c9-209c40b1f810=none,none,Alternar para a atividade "Default"
 
+[Blaphemous.desktop]
+_k_friendly_name=Blaphemous
+_launch=none,none,Iniciar Blaphemous
+
 [Blasphemous.desktop]
 _k_friendly_name=Blasphemous
 _launch=none,none,Iniciar Blasphemous
@@ -87,7 +91,7 @@ _k_friendly_name=Seletor de layouts de teclado
 
 [Katana ZERO.desktop]
 _k_friendly_name=Katana ZERO
-_launch=,none,Iniciar Katana ZERO
+_launch=none,none,Iniciar Katana ZERO
 
 [Launch WA.desktop]
 _k_friendly_name=Launch WA

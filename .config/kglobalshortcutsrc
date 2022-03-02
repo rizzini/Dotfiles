@@ -85,6 +85,10 @@ Switch keyboard layout to Português (Brasil)=none,none,Mudar para o layout de t
 Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Mudar para o próximo layout de teclado
 _k_friendly_name=Seletor de layouts de teclado
 
+[Katana ZERO.desktop]
+_k_friendly_name=Katana ZERO
+_launch=,none,Iniciar Katana ZERO
+
 [Launch WA.desktop]
 _k_friendly_name=Launch WA
 _launch=none,none,Iniciar Launch WA

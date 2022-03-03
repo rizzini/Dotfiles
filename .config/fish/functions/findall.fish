@@ -1,3 +1,3 @@
 function findall
-    sudo find / -iname "*$argv[1]*" -not -path "/mnt/*" 2> /dev/null
+    sudo find / -path '/mnt/archlinux' -prune -o -iname "*$argv[1]*" 2> /dev/null | head -n -1
 end

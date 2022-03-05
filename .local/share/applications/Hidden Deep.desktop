@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=WINEDEBUG=-all WINEPREFIX='/mnt/archlinux/Games/Hidden Deep' gamemoderun  /opt/wine-tkg-staging-fsync-opt-git/bin/wine hdeep.exe
+GenericName[pt_BR]=
+GenericName=
+Icon=/mnt/archlinux/Games/Hidden Deep/drive_c/Hidden.Deep.v0.94.32/Icon.ico
+MimeType=
+Name[pt_BR]=Hidden Deep
+Name=Hidden Deep
+NoDisplay=false
+Path=/mnt/archlinux/Games/Hidden Deep/drive_c/Hidden.Deep.v0.94.32/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

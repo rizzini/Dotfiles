@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh desativar; WINEDEBUG=-all WINEFSYNC=0 WINEPREFIX='/mnt/archlinux/Games/Rocketbirds Hardboiled Chicken' gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine Game.exe &> /dev/null; sleep 3; while [ -n "$(pgrep game.exe)" ];do sleep 1; done; /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh ativar
+GenericName[pt_BR]=
+GenericName=
+Icon=/mnt/archlinux/Games/Rocketbirds Hardboiled Chicken/drive_c/Program Files (x86)/Reverb Publishing/Rocketbirds Hardboiled Chicken/Album_Artwork/NWR_Rocketbirds_OST_Album_Cover.png
+MimeType=
+Name[pt_BR]=Rocketbirds Hardboiled Chicken
+Name=Rocketbirds Hardboiled Chicken
+NoDisplay=false
+Path=/mnt/archlinux/Games/Rocketbirds Hardboiled Chicken/drive_c/Program Files (x86)/Reverb Publishing/Rocketbirds Hardboiled Chicken
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

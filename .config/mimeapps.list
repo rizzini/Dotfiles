@@ -37,9 +37,11 @@ video/x-matroska=mpv.desktop;fr.handbrake.ghb.desktop;org.openshot.OpenShot.desk
 video/x-ms-wmv=mpv.desktop;
 video/x-msvideo=mpv.desktop;fr.handbrake.ghb.desktop;
 x-scheme-handler/chrome=firefox.desktop;
-x-scheme-handler/http=chromium.desktop;google-chrome.desktop;firefox.desktop;
-x-scheme-handler/https=chromium.desktop;google-chrome.desktop;firefox.desktop;
+x-scheme-handler/geo=wheelmap-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;chromium.desktop;google-chrome.desktop;
+x-scheme-handler/https=firefox.desktop;chromium.desktop;google-chrome.desktop;
 x-scheme-handler/mailto=chromium.desktop;
+x-scheme-handler/tel=skypeforlinux.desktop;
 
 [Default Applications]
 application/json=org.kde.kate.desktop;
@@ -85,11 +87,12 @@ x-scheme-handler/callto=skypeforlinux.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
 x-scheme-handler/discord-863127630534148136=discord-863127630534148136.desktop
-x-scheme-handler/http=chromium.desktop;
-x-scheme-handler/https=chromium.desktop;
-x-scheme-handler/mailto=chromium.desktop
+x-scheme-handler/geo=wheelmap-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/mailto=chromium.desktop;
 x-scheme-handler/skype=skypeforlinux.desktop
-x-scheme-handler/tel=skypeforlinux.desktop
+x-scheme-handler/tel=skypeforlinux.desktop;
 x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]

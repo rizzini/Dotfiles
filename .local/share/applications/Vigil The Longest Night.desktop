@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh desativar; WINEDEBUG=-all WINEFSYNC=0 WINEPREFIX='/mnt/archlinux/Games/Vigil The Longest Night/' gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine vigil.exe &> /dev/null; sleep 3; while [ -n "$(pgrep vigil.exe)" ];do sleep 1; done; /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh ativar
+GenericName[pt_BR]=
+GenericName=
+Icon=EE70_vigil.0
+MimeType=
+Name[pt_BR]=Vigil The Longest Night\s
+Name=Vigil The Longest Night\s
+NoDisplay=false
+Path=/mnt/archlinux/Games/Vigil The Longest Night/drive_c/Games/Vigil The Longest Night v3 11
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -24,7 +24,7 @@ SystemCallArchitectures=native
 SystemCallFilter=@system-service
 Type=simple
 ExecStart=/usr/bin/pipewire
-ExecStartPost=/bin/bash -c '/home/lucas/Documentos/scripts/set_up_simultaneous_audio_output_pipewire_service.sh link &'
+ExecStartPost=/bin/bash -c '/usr/bin/sleep 1 && /home/lucas/Documentos/scripts/set_up_simultaneous_audio_output_pipewire_service.sh link &'
 Restart=on-failure
 Slice=session.slice
 

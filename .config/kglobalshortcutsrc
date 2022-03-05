@@ -78,6 +78,10 @@ _launch=none,none,Iniciar ENDER LILIES Quietus of the Knights
 _k_friendly_name=Hades
 _launch=none,none,Iniciar Hades
 
+[Hidden Deep.desktop]
+_k_friendly_name=Hidden Deep
+_launch=,none,Iniciar Hidden Deep
+
 [Hitman Absolution.desktop]
 _k_friendly_name=Hitman Absolution
 _launch=none,none,Iniciar Hitman Absolution
@@ -172,6 +176,10 @@ _launch=none,none,Iniciar Uninstall The Room 4 Old Sins
 [Uninstall WA.desktop]
 _k_friendly_name=Uninstall WA
 _launch=none,none,Iniciar Uninstall WA
+
+[Vigil The Longest Night.desktop]
+_k_friendly_name=Vigil The Longest Night\s
+_launch=,none,Iniciar Vigil The Longest Night\s
 
 [Windjammers 2.desktop]
 _k_friendly_name=Windjammers 2

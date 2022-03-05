@@ -159,9 +159,10 @@ widgetStyle=Breeze
 Theme=Tela-dark
 
 [KDE]
-AnimationDurationFactor=0.5
+AnimationDurationFactor=0.35355339059327373
 ColorScheme=BreezeLight
 LookAndFeelPackage=com.github.varlesh.arc-dark
+ScrollbarLeftClickNavigatesByPage=false
 ShowDeleteCommand=false
 contrast=4
 widgetStyle=kvantum-dark

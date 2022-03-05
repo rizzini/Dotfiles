@@ -3,9 +3,9 @@ update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-vir
 
 [1]
 Description=Configurações de janela para Prime Video
-position=962,-134
+position=959,-134
 positionrule=2
-size=963,682
+size=963,680
 sizerule=2
 title=Prime Video - Mozilla Firefox
 titlematch=2

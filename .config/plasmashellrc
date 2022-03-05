@@ -7,6 +7,10 @@ iconViewIconSize=64
 HDMI-1 Height 1920x1080=472
 HDMI-1 Width 1920x1080=456
 
+[Open-with settings]
+CompletionMode=1
+History=kate
+
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 

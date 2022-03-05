@@ -82,6 +82,14 @@ _launch=none,none,Iniciar Hades
 _k_friendly_name=Hitman Absolution
 _launch=none,none,Iniciar Hitman Absolution
 
+[Icey.desktop]
+_k_friendly_name=Icey
+_launch=none,none,Iniciar Icey
+
+[Intravenous.desktop]
+_k_friendly_name=Intravenous
+_launch=,none,Iniciar Intravenous
+
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)

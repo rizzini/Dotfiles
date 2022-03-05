@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=WINEFSYNC=0 WINEDEBUG=0 WINEPREFIX='/mnt/archlinux/Games/ICEY' gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine ICEY.exe
+Icon=EF97_ICEY.0
+Name=Icey
+NoDisplay=false
+Path=/mnt/archlinux/Games/ICEY/drive_c/Game/win32/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

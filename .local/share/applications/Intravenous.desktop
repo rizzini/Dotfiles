@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh desativar; WINEDEBUG=0 WINEPREFIX='/mnt/archlinux/Games/Intravenous' gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine intravenous.exe &> /dev/null; sleep 3; while [ -n "$(pgrep intravenous.exe)" ];do sleep 1; done; /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh ativar
+Icon=/mnt/archlinux/Games/Intravenous/drive_c/Intravenous.v1.3.31/goggame-1355225376.ico
+Name=Intravenous
+NoDisplay=false
+Path=/mnt/archlinux/Games/Intravenous/drive_c/Intravenous.v1.3.31/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

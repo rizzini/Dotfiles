@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh desativar; WINEDEBUG=-all WINEPREFIX='/mnt/archlinux/Games/Silence of the Sleep' gamemoderun /opt/wine-tkg-staging-fsync-opt-git/bin/wine sots.exe &> /dev/null; sleep 3; while [ -n "$(pgrep sots.exe)" ];do sleep 1; done; /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh ativar
+GenericName[pt_BR]=
+GenericName=
+Icon=/mnt/archlinux/Games/Silence of the Sleep/drive_c/Program Files (x86)/Silence of the Sleep v1.0u2/Screenshot_1.ico
+MimeType=
+Name[pt_BR]=Silence of the Sleep
+Name=Silence of the Sleep
+NoDisplay=false
+Path=/mnt/archlinux/Games/Silence of the Sleep/drive_c/Program Files (x86)/Silence of the Sleep v1.0u2
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

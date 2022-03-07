@@ -80,7 +80,7 @@ _launch=none,none,Iniciar Hades
 
 [Hidden Deep.desktop]
 _k_friendly_name=Hidden Deep
-_launch=,none,Iniciar Hidden Deep
+_launch=none,none,Iniciar Hidden Deep
 
 [Hitman Absolution.desktop]
 _k_friendly_name=Hitman Absolution
@@ -133,6 +133,10 @@ _launch=none,none,Iniciar PortProton
 _k_friendly_name=ReadMe
 _launch=none,none,Iniciar ReadMe
 
+[The Dark Eye - Chains of Satinav.desktop]
+_k_friendly_name=The Dark Eye - Chains of Satinav
+_launch=none,none,Iniciar The Dark Eye - Chains of Satinav
+
 [The Room 4 Old Sins.desktop]
 _k_friendly_name=The Room 4 Old Sins
 _launch=none,none,Iniciar The Room 4 Old Sins
@@ -179,7 +183,7 @@ _launch=none,none,Iniciar Uninstall WA
 
 [Vigil The Longest Night.desktop]
 _k_friendly_name=Vigil The Longest Night\s
-_launch=,none,Iniciar Vigil The Longest Night\s
+_launch=none,none,Iniciar Vigil The Longest Night\s
 
 [Windjammers 2.desktop]
 _k_friendly_name=Windjammers 2
@@ -250,6 +254,7 @@ MoveZoomDown=none,none,Mover a área ampliada para baixo
 MoveZoomLeft=none,none,Mover a área ampliada para a esquerda
 MoveZoomRight=none,none,Mover a área ampliada para a direita
 MoveZoomUp=none,none,Mover a área ampliada para cima
+Overview=Meta+',Meta+W,Ativar visão geral
 Setup Window Shortcut=none,,Configurar atalhos para a janela
 Show Desktop=Meta+D,Meta+D,Exibir a área de trabalho
 ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Mostrar a grade de áreas de trabalho
@@ -282,7 +287,7 @@ Switch to Desktop 6=none,,Mudar para a área de trabalho 6
 Switch to Desktop 7=none,,Mudar para a área de trabalho 7
 Switch to Desktop 8=none,,Mudar para a área de trabalho 8
 Switch to Desktop 9=none,,Mudar para a área de trabalho 9
-Switch to Next Desktop=Meta+',,Mudar para a área de trabalho seguinte
+Switch to Next Desktop=none,,Mudar para a área de trabalho seguinte
 Switch to Next Screen=none,,Mudar para a próxima tela
 Switch to Previous Desktop=none,,Mudar para a área de trabalho anterior
 Switch to Previous Screen=none,,Mudar para a tela anterior

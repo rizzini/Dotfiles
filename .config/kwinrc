@@ -48,6 +48,7 @@ kwin4_effect_loginEnabled=false
 kwin4_effect_logoutEnabled=false
 kwin4_effect_maximizeEnabled=true
 minimizeallEnabled=false
+overviewEnabled=true
 shakeEnabled=false
 slideEnabled=false
 synchronizeskipswitcherEnabled=false

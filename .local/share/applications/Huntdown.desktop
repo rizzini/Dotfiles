@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/mnt/archlinux/Games/HUNTDOWN/start.sh
+Icon=/mnt/archlinux/Games/HUNTDOWN/game/Huntdown_Data/Resources/UnityPlayer.png
+Name=Huntdown
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -133,6 +133,10 @@ _launch=none,none,Iniciar PortProton
 _k_friendly_name=ReadMe
 _launch=none,none,Iniciar ReadMe
 
+[Rocketbirds Hardboiled Chicken.desktop]
+_k_friendly_name=Rocketbirds Hardboiled Chicken
+_launch=none,none,Iniciar Rocketbirds Hardboiled Chicken
+
 [The Dark Eye - Chains of Satinav.desktop]
 _k_friendly_name=The Dark Eye - Chains of Satinav
 _launch=none,none,Iniciar The Dark Eye - Chains of Satinav

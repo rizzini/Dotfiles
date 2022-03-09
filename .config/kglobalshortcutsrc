@@ -86,6 +86,10 @@ _launch=none,none,Iniciar Hidden Deep
 _k_friendly_name=Hitman Absolution
 _launch=none,none,Iniciar Hitman Absolution
 
+[Huntdown.desktop]
+_k_friendly_name=Huntdown
+_launch=,none,Iniciar Huntdown
+
 [Icey.desktop]
 _k_friendly_name=Icey
 _launch=none,none,Iniciar Icey
@@ -237,11 +241,11 @@ mute=Volume Mute,Volume Mute,Sem áudio
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Session Management
+_k_friendly_name=Gerenciamento de sessão
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção

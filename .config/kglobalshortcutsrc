@@ -88,7 +88,7 @@ _launch=none,none,Iniciar Hitman Absolution
 
 [Huntdown.desktop]
 _k_friendly_name=Huntdown
-_launch=,none,Iniciar Huntdown
+_launch=none,none,Iniciar Huntdown
 
 [Icey.desktop]
 _k_friendly_name=Icey

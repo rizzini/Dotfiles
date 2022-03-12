@@ -3,7 +3,7 @@ update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-
 
 [Compositing]
 LatencyPolicy=ExtremelyLow
-OpenGLIsUnsafe=true
+OpenGLIsUnsafe=false
 OpenGLIsUnsafe0=false
 OpenGLIsUnsafe1=false
 
@@ -30,6 +30,9 @@ Stiffness=42
 [Effect-kwin4_effect_translucency]
 Inactive=58
 MoveResize=83
+
+[KDE]
+AnimationDurationFactor=0.25
 
 [MouseBindings]
 CommandAllKey=Alt

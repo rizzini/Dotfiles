@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=22
+DataCount=15
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -148,15 +148,15 @@ Type=ACTION_DATA_GROUP
 
 [Data_10]
 Comment=Comentário
-Enabled=true
-Name=playerctl previous
+Enabled=false
+Name=gravar mic
 Type=SIMPLE_ACTION_DATA
 
 [Data_10Actions]
 ActionsCount=1
 
 [Data_10Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl previous
+CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
 Type=COMMAND_URL
 
 [Data_10Conditions]
@@ -168,21 +168,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_10Triggers0]
-Key=Ctrl+Volume Down
+Key=Meta+R
 Type=SHORTCUT
-Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
+Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
 
 [Data_11]
 Comment=Comentário
-Enabled=false
-Name=traduzir
+Enabled=true
+Name=anbox
 Type=SIMPLE_ACTION_DATA
 
 [Data_11Actions]
 ActionsCount=1
 
 [Data_11Actions0]
-CommandURL=/home/lucas/Documentos/scripts/traduzir_clipboard.sh
+CommandURL=/home/lucas/Documentos/scripts/anbox.sh
 Type=COMMAND_URL
 
 [Data_11Conditions]
@@ -194,21 +194,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_11Triggers0]
-Key=Ctrl+R
+Key=Meta+A
 Type=SHORTCUT
-Uuid={2c10b720-01ed-433a-b5f2-8c8f66765bb2}
+Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
 
 [Data_12]
 Comment=Comentário
-Enabled=false
-Name=gravar mic
+Enabled=true
+Name=waydroid
 Type=SIMPLE_ACTION_DATA
 
 [Data_12Actions]
 ActionsCount=1
 
 [Data_12Actions0]
-CommandURL=konsole --new-tab --hide-tabbar --hide-menubar -e '/bin/bash -c "arecord --device="pulse" -c 1 -r 48000 -f S16_LE -twav - | lame -r -s 48 --signed --little-endian -m m --vbr-new -V 9 - ~/Área\\ de\\ Trabalho/$(date +%Y-%m-%d_%H:%M:%S).mp3"'
+CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
 Type=COMMAND_URL
 
 [Data_12Conditions]
@@ -220,21 +220,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_12Triggers0]
-Key=Meta+R
+Key=Meta+W
 Type=SHORTCUT
-Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
+Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
 
 [Data_13]
 Comment=Comentário
-Enabled=false
-Name=url shortnet\s
+Enabled=true
+Name=Reboot
 Type=SIMPLE_ACTION_DATA
 
 [Data_13Actions]
 ActionsCount=1
 
 [Data_13Actions0]
-CommandURL=bash -c '/home/lucas/Documentos/scripts/url_shortner.sh'
+CommandURL=/usr/bin/shutdown -r now
 Type=COMMAND_URL
 
 [Data_13Conditions]
@@ -246,21 +246,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_13Triggers0]
-Key=Ctrl+B
+Key=ScrollLock
 Type=SHORTCUT
-Uuid={6c0a3eda-b4f8-4ebe-927d-81ec9561d5b6}
+Uuid={d5668542-715c-4531-b162-2ab4479e34e2}
 
 [Data_14]
 Comment=Comentário
 Enabled=true
-Name=anbox
+Name=kcalc
 Type=SIMPLE_ACTION_DATA
 
 [Data_14Actions]
 ActionsCount=1
 
 [Data_14Actions0]
-CommandURL=/home/lucas/Documentos/scripts/anbox.sh
+CommandURL=/usr/bin/kcalc
 Type=COMMAND_URL
 
 [Data_14Conditions]
@@ -272,21 +272,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_14Triggers0]
-Key=Meta+A
+Key=Ctrl+Launch (1)
 Type=SHORTCUT
-Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
+Uuid={e71f4f76-6417-4b4a-a545-e28f04c50b38}
 
 [Data_15]
 Comment=Comentário
-Enabled=false
-Name=youporn
+Enabled=true
+Name=tradutor crow
 Type=SIMPLE_ACTION_DATA
 
 [Data_15Actions]
 ActionsCount=1
 
 [Data_15Actions0]
-CommandURL=/home/lucas/Documentos/scripts/youporn.sh
+CommandURL=crow & sleep 0.8; while [ $(wmctrl -l | grep 'Crow Translate' | wc -l) -ge 2 ];do wmctrl -ic $(wmctrl -l | grep 'Crow Translate' | tail -1 | awk '{print $1}'); done
 Type=COMMAND_URL
 
 [Data_15Conditions]
@@ -298,113 +298,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_15Triggers0]
-Key=Alt+P
+Key=Ctrl+R
 Type=SHORTCUT
-Uuid={866b9c15-ab3c-480b-b9b7-6bf0226301ad}
-
-[Data_16]
-Comment=Comentário
-Enabled=true
-Name=waydroid
-Type=SIMPLE_ACTION_DATA
-
-[Data_16Actions]
-ActionsCount=1
-
-[Data_16Actions0]
-CommandURL=/home/lucas/Documentos/scripts/waydroid.sh
-Type=COMMAND_URL
-
-[Data_16Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_16Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_16Triggers0]
-Key=Meta+W
-Type=SHORTCUT
-Uuid={134e66e3-9e84-48b9-a9ea-056d640ce2bf}
-
-[Data_17]
-Comment=Comentário
-Enabled=true
-Name=Reboot
-Type=SIMPLE_ACTION_DATA
-
-[Data_17Actions]
-ActionsCount=1
-
-[Data_17Actions0]
-CommandURL=/usr/bin/shutdown -r now
-Type=COMMAND_URL
-
-[Data_17Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_17Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_17Triggers0]
-Key=ScrollLock
-Type=SHORTCUT
-Uuid={d5668542-715c-4531-b162-2ab4479e34e2}
-
-[Data_18]
-Comment=Comentário
-Enabled=false
-Name=Anbox
-Type=SIMPLE_ACTION_DATA
-
-[Data_18Actions]
-ActionsCount=1
-
-[Data_18Actions0]
-CommandURL=/home/lucas/Documentos/scripts/anbox.sh
-Type=COMMAND_URL
-
-[Data_18Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_18Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_18Triggers0]
-Key=Meta+A
-Type=SHORTCUT
-Uuid={d9795cf2-b181-41f6-b41e-a11df3b439d3}
-
-[Data_19]
-Comment=Comentário
-Enabled=true
-Name=kcalc
-Type=SIMPLE_ACTION_DATA
-
-[Data_19Actions]
-ActionsCount=1
-
-[Data_19Actions0]
-CommandURL=/usr/bin/kcalc
-Type=COMMAND_URL
-
-[Data_19Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_19Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_19Triggers0]
-Key=Ctrl+Launch (1)
-Type=SHORTCUT
-Uuid={e71f4f76-6417-4b4a-a545-e28f04c50b38}
+Uuid={f4804dd4-b377-452a-a4cb-f8024dbf9fee}
 
 [Data_1Conditions]
 Comment=
@@ -470,84 +366,6 @@ ImportId=kde32b1
 Name=Examples
 SystemGroup=0
 Type=ACTION_DATA_GROUP
-
-[Data_20]
-Comment=Comentário
-Enabled=true
-Name=tradutor crow
-Type=SIMPLE_ACTION_DATA
-
-[Data_20Actions]
-ActionsCount=1
-
-[Data_20Actions0]
-CommandURL=crow & sleep 0.8; while [ $(wmctrl -l | grep 'Crow Translate' | wc -l) -ge 2 ];do wmctrl -ic $(wmctrl -l | grep 'Crow Translate' | tail -1 | awk '{print $1}'); done
-Type=COMMAND_URL
-
-[Data_20Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_20Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_20Triggers0]
-Key=Ctrl+R
-Type=SHORTCUT
-Uuid={f4804dd4-b377-452a-a4cb-f8024dbf9fee}
-
-[Data_21]
-Comment=Comentário
-Enabled=true
-Name=Aumentar volume
-Type=SIMPLE_ACTION_DATA
-
-[Data_21Actions]
-ActionsCount=1
-
-[Data_21Actions0]
-CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh increase
-Type=COMMAND_URL
-
-[Data_21Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_21Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_21Triggers0]
-Key=Volume Up
-Type=SHORTCUT
-Uuid={bf7f51ed-0460-4c09-8714-36ea398683e8}
-
-[Data_22]
-Comment=Comentário
-Enabled=true
-Name=Diminuir volume
-Type=SIMPLE_ACTION_DATA
-
-[Data_22Actions]
-ActionsCount=1
-
-[Data_22Actions0]
-CommandURL=/home/lucas/Documentos/scripts/increase_descrease_volume.sh decrease
-Type=COMMAND_URL
-
-[Data_22Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_22Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_22Triggers0]
-Key=Volume Down
-Type=SHORTCUT
-Uuid={84bdac79-f37f-4df1-b574-356c43dd46f4}
 
 [Data_2Conditions]
 Comment=
@@ -1430,15 +1248,15 @@ Uuid={74f6823a-28f0-4525-a917-c84e7ad418b1}
 
 [Data_7]
 Comment=Comentário
-Enabled=false
-Name=Youtube
+Enabled=true
+Name=playerctl play-pause
 Type=SIMPLE_ACTION_DATA
 
 [Data_7Actions]
 ActionsCount=1
 
 [Data_7Actions0]
-CommandURL=/home/lucas/Documentos/scripts/youtube/youtube.sh
+CommandURL=/home/lucas/Documentos/scripts/playerctl play_pause
 Type=COMMAND_URL
 
 [Data_7Conditions]
@@ -1450,21 +1268,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_7Triggers0]
-Key=Ctrl+Y
+Key=Media Play
 Type=SHORTCUT
-Uuid={623fd3d2-1b05-4a1f-a894-500881d7f2dc}
+Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
 
 [Data_8]
 Comment=Comentário
 Enabled=true
-Name=playerctl play-pause
+Name=playerctl next
 Type=SIMPLE_ACTION_DATA
 
 [Data_8Actions]
 ActionsCount=1
 
 [Data_8Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl play_pause
+CommandURL=/home/lucas/Documentos/scripts/playerctl next
 Type=COMMAND_URL
 
 [Data_8Conditions]
@@ -1476,21 +1294,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=Media Play
+Key=Ctrl+Volume Up
 Type=SHORTCUT
-Uuid={f13f543e-e529-4f34-a748-1bb2ebef19a8}
+Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
 
 [Data_9]
 Comment=Comentário
 Enabled=true
-Name=playerctl next
+Name=playerctl previous
 Type=SIMPLE_ACTION_DATA
 
 [Data_9Actions]
 ActionsCount=1
 
 [Data_9Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl next
+CommandURL=/home/lucas/Documentos/scripts/playerctl previous
 Type=COMMAND_URL
 
 [Data_9Conditions]
@@ -1502,9 +1320,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_9Triggers0]
-Key=Ctrl+Volume Up
+Key=Ctrl+Volume Down
 Type=SHORTCUT
-Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
+Uuid={53975b2f-dc06-4947-8277-5c16cdb39c5f}
 
 [DirSelect Dialog]
 DirSelectDialog Size[$d]

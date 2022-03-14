@@ -196,9 +196,6 @@ Dialog Size=600,480
 [PreviewSettings]
 MaximumRemoteSize=0
 
-[Shortcuts]
-FindNext=
-
 [WM]
 activeBackground=40,40,40
 activeBlend=40,40,40

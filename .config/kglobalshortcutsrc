@@ -102,7 +102,7 @@ _launch=none,none,Iniciar Intravenous
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)
 Switch keyboard layout to Português (Brasil)=none,none,Mudar para o layout de teclado para Português (Brasil)
-Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Mudar para o próximo layout de teclado
+Switch to Next Keyboard Layout=none,none,Mudar para o próximo layout de teclado
 _k_friendly_name=Seletor de layouts de teclado
 
 [Katana ZERO.desktop]
@@ -220,9 +220,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
 {583c6f8c-18ab-493c-ac1a-cf654d834a97}=none,none,Launch Konsole
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
-{84bdac79-f37f-4df1-b574-356c43dd46f4}=Volume Down,none,Diminuir volume
 {bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=Ctrl+Volume Up,none,playerctl next
-{bf7f51ed-0460-4c09-8714-36ea398683e8}=Volume Up,none,Aumentar volume
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
@@ -233,19 +231,19 @@ _k_friendly_name=Serviço de atalhos personalizados
 [kmix]
 _k_friendly_name=Volume do áudio
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Diminuir volume do microfone
-decrease_volume=none,Volume Down,Diminuir volume
+decrease_volume=Volume Down,Volume Down,Diminuir volume
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Aumentar volume do microfone
-increase_volume=none,Volume Up,Aumentar volume
+increase_volume=Volume Up,Volume Up,Aumentar volume
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Silenciar microfone
 mute=Volume Mute,Volume Mute,Sem áudio
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção
@@ -267,10 +265,10 @@ Setup Window Shortcut=none,,Configurar atalhos para a janela
 Show Desktop=Meta+D,Meta+D,Exibir a área de trabalho
 ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Mostrar a grade de áreas de trabalho
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspender composição
-Switch One Desktop Down=none,Meta+Ctrl+Down,Mudar para a área de trabalho abaixo
-Switch One Desktop Up=none,Meta+Ctrl+Up,Mudar para a área de trabalho acima
-Switch One Desktop to the Left=none,Meta+Ctrl+Left,Mudar para a área de trabalho à esquerda
-Switch One Desktop to the Right=none,Meta+Ctrl+Right,Mudar para a área de trabalho à direita
+Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Mudar para a área de trabalho abaixo
+Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Mudar para a área de trabalho acima
+Switch One Desktop to the Left=Meta+Ctrl+Left,Meta+Ctrl+Left,Mudar para a área de trabalho à esquerda
+Switch One Desktop to the Right=Meta+Ctrl+Right,Meta+Ctrl+Right,Mudar para a área de trabalho à direita
 Switch Window Down=Meta+Alt+Down,Meta+Alt+Down,Mudar para a janela abaixo
 Switch Window Left=Meta+Alt+Left,Meta+Alt+Left,Mudar para a janela à esquerda
 Switch Window Right=Meta+Alt+Right,Meta+Alt+Right,Mudar para a janela à direita
@@ -447,17 +445,17 @@ clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Habilitar ações da área de transferên
 cycleNextAction=none,,Próximo item do histórico
 cyclePrevAction=none,,Item anterior do histórico
 edit_clipboard=none,,Editar conteúdo...
-manage activities=none,Meta+Q,Mostrar alternador de atividade
+manage activities=Meta+Q,Meta+Q,Mostrar alternador de atividade
 next activity=Meta+Tab,Meta+Tab,Percorrer as atividades
 previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Percorrer as atividades (inverso)
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Invocar ação manualmente sobre a área de transferência atual
 show dashboard=Ctrl+F12,Ctrl+F12,Mostrar a Área de Trabalho
 show-barcode=none,,Mostrar código de barras...
 show-on-mouse-pos=Alt+S,Meta+V,Abrir o Klipper na posição do mouse
-stop current activity=none,Meta+S,Parar a atividade atual
+stop current activity=Meta+S,Meta+S,Parar a atividade atual
 switch to next activity=none,,Mudar para a próxima atividade
 switch to previous activity=none,,Mudar para a atividade anterior
-toggle do not disturb=Launch (1),,Alternar o "Não perturbe"
+toggle do not disturb=none,,Alternar o "Não perturbe"
 
 [steam.desktop]
 BigPicture=none,none,Big Picture

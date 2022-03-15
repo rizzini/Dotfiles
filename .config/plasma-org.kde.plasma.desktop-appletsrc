@@ -938,6 +938,7 @@ DialogHeight=496
 DialogWidth=640
 
 [Containments][90][Applets][98][Configuration][General]
+currentTab=streams
 raiseMaximumVolume=true
 volumeStep=3
 

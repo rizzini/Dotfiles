@@ -23,6 +23,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
         fi
     done
     if [ -n "$(yadm status --porcelain)" ];then
+        yadm encrypt 2> /dev/null
         yadm status --porcelain;
         echo -e "\nPressione enter para continuar";
         read;

@@ -1,7 +1,5 @@
-.ssh/*
-.gnupg/*
-.gnupg/private-keys-v1.d/*
-.gnupg/openpgp-revocs.d/*
-.gnupg/crls.d/*
+.ssh/**
+.gnupg/**
 .bash_history
 .local/share/fish/fish_history
+.config/yadm/config

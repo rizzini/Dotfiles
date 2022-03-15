@@ -127,8 +127,8 @@ Replace History=,/tmp/check_btrfs_health.sh.pid,discard\\,nospace_cache\\,,en-us
 Search History=ray,Could not get password database information for UID of current process: User "???" unknown or no memory to allocate password entry,???,mar 12 19:49:35 archlinux systemd[606]: Starting D-Bus User Message Bus...\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Main process exited\\, code=exited\\, status=1/FAILURE\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Failed with result 'exit-code'.\nmar 12 19:49:35 archlinux systemd[606]: Failed to start D-Bus User Message Bus.,yadm,failed,44,4800,SDL_AUDIODRIVER,directsound,exec,steam://open/minigameslist,system,pipewire,fail,vulkan,height,size,border,bluez,enter,2022,<tr class="colorRed">,existente-down,/series/,<tr class="colorBlue">\n,colorBlue,proximo,Episódio Existente,/series/superman-and-lois/episodios/S02E06 ,s02e06,superman,sdd,scan,en_US,/tmp/btrbk.sh.pid,discard\\,,fastsync,fatsync,en-US,pt-BRen-US,pt-BR,pt-br,language,err,quant,quantum,menu,alsa_card.pci-0000_00_03.0,node,switch,device,noatime\\,,noatime\\,discard\\,,- cmd: ,prior,*,erro,preemp,zswap,install,pactl load-module  module-dbus-protocol\n,EE,media,\\\\,~,A  ,640,-volume 50 ,/usr/bin/mpg123 /home/lucas/Documentos/scripts/youporn.mp3,org.kde.plasma.volume,volume,fish,197369,playerctl,eng,br,pt,\\,ssd\\,space_cache=v2,vcrun2010,vcrun6,\\,space_cache=v2,clear_cache\\,,core,version,9989,19736,1q2w3,script,for, --porcelain | grep "??" | tr -d '??' | tr -d '"' | cut -c2-); do if [ -n "$i" ];then yadm add /home/lucas/$i; fi done,for i in $(yadm stun , --porcelain | grep "??" | sed 's/^.*\\\\(etc.*\\\\).*$/\\\\1/'); do if [ -n "$i" ];then yadm -Y /etc/yadm add /$i; fi done, /etc/yadm stun ,for i in $(yadm -Y ,tr -d '??' | tr -d '"' | cut -c2-,grep -E '^ ??|^??',grep -E '^ ??|^??,Kinglet,36
 
 [MainWindow]
-HDMI-1 Height 1920x1080=603
-HDMI-1 Width 1920x1080=1141
+HDMI-1 Height 1920x1080=608
+HDMI-1 Width 1920x1080=659
 HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 

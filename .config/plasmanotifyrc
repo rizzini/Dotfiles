@@ -13,10 +13,6 @@ Seen=true
 [Applications][modem-manager-gui]
 Seen=true
 
-[DoNotDisturb]
-NotificationSoundsMuted=true
-Until=2023,3,15,1,4,12.972
-
 [Notifications]
 NormalAlwaysOnTop=true
 PopupPosition=BottomCenter

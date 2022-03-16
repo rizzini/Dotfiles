@@ -22,5 +22,5 @@ elif [ -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]; then
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo 85%;
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 100%;
     /usr/bin/pactl set-sink-volume Simultaneous 45%;
-    /usr/bin/pactl set-default-sink Simultaneous
+    /usr/bin/pactl set-default-sink Simultaneous;
 fi

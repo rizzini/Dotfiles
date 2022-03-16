@@ -15,7 +15,7 @@ Comment[sv]=Ljudeffekter för PipeWire-applikationer
 Comment[tr]=PipeWire Uygulamaları için Ses Efektleri
 Comment[zh_CN]=为使用 PipeWire 的应用提供音效
 DBusActivatable=true
-Exec=GTK_THEME=Breeze-Dark easyeffects
+Exec=easyeffects
 GenericName[pt_BR]=Equalizador, Compressor e Outros Efeitos de Áudio
 GenericName=Equalizador, Compressor e Outros Efeitos de Áudio
 GenericName[cs]=Ekvalizér, kompresor a jiné zvukové efekty

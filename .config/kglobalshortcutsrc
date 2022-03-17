@@ -155,7 +155,7 @@ _launch=none,none,Iniciar Trine 3 - Artifacts of Power
 
 [UNO-2.desktop]
 _k_friendly_name=UNO
-_launch=,none,Iniciar UNO
+_launch=none,none,Iniciar UNO
 
 [UNO.desktop]
 _k_friendly_name=UNO

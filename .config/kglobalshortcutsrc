@@ -153,6 +153,10 @@ _launch=none,none,Iniciar The Room 4 Old Sins
 _k_friendly_name=Trine 3 - Artifacts of Power
 _launch=none,none,Iniciar Trine 3 - Artifacts of Power
 
+[UNO-2.desktop]
+_k_friendly_name=UNO
+_launch=,none,Iniciar UNO
+
 [UNO.desktop]
 _k_friendly_name=UNO
 _launch=none,none,Iniciar UNO
@@ -239,11 +243,11 @@ mute=Volume Mute,Volume Mute,Sem áudio
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Session Management
+_k_friendly_name=Gerenciamento de sessão
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção

@@ -5,10 +5,7 @@ Random_Background=$(find "$Backgrounds_Source" -type f -print0 | xargs -0 file -
 Background_Image="$HOME/.default_wallpaper.jpg"
 
 if [ -d "$Backgrounds_Source" ]; then
-
     if [ -n "$Random_Background" ]; then
-
-	ln -Pfn "$Random_Background" "$Background_Image"
-
+        ln -Pfn "$Random_Background" "$Background_Image"
     fi
 fi

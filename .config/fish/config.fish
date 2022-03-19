@@ -43,6 +43,7 @@ alias syadm="sudo yadm -Y /etc/yadm";
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl";
 alias cat='bat -p ';
 alias mem='watch -n0.5 "~/Documentos/scripts/mem_monitor_taskbar.sh & ~/Documentos/scripts/disk_monitor_taskbar.sh &"'
+alias wallp='/home/lucas/Documentos/scripts/change_wallpaper_every_boot.sh &> /dev/null && plasma-apply-wallpaperimage /home/lucas/Imagens/Wallpaper/wallpaper1.jpg &> /dev/null && plasma-apply-wallpaperimage /home/lucas/.default_wallpaper.jpg &> /dev/null'
 ## Import colorscheme from 'wal' asynchronously
 # if type "wal" >> /dev/null 2>&1
 #      /usr/bin/cat ~/.cache/wal/sequences

@@ -21,7 +21,7 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=1.sh,file:$HOME/1,file:$HOME/Documentos/scripts/check_btrfs_health.sh
+Recent Files[$e]=1.sh,file:$HOME/Documentos/filmes & series,file:$HOME/Documentos/scripts/check_btrfs_health.sh
 Recent URLs[$e]=file:$HOME/,file:$HOME/Documentos/,file:///etc/yadm/hooks/,file:$HOME/Documentos/scripts/
 iconViewIconSize=64
 

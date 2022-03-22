@@ -10,7 +10,7 @@ idleTime=300000
 
 [AC][HandleButtonEvents]
 lidAction=1
-powerButtonAction=16
+powerButtonAction=8
 powerDownAction=16
 
 [Battery]
@@ -30,6 +30,7 @@ powerDownAction=16
 
 [Battery][SuspendSession]
 idleTime=600000
+suspendThenHibernate=false
 suspendType=1
 
 [LowBattery]
@@ -52,4 +53,5 @@ powerDownAction=16
 
 [LowBattery][SuspendSession]
 idleTime=300000
+suspendThenHibernate=false
 suspendType=1

@@ -42,6 +42,7 @@ x-scheme-handler/http=firefox.desktop;chromium.desktop;google-chrome.desktop;
 x-scheme-handler/https=firefox.desktop;chromium.desktop;google-chrome.desktop;
 x-scheme-handler/mailto=chromium.desktop;
 x-scheme-handler/tel=skypeforlinux.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop;
 
 [Default Applications]
 application/json=org.kde.kate.desktop;
@@ -94,6 +95,7 @@ x-scheme-handler/mailto=chromium.desktop;
 x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop;
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop
 
 [Removed Associations]
 text/html=wine-extension-htm.desktop;wine-extension-txt.desktop;

@@ -102,7 +102,7 @@ _launch=none,none,Iniciar Intravenous
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)
 Switch keyboard layout to Português (Brasil)=none,none,Mudar para o layout de teclado para Português (Brasil)
-Switch to Next Keyboard Layout=none,none,Mudar para o próximo layout de teclado
+Switch to Next Keyboard Layout=none,Ctrl+Alt+K,Mudar para o próximo layout de teclado
 _k_friendly_name=Seletor de layouts de teclado
 
 [Katana ZERO.desktop]

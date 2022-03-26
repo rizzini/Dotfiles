@@ -33,6 +33,9 @@ thickness=28
 [PlasmaViews][Panel 84][Horizontal1920]
 thickness=28
 
+[PlasmaViews][Panel 84][Horizontal2560]
+thickness=34
+
 [ScreenConnectors]
 0=HDMI-1
 

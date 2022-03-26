@@ -6,35 +6,35 @@ if [ "$EUID" -ne 0 ]; then
     /usr/bin/echo "Please run as root";
     exit
 fi
-touch /tmp/clean_space_emergency.tmp
-find /mnt/archlinux/btrbk_snapshots/HOME/* -prune -type d | while IFS= read -r d; do
-    if [[ -d "$d" && "$d" != *"$(btrfs subvol list / | grep HOME | awk '{print $9}' | tail -1)"* ]]; then
-        btrfs sub del "$d"
+/usr/bin/touch /tmp/clean_space_emergency.tmp
+/usr/bin/find /mnt/archlinux/btrbk_snapshots/HOME/* -prune -type d | while IFS= read -r d; do
+    if [[ -d "$d" && "$d" != *"$(/usr/bin/btrfs subvol list / | /usr/bin/grep HOME | /usr/bin/awk '{print $9}' | /usr/bin/tail -1)"* ]]; then
+        /usr/bin/btrfs sub del "$d"
     fi
 done
-find /mnt/archlinux/btrbk_snapshots/ROOT/* -prune -type d | while IFS= read -r d; do
-    if [[ -d "$d" && "$d" != *"$(btrfs subvol list / | grep ROOT | awk '{print $9}' | tail -1)"* ]]; then
-        btrfs sub del "$d"
+/usr/bin/find /mnt/archlinux/btrbk_snapshots/ROOT/* -prune -type d | while IFS= read -r d; do
+    if [[ -d "$d" && "$d" != *"$(/usr/bin/btrfs subvol list / | /usr/bin/grep ROOT | /usr/bin/awk '{print $9}' | /usr/bin/tail -1)"* ]]; then
+        /usr/bin/btrfs sub del "$d"
 
     fi
 done
-find /mnt/archlinux/refind_btrfs_rw_snapshots/* -prune -type d | while IFS= read -r d; do
-    if [[ -d "$d" && "$d" != *"$(btrfs subvol list / | grep refind_btrfs_rw_snapshots | awk '{print $9}' | tail -1)"* ]]; then
-        btrfs sub del "$d"
+/usr/bin/find /mnt/archlinux/refind_btrfs_rw_snapshots/* -prune -type d | while IFS= read -r d; do
+    if [[ -d "$d" && "$d" != *"$(/usr/bin/btrfs subvol list / | /usr/bin/grep refind_btrfs_rw_snapshots | /usr/bin/awk '{print $9}' | /usr/bin/tail -1)"* ]]; then
+        /usr/bin/btrfs sub del "$d"
     fi
 done
-if [ -z "$(pgrep spotify)" ];then
-    rm -rf /home/lucas/.cache/spotify/
+if [ -z "$(/usr/bin/pgrep spotify)" ];then
+    /usr/bin/rm -rf /home/lucas/.cache/spotify/
 fi
-if [ -z "$(pgrep makepkg)" ];then
-    rm -rf /home/lucas/.ccache/*
-    if [ -z "$(pgrep yay)" ];then
-        rm -rf /home/lucas/.cache/yay/*
+if [ -z "$(/usr/bin/pgrep makepkg)" ];then
+    /usr/bin/rm -rf /home/lucas/.ccache/*
+    if [ -z "$(/usr/bin/pgrep yay)" ];then
+        /usr/bin/rm -rf /home/lucas/.cache/yay/*
     fi
 fi
-if [ -z "$(pgrep pacman)" ];then
-    rm -rf /mnt/archlinux/PKG/*
+if [ -z "$(/usr/bin/pgrep pacman)" ];then
+    /usr/bin/rm -rf /mnt/archlinux/PKG/*
 fi
-if [ -z "$(pgrep winetricks)" ];then
-    rm -rf /home/lucas/.cache/winetricks/*
+if [ -z "$(/usr/bin/pgrep winetricks)" ];then
+    /usr/bin/rm -rf /home/lucas/.cache/winetricks/*
 fi

@@ -286,7 +286,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_15Actions0]
-CommandURL=/home/lucas/Documentos/scripts/crow.sh
+CommandURL=/bin/bash -c 'if [ -z $(pgrep hl2_linux) ];then dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.open; fi'
 Type=COMMAND_URL
 
 [Data_15Conditions]

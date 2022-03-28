@@ -2,37 +2,43 @@
 if [ "$1" == 'play_pause' ]; then
     if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        /usr/bin/playerctl --no-messages --player=spotify play-pause;
+        /usr/bin/playerctl --no-messages --player=spotify play-pause &
         exit
     elif [ -n "$(/usr/bin/pgrep -x mpv)" ];then
-        /usr/bin/playerctl --no-messages --player=mpv play-pause;
+        /usr/bin/playerctl --no-messages --player=mpv play-pause &
         exit
     else
-        /usr/bin/playerctl --no-messages play-pause;
+        /usr/bin/playerctl --no-messages play-pause &
         exit
     fi
+elif [ "$1" == 'avancar_posicao' ]; then
+     /usr/bin/playerctl position 10+ &
+     exit
+elif [ "$1" == 'voltar_posicao' ]; then
+     /usr/bin/playerctl position 10- &
+     exit
 elif [ "$1" == 'previous' ]; then
     if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        /usr/bin/playerctl --no-messages --player=spotify previous;
+        /usr/bin/playerctl --no-messages --player=spotify previous &
         exit
     elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
-        /usr/bin/playerctl --no-messages --player=ncspot previous;
+        /usr/bin/playerctl --no-messages --player=ncspot previous &
         exit
     else
-        /usr/bin/playerctl --no-messages previous;
+        /usr/bin/playerctl --no-messages previous &
         exit
     fi
 elif [ "$1" == 'next' ]; then
     if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
-        /usr/bin/playerctl --no-messages --player=spotify next;
+        /usr/bin/playerctl --no-messages --player=spotify next &
         exit
     elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
-        /usr/bin/playerctl --no-messages --player=ncspot next;
+        /usr/bin/playerctl --no-messages --player=ncspot next &
         exit
     else
-        /usr/bin/playerctl --no-messages next;
+        /usr/bin/playerctl --no-messages next &
         exit
     fi
 fi

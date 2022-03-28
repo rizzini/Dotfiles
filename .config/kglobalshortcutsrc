@@ -223,15 +223,17 @@ _k_friendly_name=Serviço de atalhos personalizados
 {484d75d9-178b-4d38-973d-1614e27be52a}=Meta+A,none,anbox
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
 {583c6f8c-18ab-493c-ac1a-cf654d834a97}=none,none,Launch Konsole
+{6f6ce914-5c94-4113-bf9e-d388e8d92566}=Ctrl+Shift+Volume Up,none,playerctl avancar posicao
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
 {b38898b3-0b17-420b-8a13-8d71a49cb83e}=Meta+M,none,mem and disk monitor
-{bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=Ctrl+Volume Up,none,playerctl next
+{bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=,none,playerctl next
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
 {f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Ctrl+R,none,tradutor crow
 {fad4f2bb-5d65-4bf3-b4ff-7f4c5b19dd53}=Ctrl+K,none,kate
+{fce3e738-1ca6-44b3-b2f0-c52c2da04b3c}=Ctrl+Shift+Volume Down,none,playerctl voltar posicao
 
 [kmix]
 _k_friendly_name=Volume do áudio

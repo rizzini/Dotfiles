@@ -136,7 +136,7 @@ ForegroundPositive[$d]
 ForegroundVisited[$d]
 
 [Data]
-DataCount=16
+DataCount=18
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -168,7 +168,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_10Triggers0]
-Key=Meta+R
+Key=
 Type=SHORTCUT
 Uuid={f5b099ee-0a2f-4333-961f-1d0535a112bf}
 
@@ -327,6 +327,58 @@ TriggersCount=1
 Key=Meta+M
 Type=SHORTCUT
 Uuid={b38898b3-0b17-420b-8a13-8d71a49cb83e}
+
+[Data_17]
+Comment=Comentário
+Enabled=true
+Name=playerctl voltar posicao
+Type=SIMPLE_ACTION_DATA
+
+[Data_17Actions]
+ActionsCount=1
+
+[Data_17Actions0]
+CommandURL=/home/lucas/Documentos/scripts/playerctl voltar_posicao
+Type=COMMAND_URL
+
+[Data_17Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_17Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_17Triggers0]
+Key=Ctrl+Shift+Volume Down
+Type=SHORTCUT
+Uuid={fce3e738-1ca6-44b3-b2f0-c52c2da04b3c}
+
+[Data_18]
+Comment=Comentário
+Enabled=true
+Name=playerctl avancar posicao
+Type=SIMPLE_ACTION_DATA
+
+[Data_18Actions]
+ActionsCount=1
+
+[Data_18Actions0]
+CommandURL=/home/lucas/Documentos/scripts/playerctl avancar_posicao
+Type=COMMAND_URL
+
+[Data_18Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_18Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_18Triggers0]
+Key=Ctrl+Shift+Volume Up
+Type=SHORTCUT
+Uuid={6f6ce914-5c94-4113-bf9e-d388e8d92566}
 
 [Data_1Conditions]
 Comment=
@@ -1320,7 +1372,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=Ctrl+Volume Up
+Key=
 Type=SHORTCUT
 Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
 

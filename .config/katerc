@@ -127,8 +127,8 @@ Replace History=,/tmp/check_btrfs_health.sh.pid,discard\\,nospace_cache\\,,en-us
 Search History=*,"\\, true);,"\\, false);,user_pref(",vaa,localhost,pipe,pipew,alsa,48,41,        "api.bluez5.address": "FC:58:FA:93:42:42"\\,\n,"rate":,4410,bluez5.default.rate,_clear_patches,155,experimen,cpu,error,exec,multi,512,4800,Disable=,default.clock.max-quantum,default.clock.min-quantum,default.clock.quantum,ray,Could not get password database information for UID of current process: User "???" unknown or no memory to allocate password entry,???,mar 12 19:49:35 archlinux systemd[606]: Starting D-Bus User Message Bus...\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Main process exited\\, code=exited\\, status=1/FAILURE\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Failed with result 'exit-code'.\nmar 12 19:49:35 archlinux systemd[606]: Failed to start D-Bus User Message Bus.,yadm,failed,44,SDL_AUDIODRIVER,directsound,steam://open/minigameslist,system,pipewire,fail,vulkan,height,size,border,bluez,enter,2022,<tr class="colorRed">,existente-down,/series/,<tr class="colorBlue">\n,colorBlue,proximo,Episódio Existente,/series/superman-and-lois/episodios/S02E06 ,s02e06,superman,sdd,scan,en_US,/tmp/btrbk.sh.pid,discard\\,,fastsync,fatsync,en-US,pt-BRen-US,pt-BR,pt-br,language,err,quant,quantum,menu,alsa_card.pci-0000_00_03.0,node,switch,device,noatime\\,,noatime\\,discard\\,,- cmd: ,prior,erro,preemp,zswap,install,pactl load-module  module-dbus-protocol\n,EE,media,\\\\,~,A  ,640,-volume 50 ,/usr/bin/mpg123 /home/lucas/Documentos/scripts/youporn.mp3,org.kde.plasma.volume,volume,fish,197369,playerctl
 
 [MainWindow]
-HDMI-1 Height 1920x1080=390
-HDMI-1 Width 1920x1080=1230
+HDMI-1 Height 1920x1080=465
+HDMI-1 Width 1920x1080=1127
 HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 

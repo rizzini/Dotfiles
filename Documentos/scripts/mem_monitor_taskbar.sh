@@ -28,6 +28,6 @@ size () {
     fi
     echo "${whole}${decimal}${units[$unit]}"
 }
-writeback=$(size $(cat  /proc/meminfo | grep 'Writeback:' | awk '{print $2}')000)
-dirty=$(size $(cat  /proc/meminfo | grep 'Dirty:' | awk '{print $2}')000)
+writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
+dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
 echo "Dirty: "$dirty "|" "Writeback: "$writeback

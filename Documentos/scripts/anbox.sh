@@ -2,7 +2,7 @@
 export XDG_RUNTIME_DIR=/run/user/1000;
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus;
 export DISPLAY=:0;
-if [[ -n "$1" && -n "$(DISPLAY=:0 /usr/bin/wmctrl -l | /usr/bin/grep  'Prime Video')"  ]];then
+if [[ -n "$1" && -n "$(/usr/bin/wmctrl -l | /usr/bin/grep  'Prime Video')"  ]];then
     /usr/bin/killall -9 anbox;
     /usr/bin/anbox session-manager --single-window --window-size=600,506 &
     /usr/bin/sleep 1;
@@ -11,7 +11,7 @@ if [[ -n "$1" && -n "$(DISPLAY=:0 /usr/bin/wmctrl -l | /usr/bin/grep  'Prime Vid
         /usr/bin/sleep 2;
     done
 
-elif [[ -n "$1" && -z "$(DISPLAY=:0 /usr/bin/wmctrl -l | /usr/bin/grep  'Prime Video')"  ]];then
+elif [[ -n "$1" && -z "$(/usr/bin/wmctrl -l | /usr/bin/grep  'Prime Video')"  ]];then
     /usr/bin/killall -9 anbox;
     /usr/bin/anbox session-manager --single-window --window-size=600,524 &
     /usr/bin/sleep 1;

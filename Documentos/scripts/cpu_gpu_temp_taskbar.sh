@@ -1,8 +1,8 @@
 #!/bin/bash
 clean_space_emergency(){
-    if [ $(df -B MB  /dev/sda2 --output=avail | tail -1 | tr -d 'MB') -le 600 ];then
-        sudo /home/lucas/Documentos/scripts/clean_space_emergency.sh &
-        sleep 20;
+    if [ $(/usr/bin/df -B MB  /dev/sda2 --output=avail | /usr/bin/tail -1 | /usr/bin/tr -d 'MB') -le 600 ];then
+        /usr/bin/sudo /home/lucas/Documentos/scripts/clean_space_emergency.sh &
+        /usr/bin/sleep 20;
     fi
 }
 

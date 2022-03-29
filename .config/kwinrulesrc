@@ -2,18 +2,16 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Configurações de aplicativo para huntdown.x86_64
-clientmachine=localhost
-ignoregeometry=true
-ignoregeometryrule=2
-position=25,235
-positionrule=3
+Description=Configurações de janela para Prime Video
+position=959,-134
+positionrule=2
 size=963,680
-title=Huntdown
+sizerule=2
+title=Prime Video - Mozilla Firefox
+titlematch=1
 windowrole=browser
-wmclass=huntdown.x86_64 huntdown.x86_64
+wmclass=navigator firefox
 wmclasscomplete=true
-wmclassmatch=1
 
 [10]
 Description=Configurações de janela para Blasphemous
@@ -57,18 +55,33 @@ wmclass=darkdevotion.exe darkdevotion.exe
 wmclasscomplete=true
 wmclassmatch=1
 
-[2]
-Description=Configurações de janela para Prime Video
-noborder=true
-position=959,-134
-positionrule=2
-size=963,680
+[1ae186a4-2107-4425-a939-dfa2407ec5c0]
+Description=Dark Devotion
+ignoregeometry=true
+ignoregeometryrule=2
+position=23,250
+positionrule=3
+size=1280,744
 sizerule=2
-title=Prime Video - Mozilla Firefox
+title=Dark Devotion
 titlematch=1
-windowrole=browser
-wmclass=navigator firefox
+wmclass=steam_app_0 steam_app_0
 wmclasscomplete=true
+wmclassmatch=1
+
+[2]
+Description=Configurações de janela para Blasphemous
+ignoregeometry=true
+ignoregeometryrule=2
+noborder=true
+position=15,237
+positionrule=3
+size=963,680
+title=Blasphemous
+windowrole=browser
+wmclass=blasphemous blasphemous
+wmclasscomplete=true
+wmclassmatch=1
 
 [2c29c231-73e8-4dc6-a8eb-e7b7bc33dc57]
 Description=Configurações de janela para Blasphemous
@@ -91,14 +104,15 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [3]
-Description=Configurações de janela para Diablo III
-noborder=true
-noborderrule=2
-size=600,400
-skiptaskbar=true
-title=UNO
-windowrole=browser
-wmclass=diablo iii.exe diablo iii.exe
+Description=Configurações de janela para EasyEffects
+ignoregeometry=true
+ignoregeometryrule=3
+position=997,549
+positionrule=3
+size=882,483
+sizerule=3
+title=EasyEffects
+wmclass=easyeffects easyeffects
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -124,39 +138,6 @@ wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
-[4]
-Description=Configurações de janela para UNO
-size=600,400
-sizerule=2
-title=UNO
-windowrole=browser
-wmclass=steam_app_470220
-wmclasscomplete=true
-wmclassmatch=2
-
-[5]
-Description=Cópia de Configurações de janela para UNO [WINE]
-ignoregeometry=true
-position=22,282
-size=600,400
-sizerule=2
-title=UNO
-wmclass=steam_proton
-wmclasscomplete=true
-wmclassmatch=2
-
-[6]
-Description=Configurações de janela para Carrion
-ignoregeometry=true
-ignoregeometryrule=2
-position=22,282
-positionrule=3
-size=600,400
-title=Default - Wine desktop
-wmclass=explorer.exe explorer.exe
-wmclasscomplete=true
-wmclassmatch=1
-
 [7]
 Description=Configurações de janela para Blasphemous
 ignoregeometry=true
@@ -165,6 +146,20 @@ position=15,237
 positionrule=3
 title=Blasphemous
 wmclass=blasphemous blasphemous
+wmclasscomplete=true
+wmclassmatch=1
+
+[7c6478c2-3c65-4ecc-a8ce-a2459d421437]
+Description=Configurações de janela para Dark Devotion
+ignoregeometry=true
+ignoregeometryrule=3
+position=26,317
+positionrule=3
+size=1258,732
+sizerule=2
+title=Dark Devotion
+titlematch=1
+wmclass=darkdevotion.exe darkdevotion.exe
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -267,8 +262,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=9
-rules=1,2,3,4,5,6,7,8,9
+count=5
+rules=1,2,3,1ae186a4-2107-4425-a939-dfa2407ec5c0,7c6478c2-3c65-4ecc-a8ce-a2459d421437
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

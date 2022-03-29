@@ -1,10 +1,10 @@
 [Desktop Entry]
 Comment=
-Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh desativar; WINEDEBUG=-all WINEFSYNC=1 WINEPREFIX='/mnt/archlinux/Games/Dark Devotion' gamemoderun wine DarkDevotion.exe &> /dev/null; sleep 3; while [ -n "$(pgrep DarkDevotion.exe)" ];do sleep 1; done; /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh ativar
-Icon=/mnt/archlinux/Games/Dark Devotion/drive_c/GOG Games/DarkDevotion/goggame-1487359513.ico
+Exec=WINEDEBUG=-all WINEPREFIX='/mnt/archlinux/Games/DarkDevotion' wine DarkDevotion.exe
+Icon=/mnt/archlinux/Games/DarkDevotion/goggame-1487359513.ico
 Name=Dark Devotion
 NoDisplay=false
-Path=/mnt/archlinux/Games/Dark Devotion/drive_c/GOG Games/DarkDevotion/
+Path=/mnt/archlinux/Games/DarkDevotion
 StartupNotify=true
 Terminal=false
 TerminalOptions=

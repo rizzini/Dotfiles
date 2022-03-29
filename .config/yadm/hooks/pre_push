@@ -18,6 +18,7 @@ if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]];then
     /home/lucas/.local/share/color-schemes/* \
     /home/lucas/Documentos/hardware_specs/* \
     /home/lucas/.local/share/aurorae/themes/* \
+    /home/lucas/.local/share/kwin/tabbox/* \
     /home/lucas/.local/share/plasma/plasmoids/* \
     /home/lucas/.local/share/plasma/look-and-feel/* \
     /home/lucas/.config/autostart-scripts/* --porcelain); do

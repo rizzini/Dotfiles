@@ -8,6 +8,7 @@ application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
+application/x-ms-shortcut=org.kde.kate.desktop;
 application/x-partial-download=mpv.desktop;
 application/x-wine-extension-ini=org.kde.kate.desktop;
 application/x-xz-compressed-tar=org.kde.ark.desktop;org.kde.kate.desktop;
@@ -55,6 +56,7 @@ application/x-extension-shtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-ms-dos-executable;application/x-wine-extension-msp;application/x-msi;application/x-msdos-program=PortProton.desktop
+application/x-ms-shortcut=org.kde.kate.desktop;
 application/x-partial-download=mpv.desktop;
 application/x-wine-extension-ini=org.kde.kate.desktop;
 application/x-xz-compressed-tar=org.kde.ark.desktop;
@@ -94,9 +96,10 @@ x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=chromium.desktop;
 x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop;
-x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]
+application/x-ms-shortcut=wine.desktop;
 text/html=wine-extension-htm.desktop;wine-extension-txt.desktop;
 video/x-matroska=org.kde.kate.desktop;

@@ -18,6 +18,10 @@ _launch=none,none,Iniciar Bloodstained Ritual of the Night Classic Mode
 _k_friendly_name=Broforce
 _launch=none,none,Iniciar Broforce
 
+[Carrion.desktop]
+_k_friendly_name=Carrion
+_launch=,none,Iniciar Carrion
+
 [Dead Cells (OpenGL).desktop]
 _k_friendly_name=Dead Cells (OpenGL)
 _launch=none,none,Iniciar Dead Cells (OpenGL)
@@ -226,7 +230,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {6f6ce914-5c94-4113-bf9e-d388e8d92566}=Ctrl+Shift+Volume Up,none,playerctl avancar posicao
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
 {b38898b3-0b17-420b-8a13-8d71a49cb83e}=Meta+M,none,mem and disk monitor
-{bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=,none,playerctl next
+{bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=none,none,playerctl next
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc

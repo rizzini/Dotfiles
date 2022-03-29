@@ -11,12 +11,6 @@ if [ "$1" == 'play_pause' ]; then
         /usr/bin/playerctl --no-messages play-pause &
         exit
     fi
-elif [ "$1" == 'avancar_posicao' ]; then
-     /usr/bin/playerctl position 10+ &
-     exit
-elif [ "$1" == 'voltar_posicao' ]; then
-     /usr/bin/playerctl position 10- &
-     exit
 elif [ "$1" == 'previous' ]; then
     if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then
@@ -41,4 +35,10 @@ elif [ "$1" == 'next' ]; then
         /usr/bin/playerctl --no-messages next &
         exit
     fi
+elif [ "$1" == 'avancar_posicao' ]; then
+     /usr/bin/playerctl position 10+ &
+     exit
+elif [ "$1" == 'voltar_posicao' ]; then
+     /usr/bin/playerctl position 10- &
+     exit
 fi

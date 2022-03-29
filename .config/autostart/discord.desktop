@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Network;InstantMessaging;
 Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
-Exec=/bin/bash -c "if [ $(/usr/bin/uptime -p | /usr/bin/awk '{print $2}' ) -le 3 ];then /usr/bin/sleep 5; /usr/bin/discord --start-minimized; else /usr/bin/discord; fi"
+Exec=/usr/bin/discord
 GenericName=Internet Messenger
 Icon=discord
 Name=Discord

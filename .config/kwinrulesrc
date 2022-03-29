@@ -233,6 +233,19 @@ wmclass=steam_proton
 wmclasscomplete=true
 wmclassmatch=2
 
+[9]
+Description=Configurações de janela para Dark Devotion
+ignoregeometry=true
+ignoregeometryrule=2
+position=26,257
+positionrule=3
+size=1330,772
+sizerule=2
+title=Dark Devotion
+wmclass=darkdevotion.exe darkdevotion.exe
+wmclasscomplete=true
+wmclassmatch=1
+
 [94bbabc8-2858-4c0f-bb67-216b8ed1cf61]
 Description=Configurações de janela para Children of Morta
 position=17,287
@@ -255,7 +268,7 @@ wmclassmatch=1
 
 [General]
 count=9
-rules=1,2,3,4,5,6,7,8,194439bf-28eb-4f19-8c08-2ab9330cc580
+rules=1,2,3,4,5,6,7,8,9
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

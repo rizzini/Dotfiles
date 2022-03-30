@@ -7,7 +7,7 @@ kernel version is 5.17
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 1474561 at 0x7f7416e2a000
+shm: attached segment 1474576 at 0x7faffe577000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 ----- /proc/nvram -----
@@ -526,27 +526,27 @@ x86emu: could not init vm
     0:          6          0          0          0   IO-APIC   2-edge      timer
     8:          0          0          0          1   IO-APIC   8-edge      rtc0
     9:          0          5          0          0   IO-APIC   9-fasteoi   acpi
-   16:          0        120          0          0   IO-APIC  16-fasteoi   ehci_hcd:usb1
+   16:          0        158          0          0   IO-APIC  16-fasteoi   ehci_hcd:usb1
    18:          0          0          5          0   IO-APIC  18-fasteoi   i801_smbus
-   23:          0          0        142          0   IO-APIC  23-fasteoi   ehci_hcd:usb2
+   23:          0          0        188          0   IO-APIC  23-fasteoi   ehci_hcd:usb2
    24:          0          0          0          0   PCI-MSI 458752-edge      PCIe PME, pciehp
    25:          0          0          0          0   PCI-MSI 462848-edge      PCIe PME
-   26:    1230014          0          0          0   PCI-MSI 512000-edge      ahci[0000:00:1f.2]
-   27:    3572889          0          0          0   PCI-MSI 32768-edge      i915
-   28:          0    6320387          0          0   PCI-MSI 327680-edge      xhci_hcd
+   26:    1235530          0          0          0   PCI-MSI 512000-edge      ahci[0000:00:1f.2]
+   27:    3587489          0          0          0   PCI-MSI 32768-edge      i915
+   28:          0    6325445          0          0   PCI-MSI 327680-edge      xhci_hcd
    29:          0          0          0         24   PCI-MSI 360448-edge      mei_me
-   30:          0          0   15140110          0   PCI-MSI 1048576-edge      enp2s0
-   31:       2746          0          0          0   PCI-MSI 49152-edge      snd_hda_intel:card0
+   30:          0          0   15140673          0   PCI-MSI 1048576-edge      enp2s0
+   31:       2818          0          0          0   PCI-MSI 49152-edge      snd_hda_intel:card0
    32:          0        381          0          0   PCI-MSI 442368-edge      snd_hda_intel:card1
   NMI:          0          0          0          0   Non-maskable interrupts
-  LOC:   33413215   33212993   28711246   28467773   Local timer interrupts
+  LOC:   33461394   33256021   28736642   28492323   Local timer interrupts
   SPU:          0          0          0          0   Spurious interrupts
   PMI:          0          0          0          0   Performance monitoring interrupts
-  IWI:    7122953    4663632    4113742    4177039   IRQ work interrupts
+  IWI:    7156235    4685481    4129678    4193445   IRQ work interrupts
   RTR:          1          0          0          0   APIC ICR read retries
-  RES:   17689243   18510097   16192277   15901236   Rescheduling interrupts
-  CAL:    2430704    2353717    2231217    2216675   Function call interrupts
-  TLB:    2423009    2349777    2224476    2209965   TLB shootdowns
+  RES:   17709564   18529616   16206567   15915213   Rescheduling interrupts
+  CAL:    2433209    2354934    2232920    2217953   Function call interrupts
+  TLB:    2425486    2351159    2226080    2211103   TLB shootdowns
   TRM:        463        463        463        463   Thermal event interrupts
   THR:          0          0          0          0   Threshold APIC interrupts
   DFR:          0          0          0          0   Deferred Error APIC interrupts
@@ -575,7 +575,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 900.000
+  cpu MHz		: 3619.350
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -603,7 +603,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 3507.731
+  cpu MHz		: 3412.650
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -631,7 +631,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 800.000
+  cpu MHz		: 3700.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -659,7 +659,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 900.000
+  cpu MHz		: 800.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -690,7 +690,7 @@ x86emu: could not init vm
   meminfo:    0x1ec1f8000
   xen balloon:    0x0
 >> pci.1: sysfs drivers
------ sysfs driver list (id 0xe30735d5f16c9170) -----
+----- sysfs driver list (id 0xc10bb80478b9eea3) -----
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:03.0/hdaudioC0D0
 snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
@@ -1410,17 +1410,17 @@ i/o:0 0xffff - 0xffff (0x01) "pnp 00:01"
 irq:0  0 (        6) "2-edge      timer"
 irq:0  8 (        1) "8-edge      rtc0"
 irq:0  9 (        5) "9-fasteoi   acpi"
-irq:0 16 (      120) "16-fasteoi   ehci_hcd:usb1"
+irq:0 16 (      158) "16-fasteoi   ehci_hcd:usb1"
 irq:0 18 (        5) "18-fasteoi   i801_smbus"
-irq:0 23 (      142) "23-fasteoi   ehci_hcd:usb2"
+irq:0 23 (      188) "23-fasteoi   ehci_hcd:usb2"
 irq:0 24 (        0) "458752-edge      PCIe PME" "pciehp"
 irq:0 25 (        0) "462848-edge      PCIe PME"
-irq:0 26 (  1230014) "512000-edge      ahci[0000:00:1f.2]"
-irq:0 27 (  3572889) "32768-edge      i915"
-irq:0 28 (  6320387) "327680-edge      xhci_hcd"
+irq:0 26 (  1235530) "512000-edge      ahci[0000:00:1f.2]"
+irq:0 27 (  3587489) "32768-edge      i915"
+irq:0 28 (  6325445) "327680-edge      xhci_hcd"
 irq:0 29 (       24) "360448-edge      mei_me"
-irq:0 30 ( 15140110) "1048576-edge      enp2s0"
-irq:0 31 (     2746) "49152-edge      snd_hda_intel:card0"
+irq:0 30 ( 15140673) "1048576-edge      enp2s0"
+irq:0 31 (     2818) "49152-edge      snd_hda_intel:card0"
 irq:0 32 (      381) "442368-edge      snd_hda_intel:card1"
 dma:1 4 "cascade"
 ----- misc resources end -----
@@ -1446,7 +1446,7 @@ dma:1 4 "cascade"
 ----- exec: "/sbin/modprobe sd_mod " -----
 ----- return code: ? -----
 >> block.2: sysfs drivers
------ sysfs driver list (id 0x131c72fe286d81fa) -----
+----- sysfs driver list (id 0xf120f52cafbadf2d) -----
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:03.0/hdaudioC0D0
 snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
@@ -2120,11 +2120,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 104445 (15s/120s)  ******
-******  stopped child process 104445 (120s)  ******
+******  started child process 106471 (15s/120s)  ******
+******  stopped child process 106471 (120s)  ******
 >> mouse.2: serial
-******  started child process 104446 (20s/20s)  ******
-******  stopped child process 104446 (20s)  ******
+******  started child process 106472 (20s/20s)  ******
+******  stopped child process 106472 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -2461,7 +2461,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 3103.043
+  cpu MHz		: 3601.387
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2489,7 +2489,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 2100.000
+  cpu MHz		: 3657.172
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2517,7 +2517,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 1000.000
+  cpu MHz		: 2400.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2545,7 +2545,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 800.000
+  cpu MHz		: 3000.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2599,13 +2599,160 @@ Timeout waiting for PADO packets
 >> int.2: cdrom
 >> int.3: media
 >> int.4.1: /dev/sda
-  read_block0: 512 bytes (4s, 999998us)
+  read_block0: 512 bytes (4s, 999999us)
   mbr sig: 0x8449901c
 >> int.4: floppy
 >> int.5: edd
 >> int.5.1: bios
   bios ctrl 0: 14
 >> int.6: mouse
+----- sysfs driver list (id 0x131c72fe286d81fa) -----
+snd_hda_codec_generic: module = snd_hda_codec_generic
+snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:03.0/hdaudioC0D0
+snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
+snd_hda_codec_realtek: /devices/pci0000:00/0000:00:1b.0/hdaudioC1D0
+snd_hda_codec_realtek: module = snd_hda_codec_realtek
+       nd_region: module = libnvdimm
+          nd_bus: module = libnvdimm
+          nvdimm: module = libnvdimm
+      parport_pc: module = parport_pc
+        coretemp: /devices/platform/coretemp.0
+        coretemp: module = coretemp
+       reg-dummy: /devices/platform/reg-dummy
+        acpi-fan: /devices/platform/PNP0C0B:03
+        acpi-fan: /devices/platform/PNP0C0B:01
+        acpi-fan: /devices/platform/PNP0C0B:04
+        acpi-fan: /devices/platform/PNP0C0B:02
+        acpi-fan: /devices/platform/PNP0C0B:00
+  intel_rapl_msr: /devices/platform/intel_rapl_msr.0
+  intel_rapl_msr: module = intel_rapl_msr
+         vboxdrv: module = vboxdrv
+         vboxdrv: /devices/platform/vboxdrv.0
+      alarmtimer: /devices/pnp0/00:02/rtc/rtc0/alarmtimer.0.auto
+      serial8250: /devices/platform/serial8250
+          pcspkr: module = pcspkr
+          pcspkr: /devices/platform/pcspkr
+       intel-spi: module = intel_spi_platform
+       intel-spi: /devices/pci0000:00/0000:00:1f.0/intel-spi
+      parport_pc: module = parport_pc
+           r8169: /devices/pci0000:00/0000:00:1c.2/0000:02:00.0
+           r8169: module = r8169
+        ehci-pci: /devices/pci0000:00/0000:00:1a.0
+        ehci-pci: /devices/pci0000:00/0000:00:1d.0
+        xhci_hcd: module = xhci_pci
+        xhci_hcd: /devices/pci0000:00/0000:00:14.0
+          shpchp: module = shpchp
+   snd_hda_intel: /devices/pci0000:00/0000:00:1b.0
+   snd_hda_intel: /devices/pci0000:00/0000:00:03.0
+   snd_hda_intel: module = snd_hda_intel
+            ahci: /devices/pci0000:00/0000:00:1f.2
+            ahci: module = ahci
+            nvme: module = nvme
+        pcieport: /devices/pci0000:00/0000:00:1c.0
+        pcieport: /devices/pci0000:00/0000:00:1c.2
+         lpc_ich: /devices/pci0000:00/0000:00:1f.0
+         lpc_ich: module = lpc_ich
+          mei_me: /devices/pci0000:00/0000:00:16.0
+          mei_me: module = mei_me
+      i801_smbus: /devices/pci0000:00/0000:00:1f.3
+      i801_smbus: module = i2c_i801
+      hsw_uncore: /devices/pci0000:00/0000:00:00.0
+      hsw_uncore: module = intel_uncore
+            i915: /devices/pci0000:00/0000:00:02.0
+            i915: module = i915
+        uhci_hcd: module = uhci_hcd
+   agpgart-intel: module = intel_agp
+       processor: /devices/system/cpu/cpu3
+       processor: /devices/system/cpu/cpu1
+       processor: /devices/system/cpu/cpu2
+       processor: /devices/system/cpu/cpu0
+        mei_hdcp: /devices/pci0000:00/0000:00:16.0/0000:00:16.0-b638ab7e-94e2-4ea2-a552-d1c54b627f04
+        mei_hdcp: module = mei_hdcp
+         mei_pxp: /devices/pci0000:00/0000:00:16.0/0000:00:16.0-fbf6fcf1-96cf-4e2e-a6a6-1bab8cbe36b1
+         mei_pxp: module = mei_pxp
+              lp: module = lp
+           ppdev: module = ppdev
+              st: module = st
+              sr: module = sr_mod
+              sr: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0
+              sd: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+RTL8226B_RTL8221B 2.5Gbps PHY: module = realtek
+RTL8221B-VM-CG 2.5Gbps PHY: module = realtek
+RTL8208 Fast Ethernet: module = realtek
+RTL8221B-VB-CG 2.5Gbps PHY: module = realtek
+RTL8201CP Ethernet: module = realtek
+RTL8366RB Gigabit Ethernet: module = realtek
+     Generic PHY: module = libphy
+RTL8211F Gigabit Ethernet: module = realtek
+RTL8211B Gigabit Ethernet: module = realtek
+RTL8226B-CG_RTL8221B-CG 2.5Gbps PHY: module = realtek
+RTL8211DN Gigabit Ethernet: module = realtek
+RTL8211 Gigabit Ethernet: module = realtek
+RTL8226-CG 2.5Gbps PHY: module = realtek
+RTL8226 2.5Gbps PHY: module = realtek
+Generic FE-GE Realtek PHY: /devices/pci0000:00/0000:00:1c.2/0000:02:00.0/mdio_bus/r8169-0-200/r8169-0-200:00
+Generic FE-GE Realtek PHY: module = realtek
+RTL8365MB-VC Gigabit Ethernet: module = realtek
+RTL8211E Gigabit Ethernet: module = realtek
+Generic Clause 45 PHY: module = libphy
+RTL8201F Fast Ethernet: module = realtek
+RTL8211C Gigabit Ethernet: module = realtek
+RTL9000AA_RTL9000AN Ethernet: module = realtek
+         spi-nor: module = spi_nor
+     hid-generic: /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001
+       microsoft: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002
+       microsoft: module = hid_microsoft
+       microsoft: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003
+          pciehp: /devices/pci0000:00/0000:00:1c.0/0000:00:1c.0:pcie004
+        pcie_pme: /devices/pci0000:00/0000:00:1c.0/0000:00:1c.0:pcie001
+        pcie_pme: /devices/pci0000:00/0000:00:1c.2/0000:00:1c.2:pcie001
+        rtc_cmos: /devices/pnp0/00:02
+          system: /devices/pnp0/00:05
+          system: /devices/pnp0/00:03
+          system: /devices/pnp0/00:01
+          system: /devices/pnp0/00:04
+          system: /devices/pnp0/00:00
+   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2
+   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.3
+   snd-usb-audio: module = snd_usb_audio
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0
+          usbhid: module = usbhid
+        uvcvideo: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0
+        uvcvideo: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
+        uvcvideo: module = uvcvideo
+             usb: /devices/pci0000:00/0000:00:14.0/usb3
+             usb: /devices/pci0000:00/0000:00:14.0/usb3/3-6
+             usb: /devices/pci0000:00/0000:00:1d.0/usb2/2-1
+             usb: /devices/pci0000:00/0000:00:1a.0/usb1
+             usb: /devices/pci0000:00/0000:00:1a.0/usb1/1-1
+             usb: /devices/pci0000:00/0000:00:14.0/usb3/3-9
+             usb: /devices/pci0000:00/0000:00:14.0/usb4
+             usb: /devices/pci0000:00/0000:00:14.0/usb3/3-10
+             usb: /devices/pci0000:00/0000:00:1d.0/usb2
+             usb: /devices/pci0000:00/0000:00:14.0/usb3/3-5
+           btusb: /devices/pci0000:00/0000:00:14.0/usb3/3-9/3-9:1.1
+           btusb: /devices/pci0000:00/0000:00:14.0/usb3/3-9/3-9:1.0
+           btusb: module = btusb
+             hub: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0
+             hub: /devices/pci0000:00/0000:00:14.0/usb3/3-0:1.0
+             hub: /devices/pci0000:00/0000:00:14.0/usb4/4-0:1.0
+             hub: /devices/pci0000:00/0000:00:1a.0/usb1/1-0:1.0
+             hub: module = usbcore
+             hub: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1:1.0
+             hub: /devices/pci0000:00/0000:00:1d.0/usb2/2-0:1.0
+           usbfs: module = usbcore
+         thermal: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXTHERM:01
+         thermal: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXTHERM:00
+           video: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00
+          button: /devices/LNXSYSTM:00/LNXPWRBN:00
+          button: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00
+            at24: /devices/pci0000:00/0000:00:1f.3/i2c-6/6-0052
+            at24: /devices/pci0000:00/0000:00:1f.3/i2c-6/6-0050
+            at24: module = at24
+     smbus_alert: module = i2c_smbus
+----- sysfs driver list end -----
 >> int.15: system info
   system type:
   acpi: 1
@@ -3819,8 +3966,8 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
   E: DEVLINKS=/dev/dri/by-path/pci-0000:00:02.0-card
-  E: TAGS=:uaccess:master-of-seat:seat:
-  E: CURRENT_TAGS=:uaccess:master-of-seat:seat:
+  E: TAGS=:seat:uaccess:master-of-seat:
+  E: CURRENT_TAGS=:seat:uaccess:master-of-seat:
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1
   L: 0
@@ -3831,8 +3978,8 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
-  E: TAGS=:master-of-seat:seat:
-  E: CURRENT_TAGS=:master-of-seat:seat:
+  E: TAGS=:seat:master-of-seat:
+  E: CURRENT_TAGS=:seat:master-of-seat:
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card1/card1-VGA-1
   L: 0
@@ -3843,8 +3990,8 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
-  E: TAGS=:master-of-seat:seat:
-  E: CURRENT_TAGS=:master-of-seat:seat:
+  E: TAGS=:seat:master-of-seat:
+  E: CURRENT_TAGS=:seat:master-of-seat:
   
   P: /devices/pci0000:00/0000:00:02.0/drm/renderD128
   N: dri/renderD128
@@ -4382,8 +4529,8 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/input/input17/event17
   N: input/event17
   L: 0
-  S: input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00
   S: input/by-path/pci-0000:00:14.0-usb-0:10:1.0-event
+  S: input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/input/input17/event17
   E: SUBSYSTEM=input
   E: DEVNAME=/dev/input/event17
@@ -4408,7 +4555,7 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:10:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_10_1_0
   E: LIBINPUT_DEVICE_GROUP=3/1908/2310:usb-0000:00:14.0-10/button
-  E: DEVLINKS=/dev/input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00 /dev/input/by-path/pci-0000:00:14.0-usb-0:10:1.0-event
+  E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:10:1.0-event /dev/input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00
   E: TAGS=:power-switch:
   E: CURRENT_TAGS=:power-switch:
   
@@ -4424,14 +4571,14 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:10:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_10_1_0
   E: ID_FOR_SEAT=media-pci-0000_00_14_0-usb-0_10_1_0
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   N: video0
   L: 0
-  S: v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
   S: v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
+  S: v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   E: SUBSYSTEM=video4linux
   E: DEVNAME=/dev/video0
@@ -4459,15 +4606,15 @@ Timeout waiting for PADO packets
   E: ID_FOR_SEAT=video4linux-pci-0000_00_14_0-usb-0_10_1_0
   E: COLORD_DEVICE=1
   E: COLORD_KIND=camera
-  E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0 /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: DEVLINKS=/dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0 /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video1
   N: video1
   L: 0
-  S: v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1
   S: v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1
+  S: v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video1
   E: SUBSYSTEM=video4linux
   E: DEVNAME=/dev/video1
@@ -4495,9 +4642,9 @@ Timeout waiting for PADO packets
   E: ID_FOR_SEAT=video4linux-pci-0000_00_14_0-usb-0_10_1_0
   E: COLORD_DEVICE=1
   E: COLORD_KIND=camera
-  E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1 /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: DEVLINKS=/dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1 /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
   L: 0
@@ -4733,8 +4880,8 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/event3
   N: input/event3
   L: 0
-  S: input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse
   S: input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse
+  S: input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/event3
   E: SUBSYSTEM=input
   E: DEVNAME=/dev/input/event3
@@ -4759,7 +4906,7 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:5:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_5_1_0
   E: LIBINPUT_DEVICE_GROUP=3/1bcf/5:usb-0000:00:14.0-5
-  E: DEVLINKS=/dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse
+  E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/mouse0
   N: input/mouse0
@@ -4825,8 +4972,8 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6
   E: ID_FOR_SEAT=usb-pci-0000_00_14_0-usb-0_6
   E: DEVLINKS=/dev/android /dev/android6
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0
   L: 0
@@ -5045,8 +5192,8 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
   N: input/event6
   L: 0
-  S: input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
   S: input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  S: input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
   E: SUBSYSTEM=input
   E: DEVNAME=/dev/input/event6
@@ -5072,7 +5219,7 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.1
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_1
   E: LIBINPUT_DEVICE_GROUP=3/45e/750:usb-0000:00:14.0-6
-  E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  E: DEVLINKS=/dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
   E: TAGS=:power-switch:
   E: CURRENT_TAGS=:power-switch:
   
@@ -6200,9 +6347,9 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   N: sr0
   L: -100
-  S: disk/by-path/pci-0000:00:1f.2-ata-1.0
   S: cdrom
   S: disk/by-path/pci-0000:00:1f.2-ata-1
+  S: disk/by-path/pci-0000:00:1f.2-ata-1.0
   S: disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   E: SUBSYSTEM=block
@@ -6245,9 +6392,9 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_1f_2-ata-1_0
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-1
   E: ID_FOR_SEAT=block-pci-0000_00_1f_2-ata-1_0
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-1.0 /dev/cdrom /dev/disk/by-path/pci-0000:00:1f.2-ata-1 /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
-  E: TAGS=:uaccess:systemd:seat:
-  E: CURRENT_TAGS=:uaccess:systemd:seat:
+  E: DEVLINKS=/dev/cdrom /dev/disk/by-path/pci-0000:00:1f.2-ata-1 /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0 /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  E: TAGS=:seat:systemd:uaccess:
+  E: CURRENT_TAGS=:seat:systemd:uaccess:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
   N: bsg/0:0:0:0
@@ -6276,8 +6423,8 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_1f_2-ata-1_0
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-1
   E: ID_FOR_SEAT=scsi_generic-pci-0000_00_1f_2-ata-1_0
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/link1/ata_link/link1
   L: 0
@@ -6322,9 +6469,9 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda
   N: sda
   L: 0
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980
   S: disk/by-path/pci-0000:00:1f.2-ata-2.0
   S: disk/by-id/wwn-0x5001b448b1c77808
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980
   S: disk/by-path/pci-0000:00:1f.2-ata-2
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda
   E: SUBSYSTEM=block
@@ -6368,19 +6515,19 @@ Timeout waiting for PADO packets
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-2
   E: ID_PART_TABLE_UUID=c932b96a-2553-4827-be2d-2c993ed424ba
   E: ID_PART_TABLE_TYPE=gpt
-  E: DEVLINKS=/dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0 /dev/disk/by-id/wwn-0x5001b448b1c77808 /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2.0 /dev/disk/by-id/wwn-0x5001b448b1c77808 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980 /dev/disk/by-path/pci-0000:00:1f.2-ata-2
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   N: sda1
   L: 0
-  S: disk/by-id/wwn-0x5001b448b1c77808-part1
-  S: disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
   S: disk/by-path/pci-0000:00:1f.2-ata-2-part1
-  S: disk/by-uuid/83ED-BDD9
   S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
+  S: disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
+  S: disk/by-id/wwn-0x5001b448b1c77808-part1
+  S: disk/by-uuid/83ED-BDD9
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda1
@@ -6437,19 +6584,19 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_SIZE=262144
   E: ID_PART_ENTRY_DISK=8:0
   E: UDISKS_IGNORE=1
-  E: DEVLINKS=/dev/disk/by-id/wwn-0x5001b448b1c77808-part1 /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1 /dev/disk/by-uuid/83ED-BDD9 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1 /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0 /dev/disk/by-id/wwn-0x5001b448b1c77808-part1 /dev/disk/by-uuid/83ED-BDD9 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
   N: sda2
   L: 0
+  S: disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2
+  S: disk/by-label/archlinux
   S: disk/by-partlabel/archlinux
   S: disk/by-id/wwn-0x5001b448b1c77808-part2
-  S: disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e
-  S: disk/by-label/archlinux
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
   S: disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a
   S: disk/by-path/pci-0000:00:1f.2-ata-2-part2
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
@@ -6513,19 +6660,19 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_SIZE=216592384
   E: ID_PART_ENTRY_DISK=8:0
   E: ID_BTRFS_READY=1
-  E: DEVLINKS=/dev/disk/by-partlabel/archlinux /dev/disk/by-id/wwn-0x5001b448b1c77808-part2 /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e /dev/disk/by-label/archlinux /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2 /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
+  E: DEVLINKS=/dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2 /dev/disk/by-label/archlinux /dev/disk/by-partlabel/archlinux /dev/disk/by-id/wwn-0x5001b448b1c77808-part2 /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda5
   N: sda5
   L: 0
-  S: disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
+  S: disk/by-id/wwn-0x5001b448b1c77808-part5
   S: disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4
   S: disk/by-path/pci-0000:00:1f.2-ata-2-part5
-  S: disk/by-id/wwn-0x5001b448b1c77808-part5
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5
+  S: disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda5
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda5
@@ -6581,19 +6728,19 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_OFFSET=216856576
   E: ID_PART_ENTRY_SIZE=8388608
   E: ID_PART_ENTRY_DISK=8:0
-  E: DEVLINKS=/dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5 /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5 /dev/disk/by-id/wwn-0x5001b448b1c77808-part5 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5 /dev/disk/by-id/wwn-0x5001b448b1c77808-part5 /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5 /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   N: sda6
   L: 0
+  S: disk/by-id/wwn-0x5001b448b1c77808-part6
   S: disk/by-path/pci-0000:00:1f.2-ata-2-part6
   S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6
-  S: disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part6
   S: disk/by-label/archrecover
-  S: disk/by-id/wwn-0x5001b448b1c77808-part6
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part6
+  S: disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
   S: disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   E: SUBSYSTEM=block
@@ -6652,7 +6799,7 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_OFFSET=225245184
   E: ID_PART_ENTRY_SIZE=9195520
   E: ID_PART_ENTRY_DISK=8:0
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6 /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6 /dev/disk/by-label/archrecover /dev/disk/by-id/wwn-0x5001b448b1c77808-part6 /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
+  E: DEVLINKS=/dev/disk/by-id/wwn-0x5001b448b1c77808-part6 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6 /dev/disk/by-label/archrecover /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6 /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
@@ -8262,8 +8409,8 @@ Timeout waiting for PADO packets
   E: MINOR=242
   E: USEC_INITIALIZED=3142019
   E: SYSTEMD_WANTS=systemd-rfkill.socket
-  E: TAGS=:uaccess:systemd:seat:
-  E: CURRENT_TAGS=:uaccess:systemd:seat:
+  E: TAGS=:seat:systemd:uaccess:
+  E: CURRENT_TAGS=:seat:systemd:uaccess:
   
   P: /devices/virtual/misc/snapshot
   N: snapshot
@@ -8292,8 +8439,8 @@ Timeout waiting for PADO packets
   E: MAJOR=10
   E: MINOR=223
   E: USEC_INITIALIZED=9147970349
-  E: TAGS=:uaccess:seat:
-  E: CURRENT_TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
+  E: CURRENT_TAGS=:seat:uaccess:
   
   P: /devices/virtual/misc/vboxdrv
   N: vboxdrv
@@ -9742,15 +9889,15 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/input/input17
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/input/input17/event17
   name: /dev/input/event17
-  links: /dev/input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00, /dev/input/by-path/pci-0000:00:14.0-usb-0:10:1.0-event
+  links: /dev/input/by-path/pci-0000:00:14.0-usb-0:10:1.0-event, /dev/input/by-id/usb-Generic_USB2.0_PC_CAMERA-event-if00
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/media0
   name: /dev/media0
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   name: /dev/video0
-  links: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0, /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
+  links: /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0, /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video1
   name: /dev/video1
-  links: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1, /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1
+  links: /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1, /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2/sound/card2
@@ -9769,7 +9916,7 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3
 /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/event3
   name: /dev/input/event3
-  links: /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse
+  links: /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse, /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse
 /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/mouse0
   name: /dev/input/mouse0
   links: /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-mouse, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-mouse
@@ -9794,7 +9941,7 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
   name: /dev/input/event6
-  links: /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  links: /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/wakeup/wakeup21
 /devices/pci0000:00/0000:00:14.0/usb3/3-9
   name: /dev/bus/usb/003/004
@@ -9903,7 +10050,7 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   name: /dev/sr0
-  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  links: /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
   name: /dev/bsg/0:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/scsi_device/0:0:0:0
@@ -9918,19 +10065,19 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda
   name: /dev/sda
-  links: /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   name: /dev/sda1
-  links: /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
+  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
   name: /dev/sda2
-  links: /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-label/archlinux, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
+  links: /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-label/archlinux, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda5
   name: /dev/sda5
-  links: /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
+  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   name: /dev/sda6
-  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-label/archrecover, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
+  links: /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-label/archrecover, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/bsg/1:0:0:0
   name: /dev/bsg/1:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_device/1:0:0:0
@@ -10537,15 +10684,6 @@ Timeout waiting for PADO packets
   prop read: Ij4C.ndpeucax6V1 (failed)
   old prop read: Ij4C.ndpeucax6V1 (failed)
 ----- kernel log -----
-  <4>[21920.139466] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=185.156.73.91 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=244 ID=6876 PROTO=TCP SPT=48067 DPT=3325 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[21940.254419] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=120.238.147.178 DST=192.168.0.201 LEN=60 TOS=0x00 PREC=0x00 TTL=43 ID=30768 DF PROTO=TCP SPT=29385 DPT=8250 WINDOW=0 RES=0x00 SYN URGP=0 
-  <4>[21948.752068] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=104.206.128.22 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=11839 PROTO=TCP SPT=34247 DPT=8333 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[21966.738122] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=89.248.165.202 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=243 ID=54321 PROTO=TCP SPT=43337 DPT=4768 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[21975.475909] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=17272 DF PROTO=2 
-  <4>[21981.043393] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=92.63.197.94 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=242 ID=10664 PROTO=TCP SPT=45462 DPT=3333 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[21984.050832] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=78.101.166.142 DST=192.168.0.201 LEN=52 TOS=0x00 PREC=0x00 TTL=111 ID=2226 DF PROTO=TCP SPT=50995 DPT=5598 WINDOW=64240 RES=0x00 SYN URGP=0 
-  <4>[21999.079133] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=78.101.166.142 DST=192.168.0.201 LEN=52 TOS=0x00 PREC=0x00 TTL=111 ID=2230 DF PROTO=TCP SPT=50995 DPT=5598 WINDOW=64240 RES=0x00 SYN URGP=0 
-  <4>[22024.541676] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=46.161.27.5 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=37074 PROTO=TCP SPT=40563 DPT=443 WINDOW=1024 RES=0x00 SYN URGP=0 
   <4>[22050.625062] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=89.163.138.112 DST=192.168.0.201 LEN=449 TOS=0x00 PREC=0x00 TTL=51 ID=49627 DF PROTO=UDP SPT=5106 DPT=5060 LEN=429 
   <4>[22084.524299] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=207.154.255.215 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=44293 DPT=8081 WINDOW=65535 RES=0x00 SYN URGP=0 
   <4>[22098.454798] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=162.142.125.232 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=37 ID=44741 PROTO=TCP SPT=35099 DPT=5431 WINDOW=1024 RES=0x00 SYN URGP=0 
@@ -10577,6 +10715,18 @@ Timeout waiting for PADO packets
   <6>[22510.098334] lp: driver loaded but no devices found
   <4>[22512.654145] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.39 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=15719 PROTO=TCP SPT=53224 DPT=13041 WINDOW=1024 RES=0x00 SYN URGP=0 
   <4>[22541.014548] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=167.94.146.22 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=32 ID=5174 PROTO=TCP SPT=39766 DPT=7917 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <6>[22546.964002] printk: console [lp0] disabled
+  <6>[22547.089881] lp: driver loaded but no devices found
+  <4>[22564.782416] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.143.203.2 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=9274 PROTO=TCP SPT=43383 DPT=8960 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22599.766585] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=22647 DF PROTO=2 
+  <4>[22611.216113] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.135.232.80 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=54321 PROTO=TCP SPT=60804 DPT=8082 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[22620.686788] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=184.105.247.246 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=60489 DPT=1080 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[22628.386230] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=8.129.96.243 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=233 ID=24844 PROTO=TCP SPT=52164 DPT=2376 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22638.134478] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=195.133.40.231 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=54321 PROTO=TCP SPT=48665 DPT=111 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <6>[22674.328350] printk: console [lp0] disabled
+  <6>[22674.511087] lp: driver loaded but no devices found
+  <4>[22680.661171] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=94.102.61.39 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=242 ID=54321 PROTO=TCP SPT=45859 DPT=535 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[22682.185806] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.51 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=54395 PROTO=TCP SPT=59475 DPT=14311 WINDOW=1024 RES=0x00 SYN URGP=0 
 ----- kernel log end -----
 ----- /proc/modules -----
   lp 24576 0 - Live 0xffffffffc1262000
@@ -11253,7 +11403,7 @@ Timeout waiting for PADO packets
   I/O Ports: 0xf080-0xf083 (rw)
   I/O Ports: 0xf060-0xf07f (rw)
   Memory Range: 0xf7d1a000-0xf7d1a7ff (rw,non-prefetchable)
-  IRQ: 26 (1230014 events)
+  IRQ: 26 (1235530 events)
   Module Alias: "pci:v00008086d00008C02sv00008086sd00008C02bc01sc06i01"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -11423,7 +11573,7 @@ Timeout waiting for PADO packets
   Driver: "snd_hda_intel"
   Driver Modules: "snd_hda_intel"
   Memory Range: 0xf7d14000-0xf7d17fff (rw,non-prefetchable)
-  IRQ: 31 (2746 events)
+  IRQ: 31 (2818 events)
   Module Alias: "pci:v00008086d00000C0Csv00008086sd00000C0Cbc04sc03i00"
   Driver Info #0:
     Driver Status: snd_hda_intel is active
@@ -11444,7 +11594,7 @@ Timeout waiting for PADO packets
   Revision: 0x05
   Driver: "ehci-pci"
   Memory Range: 0xf7d1c000-0xf7d1c3ff (rw,non-prefetchable)
-  IRQ: 16 (120 events)
+  IRQ: 16 (158 events)
   Module Alias: "pci:v00008086d00008C2Dsv00008086sd00008C2Dbc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -11465,7 +11615,7 @@ Timeout waiting for PADO packets
   Revision: 0x05
   Driver: "ehci-pci"
   Memory Range: 0xf7d1b000-0xf7d1b3ff (rw,non-prefetchable)
-  IRQ: 23 (142 events)
+  IRQ: 23 (188 events)
   Module Alias: "pci:v00008086d00008C26sv00008086sd00008C26bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -11491,7 +11641,7 @@ Timeout waiting for PADO packets
   Memory Range: 0xe0000000-0xefffffff (ro,non-prefetchable)
   I/O Ports: 0xf000-0xf03f (rw)
   Memory Range: 0x000c0000-0x000dffff (rw,non-prefetchable,disabled)
-  IRQ: 27 (3572889 events)
+  IRQ: 27 (3587489 events)
   Module Alias: "pci:v00008086d0000041Esv00008086sd0000041Ebc03sc00i00"
   Driver Info #0:
     Driver Status: i915 is active
@@ -11513,7 +11663,7 @@ Timeout waiting for PADO packets
   Driver: "xhci_hcd"
   Driver Modules: "xhci_pci"
   Memory Range: 0xf7d00000-0xf7d0ffff (rw,non-prefetchable)
-  IRQ: 28 (6320387 events)
+  IRQ: 28 (6325445 events)
   Module Alias: "pci:v00008086d00008C31sv00008086sd00008C31bc0Csc03i30"
   Driver Info #0:
     Driver Status: xhci_pci is active
@@ -11591,7 +11741,7 @@ Timeout waiting for PADO packets
   Driver: "ahci", "sr"
   Driver Modules: "ahci", "sr_mod"
   Device File: /dev/sr0 (/dev/sg0)
-  Device Files: /dev/sr0, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  Device Files: /dev/sr0, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
   Device Number: block 11:0 (char 21:0)
   Features: CD-R, CD-RW, DVD, DVD-R, DVD-RW, DVD-R DL, DVD+R, DVD+RW, DVD+R DL, DVD-RAM, MRW, MRW-W
   Drive status: no medium
@@ -11615,7 +11765,7 @@ Timeout waiting for PADO packets
   Driver: "ahci", "sd"
   Driver Modules: "ahci"
   Device File: /dev/sda
-  Device Files: /dev/sda, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  Device Files: /dev/sda, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
   Device Number: block 8:0-8:15
   BIOS id: 0x80
   Geometry (Logical): CHS 14593/255/63
@@ -11632,7 +11782,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda1
-  Device Files: /dev/sda1, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
+  Device Files: /dev/sda1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11644,7 +11794,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda2
-  Device Files: /dev/sda2, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-label/archlinux, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
+  Device Files: /dev/sda2, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-label/archlinux, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11656,7 +11806,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda5
-  Device Files: /dev/sda5, /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
+  Device Files: /dev/sda5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11668,7 +11818,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda6
-  Device Files: /dev/sda6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-label/archrecover, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
+  Device Files: /dev/sda6, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-label/archrecover, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11771,7 +11921,7 @@ Timeout waiting for PADO packets
   Driver: "usbhid"
   Driver Modules: "usbhid"
   Device File: /dev/input/event6
-  Device Files: /dev/input/event6, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  Device Files: /dev/input/event6, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
   Device Number: char 13:70
   Speed: 1.5 Mbps
   Module Alias: "usb:v045Ep0750d0110dc00dsc00dp00ic03isc00ip00in01"
@@ -11816,7 +11966,7 @@ Timeout waiting for PADO packets
   Driver: "usbhid"
   Driver Modules: "usbhid"
   Device File: /dev/input/mice (/dev/input/mouse0)
-  Device Files: /dev/input/mice, /dev/input/mouse0, /dev/input/event3, /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse, /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-mouse, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-mouse
+  Device Files: /dev/input/mice, /dev/input/mouse0, /dev/input/event3, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-event-mouse, /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-event-mouse, /dev/input/by-id/usb-1bcf_USB_Optical_Mouse-mouse, /dev/input/by-path/pci-0000:00:14.0-usb-0:5:1.0-mouse
   Device Number: char 13:63 (char 13:32)
   Speed: 1.5 Mbps
   Module Alias: "usb:v1BCFp0005d0090dc00dsc00dp00ic03isc01ip02in00"
@@ -11920,7 +12070,7 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 3103 MHz
+  Clock: 3600 MHz
   BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
@@ -11934,7 +12084,7 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 2100 MHz
+  Clock: 3657 MHz
   BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
@@ -11948,7 +12098,7 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 1000 MHz
+  Clock: 2400 MHz
   BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
@@ -11962,7 +12112,7 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 800 MHz
+  Clock: 3000 MHz
   BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16

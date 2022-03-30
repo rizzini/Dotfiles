@@ -19,3 +19,4 @@ btrfs device usage / | tee '/home/lucas/Documentos/hardware_specs/btrfs device u
 btrfs filesystem df / | tee '/home/lucas/Documentos/hardware_specs/btrfs filesystem df'
 btrfs filesystem show | tee '/home/lucas/Documentos/hardware_specs/btrfs filesystem show'
 btrfs filesystem usage / | tee '/home/lucas/Documentos/hardware_specs/btrfs filesystem usage'
+sudo -u lucas yay -Q | tee '/home/lucas/Documentos/hardware_specs/installed_package_list'

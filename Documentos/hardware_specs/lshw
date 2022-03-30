@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3599MHz
+          size: 3420MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz

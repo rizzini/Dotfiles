@@ -14,7 +14,7 @@ Overall:
 Data,single: Size:99.26GiB, Used:82.02GiB (82.63%)
    /dev/sda2	  99.26GiB
 
-Metadata,DUP: Size:2.00GiB, Used:689.48MiB (33.67%)
+Metadata,DUP: Size:2.00GiB, Used:690.08MiB (33.70%)
    /dev/sda2	   4.00GiB
 
 System,DUP: Size:8.00MiB, Used:16.00KiB (0.20%)

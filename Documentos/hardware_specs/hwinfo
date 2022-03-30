@@ -1,13 +1,13 @@
 ============ start debug info ============
 libhd version 21.80 (x86-64) [7688]
 using /var/lib/hardware
-kernel version is 5.16
+kernel version is 5.17
 ----- /proc/cmdline -----
-  intel_pstate=passive root=PARTUUID=076b16ce-f47f-4306-826b-85f19ec2746a rw rootflags=subvol=ROOT initrd=ROOT\boot\intel-ucode.img initrd=ROOT\boot\initramfs-linux516-tkg-pds.img audit=off mitigation=off nowatchdog initrd=\ROOT\boot\initramfs-linux516-tkg-pds.img
+  intel_pstate=passive root=PARTUUID=076b16ce-f47f-4306-826b-85f19ec2746a rw rootflags=subvol=ROOT initrd=ROOT\boot\intel-ucode.img initrd=ROOT\boot\initramfs-linux517-tkg-pds.img audit=off mitigation=off nowatchdog initrd=\ROOT\boot\initramfs-linux517-tkg-pds.img
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 32772 at 0x7f595f8bb000
+shm: attached segment 1474561 at 0x7f7416e2a000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 ----- /proc/nvram -----
@@ -458,7 +458,12 @@ x86emu: could not init vm
 >> misc.1: misc data
 >> misc.1.1: open serial
 >> misc.1.2: open parallel
------ exec: "/sbin/modprobe parport " -----
+----- exec: "/sbin/rmmod lp" -----
+----- return code: ? -----
+----- exec: "/sbin/rmmod parport_pc" -----
+----- return code: ? -----
+----- exec: "/sbin/rmmod parport" -----
+  rmmod: ERROR: Module parport is in use by: ppdev
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe parport_pc " -----
 ----- return code: ? -----
@@ -521,32 +526,32 @@ x86emu: could not init vm
     0:          6          0          0          0   IO-APIC   2-edge      timer
     8:          0          0          0          1   IO-APIC   8-edge      rtc0
     9:          0          5          0          0   IO-APIC   9-fasteoi   acpi
-   16:          0         27          0          0   IO-APIC  16-fasteoi   ehci_hcd:usb1
+   16:          0        120          0          0   IO-APIC  16-fasteoi   ehci_hcd:usb1
    18:          0          0          5          0   IO-APIC  18-fasteoi   i801_smbus
-   23:          0          0         29          0   IO-APIC  23-fasteoi   ehci_hcd:usb2
+   23:          0          0        142          0   IO-APIC  23-fasteoi   ehci_hcd:usb2
    24:          0          0          0          0   PCI-MSI 458752-edge      PCIe PME, pciehp
    25:          0          0          0          0   PCI-MSI 462848-edge      PCIe PME
-   26:     142416          0          0          0   PCI-MSI 512000-edge      ahci[0000:00:1f.2]
-   27:     243871          0          0          0   PCI-MSI 32768-edge      i915
-   28:          0      75041          0          0   PCI-MSI 327680-edge      xhci_hcd
+   26:    1230014          0          0          0   PCI-MSI 512000-edge      ahci[0000:00:1f.2]
+   27:    3572889          0          0          0   PCI-MSI 32768-edge      i915
+   28:          0    6320387          0          0   PCI-MSI 327680-edge      xhci_hcd
    29:          0          0          0         24   PCI-MSI 360448-edge      mei_me
-   30:          0          0     242972          0   PCI-MSI 1048576-edge      enp2s0
-   31:        814          0          0          0   PCI-MSI 49152-edge      snd_hda_intel:card0
+   30:          0          0   15140110          0   PCI-MSI 1048576-edge      enp2s0
+   31:       2746          0          0          0   PCI-MSI 49152-edge      snd_hda_intel:card0
    32:          0        381          0          0   PCI-MSI 442368-edge      snd_hda_intel:card1
   NMI:          0          0          0          0   Non-maskable interrupts
-  LOC:    1354203    1322267     873032     873643   Local timer interrupts
+  LOC:   33413215   33212993   28711246   28467773   Local timer interrupts
   SPU:          0          0          0          0   Spurious interrupts
   PMI:          0          0          0          0   Performance monitoring interrupts
-  IWI:     583841     452634     383635     388405   IRQ work interrupts
-  RTR:          0          0          0          0   APIC ICR read retries
-  RES:     894324     936063     811228     779954   Rescheduling interrupts
-  CAL:     213918     232789     187955     193879   Function call interrupts
-  TLB:     206307     222962     178839     181782   TLB shootdowns
-  TRM:          0          0          0          0   Thermal event interrupts
+  IWI:    7122953    4663632    4113742    4177039   IRQ work interrupts
+  RTR:          1          0          0          0   APIC ICR read retries
+  RES:   17689243   18510097   16192277   15901236   Rescheduling interrupts
+  CAL:    2430704    2353717    2231217    2216675   Function call interrupts
+  TLB:    2423009    2349777    2224476    2209965   TLB shootdowns
+  TRM:        463        463        463        463   Thermal event interrupts
   THR:          0          0          0          0   Threshold APIC interrupts
   DFR:          0          0          0          0   Deferred Error APIC interrupts
   MCE:          0          0          0          0   Machine check exceptions
-  MCP:          8          9          9          9   Machine check polls
+  MCP:         75         76         76         76   Machine check polls
   ERR:          0
   MIS:          0
   PIN:          0          0          0          0   Posted-interrupt notification event
@@ -570,7 +575,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 3234.648
+  cpu MHz		: 900.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -585,7 +590,7 @@ x86emu: could not init vm
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -598,7 +603,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 2300.000
+  cpu MHz		: 3507.731
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -613,7 +618,7 @@ x86emu: could not init vm
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -626,7 +631,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 2931.436
+  cpu MHz		: 800.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -641,7 +646,7 @@ x86emu: could not init vm
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -654,7 +659,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 3551.788
+  cpu MHz		: 900.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -669,7 +674,7 @@ x86emu: could not init vm
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -682,10 +687,10 @@ x86emu: could not init vm
   klog mem 1: 0x0
   klog mem:   0x0
   bios mem:   0x0
-  meminfo:    0x1ec214000
+  meminfo:    0x1ec1f8000
   xen balloon:    0x0
 >> pci.1: sysfs drivers
------ sysfs driver list (id 0x4d41e6d2633b9658) -----
+----- sysfs driver list (id 0xe30735d5f16c9170) -----
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:03.0/hdaudioC0D0
 snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
@@ -705,7 +710,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
         acpi-fan: /devices/platform/PNP0C0B:00
   intel_rapl_msr: /devices/platform/intel_rapl_msr.0
   intel_rapl_msr: module = intel_rapl_msr
- efi-framebuffer: /devices/platform/efi-framebuffer.0
          vboxdrv: module = vboxdrv
          vboxdrv: /devices/platform/vboxdrv.0
       alarmtimer: /devices/pnp0/00:02/rtc/rtc0/alarmtimer.0.auto
@@ -751,6 +755,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
          mei_pxp: /devices/pci0000:00/0000:00:16.0/0000:00:16.0-fbf6fcf1-96cf-4e2e-a6a6-1bab8cbe36b1
          mei_pxp: module = mei_pxp
            ppdev: module = ppdev
+              st: module = st
               sr: module = sr_mod
               sr: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0
               sd: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
@@ -973,7 +978,7 @@ RTL9000AA_RTL9000AN Ethernet: module = realtek
     res[4] = 0xf000 0xf03f 0x40101
     res[6] = 0xc0000 0xdffff 0x212
     config[64]
-    found edid file at /sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1/edid (size: 128)
+    found edid file at /sys/devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1/edid (size: 128)
       00 ff ff ff ff ff ff 00 1e 6d 01 00 01 01 01 01  ".........m......"
       01 15 01 03 80 10 09 78 0a ee 91 a3 54 4c 99 26  ".......x....TL.&"
       0f 50 54 a1 08 00 71 4f 81 80 01 01 01 01 01 01  ".PT...qO........"
@@ -982,7 +987,7 @@ RTL9000AA_RTL9000AN Ethernet: module = realtek
       48 88 35 00 a0 5a 00 00 00 1c 00 00 00 fd 00 3a  "H.5..Z.........:"
       3e 1e 53 10 00 0a 20 20 20 20 20 20 00 00 00 fc  ">.S...      ...."
       00 4c 47 20 54 56 0a 20 20 20 20 20 20 20 01 e2  ".LG TV.       .."
-    found edid file at /sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1/edid (size: 0)
+    found edid file at /sys/devices/pci0000:00/0000:00:02.0/drm/card1/card1-VGA-1/edid (size: 0)
   pci device: name = 0000:00:14.0
     path = /devices/pci0000:00/0000:00:14.0
     modalias = "pci:v00008086d00008C31sv00008086sd00008C31bc0Csc03i30"
@@ -1243,9 +1248,6 @@ sysfs: no such bus: ps3_system_bus
   platform device: name = PNP0C0B:02
     path = /devices/platform/PNP0C0B:02
     type = "", modalias = "acpi:PNP0C0B:", driver = "acpi-fan"
-  platform device: name = efi-framebuffer.0
-    path = /devices/platform/efi-framebuffer.0
-    type = "", modalias = "platform:efi-framebuffer", driver = "efi-framebuffer"
   platform device: name = coretemp.0
     path = /devices/platform/coretemp.0
     type = "", modalias = "platform:coretemp", driver = "coretemp"
@@ -1408,17 +1410,17 @@ i/o:0 0xffff - 0xffff (0x01) "pnp 00:01"
 irq:0  0 (        6) "2-edge      timer"
 irq:0  8 (        1) "8-edge      rtc0"
 irq:0  9 (        5) "9-fasteoi   acpi"
-irq:0 16 (       27) "16-fasteoi   ehci_hcd:usb1"
+irq:0 16 (      120) "16-fasteoi   ehci_hcd:usb1"
 irq:0 18 (        5) "18-fasteoi   i801_smbus"
-irq:0 23 (       29) "23-fasteoi   ehci_hcd:usb2"
+irq:0 23 (      142) "23-fasteoi   ehci_hcd:usb2"
 irq:0 24 (        0) "458752-edge      PCIe PME" "pciehp"
 irq:0 25 (        0) "462848-edge      PCIe PME"
-irq:0 26 (   142416) "512000-edge      ahci[0000:00:1f.2]"
-irq:0 27 (   243871) "32768-edge      i915"
-irq:0 28 (    75041) "327680-edge      xhci_hcd"
+irq:0 26 (  1230014) "512000-edge      ahci[0000:00:1f.2]"
+irq:0 27 (  3572889) "32768-edge      i915"
+irq:0 28 (  6320387) "327680-edge      xhci_hcd"
 irq:0 29 (       24) "360448-edge      mei_me"
-irq:0 30 (   242972) "1048576-edge      enp2s0"
-irq:0 31 (      814) "49152-edge      snd_hda_intel:card0"
+irq:0 30 ( 15140110) "1048576-edge      enp2s0"
+irq:0 31 (     2746) "49152-edge      snd_hda_intel:card0"
 irq:0 32 (      381) "442368-edge      snd_hda_intel:card1"
 dma:1 4 "cascade"
 ----- misc resources end -----
@@ -1436,17 +1438,15 @@ dma:1 4 "cascade"
 ----- parallel info end -----
 >> block.1: block modules
 ----- exec: "/sbin/modprobe ide-cd_mod " -----
-  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/5.16.14-247-tkg-pds
+  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/5.17.0-248-tkg-pds
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe ide-disk " -----
-  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/5.16.14-247-tkg-pds
+  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/5.17.0-248-tkg-pds
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe sd_mod " -----
 ----- return code: ? -----
------ exec: "/sbin/modprobe st " -----
------ return code: ? -----
 >> block.2: sysfs drivers
------ sysfs driver list (id 0x816e2e215453718d) -----
+----- sysfs driver list (id 0x131c72fe286d81fa) -----
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:03.0/hdaudioC0D0
 snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
@@ -1466,7 +1466,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
         acpi-fan: /devices/platform/PNP0C0B:00
   intel_rapl_msr: /devices/platform/intel_rapl_msr.0
   intel_rapl_msr: module = intel_rapl_msr
- efi-framebuffer: /devices/platform/efi-framebuffer.0
          vboxdrv: module = vboxdrv
          vboxdrv: /devices/platform/vboxdrv.0
       alarmtimer: /devices/pnp0/00:02/rtc/rtc0/alarmtimer.0.auto
@@ -1773,7 +1772,7 @@ sysfs: no such class: scsi_tape
     speed = "480"
   usb device: name = 3-0:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb3/3-0:1.0
-    modalias = "usb:v1D6Bp0002d0516dc09dsc00dp01ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0002d0517dc09dsc00dp01ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -1784,10 +1783,10 @@ sysfs: no such class: scsi_tape
     bDeviceProtocol = 1
     idVendor = 0x1d6b
     idProduct = 0x0002
-    manufacturer = "Linux 5.16.14-247-tkg-pds xhci-hcd"
+    manufacturer = "Linux 5.17.0-248-tkg-pds xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:00:14.0"
-    bcdDevice = 0516
+    bcdDevice = 0517
     speed = "480"
   usb device: name = 3-6:1.1
     path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1
@@ -1829,7 +1828,7 @@ sysfs: no such class: scsi_tape
     path = /devices/pci0000:00/0000:00:14.0/usb3/3-9
   usb device: name = 4-0:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb4/4-0:1.0
-    modalias = "usb:v1D6Bp0003d0516dc09dsc00dp03ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0003d0517dc09dsc00dp03ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -1840,10 +1839,10 @@ sysfs: no such class: scsi_tape
     bDeviceProtocol = 3
     idVendor = 0x1d6b
     idProduct = 0x0003
-    manufacturer = "Linux 5.16.14-247-tkg-pds xhci-hcd"
+    manufacturer = "Linux 5.17.0-248-tkg-pds xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:00:14.0"
-    bcdDevice = 0516
+    bcdDevice = 0517
     speed = "5000"
   usb device: name = 3-5:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0
@@ -1904,7 +1903,7 @@ sysfs: no such class: scsi_tape
     speed = "480"
   usb device: name = 1-0:1.0
     path = /devices/pci0000:00/0000:00:1a.0/usb1/1-0:1.0
-    modalias = "usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -1915,10 +1914,10 @@ sysfs: no such class: scsi_tape
     bDeviceProtocol = 0
     idVendor = 0x1d6b
     idProduct = 0x0002
-    manufacturer = "Linux 5.16.14-247-tkg-pds ehci_hcd"
+    manufacturer = "Linux 5.17.0-248-tkg-pds ehci_hcd"
     product = "EHCI Host Controller"
     serial = "0000:00:1a.0"
-    bcdDevice = 0516
+    bcdDevice = 0517
     speed = "480"
   usb device: name = 3-5
     path = /devices/pci0000:00/0000:00:14.0/usb3/3-5
@@ -1973,7 +1972,7 @@ sysfs: no such class: scsi_tape
     speed = "480"
   usb device: name = 2-0:1.0
     path = /devices/pci0000:00/0000:00:1d.0/usb2/2-0:1.0
-    modalias = "usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -1984,10 +1983,10 @@ sysfs: no such class: scsi_tape
     bDeviceProtocol = 0
     idVendor = 0x1d6b
     idProduct = 0x0002
-    manufacturer = "Linux 5.16.14-247-tkg-pds ehci_hcd"
+    manufacturer = "Linux 5.17.0-248-tkg-pds ehci_hcd"
     product = "EHCI Host Controller"
     serial = "0000:00:1d.0"
-    bcdDevice = 0516
+    bcdDevice = 0517
     speed = "480"
 removed: /devices/pci0000:00/0000:00:14.0/usb3/3-9/3-9:1.0
 removed: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0
@@ -2038,10 +2037,10 @@ removed: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
       path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002
   input: name = input3, path = /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3
     no dev - ignored
-  input: name = event11, path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11/event11
+  input: name = event11, path = /devices/pci0000:00/0000:00:03.0/sound/card0/input11/event11
     dev = 13:75
-    input device: bus = hid, bus_id = 0003:045E:0750.0003 driver = microsoft
-      path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:03.0/sound/card0
   input: name = event3, path = /devices/pci0000:00/0000:00:14.0/usb3/3-5/3-5:1.0/0003:1BCF:0005.0001/input/input3/event3
     dev = 13:67
     input device: bus = hid, bus_id = 0003:1BCF:0005.0001 driver = hid-generic
@@ -2072,18 +2071,18 @@ removed: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
     dev = 13:72
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:03.0/sound/card0
-  input: name = input6, path = /devices/pci0000:00/0000:00:03.0/sound/card0/input6
+  input: name = input6, path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
     no dev - ignored
   input: name = event14, path = /devices/pci0000:00/0000:00:1b.0/sound/card1/input14/event14
     dev = 13:78
     input device: bus = sound, bus_id = card1 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card1
-  input: name = input11, path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11
+  input: name = input11, path = /devices/pci0000:00/0000:00:03.0/sound/card0/input11
     no dev - ignored
-  input: name = event6, path = /devices/pci0000:00/0000:00:03.0/sound/card0/input6/event6
+  input: name = event6, path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
     dev = 13:70
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:03.0/sound/card0
+    input device: bus = hid, bus_id = 0003:045E:0750.0003 driver = microsoft
+      path = /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003
   input: name = input4, path = /devices/platform/pcspkr/input/input4
     no dev - ignored
   input: name = event12, path = /devices/pci0000:00/0000:00:1b.0/sound/card1/input12/event12
@@ -2121,11 +2120,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 9792 (15s/120s)  ******
-******  stopped child process 9792 (120s)  ******
+******  started child process 104445 (15s/120s)  ******
+******  stopped child process 104445 (120s)  ******
 >> mouse.2: serial
-******  started child process 9793 (20s/20s)  ******
-******  stopped child process 9793 (20s)  ******
+******  started child process 104446 (20s/20s)  ******
+******  stopped child process 104446 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -2196,18 +2195,21 @@ sysfs: no such class: usb
   B: MSC=10
   B: LED=7
   
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel HDMI HDMI/DP,pcm=3"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input6
+  I: Bus=0003 Vendor=045e Product=0750 Version=0111
+  N: Name="Microsoft Wired Keyboard 600"
+  P: Phys=usb-0000:00:14.0-6/input1
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
   U: Uniq=
-  H: Handlers=event6 
+  H: Handlers=sysrq kbd event6 
   B: PROP=0
-  B: EV=21
-  B: SW=140
+  B: EV=10001f
+  B: KEY=3f000306ff 0 0 4c3ffff17aff32d bfd4445600000000 1 130ffb8b17d007 ffff7bfad971dfff ffbeffdfffefffff fffffffffffffffe
+  B: REL=1040
+  B: ABS=10100000000
+  B: MSC=10
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel HDMI HDMI/DP,pcm=7"
+  N: Name="HDA Intel HDMI HDMI/DP,pcm=3"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input7
   U: Uniq=
@@ -2217,7 +2219,7 @@ sysfs: no such class: usb
   B: SW=140
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel HDMI HDMI/DP,pcm=8"
+  N: Name="HDA Intel HDMI HDMI/DP,pcm=7"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input8
   U: Uniq=
@@ -2227,7 +2229,7 @@ sysfs: no such class: usb
   B: SW=140
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel HDMI HDMI/DP,pcm=9"
+  N: Name="HDA Intel HDMI HDMI/DP,pcm=8"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input9
   U: Uniq=
@@ -2237,7 +2239,7 @@ sysfs: no such class: usb
   B: SW=140
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel HDMI HDMI/DP,pcm=10"
+  N: Name="HDA Intel HDMI HDMI/DP,pcm=9"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input10
   U: Uniq=
@@ -2246,18 +2248,15 @@ sysfs: no such class: usb
   B: EV=21
   B: SW=140
   
-  I: Bus=0003 Vendor=045e Product=0750 Version=0111
-  N: Name="Microsoft Wired Keyboard 600"
-  P: Phys=usb-0000:00:14.0-6/input1
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel HDMI HDMI/DP,pcm=10"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:03.0/sound/card0/input11
   U: Uniq=
-  H: Handlers=sysrq kbd event11 
+  H: Handlers=event11 
   B: PROP=0
-  B: EV=10001f
-  B: KEY=3f000306ff 0 0 4c3ffff17aff32d bfd4445600000000 1 130ffb8b17d007 ffff7bfad971dfff ffbeffdfffefffff fffffffffffffffe
-  B: REL=1040
-  B: ABS=10100000000
-  B: MSC=10
+  B: EV=21
+  B: SW=140
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
   N: Name="HDA Intel PCH Front Mic"
@@ -2366,43 +2365,8 @@ bus = 3, name = Microsoft Wired Keyboard 600
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
-bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=3
-  handlers = event6
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=7
-  handlers = event7
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=8
-  handlers = event8
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=9
-  handlers = event9
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=10
-  handlers = event10
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
 bus = 3, name = Microsoft Wired Keyboard 600
-  handlers = sysrq kbd event11
+  handlers = sysrq kbd event6
   key = 0000003f000306ff0000000000000000000000000000000004c3ffff17aff32dbfd4445600000000000000000000000100130ffb8b17d007ffff7bfad971dfffffbeffdfffeffffffffffffffffffffe
   rel = 0000000000001040
   abs = 0000010100000000
@@ -2410,6 +2374,41 @@ bus = 3, name = Microsoft Wired Keyboard 600
   mouse wheels = 2
   is_mouse = 0
   is_joystick = 0
+bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=3
+  handlers = event7
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=7
+  handlers = event8
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=8
+  handlers = event9
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=9
+  handlers = event10
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel HDMI HDMI/DP,pcm=10
+  handlers = event11
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
 bus = 0, name = HDA Intel PCH Front Mic
   handlers = event12
   mouse buttons = 0
@@ -2462,7 +2461,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 2106.676
+  cpu MHz		: 3103.043
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2477,7 +2476,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -2490,7 +2489,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 2220.248
+  cpu MHz		: 2100.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2505,7 +2504,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -2518,7 +2517,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 800.000
+  cpu MHz		: 1000.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2533,7 +2532,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -2546,7 +2545,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   model name	: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
   stepping	: 3
   microcode	: 0x28
-  cpu MHz		: 1200.000
+  cpu MHz		: 800.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2561,7 +2560,7 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
   bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
-  bogomips	: 7383.11
+  bogomips	: 7383.27
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 39 bits physical, 48 bits virtual
@@ -2571,6 +2570,13 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
 >> kbd.3: serial console
 >> fb.1: read info
 >> net.1: get network data
+  net interface: name = lo, path = /class/net/lo
+    type = 772
+    carrier = 1
+    hw_addr = 00:00:00:00:00:00
+  lo: ethtool permanent hw address[6]: 00:00:00:00:00:00
+    GDRVINFO ethtool error: Operation not supported
+    ethtool private flags: 0
   net interface: name = enp2s0, path = /class/net/enp2s0
     type = 1
     carrier = 1
@@ -2578,13 +2584,6 @@ bus = 3, name = USB2.0 PC CAMERA: USB2.0 PC CAM
     net device: path = /devices/pci0000:00/0000:00:1c.2/0000:02:00.0
     net driver: name = r8169, path = /bus/pci/drivers/r8169
   enp2s0: ethtool permanent hw address[6]: 00:e0:4c:f5:51:d8
-    ethtool private flags: 0
-  net interface: name = lo, path = /class/net/lo
-    type = 772
-    carrier = 1
-    hw_addr = 00:00:00:00:00:00
-  lo: ethtool permanent hw address[6]: 00:00:00:00:00:00
-    GDRVINFO ethtool error: Operation not supported
     ethtool private flags: 0
 >> pppoe.1: looking for pppoe
 >> pppoe.2: discovery
@@ -2600,7 +2599,7 @@ Timeout waiting for PADO packets
 >> int.2: cdrom
 >> int.3: media
 >> int.4.1: /dev/sda
-  read_block0: 512 bytes (4s, 999997us)
+  read_block0: 512 bytes (4s, 999998us)
   mbr sig: 0x8449901c
 >> int.4: floppy
 >> int.5: edd
@@ -2623,7 +2622,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXSYSTM:
-  E: USEC_INITIALIZED=2826576
+  E: USEC_INITIALIZED=2764312
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/ICV0A12:00
@@ -2637,7 +2636,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2829115
+  E: USEC_INITIALIZED=2765691
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:01
@@ -2645,7 +2644,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:01
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2829244
+  E: USEC_INITIALIZED=2765829
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:02
@@ -2653,7 +2652,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:02
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2828867
+  E: USEC_INITIALIZED=2766236
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:03
@@ -2661,7 +2660,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:03
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2828300
+  E: USEC_INITIALIZED=2766061
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:04
@@ -2669,7 +2668,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:04
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2828652
+  E: USEC_INITIALIZED=2766655
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:05
@@ -2677,7 +2676,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:05
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2829924
+  E: USEC_INITIALIZED=2784763
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:06
@@ -2685,7 +2684,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:06
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2830383
+  E: USEC_INITIALIZED=2784907
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXCPU:07
@@ -2693,7 +2692,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXCPU:07
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXCPU:
-  E: USEC_INITIALIZED=2873465
+  E: USEC_INITIALIZED=2785535
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXPWRBN:00
@@ -2702,7 +2701,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=acpi
   E: DRIVER=button
   E: MODALIAS=acpi:LNXPWRBN:
-  E: USEC_INITIALIZED=2869632
+  E: USEC_INITIALIZED=2785064
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
@@ -2716,7 +2715,7 @@ Timeout waiting for PADO packets
   E: EV=3
   E: KEY=10000000000000 0
   E: MODALIAS=input:b0019v0000p0001e0000-e0,1,k74,ramlsfw
-  E: USEC_INITIALIZED=2879557
+  E: USEC_INITIALIZED=2795428
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-LNXPWRBN:00
@@ -2733,7 +2732,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event1
   E: MAJOR=13
   E: MINOR=65
-  E: USEC_INITIALIZED=3275192
+  E: USEC_INITIALIZED=2981666
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-LNXPWRBN:00
@@ -2752,7 +2751,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXSYBUS:
-  E: USEC_INITIALIZED=2869672
+  E: USEC_INITIALIZED=2785064
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/INT33A1:00
@@ -2772,7 +2771,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0A08:PNP0A03:
-  E: USEC_INITIALIZED=2871533
+  E: USEC_INITIALIZED=2787709
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/ABCD0000:00
@@ -2787,7 +2786,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=acpi
   E: DRIVER=video
   E: MODALIAS=acpi:LNXVIDEO:
-  E: USEC_INITIALIZED=2876205
+  E: USEC_INITIALIZED=2789056
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/device:51
@@ -2881,7 +2880,7 @@ Timeout waiting for PADO packets
   E: EV=3
   E: KEY=3e000b00000000 0 0 0
   E: MODALIAS=input:b0019v0000p0006e0000-e0,1,kE0,E1,E3,F1,F2,F3,F4,F5,ramlsfw
-  E: USEC_INITIALIZED=2884152
+  E: USEC_INITIALIZED=2807388
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-LNXVIDEO:00
@@ -2898,7 +2897,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event2
   E: MAJOR=13
   E: MINOR=66
-  E: USEC_INITIALIZED=3275197
+  E: USEC_INITIALIZED=2963067
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-LNXVIDEO:00
@@ -2917,7 +2916,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C01:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C01:
-  E: USEC_INITIALIZED=2877674
+  E: USEC_INITIALIZED=2800476
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C02:02
@@ -2925,7 +2924,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C02:02
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C02:
-  E: USEC_INITIALIZED=2872683
+  E: USEC_INITIALIZED=2796851
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00
@@ -2938,7 +2937,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/INT0800:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:INT0800:
-  E: USEC_INITIALIZED=2876295
+  E: USEC_INITIALIZED=2800288
   E: ID_VENDOR_FROM_DATABASE=Interphase Corporation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/INT3F0D:00
@@ -2946,7 +2945,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/INT3F0D:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:INT3F0D:PNP0C02:
-  E: USEC_INITIALIZED=2873368
+  E: USEC_INITIALIZED=2799262
   E: ID_VENDOR_FROM_DATABASE=Interphase Corporation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0000:00
@@ -2954,7 +2953,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0000:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0000:
-  E: USEC_INITIALIZED=2874364
+  E: USEC_INITIALIZED=2801527
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0100:00
@@ -2962,7 +2961,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0100:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0100:
-  E: USEC_INITIALIZED=2874643
+  E: USEC_INITIALIZED=2815792
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0103:00
@@ -2970,7 +2969,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0103:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0103:
-  E: USEC_INITIALIZED=2874336
+  E: USEC_INITIALIZED=2807781
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0200:00
@@ -2978,7 +2977,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0200:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0200:
-  E: USEC_INITIALIZED=2875150
+  E: USEC_INITIALIZED=2808909
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0B00:00
@@ -2986,7 +2985,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0B00:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0B00:
-  E: USEC_INITIALIZED=2875468
+  E: USEC_INITIALIZED=2809640
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C02:00
@@ -2994,7 +2993,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C02:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C02:
-  E: USEC_INITIALIZED=2875669
+  E: USEC_INITIALIZED=2810619
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C02:01
@@ -3002,7 +3001,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C02:01
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C02:
-  E: USEC_INITIALIZED=2875755
+  E: USEC_INITIALIZED=2816581
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C04:00
@@ -3010,7 +3009,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C04:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C04:
-  E: USEC_INITIALIZED=2876270
+  E: USEC_INITIALIZED=2813801
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/PNP0C09:00
@@ -3509,7 +3508,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=acpi
   E: DRIVER=button
   E: MODALIAS=acpi:PNP0C0C:
-  E: USEC_INITIALIZED=2871522
+  E: USEC_INITIALIZED=2787815
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
@@ -3523,7 +3522,7 @@ Timeout waiting for PADO packets
   E: EV=3
   E: KEY=10000000000000 0
   E: MODALIAS=input:b0019v0000p0001e0000-e0,1,k74,ramlsfw
-  E: USEC_INITIALIZED=2913286
+  E: USEC_INITIALIZED=2855653
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-PNP0C0C:00
@@ -3540,7 +3539,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event0
   E: MAJOR=13
   E: MINOR=64
-  E: USEC_INITIALIZED=3275195
+  E: USEC_INITIALIZED=2963057
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=acpi-PNP0C0C:00
@@ -3565,7 +3564,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2913718
+  E: USEC_INITIALIZED=2787834
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:01
@@ -3573,7 +3572,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:01
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2914427
+  E: USEC_INITIALIZED=2787834
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:02
@@ -3581,7 +3580,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:02
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2914430
+  E: USEC_INITIALIZED=2789432
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:03
@@ -3589,7 +3588,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:03
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2914240
+  E: USEC_INITIALIZED=2790072
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:04
@@ -3597,7 +3596,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:04
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2914959
+  E: USEC_INITIALIZED=2789910
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:05
@@ -3605,7 +3604,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:05
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2915318
+  E: USEC_INITIALIZED=2853981
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:06
@@ -3613,7 +3612,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:06
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2915350
+  E: USEC_INITIALIZED=2854708
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:07
@@ -3621,7 +3620,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:07
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0F:
-  E: USEC_INITIALIZED=2915452
+  E: USEC_INITIALIZED=2857046
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01
@@ -3629,7 +3628,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:LNXSYBUS:
-  E: USEC_INITIALIZED=2869823
+  E: USEC_INITIALIZED=2786126
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXPOWER:00
@@ -3668,7 +3667,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=acpi
   E: DRIVER=thermal
   E: MODALIAS=acpi:LNXTHERM:
-  E: USEC_INITIALIZED=2917033
+  E: USEC_INITIALIZED=2858095
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXTHERM:01
@@ -3677,7 +3676,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=acpi
   E: DRIVER=thermal
   E: MODALIAS=acpi:LNXTHERM:
-  E: USEC_INITIALIZED=2916991
+  E: USEC_INITIALIZED=2858481
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:00
@@ -3685,7 +3684,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:00
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2926055
+  E: USEC_INITIALIZED=2858981
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:01
@@ -3693,7 +3692,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:01
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2932950
+  E: USEC_INITIALIZED=2859860
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:02
@@ -3701,7 +3700,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:02
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2927777
+  E: USEC_INITIALIZED=2859497
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:03
@@ -3709,7 +3708,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:03
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2927946
+  E: USEC_INITIALIZED=2859703
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:04
@@ -3717,7 +3716,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:01/PNP0C0B:04
   E: SUBSYSTEM=acpi
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2928763
+  E: USEC_INITIALIZED=2860736
   E: ID_VENDOR_FROM_DATABASE=The Linux Foundation
   
   P: /devices/LNXSYSTM:00/NXP5442:00
@@ -3782,7 +3781,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:0C00
   E: PCI_SLOT_NAME=0000:00:00.0
   E: MODALIAS=pci:v00008086d00000C00sv00008086sd00000C00bc06sc00i00
-  E: USEC_INITIALIZED=2870385
+  E: USEC_INITIALIZED=2783581
   E: ID_PCI_CLASS_FROM_DATABASE=Bridge
   E: ID_PCI_SUBCLASS_FROM_DATABASE=Host bridge
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -3798,49 +3797,49 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:041E
   E: PCI_SLOT_NAME=0000:00:02.0
   E: MODALIAS=pci:v00008086d0000041Esv00008086sd0000041Ebc03sc00i00
-  E: USEC_INITIALIZED=2868660
+  E: USEC_INITIALIZED=2784127
   E: ID_PCI_CLASS_FROM_DATABASE=Display controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=VGA compatible controller
   E: ID_PCI_INTERFACE_FROM_DATABASE=VGA controller
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
   E: ID_MODEL_FROM_DATABASE=4th Generation Core Processor Family Integrated Graphics Controller
   
-  P: /devices/pci0000:00/0000:00:02.0/drm/card0
-  N: dri/card0
+  P: /devices/pci0000:00/0000:00:02.0/drm/card1
+  N: dri/card1
   L: 0
   S: dri/by-path/pci-0000:00:02.0-card
-  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0
+  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card1
   E: SUBSYSTEM=drm
-  E: DEVNAME=/dev/dri/card0
+  E: DEVNAME=/dev/dri/card1
   E: DEVTYPE=drm_minor
   E: MAJOR=226
-  E: MINOR=0
-  E: USEC_INITIALIZED=2940099
+  E: MINOR=1
+  E: USEC_INITIALIZED=2871882
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
   E: DEVLINKS=/dev/dri/by-path/pci-0000:00:02.0-card
-  E: TAGS=:master-of-seat:seat:uaccess:
-  E: CURRENT_TAGS=:master-of-seat:seat:uaccess:
+  E: TAGS=:uaccess:master-of-seat:seat:
+  E: CURRENT_TAGS=:uaccess:master-of-seat:seat:
   
-  P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
+  P: /devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1
   L: 0
-  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
+  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1
   E: SUBSYSTEM=drm
   E: DEVTYPE=drm_connector
-  E: USEC_INITIALIZED=2941152
+  E: USEC_INITIALIZED=2872833
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
   E: TAGS=:master-of-seat:seat:
   E: CURRENT_TAGS=:master-of-seat:seat:
   
-  P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
+  P: /devices/pci0000:00/0000:00:02.0/drm/card1/card1-VGA-1
   L: 0
-  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
+  E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card1/card1-VGA-1
   E: SUBSYSTEM=drm
   E: DEVTYPE=drm_connector
-  E: USEC_INITIALIZED=2941445
+  E: USEC_INITIALIZED=2872712
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=drm-pci-0000_00_02_0
@@ -3857,7 +3856,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=drm_minor
   E: MAJOR=226
   E: MINOR=128
-  E: USEC_INITIALIZED=2942967
+  E: USEC_INITIALIZED=2870980
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: DEVLINKS=/dev/dri/by-path/pci-0000:00:02.0-render
@@ -3870,7 +3869,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/fb0
   E: MAJOR=29
   E: MINOR=0
-  E: USEC_INITIALIZED=2934146
+  E: USEC_INITIALIZED=2861771
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: ID_FOR_SEAT=graphics-pci-0000_00_02_0
@@ -3917,7 +3916,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:0C0C
   E: PCI_SLOT_NAME=0000:00:03.0
   E: MODALIAS=pci:v00008086d00000C0Csv00008086sd00000C0Cbc04sc03i00
-  E: USEC_INITIALIZED=2869221
+  E: USEC_INITIALIZED=2782159
   E: ID_PCI_CLASS_FROM_DATABASE=Multimedia controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=Audio device
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -3934,7 +3933,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0
   E: SUBSYSTEM=sound
-  E: USEC_INITIALIZED=3472578
+  E: USEC_INITIALIZED=3278116
   E: ID_PATH=pci-0000:00:03.0
   E: ID_PATH_TAG=pci-0000_00_03_0
   E: ID_FOR_SEAT=sound-pci-0000_00_03_0
@@ -3958,7 +3957,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/hwC0D0
   E: MAJOR=116
   E: MINOR=7
-  E: USEC_INITIALIZED=3474404
+  E: USEC_INITIALIZED=3279232
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -3967,13 +3966,13 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input10
   E: SUBSYSTEM=input
   E: PRODUCT=0/0/0/0
-  E: NAME="HDA Intel HDMI HDMI/DP,pcm=10"
+  E: NAME="HDA Intel HDMI HDMI/DP,pcm=9"
   E: PHYS="ALSA"
   E: PROP=0
   E: EV=21
   E: SW=140
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,8,
-  E: USEC_INITIALIZED=3483621
+  E: USEC_INITIALIZED=3281220
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -3990,7 +3989,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event10
   E: MAJOR=13
   E: MINOR=74
-  E: USEC_INITIALIZED=3511908
+  E: USEC_INITIALIZED=3308724
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -3999,18 +3998,18 @@ Timeout waiting for PADO packets
   E: TAGS=:power-switch:
   E: CURRENT_TAGS=:power-switch:
   
-  P: /devices/pci0000:00/0000:00:03.0/sound/card0/input6
+  P: /devices/pci0000:00/0000:00:03.0/sound/card0/input11
   L: 0
-  E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input6
+  E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input11
   E: SUBSYSTEM=input
   E: PRODUCT=0/0/0/0
-  E: NAME="HDA Intel HDMI HDMI/DP,pcm=3"
+  E: NAME="HDA Intel HDMI HDMI/DP,pcm=10"
   E: PHYS="ALSA"
   E: PROP=0
   E: EV=21
   E: SW=140
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,8,
-  E: USEC_INITIALIZED=3475523
+  E: USEC_INITIALIZED=3288975
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4019,15 +4018,15 @@ Timeout waiting for PADO packets
   E: TAGS=:seat:
   E: CURRENT_TAGS=:seat:
   
-  P: /devices/pci0000:00/0000:00:03.0/sound/card0/input6/event6
-  N: input/event6
+  P: /devices/pci0000:00/0000:00:03.0/sound/card0/input11/event11
+  N: input/event11
   L: 0
-  E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input6/event6
+  E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input11/event11
   E: SUBSYSTEM=input
-  E: DEVNAME=/dev/input/event6
+  E: DEVNAME=/dev/input/event11
   E: MAJOR=13
-  E: MINOR=70
-  E: USEC_INITIALIZED=3508657
+  E: MINOR=75
+  E: USEC_INITIALIZED=3317663
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4041,13 +4040,13 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input7
   E: SUBSYSTEM=input
   E: PRODUCT=0/0/0/0
-  E: NAME="HDA Intel HDMI HDMI/DP,pcm=7"
+  E: NAME="HDA Intel HDMI HDMI/DP,pcm=3"
   E: PHYS="ALSA"
   E: PROP=0
   E: EV=21
   E: SW=140
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,8,
-  E: USEC_INITIALIZED=3482428
+  E: USEC_INITIALIZED=3280492
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4064,7 +4063,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event7
   E: MAJOR=13
   E: MINOR=71
-  E: USEC_INITIALIZED=3511881
+  E: USEC_INITIALIZED=3317661
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4078,13 +4077,13 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input8
   E: SUBSYSTEM=input
   E: PRODUCT=0/0/0/0
-  E: NAME="HDA Intel HDMI HDMI/DP,pcm=8"
+  E: NAME="HDA Intel HDMI HDMI/DP,pcm=7"
   E: PHYS="ALSA"
   E: PROP=0
   E: EV=21
   E: SW=140
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,8,
-  E: USEC_INITIALIZED=3483604
+  E: USEC_INITIALIZED=3284389
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4101,7 +4100,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event8
   E: MAJOR=13
   E: MINOR=72
-  E: USEC_INITIALIZED=3508906
+  E: USEC_INITIALIZED=3324094
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4115,13 +4114,13 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:03.0/sound/card0/input9
   E: SUBSYSTEM=input
   E: PRODUCT=0/0/0/0
-  E: NAME="HDA Intel HDMI HDMI/DP,pcm=9"
+  E: NAME="HDA Intel HDMI HDMI/DP,pcm=8"
   E: PHYS="ALSA"
   E: PROP=0
   E: EV=21
   E: SW=140
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,8,
-  E: USEC_INITIALIZED=3483620
+  E: USEC_INITIALIZED=3288517
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4138,7 +4137,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event9
   E: MAJOR=13
   E: MINOR=73
-  E: USEC_INITIALIZED=3509522
+  E: USEC_INITIALIZED=3323672
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:03.0
@@ -4156,7 +4155,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=pcm
   E: MAJOR=116
   E: MINOR=6
-  E: USEC_INITIALIZED=3474509
+  E: USEC_INITIALIZED=3279253
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -4169,7 +4168,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=pcm
   E: MAJOR=116
   E: MINOR=2
-  E: USEC_INITIALIZED=3474493
+  E: USEC_INITIALIZED=3283459
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -4182,7 +4181,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=pcm
   E: MAJOR=116
   E: MINOR=3
-  E: USEC_INITIALIZED=3474386
+  E: USEC_INITIALIZED=3279292
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -4195,7 +4194,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=pcm
   E: MAJOR=116
   E: MINOR=4
-  E: USEC_INITIALIZED=3474487
+  E: USEC_INITIALIZED=3279236
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -4208,7 +4207,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=pcm
   E: MAJOR=116
   E: MINOR=5
-  E: USEC_INITIALIZED=3474528
+  E: USEC_INITIALIZED=3283472
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -4221,14 +4220,14 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/controlC0
   E: MAJOR=116
   E: MINOR=8
-  E: USEC_INITIALIZED=3571701
+  E: USEC_INITIALIZED=3382621
   E: ID_PATH=pci-0000:00:03.0
   E: ID_PATH_TAG=pci-0000_00_03_0
   E: SYSTEMD_WANTS=sound.target
   E: SYSTEMD_USER_WANTS=sound.target
   E: DEVLINKS=/dev/snd/by-path/pci-0000:00:03.0
-  E: TAGS=:uaccess:systemd:
-  E: CURRENT_TAGS=:uaccess:systemd:
+  E: TAGS=:systemd:uaccess:
+  E: CURRENT_TAGS=:systemd:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0
   L: 0
@@ -4240,7 +4239,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C31
   E: PCI_SLOT_NAME=0000:00:14.0
   E: MODALIAS=pci:v00008086d00008C31sv00008086sd00008C31bc0Csc03i30
-  E: USEC_INITIALIZED=2868267
+  E: USEC_INITIALIZED=2783290
   E: ID_PCI_CLASS_FROM_DATABASE=Serial bus controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=USB controller
   E: ID_PCI_INTERFACE_FROM_DATABASE=XHCI
@@ -4255,21 +4254,21 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/bus/usb/003/001
   E: DEVTYPE=usb_device
   E: DRIVER=usb
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/1
   E: BUSNUM=003
   E: DEVNUM=001
   E: MAJOR=189
   E: MINOR=256
-  E: USEC_INITIALIZED=2942791
-  E: ID_VENDOR=Linux_5.16.14-247-tkg-pds_xhci-hcd
-  E: ID_VENDOR_ENC=Linux\x205.16.14-247-tkg-pds\x20xhci-hcd
+  E: USEC_INITIALIZED=2864013
+  E: ID_VENDOR=Linux_5.17.0-248-tkg-pds_xhci-hcd
+  E: ID_VENDOR_ENC=Linux\x205.17.0-248-tkg-pds\x20xhci-hcd
   E: ID_VENDOR_ID=1d6b
   E: ID_MODEL=xHCI_Host_Controller
   E: ID_MODEL_ENC=xHCI\x20Host\x20Controller
   E: ID_MODEL_ID=0002
-  E: ID_REVISION=0516
-  E: ID_SERIAL=Linux_5.16.14-247-tkg-pds_xhci-hcd_xHCI_Host_Controller_0000:00:14.0
+  E: ID_REVISION=0517
+  E: ID_SERIAL=Linux_5.17.0-248-tkg-pds_xhci-hcd_xHCI_Host_Controller_0000:00:14.0
   E: ID_SERIAL_SHORT=0000:00:14.0
   E: ID_BUS=usb
   E: ID_USB_INTERFACES=:090000:
@@ -4288,11 +4287,11 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=usb
   E: DEVTYPE=usb_interface
   E: DRIVER=hub
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/1
   E: INTERFACE=9/0/0
-  E: MODALIAS=usb:v1D6Bp0002d0516dc09dsc00dp01ic09isc00ip00in00
-  E: USEC_INITIALIZED=3250940
+  E: MODALIAS=usb:v1D6Bp0002d0517dc09dsc00dp01ic09isc00ip00in00
+  E: USEC_INITIALIZED=2906171
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_USB_PROTOCOL_FROM_DATABASE=Single TT
   E: ID_VENDOR_FROM_DATABASE=Linux Foundation
@@ -4315,7 +4314,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=005
   E: MAJOR=189
   E: MINOR=260
-  E: USEC_INITIALIZED=3329124
+  E: USEC_INITIALIZED=3082763
   E: ID_VENDOR=Generic
   E: ID_VENDOR_ENC=Generic
   E: ID_VENDOR_ID=1908
@@ -4340,7 +4339,7 @@ Timeout waiting for PADO packets
   E: TYPE=239/2/1
   E: INTERFACE=14/1/0
   E: MODALIAS=usb:v1908p2310d0100dcEFdsc02dp01ic0Eisc01ip00in00
-  E: USEC_INITIALIZED=3353628
+  E: USEC_INITIALIZED=3221692
   E: ID_USB_CLASS_FROM_DATABASE=Miscellaneous Device
   E: ID_USB_PROTOCOL_FROM_DATABASE=Interface Association
   E: ID_VENDOR_FROM_DATABASE=GEMBIRD
@@ -4358,7 +4357,7 @@ Timeout waiting for PADO packets
   E: EV=3
   E: KEY=100000 0 0 0
   E: MODALIAS=input:b0003v1908p2310e0100-e0,1,kD4,ramlsfw
-  E: USEC_INITIALIZED=3982996
+  E: USEC_INITIALIZED=3341749
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_VENDOR=Generic
@@ -4390,7 +4389,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event17
   E: MAJOR=13
   E: MINOR=81
-  E: USEC_INITIALIZED=4031134
+  E: USEC_INITIALIZED=3401842
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_VENDOR=Generic
@@ -4421,24 +4420,24 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/media0
   E: MAJOR=234
   E: MINOR=0
-  E: USEC_INITIALIZED=3982305
+  E: USEC_INITIALIZED=3340986
   E: ID_PATH=pci-0000:00:14.0-usb-0:10:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_10_1_0
   E: ID_FOR_SEAT=media-pci-0000_00_14_0-usb-0_10_1_0
-  E: TAGS=:seat:uaccess:
-  E: CURRENT_TAGS=:seat:uaccess:
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   N: video0
   L: 0
-  S: v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
   S: v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
+  S: v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   E: SUBSYSTEM=video4linux
   E: DEVNAME=/dev/video0
   E: MAJOR=81
   E: MINOR=0
-  E: USEC_INITIALIZED=4052758
+  E: USEC_INITIALIZED=3401497
   E: ID_V4L_VERSION=2
   E: ID_V4L_PRODUCT=USB2.0 PC CAMERA: USB2.0 PC CAM
   E: ID_V4L_CAPABILITIES=:capture:
@@ -4460,9 +4459,9 @@ Timeout waiting for PADO packets
   E: ID_FOR_SEAT=video4linux-pci-0000_00_14_0-usb-0_10_1_0
   E: COLORD_DEVICE=1
   E: COLORD_KIND=camera
-  E: DEVLINKS=/dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0 /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
-  E: TAGS=:seat:uaccess:
-  E: CURRENT_TAGS=:seat:uaccess:
+  E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0 /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video1
   N: video1
@@ -4474,7 +4473,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/video1
   E: MAJOR=81
   E: MINOR=1
-  E: USEC_INITIALIZED=4046100
+  E: USEC_INITIALIZED=3401579
   E: ID_V4L_VERSION=2
   E: ID_V4L_PRODUCT=USB2.0 PC CAMERA: USB2.0 PC CAM
   E: ID_V4L_CAPABILITIES=:
@@ -4497,8 +4496,8 @@ Timeout waiting for PADO packets
   E: COLORD_DEVICE=1
   E: COLORD_KIND=camera
   E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1 /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1
-  E: TAGS=:seat:uaccess:
-  E: CURRENT_TAGS=:seat:uaccess:
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.1
   L: 0
@@ -4510,7 +4509,7 @@ Timeout waiting for PADO packets
   E: TYPE=239/2/1
   E: INTERFACE=14/2/0
   E: MODALIAS=usb:v1908p2310d0100dcEFdsc02dp01ic0Eisc02ip00in01
-  E: USEC_INITIALIZED=3353222
+  E: USEC_INITIALIZED=3221693
   E: ID_USB_CLASS_FROM_DATABASE=Miscellaneous Device
   E: ID_USB_PROTOCOL_FROM_DATABASE=Interface Association
   E: ID_VENDOR_FROM_DATABASE=GEMBIRD
@@ -4527,7 +4526,7 @@ Timeout waiting for PADO packets
   E: TYPE=239/2/1
   E: INTERFACE=1/1/0
   E: MODALIAS=usb:v1908p2310d0100dcEFdsc02dp01ic01isc01ip00in02
-  E: USEC_INITIALIZED=3353253
+  E: USEC_INITIALIZED=3221538
   E: ID_USB_CLASS_FROM_DATABASE=Miscellaneous Device
   E: ID_USB_PROTOCOL_FROM_DATABASE=Interface Association
   E: ID_VENDOR_FROM_DATABASE=GEMBIRD
@@ -4538,7 +4537,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2/sound/card2
   E: SUBSYSTEM=sound
-  E: USEC_INITIALIZED=3981233
+  E: USEC_INITIALIZED=3339918
   E: ID_PATH=pci-0000:00:14.0-usb-0:10:1.2
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_10_1_2
   E: ID_FOR_SEAT=sound-pci-0000_00_14_0-usb-0_10_1_2
@@ -4572,22 +4571,22 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/pcmC2D0c
   E: DEVTYPE=pcm
   E: MAJOR=116
-  E: MINOR=9
-  E: USEC_INITIALIZED=3982625
+  E: MINOR=15
+  E: USEC_INITIALIZED=3341839
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2/sound/card2/controlC2
   N: snd/controlC2
   L: 0
-  S: snd/by-path/pci-0000:00:14.0-usb-0:10:1.2
   S: snd/by-id/usb-Generic_USB2.0_PC_CAMERA-02
+  S: snd/by-path/pci-0000:00:14.0-usb-0:10:1.2
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2/sound/card2/controlC2
   E: SUBSYSTEM=sound
   E: DEVNAME=/dev/snd/controlC2
   E: MAJOR=116
-  E: MINOR=10
-  E: USEC_INITIALIZED=4003049
+  E: MINOR=16
+  E: USEC_INITIALIZED=3395538
   E: ID_VENDOR=Generic
   E: ID_VENDOR_ENC=Generic
   E: ID_VENDOR_ID=1908
@@ -4605,9 +4604,9 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_10_1_2
   E: SYSTEMD_WANTS=sound.target
   E: SYSTEMD_USER_WANTS=sound.target
-  E: DEVLINKS=/dev/snd/by-path/pci-0000:00:14.0-usb-0:10:1.2 /dev/snd/by-id/usb-Generic_USB2.0_PC_CAMERA-02
-  E: TAGS=:uaccess:systemd:
-  E: CURRENT_TAGS=:uaccess:systemd:
+  E: DEVLINKS=/dev/snd/by-id/usb-Generic_USB2.0_PC_CAMERA-02 /dev/snd/by-path/pci-0000:00:14.0-usb-0:10:1.2
+  E: TAGS=:systemd:uaccess:
+  E: CURRENT_TAGS=:systemd:uaccess:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.3
   L: 0
@@ -4619,7 +4618,7 @@ Timeout waiting for PADO packets
   E: TYPE=239/2/1
   E: INTERFACE=1/2/0
   E: MODALIAS=usb:v1908p2310d0100dcEFdsc02dp01ic01isc02ip00in03
-  E: USEC_INITIALIZED=3354210
+  E: USEC_INITIALIZED=3221719
   E: ID_USB_CLASS_FROM_DATABASE=Miscellaneous Device
   E: ID_USB_PROTOCOL_FROM_DATABASE=Interface Association
   E: ID_VENDOR_FROM_DATABASE=GEMBIRD
@@ -4640,7 +4639,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=002
   E: MAJOR=189
   E: MINOR=257
-  E: USEC_INITIALIZED=3328422
+  E: USEC_INITIALIZED=2958839
   E: ID_VENDOR=1bcf
   E: ID_VENDOR_ENC=1bcf
   E: ID_VENDOR_ID=1bcf
@@ -4669,7 +4668,7 @@ Timeout waiting for PADO packets
   E: TYPE=0/0/0
   E: INTERFACE=3/1/2
   E: MODALIAS=usb:v1BCFp0005d0090dc00dsc00dp00ic03isc01ip02in00
-  E: USEC_INITIALIZED=3353271
+  E: USEC_INITIALIZED=2969532
   E: ID_VENDOR_FROM_DATABASE=Sunplus Innovation Technology Inc.
   E: ID_MODEL_FROM_DATABASE=Optical Mouse
   E: ID_PATH=pci-0000:00:14.0-usb-0:5:1.0
@@ -4709,7 +4708,7 @@ Timeout waiting for PADO packets
   E: REL=1943
   E: MSC=10
   E: MODALIAS=input:b0003v1BCFp0005e0110-e0,1,2,4,k110,111,112,113,114,r0,1,6,8,B,C,am4,lsfw
-  E: USEC_INITIALIZED=3355461
+  E: USEC_INITIALIZED=2978491
   E: ID_INPUT=1
   E: ID_INPUT_MOUSE=1
   E: ID_VENDOR=1bcf
@@ -4741,7 +4740,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event3
   E: MAJOR=13
   E: MINOR=67
-  E: USEC_INITIALIZED=3519599
+  E: USEC_INITIALIZED=3109658
   E: ID_INPUT=1
   E: ID_INPUT_MOUSE=1
   E: ID_VENDOR=1bcf
@@ -4772,7 +4771,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/mouse0
   E: MAJOR=13
   E: MINOR=32
-  E: USEC_INITIALIZED=3440309
+  E: USEC_INITIALIZED=3161251
   E: ID_INPUT=1
   E: ID_INPUT_MOUSE=1
   E: ID_VENDOR=1bcf
@@ -4808,7 +4807,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=003
   E: MAJOR=189
   E: MINOR=258
-  E: USEC_INITIALIZED=3361737
+  E: USEC_INITIALIZED=2979017
   E: ID_VENDOR=Microsoft
   E: ID_VENDOR_ENC=Microsoft
   E: ID_VENDOR_ID=045e
@@ -4826,8 +4825,8 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6
   E: ID_FOR_SEAT=usb-pci-0000_00_14_0-usb-0_6
   E: DEVLINKS=/dev/android /dev/android6
-  E: TAGS=:seat:uaccess:
-  E: CURRENT_TAGS=:seat:uaccess:
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0
   L: 0
@@ -4839,7 +4838,7 @@ Timeout waiting for PADO packets
   E: TYPE=0/0/0
   E: INTERFACE=3/1/1
   E: MODALIAS=usb:v045Ep0750d0110dc00dsc00dp00ic03isc01ip01in00
-  E: USEC_INITIALIZED=3371350
+  E: USEC_INITIALIZED=2991439
   E: ID_VENDOR_FROM_DATABASE=Microsoft Corp.
   E: ID_MODEL_FROM_DATABASE=Wired Keyboard 600
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.0
@@ -4879,7 +4878,7 @@ Timeout waiting for PADO packets
   E: MSC=10
   E: LED=7
   E: MODALIAS=input:b0003v045Ep0750e0111-e0,1,4,11,14,k71,72,73,74,75,77,79,7A,7B,7C,7D,7E,7F,80,81,82,83,84,85,86,87,88,89,8A,8C,8E,96,98,9E,9F,A1,A3,A4,A5,A6,AD,B0,B1,B2,B3,B4,B7,B8,B9,BA,BB,BC,BD,BE,BF,C0,C1,C2,F0,ram4,l0,1,2,sfw
-  E: USEC_INITIALIZED=3537300
+  E: USEC_INITIALIZED=3246652
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_INPUT_KEYBOARD=1
@@ -4905,14 +4904,14 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/event5
   N: input/event5
   L: 0
-  S: input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd
   S: input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd
+  S: input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/event5
   E: SUBSYSTEM=input
   E: DEVNAME=/dev/input/event5
   E: MAJOR=13
   E: MINOR=69
-  E: USEC_INITIALIZED=3579707
+  E: USEC_INITIALIZED=3310985
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_INPUT_KEYBOARD=1
@@ -4932,7 +4931,7 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_0
   E: LIBINPUT_DEVICE_GROUP=3/45e/750:usb-0000:00:14.0-6
-  E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd
+  E: DEVLINKS=/dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd
   E: TAGS=:power-switch:
   E: CURRENT_TAGS=:power-switch:
   
@@ -4940,7 +4939,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::capslock
   E: SUBSYSTEM=leds
-  E: USEC_INITIALIZED=3542399
+  E: USEC_INITIALIZED=3248268
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_0
   E: ID_FOR_SEAT=leds-pci-0000_00_14_0-usb-0_6_1_0
@@ -4951,7 +4950,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::numlock
   E: SUBSYSTEM=leds
-  E: USEC_INITIALIZED=3541011
+  E: USEC_INITIALIZED=3254222
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_0
   E: ID_FOR_SEAT=leds-pci-0000_00_14_0-usb-0_6_1_0
@@ -4962,7 +4961,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::scrolllock
   E: SUBSYSTEM=leds
-  E: USEC_INITIALIZED=3539073
+  E: USEC_INITIALIZED=3248210
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_0
   E: ID_FOR_SEAT=leds-pci-0000_00_14_0-usb-0_6_1_0
@@ -4979,7 +4978,7 @@ Timeout waiting for PADO packets
   E: TYPE=0/0/0
   E: INTERFACE=3/0/0
   E: MODALIAS=usb:v045Ep0750d0110dc00dsc00dp00ic03isc00ip00in01
-  E: USEC_INITIALIZED=3371198
+  E: USEC_INITIALIZED=2991866
   E: ID_VENDOR_FROM_DATABASE=Microsoft Corp.
   E: ID_MODEL_FROM_DATABASE=Wired Keyboard 600
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.1
@@ -5005,9 +5004,9 @@ Timeout waiting for PADO packets
   E: MAJOR=237
   E: MINOR=2
   
-  P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11
+  P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
   L: 0
-  E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11
+  E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
   E: SUBSYSTEM=input
   E: PRODUCT=3/45e/750/111
   E: NAME="Microsoft Wired Keyboard 600"
@@ -5020,7 +5019,7 @@ Timeout waiting for PADO packets
   E: ABS=10100000000
   E: MSC=10
   E: MODALIAS=input:b0003v045Ep0750e0111-e0,1,2,3,4,14,k71,72,73,74,75,77,78,79,7A,7B,7C,7D,7E,7F,80,81,82,83,84,85,86,87,88,89,8A,8B,8C,8E,8F,90,94,95,96,98,9B,9C,9E,9F,A1,A3,A4,A5,A6,A7,A8,A9,AB,AC,AD,AE,B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,BA,BB,BC,BD,BE,BF,C0,C1,C2,CC,CE,CF,D0,D1,D2,D4,D8,D9,DB,DF,E0,E1,E3,E4,E5,E6,E7,E8,E9,EA,EB,F0,F1,F4,100,161,162,164,166,16A,16E,172,174,176,177,178,179,17A,17B,17C,17D,17F,180,182,183,185,188,189,18C,18D,18E,18F,190,191,192,193,195,197,198,199,19A,19C,1A0,1A1,1A2,1A3,1A4,1A5,1A6,1A7,1A8,1A9,1AA,1AB,1AC,1AD,1AE,1AF,1B0,1B1,1B6,1B7,1BA,240,241,242,243,244,245,246,247,249,24A,250,251,260,261,262,263,264,265,r6,C,a20,28,m4,lsfw
-  E: USEC_INITIALIZED=3537295
+  E: USEC_INITIALIZED=3248446
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_INPUT_KEYBOARD=1
@@ -5043,17 +5042,17 @@ Timeout waiting for PADO packets
   E: TAGS=:seat:
   E: CURRENT_TAGS=:seat:
   
-  P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11/event11
-  N: input/event11
+  P: /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
+  N: input/event6
   L: 0
-  S: input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
   S: input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
-  E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11/event11
+  S: input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
   E: SUBSYSTEM=input
-  E: DEVNAME=/dev/input/event11
+  E: DEVNAME=/dev/input/event6
   E: MAJOR=13
-  E: MINOR=75
-  E: USEC_INITIALIZED=3693742
+  E: MINOR=70
+  E: USEC_INITIALIZED=3328379
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_INPUT_KEYBOARD=1
@@ -5073,7 +5072,7 @@ Timeout waiting for PADO packets
   E: ID_PATH=pci-0000:00:14.0-usb-0:6:1.1
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_6_1_1
   E: LIBINPUT_DEVICE_GROUP=3/45e/750:usb-0000:00:14.0-6
-  E: DEVLINKS=/dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
+  E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
   E: TAGS=:power-switch:
   E: CURRENT_TAGS=:power-switch:
   
@@ -5096,7 +5095,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=004
   E: MAJOR=189
   E: MINOR=259
-  E: USEC_INITIALIZED=3257087
+  E: USEC_INITIALIZED=2908137
   E: ID_VENDOR=Realtek
   E: ID_VENDOR_ENC=Realtek
   E: ID_VENDOR_ID=0bda
@@ -5122,7 +5121,7 @@ Timeout waiting for PADO packets
   E: TYPE=224/1/1
   E: INTERFACE=224/1/1
   E: MODALIAS=usb:v0BDAp8771d0200dcE0dsc01dp01icE0isc01ip01in00
-  E: USEC_INITIALIZED=3319775
+  E: USEC_INITIALIZED=2945822
   E: ID_USB_CLASS_FROM_DATABASE=Wireless
   E: ID_USB_SUBCLASS_FROM_DATABASE=Radio Frequency
   E: ID_USB_PROTOCOL_FROM_DATABASE=Bluetooth
@@ -5135,7 +5134,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-9/3-9:1.0/bluetooth/hci0
   E: SUBSYSTEM=bluetooth
   E: DEVTYPE=host
-  E: USEC_INITIALIZED=4035383
+  E: USEC_INITIALIZED=3459290
   E: SYSTEMD_ALIAS=/sys/subsystem/bluetooth/devices/hci0
   E: SYSTEMD_WANTS=bluetooth.target
   E: SYSTEMD_USER_WANTS=bluetooth.target
@@ -5150,7 +5149,7 @@ Timeout waiting for PADO packets
   E: RFKILL_TYPE=bluetooth
   E: RFKILL_STATE=1
   E: RFKILL_HW_BLOCK_REASON=0x0
-  E: USEC_INITIALIZED=4036342
+  E: USEC_INITIALIZED=3460425
   E: SYSTEMD_RFKILL=1
   E: ID_PATH=pci-0000:00:14.0-usb-0:9:1.0
   E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_9_1_0
@@ -5165,7 +5164,7 @@ Timeout waiting for PADO packets
   E: TYPE=224/1/1
   E: INTERFACE=224/1/1
   E: MODALIAS=usb:v0BDAp8771d0200dcE0dsc01dp01icE0isc01ip01in01
-  E: USEC_INITIALIZED=3319783
+  E: USEC_INITIALIZED=2954112
   E: ID_USB_CLASS_FROM_DATABASE=Wireless
   E: ID_USB_SUBCLASS_FROM_DATABASE=Radio Frequency
   E: ID_USB_PROTOCOL_FROM_DATABASE=Bluetooth
@@ -5181,21 +5180,21 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/bus/usb/004/001
   E: DEVTYPE=usb_device
   E: DRIVER=usb
-  E: PRODUCT=1d6b/3/516
+  E: PRODUCT=1d6b/3/517
   E: TYPE=9/0/3
   E: BUSNUM=004
   E: DEVNUM=001
   E: MAJOR=189
   E: MINOR=384
-  E: USEC_INITIALIZED=2939254
-  E: ID_VENDOR=Linux_5.16.14-247-tkg-pds_xhci-hcd
-  E: ID_VENDOR_ENC=Linux\x205.16.14-247-tkg-pds\x20xhci-hcd
+  E: USEC_INITIALIZED=2865047
+  E: ID_VENDOR=Linux_5.17.0-248-tkg-pds_xhci-hcd
+  E: ID_VENDOR_ENC=Linux\x205.17.0-248-tkg-pds\x20xhci-hcd
   E: ID_VENDOR_ID=1d6b
   E: ID_MODEL=xHCI_Host_Controller
   E: ID_MODEL_ENC=xHCI\x20Host\x20Controller
   E: ID_MODEL_ID=0003
-  E: ID_REVISION=0516
-  E: ID_SERIAL=Linux_5.16.14-247-tkg-pds_xhci-hcd_xHCI_Host_Controller_0000:00:14.0
+  E: ID_REVISION=0517
+  E: ID_SERIAL=Linux_5.17.0-248-tkg-pds_xhci-hcd_xHCI_Host_Controller_0000:00:14.0
   E: ID_SERIAL_SHORT=0000:00:14.0
   E: ID_BUS=usb
   E: ID_USB_INTERFACES=:090000:
@@ -5214,11 +5213,11 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=usb
   E: DEVTYPE=usb_interface
   E: DRIVER=hub
-  E: PRODUCT=1d6b/3/516
+  E: PRODUCT=1d6b/3/517
   E: TYPE=9/0/3
   E: INTERFACE=9/0/0
-  E: MODALIAS=usb:v1D6Bp0003d0516dc09dsc00dp03ic09isc00ip00in00
-  E: USEC_INITIALIZED=3243567
+  E: MODALIAS=usb:v1D6Bp0003d0517dc09dsc00dp03ic09isc00ip00in00
+  E: USEC_INITIALIZED=2905620
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_VENDOR_FROM_DATABASE=Linux Foundation
   E: ID_AUTOSUSPEND=1
@@ -5241,7 +5240,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C3A
   E: PCI_SLOT_NAME=0000:00:16.0
   E: MODALIAS=pci:v00008086d00008C3Asv00008086sd00008C3Abc07sc80i00
-  E: USEC_INITIALIZED=2867656
+  E: USEC_INITIALIZED=2782746
   E: ID_PCI_CLASS_FROM_DATABASE=Communication controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=Communication controller
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -5349,7 +5348,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C2D
   E: PCI_SLOT_NAME=0000:00:1a.0
   E: MODALIAS=pci:v00008086d00008C2Dsv00008086sd00008C2Dbc0Csc03i20
-  E: USEC_INITIALIZED=2868818
+  E: USEC_INITIALIZED=2784381
   E: ID_PCI_CLASS_FROM_DATABASE=Serial bus controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=USB controller
   E: ID_PCI_INTERFACE_FROM_DATABASE=EHCI
@@ -5364,21 +5363,21 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/bus/usb/001/001
   E: DEVTYPE=usb_device
   E: DRIVER=usb
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/0
   E: BUSNUM=001
   E: DEVNUM=001
   E: MAJOR=189
   E: MINOR=0
-  E: USEC_INITIALIZED=2942621
-  E: ID_VENDOR=Linux_5.16.14-247-tkg-pds_ehci_hcd
-  E: ID_VENDOR_ENC=Linux\x205.16.14-247-tkg-pds\x20ehci_hcd
+  E: USEC_INITIALIZED=2864595
+  E: ID_VENDOR=Linux_5.17.0-248-tkg-pds_ehci_hcd
+  E: ID_VENDOR_ENC=Linux\x205.17.0-248-tkg-pds\x20ehci_hcd
   E: ID_VENDOR_ID=1d6b
   E: ID_MODEL=EHCI_Host_Controller
   E: ID_MODEL_ENC=EHCI\x20Host\x20Controller
   E: ID_MODEL_ID=0002
-  E: ID_REVISION=0516
-  E: ID_SERIAL=Linux_5.16.14-247-tkg-pds_ehci_hcd_EHCI_Host_Controller_0000:00:1a.0
+  E: ID_REVISION=0517
+  E: ID_SERIAL=Linux_5.17.0-248-tkg-pds_ehci_hcd_EHCI_Host_Controller_0000:00:1a.0
   E: ID_SERIAL_SHORT=0000:00:1a.0
   E: ID_BUS=usb
   E: ID_USB_INTERFACES=:090000:
@@ -5397,11 +5396,11 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=usb
   E: DEVTYPE=usb_interface
   E: DRIVER=hub
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/0
   E: INTERFACE=9/0/0
-  E: MODALIAS=usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00
-  E: USEC_INITIALIZED=3256018
+  E: MODALIAS=usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00
+  E: USEC_INITIALIZED=2905430
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_USB_PROTOCOL_FROM_DATABASE=Full speed (or root) hub
   E: ID_VENDOR_FROM_DATABASE=Linux Foundation
@@ -5424,7 +5423,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=002
   E: MAJOR=189
   E: MINOR=1
-  E: USEC_INITIALIZED=3257914
+  E: USEC_INITIALIZED=2907342
   E: ID_VENDOR=8087
   E: ID_VENDOR_ENC=8087
   E: ID_VENDOR_ID=8087
@@ -5453,7 +5452,7 @@ Timeout waiting for PADO packets
   E: TYPE=9/0/1
   E: INTERFACE=9/0/0
   E: MODALIAS=usb:v8087p8008d0005dc09dsc00dp01ic09isc00ip00in00
-  E: USEC_INITIALIZED=3265616
+  E: USEC_INITIALIZED=2914241
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_USB_PROTOCOL_FROM_DATABASE=Single TT
   E: ID_VENDOR_FROM_DATABASE=Intel Corp.
@@ -5476,7 +5475,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C20
   E: PCI_SLOT_NAME=0000:00:1b.0
   E: MODALIAS=pci:v00008086d00008C20sv00008086sd00008C20bc04sc03i00
-  E: USEC_INITIALIZED=2868209
+  E: USEC_INITIALIZED=2782643
   E: ID_PCI_CLASS_FROM_DATABASE=Multimedia controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=Audio device
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -5493,7 +5492,7 @@ Timeout waiting for PADO packets
   L: 0
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card1
   E: SUBSYSTEM=sound
-  E: USEC_INITIALIZED=3681141
+  E: USEC_INITIALIZED=3301559
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: ID_FOR_SEAT=sound-pci-0000_00_1b_0
@@ -5516,8 +5515,8 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=sound
   E: DEVNAME=/dev/snd/hwC1D0
   E: MAJOR=116
-  E: MINOR=15
-  E: USEC_INITIALIZED=3683603
+  E: MINOR=13
+  E: USEC_INITIALIZED=3303466
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -5532,7 +5531,7 @@ Timeout waiting for PADO packets
   E: EV=21
   E: SW=10
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw4,
-  E: USEC_INITIALIZED=3691370
+  E: USEC_INITIALIZED=3305066
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5549,7 +5548,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event12
   E: MAJOR=13
   E: MINOR=76
-  E: USEC_INITIALIZED=3725007
+  E: USEC_INITIALIZED=3343058
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5569,7 +5568,7 @@ Timeout waiting for PADO packets
   E: EV=21
   E: SW=10
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw4,
-  E: USEC_INITIALIZED=3684153
+  E: USEC_INITIALIZED=3302756
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5586,7 +5585,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event13
   E: MAJOR=13
   E: MINOR=77
-  E: USEC_INITIALIZED=3721903
+  E: USEC_INITIALIZED=3325614
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5606,7 +5605,7 @@ Timeout waiting for PADO packets
   E: EV=21
   E: SW=2000
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfwD,
-  E: USEC_INITIALIZED=3689976
+  E: USEC_INITIALIZED=3304676
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5623,7 +5622,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event14
   E: MAJOR=13
   E: MINOR=78
-  E: USEC_INITIALIZED=3721587
+  E: USEC_INITIALIZED=3334041
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5643,7 +5642,7 @@ Timeout waiting for PADO packets
   E: EV=21
   E: SW=40
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw6,
-  E: USEC_INITIALIZED=3693309
+  E: USEC_INITIALIZED=3304998
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5660,7 +5659,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event15
   E: MAJOR=13
   E: MINOR=79
-  E: USEC_INITIALIZED=3725240
+  E: USEC_INITIALIZED=3333450
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5680,7 +5679,7 @@ Timeout waiting for PADO packets
   E: EV=21
   E: SW=4
   E: MODALIAS=input:b0000v0000p0000e0000-e0,5,kramlsfw2,
-  E: USEC_INITIALIZED=3695023
+  E: USEC_INITIALIZED=3303912
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5697,7 +5696,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event16
   E: MAJOR=13
   E: MINOR=80
-  E: USEC_INITIALIZED=3723740
+  E: USEC_INITIALIZED=3333789
   E: ID_INPUT=1
   E: ID_INPUT_SWITCH=1
   E: ID_PATH=pci-0000:00:1b.0
@@ -5714,8 +5713,8 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/pcmC1D0c
   E: DEVTYPE=pcm
   E: MAJOR=116
-  E: MINOR=12
-  E: USEC_INITIALIZED=3688689
+  E: MINOR=10
+  E: USEC_INITIALIZED=3302510
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -5727,8 +5726,8 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/pcmC1D0p
   E: DEVTYPE=pcm
   E: MAJOR=116
-  E: MINOR=11
-  E: USEC_INITIALIZED=3682251
+  E: MINOR=9
+  E: USEC_INITIALIZED=3302495
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -5740,8 +5739,8 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/pcmC1D1p
   E: DEVTYPE=pcm
   E: MAJOR=116
-  E: MINOR=13
-  E: USEC_INITIALIZED=3683433
+  E: MINOR=11
+  E: USEC_INITIALIZED=3303577
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -5753,8 +5752,8 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/pcmC1D2c
   E: DEVTYPE=pcm
   E: MAJOR=116
-  E: MINOR=14
-  E: USEC_INITIALIZED=3682408
+  E: MINOR=12
+  E: USEC_INITIALIZED=3303301
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -5766,15 +5765,15 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=sound
   E: DEVNAME=/dev/snd/controlC1
   E: MAJOR=116
-  E: MINOR=16
-  E: USEC_INITIALIZED=3702222
+  E: MINOR=14
+  E: USEC_INITIALIZED=3385320
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: SYSTEMD_WANTS=sound.target
   E: SYSTEMD_USER_WANTS=sound.target
   E: DEVLINKS=/dev/snd/by-path/pci-0000:00:1b.0
-  E: TAGS=:uaccess:systemd:
-  E: CURRENT_TAGS=:uaccess:systemd:
+  E: TAGS=:systemd:uaccess:
+  E: CURRENT_TAGS=:systemd:uaccess:
   
   P: /devices/pci0000:00/0000:00:1c.0
   L: 0
@@ -5786,7 +5785,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C10
   E: PCI_SLOT_NAME=0000:00:1c.0
   E: MODALIAS=pci:v00008086d00008C10sv00008086sd00008C10bc06sc04i00
-  E: USEC_INITIALIZED=2869783
+  E: USEC_INITIALIZED=2783907
   E: ID_PCI_CLASS_FROM_DATABASE=Bridge
   E: ID_PCI_SUBCLASS_FROM_DATABASE=PCI bridge
   E: ID_PCI_INTERFACE_FROM_DATABASE=Normal decode
@@ -5825,7 +5824,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C14
   E: PCI_SLOT_NAME=0000:00:1c.2
   E: MODALIAS=pci:v00008086d00008C14sv00008086sd00008C14bc06sc04i00
-  E: USEC_INITIALIZED=2867676
+  E: USEC_INITIALIZED=2783736
   E: ID_PCI_CLASS_FROM_DATABASE=Bridge
   E: ID_PCI_SUBCLASS_FROM_DATABASE=PCI bridge
   E: ID_PCI_INTERFACE_FROM_DATABASE=Normal decode
@@ -5853,7 +5852,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=10EC:0123
   E: PCI_SLOT_NAME=0000:02:00.0
   E: MODALIAS=pci:v000010ECd00008168sv000010ECsd00000123bc02sc00i00
-  E: USEC_INITIALIZED=2945310
+  E: USEC_INITIALIZED=2869157
   E: ID_PCI_CLASS_FROM_DATABASE=Network controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=Ethernet controller
   E: ID_VENDOR_FROM_DATABASE=Realtek Semiconductor Co., Ltd.
@@ -5877,7 +5876,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=net
   E: INTERFACE=enp2s0
   E: IFINDEX=2
-  E: USEC_INITIALIZED=3377133
+  E: USEC_INITIALIZED=3152819
   E: ID_NET_NAMING_SCHEME=v250
   E: ID_NET_NAME_MAC=enx00e04cf551d8
   E: ID_OUI_FROM_DATABASE=REALTEK SEMICONDUCTOR CORP.
@@ -5919,7 +5918,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C26
   E: PCI_SLOT_NAME=0000:00:1d.0
   E: MODALIAS=pci:v00008086d00008C26sv00008086sd00008C26bc0Csc03i20
-  E: USEC_INITIALIZED=2868196
+  E: USEC_INITIALIZED=2782769
   E: ID_PCI_CLASS_FROM_DATABASE=Serial bus controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=USB controller
   E: ID_PCI_INTERFACE_FROM_DATABASE=EHCI
@@ -5934,21 +5933,21 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/bus/usb/002/001
   E: DEVTYPE=usb_device
   E: DRIVER=usb
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/0
   E: BUSNUM=002
   E: DEVNUM=001
   E: MAJOR=189
   E: MINOR=128
-  E: USEC_INITIALIZED=2946408
-  E: ID_VENDOR=Linux_5.16.14-247-tkg-pds_ehci_hcd
-  E: ID_VENDOR_ENC=Linux\x205.16.14-247-tkg-pds\x20ehci_hcd
+  E: USEC_INITIALIZED=2870220
+  E: ID_VENDOR=Linux_5.17.0-248-tkg-pds_ehci_hcd
+  E: ID_VENDOR_ENC=Linux\x205.17.0-248-tkg-pds\x20ehci_hcd
   E: ID_VENDOR_ID=1d6b
   E: ID_MODEL=EHCI_Host_Controller
   E: ID_MODEL_ENC=EHCI\x20Host\x20Controller
   E: ID_MODEL_ID=0002
-  E: ID_REVISION=0516
-  E: ID_SERIAL=Linux_5.16.14-247-tkg-pds_ehci_hcd_EHCI_Host_Controller_0000:00:1d.0
+  E: ID_REVISION=0517
+  E: ID_SERIAL=Linux_5.17.0-248-tkg-pds_ehci_hcd_EHCI_Host_Controller_0000:00:1d.0
   E: ID_SERIAL_SHORT=0000:00:1d.0
   E: ID_BUS=usb
   E: ID_USB_INTERFACES=:090000:
@@ -5967,11 +5966,11 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=usb
   E: DEVTYPE=usb_interface
   E: DRIVER=hub
-  E: PRODUCT=1d6b/2/516
+  E: PRODUCT=1d6b/2/517
   E: TYPE=9/0/0
   E: INTERFACE=9/0/0
-  E: MODALIAS=usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00
-  E: USEC_INITIALIZED=3253344
+  E: MODALIAS=usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00
+  E: USEC_INITIALIZED=2908909
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_USB_PROTOCOL_FROM_DATABASE=Full speed (or root) hub
   E: ID_VENDOR_FROM_DATABASE=Linux Foundation
@@ -5994,7 +5993,7 @@ Timeout waiting for PADO packets
   E: DEVNUM=002
   E: MAJOR=189
   E: MINOR=129
-  E: USEC_INITIALIZED=3246526
+  E: USEC_INITIALIZED=2910217
   E: ID_VENDOR=8087
   E: ID_VENDOR_ENC=8087
   E: ID_VENDOR_ID=8087
@@ -6024,7 +6023,7 @@ Timeout waiting for PADO packets
   E: TYPE=9/0/1
   E: INTERFACE=9/0/0
   E: MODALIAS=usb:v8087p8000d0005dc09dsc00dp01ic09isc00ip00in00
-  E: USEC_INITIALIZED=3257243
+  E: USEC_INITIALIZED=2916622
   E: ID_USB_CLASS_FROM_DATABASE=Hub
   E: ID_USB_PROTOCOL_FROM_DATABASE=Single TT
   E: ID_VENDOR_FROM_DATABASE=Intel Corp.
@@ -6048,7 +6047,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C5C
   E: PCI_SLOT_NAME=0000:00:1f.0
   E: MODALIAS=pci:v00008086d00008C5Csv00008086sd00008C5Cbc06sc01i00
-  E: USEC_INITIALIZED=2868845
+  E: USEC_INITIALIZED=2783804
   E: ID_PCI_CLASS_FROM_DATABASE=Bridge
   E: ID_PCI_SUBCLASS_FROM_DATABASE=ISA bridge
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -6059,7 +6058,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.0/INT0800:00
   E: SUBSYSTEM=platform
   E: MODALIAS=acpi:INT0800:
-  E: USEC_INITIALIZED=2971750
+  E: USEC_INITIALIZED=2870607
   E: ID_VENDOR_FROM_DATABASE=Interphase Corporation
   E: ID_PATH=pci-0000:00:1f.0-platform-INT0800:00
   E: ID_PATH_TAG=pci-0000_00_1f_0-platform-INT0800_00
@@ -6069,7 +6068,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.0/PNP0103:00
   E: SUBSYSTEM=platform
   E: MODALIAS=acpi:PNP0103:
-  E: USEC_INITIALIZED=2972303
+  E: USEC_INITIALIZED=2871390
   E: ID_PATH=pci-0000:00:1f.0-platform-PNP0103:00
   E: ID_PATH_TAG=pci-0000_00_1f_0-platform-PNP0103_00
   
@@ -6078,7 +6077,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.0/PNP0C04:00
   E: SUBSYSTEM=platform
   E: MODALIAS=acpi:PNP0C04:
-  E: USEC_INITIALIZED=2972821
+  E: USEC_INITIALIZED=2871701
   E: ID_PATH=pci-0000:00:1f.0-platform-PNP0C04:00
   E: ID_PATH_TAG=pci-0000_00_1f_0-platform-PNP0C04_00
   
@@ -6088,7 +6087,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DEVTYPE=mfd_device
   E: MODALIAS=platform:iTCO_wdt
-  E: USEC_INITIALIZED=3197346
+  E: USEC_INITIALIZED=3084140
   E: ID_PATH=pci-0000:00:1f.0-platform-iTCO_wdt.1.auto
   E: ID_PATH_TAG=pci-0000_00_1f_0-platform-iTCO_wdt_1_auto
   
@@ -6099,7 +6098,7 @@ Timeout waiting for PADO packets
   E: DEVTYPE=mfd_device
   E: DRIVER=intel-spi
   E: MODALIAS=platform:intel-spi
-  E: USEC_INITIALIZED=3197749
+  E: USEC_INITIALIZED=3084440
   E: ID_PATH=pci-0000:00:1f.0-platform-intel-spi
   E: ID_PATH_TAG=pci-0000_00_1f_0-platform-intel-spi
   
@@ -6161,7 +6160,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C02
   E: PCI_SLOT_NAME=0000:00:1f.2
   E: MODALIAS=pci:v00008086d00008C02sv00008086sd00008C02bc01sc06i01
-  E: USEC_INITIALIZED=2868786
+  E: USEC_INITIALIZED=2782616
   E: ID_PCI_CLASS_FROM_DATABASE=Mass storage controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=SATA controller
   E: ID_PCI_INTERFACE_FROM_DATABASE=AHCI 1.0
@@ -6201,9 +6200,9 @@ Timeout waiting for PADO packets
   P: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   N: sr0
   L: -100
-  S: disk/by-path/pci-0000:00:1f.2-ata-1
-  S: cdrom
   S: disk/by-path/pci-0000:00:1f.2-ata-1.0
+  S: cdrom
+  S: disk/by-path/pci-0000:00:1f.2-ata-1
   S: disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   E: SUBSYSTEM=block
@@ -6212,7 +6211,7 @@ Timeout waiting for PADO packets
   E: DISKSEQ=3
   E: MAJOR=11
   E: MINOR=0
-  E: USEC_INITIALIZED=3380289
+  E: USEC_INITIALIZED=3068938
   E: ID_CDROM=1
   E: SYSTEMD_MOUNT_DEVICE_BOUND=1
   E: ID_CDROM_CD_R=1
@@ -6246,9 +6245,9 @@ Timeout waiting for PADO packets
   E: ID_PATH_TAG=pci-0000_00_1f_2-ata-1_0
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-1
   E: ID_FOR_SEAT=block-pci-0000_00_1f_2-ata-1_0
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-1 /dev/cdrom /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0 /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
-  E: TAGS=:seat:uaccess:systemd:
-  E: CURRENT_TAGS=:seat:uaccess:systemd:
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-1.0 /dev/cdrom /dev/disk/by-path/pci-0000:00:1f.2-ata-1 /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  E: TAGS=:uaccess:systemd:seat:
+  E: CURRENT_TAGS=:uaccess:systemd:seat:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
   N: bsg/0:0:0:0
@@ -6272,13 +6271,13 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/sg0
   E: MAJOR=21
   E: MINOR=0
-  E: USEC_INITIALIZED=3186568
+  E: USEC_INITIALIZED=2740665
   E: ID_PATH=pci-0000:00:1f.2-ata-1.0
   E: ID_PATH_TAG=pci-0000_00_1f_2-ata-1_0
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-1
   E: ID_FOR_SEAT=scsi_generic-pci-0000_00_1f_2-ata-1_0
-  E: TAGS=:seat:uaccess:
-  E: CURRENT_TAGS=:seat:uaccess:
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/link1/ata_link/link1
   L: 0
@@ -6324,8 +6323,8 @@ Timeout waiting for PADO packets
   N: sda
   L: 0
   S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980
-  S: disk/by-id/wwn-0x5001b448b1c77808
   S: disk/by-path/pci-0000:00:1f.2-ata-2.0
+  S: disk/by-id/wwn-0x5001b448b1c77808
   S: disk/by-path/pci-0000:00:1f.2-ata-2
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda
   E: SUBSYSTEM=block
@@ -6334,7 +6333,7 @@ Timeout waiting for PADO packets
   E: DISKSEQ=1
   E: MAJOR=8
   E: MINOR=0
-  E: USEC_INITIALIZED=3283603
+  E: USEC_INITIALIZED=2940057
   E: ID_ATA=1
   E: ID_TYPE=disk
   E: ID_BUS=ata
@@ -6369,19 +6368,19 @@ Timeout waiting for PADO packets
   E: ID_PATH_ATA_COMPAT=pci-0000:00:1f.2-ata-2
   E: ID_PART_TABLE_UUID=c932b96a-2553-4827-be2d-2c993ed424ba
   E: ID_PART_TABLE_TYPE=gpt
-  E: DEVLINKS=/dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980 /dev/disk/by-id/wwn-0x5001b448b1c77808 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0 /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  E: DEVLINKS=/dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0 /dev/disk/by-id/wwn-0x5001b448b1c77808 /dev/disk/by-path/pci-0000:00:1f.2-ata-2
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   N: sda1
   L: 0
-  S: disk/by-uuid/83ED-BDD9
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
   S: disk/by-id/wwn-0x5001b448b1c77808-part1
-  S: disk/by-path/pci-0000:00:1f.2-ata-2-part1
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
   S: disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part1
+  S: disk/by-path/pci-0000:00:1f.2-ata-2-part1
+  S: disk/by-uuid/83ED-BDD9
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda1
@@ -6390,7 +6389,7 @@ Timeout waiting for PADO packets
   E: PARTN=1
   E: MAJOR=8
   E: MINOR=1
-  E: USEC_INITIALIZED=3508610
+  E: USEC_INITIALIZED=3102758
   E: ID_ATA=1
   E: ID_TYPE=disk
   E: ID_BUS=ata
@@ -6438,21 +6437,21 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_SIZE=262144
   E: ID_PART_ENTRY_DISK=8:0
   E: UDISKS_IGNORE=1
-  E: DEVLINKS=/dev/disk/by-uuid/83ED-BDD9 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1 /dev/disk/by-id/wwn-0x5001b448b1c77808-part1 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1 /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
+  E: DEVLINKS=/dev/disk/by-id/wwn-0x5001b448b1c77808-part1 /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1 /dev/disk/by-uuid/83ED-BDD9 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
   N: sda2
   L: 0
-  S: disk/by-path/pci-0000:00:1f.2-ata-2-part2
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2
-  S: disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a
-  S: disk/by-label/archlinux
-  S: disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e
   S: disk/by-partlabel/archlinux
   S: disk/by-id/wwn-0x5001b448b1c77808-part2
+  S: disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e
+  S: disk/by-label/archlinux
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2
   S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
+  S: disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a
+  S: disk/by-path/pci-0000:00:1f.2-ata-2-part2
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda2
@@ -6462,7 +6461,7 @@ Timeout waiting for PADO packets
   E: PARTNAME=archlinux
   E: MAJOR=8
   E: MINOR=2
-  E: USEC_INITIALIZED=3534150
+  E: USEC_INITIALIZED=3070983
   E: ID_ATA=1
   E: ID_TYPE=disk
   E: ID_BUS=ata
@@ -6514,7 +6513,7 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_SIZE=216592384
   E: ID_PART_ENTRY_DISK=8:0
   E: ID_BTRFS_READY=1
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2 /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a /dev/disk/by-label/archlinux /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e /dev/disk/by-partlabel/archlinux /dev/disk/by-id/wwn-0x5001b448b1c77808-part2 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
+  E: DEVLINKS=/dev/disk/by-partlabel/archlinux /dev/disk/by-id/wwn-0x5001b448b1c77808-part2 /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e /dev/disk/by-label/archlinux /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2 /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
@@ -6522,11 +6521,11 @@ Timeout waiting for PADO packets
   N: sda5
   L: 0
   S: disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc
-  S: disk/by-path/pci-0000:00:1f.2-ata-2-part5
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
   S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5
-  S: disk/by-id/wwn-0x5001b448b1c77808-part5
   S: disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4
+  S: disk/by-path/pci-0000:00:1f.2-ata-2-part5
+  S: disk/by-id/wwn-0x5001b448b1c77808-part5
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda5
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda5
@@ -6535,7 +6534,7 @@ Timeout waiting for PADO packets
   E: PARTN=5
   E: MAJOR=8
   E: MINOR=5
-  E: USEC_INITIALIZED=3626570
+  E: USEC_INITIALIZED=3058632
   E: ID_ATA=1
   E: ID_TYPE=disk
   E: ID_BUS=ata
@@ -6582,20 +6581,20 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_OFFSET=216856576
   E: ID_PART_ENTRY_SIZE=8388608
   E: ID_PART_ENTRY_DISK=8:0
-  E: DEVLINKS=/dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5 /dev/disk/by-id/wwn-0x5001b448b1c77808-part5 /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4
+  E: DEVLINKS=/dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5 /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4 /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5 /dev/disk/by-id/wwn-0x5001b448b1c77808-part5 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   N: sda6
   L: 0
-  S: disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
-  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6
-  S: disk/by-label/archrecover
   S: disk/by-path/pci-0000:00:1f.2-ata-2-part6
-  S: disk/by-id/wwn-0x5001b448b1c77808-part6
-  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part6
+  S: disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6
   S: disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
+  S: disk/by-path/pci-0000:00:1f.2-ata-2.0-part6
+  S: disk/by-label/archrecover
+  S: disk/by-id/wwn-0x5001b448b1c77808-part6
+  S: disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   E: SUBSYSTEM=block
   E: DEVNAME=/dev/sda6
@@ -6604,7 +6603,7 @@ Timeout waiting for PADO packets
   E: PARTN=6
   E: MAJOR=8
   E: MINOR=6
-  E: USEC_INITIALIZED=3727402
+  E: USEC_INITIALIZED=3088854
   E: ID_ATA=1
   E: ID_TYPE=disk
   E: ID_BUS=ata
@@ -6653,7 +6652,7 @@ Timeout waiting for PADO packets
   E: ID_PART_ENTRY_OFFSET=225245184
   E: ID_PART_ENTRY_SIZE=9195520
   E: ID_PART_ENTRY_DISK=8:0
-  E: DEVLINKS=/dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6 /dev/disk/by-label/archrecover /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6 /dev/disk/by-id/wwn-0x5001b448b1c77808-part6 /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6 /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6 /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6 /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6 /dev/disk/by-label/archrecover /dev/disk/by-id/wwn-0x5001b448b1c77808-part6 /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
   
@@ -6757,7 +6756,7 @@ Timeout waiting for PADO packets
   E: PCI_SUBSYS_ID=8086:8C22
   E: PCI_SLOT_NAME=0000:00:1f.3
   E: MODALIAS=pci:v00008086d00008C22sv00008086sd00008C22bc0Csc05i00
-  E: USEC_INITIALIZED=2867681
+  E: USEC_INITIALIZED=2782986
   E: ID_PCI_CLASS_FROM_DATABASE=Serial bus controller
   E: ID_PCI_SUBCLASS_FROM_DATABASE=SMBus
   E: ID_VENDOR_FROM_DATABASE=Intel Corporation
@@ -6803,7 +6802,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=acpi-fan
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2827258
+  E: USEC_INITIALIZED=2763419
   E: ID_PATH=platform-PNP0C0B:00
   E: ID_PATH_TAG=platform-PNP0C0B_00
   
@@ -6813,7 +6812,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=acpi-fan
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2826647
+  E: USEC_INITIALIZED=2763420
   E: ID_PATH=platform-PNP0C0B:01
   E: ID_PATH_TAG=platform-PNP0C0B_01
   
@@ -6823,7 +6822,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=acpi-fan
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2827763
+  E: USEC_INITIALIZED=2764078
   E: ID_PATH=platform-PNP0C0B:02
   E: ID_PATH_TAG=platform-PNP0C0B_02
   
@@ -6833,7 +6832,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=acpi-fan
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2828965
+  E: USEC_INITIALIZED=2763432
   E: ID_PATH=platform-PNP0C0B:03
   E: ID_PATH_TAG=platform-PNP0C0B_03
   
@@ -6843,7 +6842,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=acpi-fan
   E: MODALIAS=acpi:PNP0C0B:
-  E: USEC_INITIALIZED=2827364
+  E: USEC_INITIALIZED=2764148
   E: ID_PATH=platform-PNP0C0B:04
   E: ID_PATH_TAG=platform-PNP0C0B_04
   
@@ -6852,7 +6851,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/platform/PNP0C0C:00
   E: SUBSYSTEM=platform
   E: MODALIAS=acpi:PNP0C0C:
-  E: USEC_INITIALIZED=2826648
+  E: USEC_INITIALIZED=2763421
   E: ID_PATH=platform-PNP0C0C:00
   E: ID_PATH_TAG=platform-PNP0C0C_00
   
@@ -6862,7 +6861,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=coretemp
   E: MODALIAS=platform:coretemp
-  E: USEC_INITIALIZED=4027347
+  E: USEC_INITIALIZED=3530261
   E: ID_PATH=platform-coretemp.0
   E: ID_PATH_TAG=platform-coretemp_0
   
@@ -6871,22 +6870,12 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/platform/coretemp.0/hwmon/hwmon1
   E: SUBSYSTEM=hwmon
   
-  P: /devices/platform/efi-framebuffer.0
-  L: 0
-  E: DEVPATH=/devices/platform/efi-framebuffer.0
-  E: SUBSYSTEM=platform
-  E: DRIVER=efi-framebuffer
-  E: MODALIAS=platform:efi-framebuffer
-  E: USEC_INITIALIZED=2868126
-  E: ID_PATH=platform-efi-framebuffer.0
-  E: ID_PATH_TAG=platform-efi-framebuffer_0
-  
   P: /devices/platform/efivars.0
   L: 0
   E: DEVPATH=/devices/platform/efivars.0
   E: SUBSYSTEM=platform
   E: MODALIAS=platform:efivars
-  E: USEC_INITIALIZED=2871882
+  E: USEC_INITIALIZED=2783222
   E: ID_PATH=platform-efivars.0
   E: ID_PATH_TAG=platform-efivars_0
   
@@ -6896,7 +6885,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=intel_rapl_msr
   E: MODALIAS=platform:intel_rapl_msr
-  E: USEC_INITIALIZED=4281613
+  E: USEC_INITIALIZED=3582527
   E: ID_PATH=platform-intel_rapl_msr.0
   E: ID_PATH_TAG=platform-intel_rapl_msr_0
   
@@ -6905,7 +6894,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/platform/microcode
   E: SUBSYSTEM=platform
   E: MODALIAS=platform:microcode
-  E: USEC_INITIALIZED=2870441
+  E: USEC_INITIALIZED=2782042
   E: ID_PATH=platform-microcode
   E: ID_PATH_TAG=platform-microcode
   
@@ -6915,7 +6904,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=pcspkr
   E: MODALIAS=platform:pcspkr
-  E: USEC_INITIALIZED=2867592
+  E: USEC_INITIALIZED=2782042
   E: ID_PATH=platform-pcspkr
   E: ID_PATH_TAG=platform-pcspkr
   
@@ -6930,7 +6919,7 @@ Timeout waiting for PADO packets
   E: EV=40001
   E: SND=6
   E: MODALIAS=input:b0010v001Fp0001e0100-e0,12,kramls1,2,fw
-  E: USEC_INITIALIZED=3224306
+  E: USEC_INITIALIZED=3087407
   E: ID_INPUT=1
   E: ID_SERIAL=noserial
   E: ID_PATH=platform-pcspkr
@@ -6948,7 +6937,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/input/event4
   E: MAJOR=13
   E: MINOR=68
-  E: USEC_INITIALIZED=3286660
+  E: USEC_INITIALIZED=3131689
   E: ID_INPUT=1
   E: ID_SERIAL=noserial
   E: ID_PATH=platform-pcspkr
@@ -6962,7 +6951,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=reg-dummy
   E: MODALIAS=platform:reg-dummy
-  E: USEC_INITIALIZED=3006702
+  E: USEC_INITIALIZED=2784302
   E: ID_PATH=platform-reg-dummy
   E: ID_PATH_TAG=platform-reg-dummy
   
@@ -6976,7 +6965,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/platform/rtc-efi.0
   E: SUBSYSTEM=platform
   E: MODALIAS=platform:rtc-efi
-  E: USEC_INITIALIZED=3006952
+  E: USEC_INITIALIZED=2783210
   E: ID_PATH=platform-rtc-efi.0
   E: ID_PATH_TAG=platform-rtc-efi_0
   
@@ -6986,7 +6975,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=serial8250
   E: MODALIAS=platform:serial8250
-  E: USEC_INITIALIZED=3007369
+  E: USEC_INITIALIZED=2782646
   E: ID_PATH=platform-serial8250
   E: ID_PATH_TAG=platform-serial8250
   
@@ -6998,7 +6987,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS0
   E: MAJOR=4
   E: MINOR=64
-  E: USEC_INITIALIZED=3007892
+  E: USEC_INITIALIZED=2894078
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7011,7 +7000,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS1
   E: MAJOR=4
   E: MINOR=65
-  E: USEC_INITIALIZED=3008106
+  E: USEC_INITIALIZED=2896296
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7024,7 +7013,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS10
   E: MAJOR=4
   E: MINOR=74
-  E: USEC_INITIALIZED=3008684
+  E: USEC_INITIALIZED=2897638
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7037,7 +7026,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS11
   E: MAJOR=4
   E: MINOR=75
-  E: USEC_INITIALIZED=3008592
+  E: USEC_INITIALIZED=2898915
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7050,7 +7039,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS12
   E: MAJOR=4
   E: MINOR=76
-  E: USEC_INITIALIZED=3009394
+  E: USEC_INITIALIZED=2899750
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7063,7 +7052,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS13
   E: MAJOR=4
   E: MINOR=77
-  E: USEC_INITIALIZED=3009501
+  E: USEC_INITIALIZED=2901361
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7076,7 +7065,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS14
   E: MAJOR=4
   E: MINOR=78
-  E: USEC_INITIALIZED=3010232
+  E: USEC_INITIALIZED=2902359
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7089,7 +7078,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS15
   E: MAJOR=4
   E: MINOR=79
-  E: USEC_INITIALIZED=3010349
+  E: USEC_INITIALIZED=2903562
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7102,7 +7091,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS16
   E: MAJOR=4
   E: MINOR=80
-  E: USEC_INITIALIZED=3011194
+  E: USEC_INITIALIZED=2904562
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7115,7 +7104,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS17
   E: MAJOR=4
   E: MINOR=81
-  E: USEC_INITIALIZED=3011192
+  E: USEC_INITIALIZED=2915177
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7128,7 +7117,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS18
   E: MAJOR=4
   E: MINOR=82
-  E: USEC_INITIALIZED=3012169
+  E: USEC_INITIALIZED=2916159
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7141,7 +7130,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS19
   E: MAJOR=4
   E: MINOR=83
-  E: USEC_INITIALIZED=3012166
+  E: USEC_INITIALIZED=2917053
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7154,7 +7143,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS2
   E: MAJOR=4
   E: MINOR=66
-  E: USEC_INITIALIZED=3012279
+  E: USEC_INITIALIZED=2917679
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7167,7 +7156,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS20
   E: MAJOR=4
   E: MINOR=84
-  E: USEC_INITIALIZED=3013033
+  E: USEC_INITIALIZED=2917666
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7180,7 +7169,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS21
   E: MAJOR=4
   E: MINOR=85
-  E: USEC_INITIALIZED=3013054
+  E: USEC_INITIALIZED=2917934
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7193,7 +7182,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS22
   E: MAJOR=4
   E: MINOR=86
-  E: USEC_INITIALIZED=3013163
+  E: USEC_INITIALIZED=2918524
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7206,7 +7195,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS23
   E: MAJOR=4
   E: MINOR=87
-  E: USEC_INITIALIZED=3013877
+  E: USEC_INITIALIZED=2918575
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7219,7 +7208,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS24
   E: MAJOR=4
   E: MINOR=88
-  E: USEC_INITIALIZED=3013947
+  E: USEC_INITIALIZED=2918802
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7232,7 +7221,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS25
   E: MAJOR=4
   E: MINOR=89
-  E: USEC_INITIALIZED=3014032
+  E: USEC_INITIALIZED=2919459
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7245,7 +7234,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS26
   E: MAJOR=4
   E: MINOR=90
-  E: USEC_INITIALIZED=3014903
+  E: USEC_INITIALIZED=2919418
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7258,7 +7247,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS27
   E: MAJOR=4
   E: MINOR=91
-  E: USEC_INITIALIZED=3014818
+  E: USEC_INITIALIZED=2919656
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7271,7 +7260,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS28
   E: MAJOR=4
   E: MINOR=92
-  E: USEC_INITIALIZED=3014962
+  E: USEC_INITIALIZED=2920300
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7284,7 +7273,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS29
   E: MAJOR=4
   E: MINOR=93
-  E: USEC_INITIALIZED=3015696
+  E: USEC_INITIALIZED=2920336
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7297,7 +7286,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS3
   E: MAJOR=4
   E: MINOR=67
-  E: USEC_INITIALIZED=3015772
+  E: USEC_INITIALIZED=2920580
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7310,7 +7299,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS30
   E: MAJOR=4
   E: MINOR=94
-  E: USEC_INITIALIZED=3015842
+  E: USEC_INITIALIZED=2921267
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7323,7 +7312,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS31
   E: MAJOR=4
   E: MINOR=95
-  E: USEC_INITIALIZED=3016561
+  E: USEC_INITIALIZED=2921602
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7336,7 +7325,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS4
   E: MAJOR=4
   E: MINOR=68
-  E: USEC_INITIALIZED=3016657
+  E: USEC_INITIALIZED=2921459
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7349,7 +7338,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS5
   E: MAJOR=4
   E: MINOR=69
-  E: USEC_INITIALIZED=3016722
+  E: USEC_INITIALIZED=2922203
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7362,7 +7351,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS6
   E: MAJOR=4
   E: MINOR=70
-  E: USEC_INITIALIZED=3017424
+  E: USEC_INITIALIZED=2922319
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7375,7 +7364,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS7
   E: MAJOR=4
   E: MINOR=71
-  E: USEC_INITIALIZED=3017507
+  E: USEC_INITIALIZED=2922606
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7388,7 +7377,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS8
   E: MAJOR=4
   E: MINOR=72
-  E: USEC_INITIALIZED=3017624
+  E: USEC_INITIALIZED=2923135
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7401,7 +7390,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/ttyS9
   E: MAJOR=4
   E: MINOR=73
-  E: USEC_INITIALIZED=3018313
+  E: USEC_INITIALIZED=2923257
   E: ID_MM_CANDIDATE=1
   E: TAGS=:systemd:
   E: CURRENT_TAGS=:systemd:
@@ -7412,7 +7401,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=vboxdrv
   E: MODALIAS=platform:vboxdrv
-  E: USEC_INITIALIZED=3188857
+  E: USEC_INITIALIZED=3076669
   E: ID_PATH=platform-vboxdrv.0
   E: ID_PATH_TAG=platform-vboxdrv_0
   
@@ -7448,7 +7437,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/rtc0
   E: MAJOR=249
   E: MINOR=0
-  E: USEC_INITIALIZED=3029339
+  E: USEC_INITIALIZED=2934217
   E: DEVLINKS=/dev/rtc
   
   P: /devices/pnp0/00:02/rtc/rtc0/alarmtimer.0.auto
@@ -7457,7 +7446,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=platform
   E: DRIVER=alarmtimer
   E: MODALIAS=platform:alarmtimer
-  E: USEC_INITIALIZED=3029892
+  E: USEC_INITIALIZED=2934821
   E: ID_PATH=platform-alarmtimer.0.auto
   E: ID_PATH_TAG=platform-alarmtimer_0_auto
   
@@ -8017,7 +8006,7 @@ Timeout waiting for PADO packets
   E: DEVPATH=/devices/virtual/dmi/id
   E: SUBSYSTEM=dmi
   E: MODALIAS=dmi:bvnAmericanMegatrendsInc.:bvr4.6.5:bd09/18/2020:br4.6:svnINTEL:pnH81:pvrTobefilledbyO.E.M.:rvnINTEL:rnH81:rvr:cvnToBeFilledByO.E.M.:ct3:cvrToBeFilledByO.E.M.:skuTobefilledbyO.E.M.:
-  E: USEC_INITIALIZED=3230053
+  E: USEC_INITIALIZED=3022321
   E: ID_VENDOR=INTEL
   E: ID_MODEL=H81
   E: MEMORY_ARRAY_LOCATION=System Board Or Motherboard
@@ -8271,10 +8260,10 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/rfkill
   E: MAJOR=10
   E: MINOR=242
-  E: USEC_INITIALIZED=3402016
+  E: USEC_INITIALIZED=3142019
   E: SYSTEMD_WANTS=systemd-rfkill.socket
-  E: TAGS=:seat:uaccess:systemd:
-  E: CURRENT_TAGS=:seat:uaccess:systemd:
+  E: TAGS=:uaccess:systemd:seat:
+  E: CURRENT_TAGS=:uaccess:systemd:seat:
   
   P: /devices/virtual/misc/snapshot
   N: snapshot
@@ -8293,6 +8282,18 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/udmabuf
   E: MAJOR=10
   E: MINOR=126
+  
+  P: /devices/virtual/misc/uinput
+  N: uinput
+  L: 0
+  E: DEVPATH=/devices/virtual/misc/uinput
+  E: SUBSYSTEM=misc
+  E: DEVNAME=/dev/uinput
+  E: MAJOR=10
+  E: MINOR=223
+  E: USEC_INITIALIZED=9147970349
+  E: TAGS=:uaccess:seat:
+  E: CURRENT_TAGS=:uaccess:seat:
   
   P: /devices/virtual/misc/vboxdrv
   N: vboxdrv
@@ -8381,7 +8382,7 @@ Timeout waiting for PADO packets
   E: SUBSYSTEM=net
   E: INTERFACE=lo
   E: IFINDEX=1
-  E: USEC_INITIALIZED=3243196
+  E: USEC_INITIALIZED=3066364
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/powercap/dtpm
@@ -8422,7 +8423,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/seq
   E: MAJOR=116
   E: MINOR=1
-  E: USEC_INITIALIZED=19246971
+  E: USEC_INITIALIZED=10009775
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -8434,7 +8435,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/snd/timer
   E: MAJOR=116
   E: MINOR=33
-  E: USEC_INITIALIZED=3273670
+  E: USEC_INITIALIZED=3114353
   E: TAGS=:uaccess:
   E: CURRENT_TAGS=:uaccess:
   
@@ -8516,7 +8517,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/console
   E: MAJOR=5
   E: MINOR=1
-  E: USEC_INITIALIZED=3124422
+  E: USEC_INITIALIZED=3048972
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/ptmx
@@ -8528,7 +8529,7 @@ Timeout waiting for PADO packets
   E: DEVMODE=0666
   E: MAJOR=5
   E: MINOR=2
-  E: USEC_INITIALIZED=3124851
+  E: USEC_INITIALIZED=3049375
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty
@@ -8540,7 +8541,7 @@ Timeout waiting for PADO packets
   E: DEVMODE=0666
   E: MAJOR=5
   E: MINOR=0
-  E: USEC_INITIALIZED=3125315
+  E: USEC_INITIALIZED=3049801
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty0
@@ -8551,7 +8552,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty0
   E: MAJOR=4
   E: MINOR=0
-  E: USEC_INITIALIZED=3125704
+  E: USEC_INITIALIZED=3050218
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty1
@@ -8562,7 +8563,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty1
   E: MAJOR=4
   E: MINOR=1
-  E: USEC_INITIALIZED=3126080
+  E: USEC_INITIALIZED=3050612
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty10
@@ -8573,7 +8574,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty10
   E: MAJOR=4
   E: MINOR=10
-  E: USEC_INITIALIZED=3126455
+  E: USEC_INITIALIZED=3051020
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty11
@@ -8584,7 +8585,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty11
   E: MAJOR=4
   E: MINOR=11
-  E: USEC_INITIALIZED=3126835
+  E: USEC_INITIALIZED=3051415
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty12
@@ -8595,7 +8596,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty12
   E: MAJOR=4
   E: MINOR=12
-  E: USEC_INITIALIZED=3127209
+  E: USEC_INITIALIZED=3051808
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty13
@@ -8606,7 +8607,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty13
   E: MAJOR=4
   E: MINOR=13
-  E: USEC_INITIALIZED=3127577
+  E: USEC_INITIALIZED=3052206
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty14
@@ -8617,7 +8618,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty14
   E: MAJOR=4
   E: MINOR=14
-  E: USEC_INITIALIZED=3127942
+  E: USEC_INITIALIZED=3052615
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty15
@@ -8628,7 +8629,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty15
   E: MAJOR=4
   E: MINOR=15
-  E: USEC_INITIALIZED=3128325
+  E: USEC_INITIALIZED=3053006
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty16
@@ -8639,7 +8640,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty16
   E: MAJOR=4
   E: MINOR=16
-  E: USEC_INITIALIZED=3128707
+  E: USEC_INITIALIZED=3053386
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty17
@@ -8650,7 +8651,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty17
   E: MAJOR=4
   E: MINOR=17
-  E: USEC_INITIALIZED=3129080
+  E: USEC_INITIALIZED=3053766
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty18
@@ -8661,7 +8662,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty18
   E: MAJOR=4
   E: MINOR=18
-  E: USEC_INITIALIZED=3129447
+  E: USEC_INITIALIZED=3054136
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty19
@@ -8672,7 +8673,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty19
   E: MAJOR=4
   E: MINOR=19
-  E: USEC_INITIALIZED=3129817
+  E: USEC_INITIALIZED=3054509
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty2
@@ -8683,7 +8684,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty2
   E: MAJOR=4
   E: MINOR=2
-  E: USEC_INITIALIZED=3130182
+  E: USEC_INITIALIZED=3054936
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty20
@@ -8694,7 +8695,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty20
   E: MAJOR=4
   E: MINOR=20
-  E: USEC_INITIALIZED=3130552
+  E: USEC_INITIALIZED=3055367
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty21
@@ -8705,7 +8706,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty21
   E: MAJOR=4
   E: MINOR=21
-  E: USEC_INITIALIZED=3130930
+  E: USEC_INITIALIZED=3055807
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty22
@@ -8716,7 +8717,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty22
   E: MAJOR=4
   E: MINOR=22
-  E: USEC_INITIALIZED=3131298
+  E: USEC_INITIALIZED=3056203
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty23
@@ -8727,7 +8728,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty23
   E: MAJOR=4
   E: MINOR=23
-  E: USEC_INITIALIZED=3131664
+  E: USEC_INITIALIZED=3056590
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty24
@@ -8738,7 +8739,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty24
   E: MAJOR=4
   E: MINOR=24
-  E: USEC_INITIALIZED=3132029
+  E: USEC_INITIALIZED=3056980
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty25
@@ -8749,7 +8750,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty25
   E: MAJOR=4
   E: MINOR=25
-  E: USEC_INITIALIZED=3132396
+  E: USEC_INITIALIZED=3057360
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty26
@@ -8760,7 +8761,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty26
   E: MAJOR=4
   E: MINOR=26
-  E: USEC_INITIALIZED=3132774
+  E: USEC_INITIALIZED=3057732
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty27
@@ -8771,7 +8772,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty27
   E: MAJOR=4
   E: MINOR=27
-  E: USEC_INITIALIZED=3133143
+  E: USEC_INITIALIZED=3058105
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty28
@@ -8782,7 +8783,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty28
   E: MAJOR=4
   E: MINOR=28
-  E: USEC_INITIALIZED=3133509
+  E: USEC_INITIALIZED=3058481
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty29
@@ -8793,7 +8794,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty29
   E: MAJOR=4
   E: MINOR=29
-  E: USEC_INITIALIZED=3133878
+  E: USEC_INITIALIZED=3058937
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty3
@@ -8804,7 +8805,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty3
   E: MAJOR=4
   E: MINOR=3
-  E: USEC_INITIALIZED=3134250
+  E: USEC_INITIALIZED=3059538
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty30
@@ -8815,7 +8816,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty30
   E: MAJOR=4
   E: MINOR=30
-  E: USEC_INITIALIZED=3134622
+  E: USEC_INITIALIZED=3059591
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty31
@@ -8826,7 +8827,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty31
   E: MAJOR=4
   E: MINOR=31
-  E: USEC_INITIALIZED=3134999
+  E: USEC_INITIALIZED=3060282
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty32
@@ -8837,7 +8838,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty32
   E: MAJOR=4
   E: MINOR=32
-  E: USEC_INITIALIZED=3135368
+  E: USEC_INITIALIZED=3060251
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty33
@@ -8848,7 +8849,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty33
   E: MAJOR=4
   E: MINOR=33
-  E: USEC_INITIALIZED=3135733
+  E: USEC_INITIALIZED=3060945
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty34
@@ -8859,7 +8860,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty34
   E: MAJOR=4
   E: MINOR=34
-  E: USEC_INITIALIZED=3136096
+  E: USEC_INITIALIZED=3060995
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty35
@@ -8870,7 +8871,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty35
   E: MAJOR=4
   E: MINOR=35
-  E: USEC_INITIALIZED=3136461
+  E: USEC_INITIALIZED=3061693
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty36
@@ -8881,7 +8882,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty36
   E: MAJOR=4
   E: MINOR=36
-  E: USEC_INITIALIZED=3136839
+  E: USEC_INITIALIZED=3061696
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty37
@@ -8892,7 +8893,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty37
   E: MAJOR=4
   E: MINOR=37
-  E: USEC_INITIALIZED=3137211
+  E: USEC_INITIALIZED=3062397
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty38
@@ -8903,7 +8904,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty38
   E: MAJOR=4
   E: MINOR=38
-  E: USEC_INITIALIZED=3137581
+  E: USEC_INITIALIZED=3062209
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty39
@@ -8914,7 +8915,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty39
   E: MAJOR=4
   E: MINOR=39
-  E: USEC_INITIALIZED=3137948
+  E: USEC_INITIALIZED=3063101
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty4
@@ -8925,7 +8926,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty4
   E: MAJOR=4
   E: MINOR=4
-  E: USEC_INITIALIZED=3138316
+  E: USEC_INITIALIZED=3063261
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty40
@@ -8936,7 +8937,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty40
   E: MAJOR=4
   E: MINOR=40
-  E: USEC_INITIALIZED=3138688
+  E: USEC_INITIALIZED=3063805
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty41
@@ -8947,7 +8948,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty41
   E: MAJOR=4
   E: MINOR=41
-  E: USEC_INITIALIZED=3139199
+  E: USEC_INITIALIZED=3064015
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty42
@@ -8958,7 +8959,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty42
   E: MAJOR=4
   E: MINOR=42
-  E: USEC_INITIALIZED=3139602
+  E: USEC_INITIALIZED=3064286
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty43
@@ -8969,7 +8970,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty43
   E: MAJOR=4
   E: MINOR=43
-  E: USEC_INITIALIZED=3139983
+  E: USEC_INITIALIZED=3064465
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty44
@@ -8980,7 +8981,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty44
   E: MAJOR=4
   E: MINOR=44
-  E: USEC_INITIALIZED=3140378
+  E: USEC_INITIALIZED=3064823
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty45
@@ -8991,7 +8992,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty45
   E: MAJOR=4
   E: MINOR=45
-  E: USEC_INITIALIZED=3140801
+  E: USEC_INITIALIZED=3066883
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty46
@@ -9002,7 +9003,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty46
   E: MAJOR=4
   E: MINOR=46
-  E: USEC_INITIALIZED=3141198
+  E: USEC_INITIALIZED=3065597
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty47
@@ -9013,7 +9014,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty47
   E: MAJOR=4
   E: MINOR=47
-  E: USEC_INITIALIZED=3141594
+  E: USEC_INITIALIZED=3067813
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty48
@@ -9024,7 +9025,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty48
   E: MAJOR=4
   E: MINOR=48
-  E: USEC_INITIALIZED=3141972
+  E: USEC_INITIALIZED=3066326
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty49
@@ -9035,7 +9036,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty49
   E: MAJOR=4
   E: MINOR=49
-  E: USEC_INITIALIZED=3142348
+  E: USEC_INITIALIZED=3067057
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty5
@@ -9046,7 +9047,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty5
   E: MAJOR=4
   E: MINOR=5
-  E: USEC_INITIALIZED=3142751
+  E: USEC_INITIALIZED=3068700
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty50
@@ -9057,7 +9058,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty50
   E: MAJOR=4
   E: MINOR=50
-  E: USEC_INITIALIZED=3143142
+  E: USEC_INITIALIZED=3067767
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty51
@@ -9068,7 +9069,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty51
   E: MAJOR=4
   E: MINOR=51
-  E: USEC_INITIALIZED=3143523
+  E: USEC_INITIALIZED=3067823
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty52
@@ -9079,7 +9080,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty52
   E: MAJOR=4
   E: MINOR=52
-  E: USEC_INITIALIZED=3143902
+  E: USEC_INITIALIZED=3068674
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty53
@@ -9090,7 +9091,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty53
   E: MAJOR=4
   E: MINOR=53
-  E: USEC_INITIALIZED=3144285
+  E: USEC_INITIALIZED=3069331
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty54
@@ -9101,7 +9102,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty54
   E: MAJOR=4
   E: MINOR=54
-  E: USEC_INITIALIZED=3144830
+  E: USEC_INITIALIZED=3069071
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty55
@@ -9112,7 +9113,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty55
   E: MAJOR=4
   E: MINOR=55
-  E: USEC_INITIALIZED=3145247
+  E: USEC_INITIALIZED=3069637
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty56
@@ -9123,7 +9124,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty56
   E: MAJOR=4
   E: MINOR=56
-  E: USEC_INITIALIZED=3145654
+  E: USEC_INITIALIZED=3070063
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty57
@@ -9134,7 +9135,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty57
   E: MAJOR=4
   E: MINOR=57
-  E: USEC_INITIALIZED=3146050
+  E: USEC_INITIALIZED=3072479
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty58
@@ -9145,7 +9146,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty58
   E: MAJOR=4
   E: MINOR=58
-  E: USEC_INITIALIZED=3146438
+  E: USEC_INITIALIZED=3071383
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty59
@@ -9156,7 +9157,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty59
   E: MAJOR=4
   E: MINOR=59
-  E: USEC_INITIALIZED=3146845
+  E: USEC_INITIALIZED=3070102
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty6
@@ -9167,7 +9168,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty6
   E: MAJOR=4
   E: MINOR=6
-  E: USEC_INITIALIZED=3147481
+  E: USEC_INITIALIZED=3070396
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty60
@@ -9178,7 +9179,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty60
   E: MAJOR=4
   E: MINOR=60
-  E: USEC_INITIALIZED=3148037
+  E: USEC_INITIALIZED=3070854
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty61
@@ -9189,7 +9190,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty61
   E: MAJOR=4
   E: MINOR=61
-  E: USEC_INITIALIZED=3148425
+  E: USEC_INITIALIZED=3070863
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty62
@@ -9200,7 +9201,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty62
   E: MAJOR=4
   E: MINOR=62
-  E: USEC_INITIALIZED=3148965
+  E: USEC_INITIALIZED=3071087
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty63
@@ -9211,7 +9212,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty63
   E: MAJOR=4
   E: MINOR=63
-  E: USEC_INITIALIZED=3149353
+  E: USEC_INITIALIZED=3071780
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty7
@@ -9222,7 +9223,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty7
   E: MAJOR=4
   E: MINOR=7
-  E: USEC_INITIALIZED=3149726
+  E: USEC_INITIALIZED=3074365
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty8
@@ -9233,7 +9234,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty8
   E: MAJOR=4
   E: MINOR=8
-  E: USEC_INITIALIZED=3150093
+  E: USEC_INITIALIZED=3072073
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/tty/tty9
@@ -9244,7 +9245,7 @@ Timeout waiting for PADO packets
   E: DEVNAME=/dev/tty9
   E: MAJOR=4
   E: MINOR=9
-  E: USEC_INITIALIZED=3150462
+  E: USEC_INITIALIZED=3072522
   E: ID_MM_CANDIDATE=1
   
   P: /devices/virtual/vc/vcs
@@ -9682,11 +9683,11 @@ Timeout waiting for PADO packets
 /devices/msr
 /devices/pci0000:00/0000:00:00.0
 /devices/pci0000:00/0000:00:02.0
-/devices/pci0000:00/0000:00:02.0/drm/card0
-  name: /dev/dri/card0
+/devices/pci0000:00/0000:00:02.0/drm/card1
+  name: /dev/dri/card1
   links: /dev/dri/by-path/pci-0000:00:02.0-card
-/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
-/devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
+/devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1
+/devices/pci0000:00/0000:00:02.0/drm/card1/card1-VGA-1
 /devices/pci0000:00/0000:00:02.0/drm/renderD128
   name: /dev/dri/renderD128
   links: /dev/dri/by-path/pci-0000:00:02.0-render
@@ -9706,9 +9707,9 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:03.0/sound/card0/input10
 /devices/pci0000:00/0000:00:03.0/sound/card0/input10/event10
   name: /dev/input/event10
-/devices/pci0000:00/0000:00:03.0/sound/card0/input6
-/devices/pci0000:00/0000:00:03.0/sound/card0/input6/event6
-  name: /dev/input/event6
+/devices/pci0000:00/0000:00:03.0/sound/card0/input11
+/devices/pci0000:00/0000:00:03.0/sound/card0/input11/event11
+  name: /dev/input/event11
 /devices/pci0000:00/0000:00:03.0/sound/card0/input7
 /devices/pci0000:00/0000:00:03.0/sound/card0/input7/event7
   name: /dev/input/event7
@@ -9746,7 +9747,7 @@ Timeout waiting for PADO packets
   name: /dev/media0
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video0
   name: /dev/video0
-  links: /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0, /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0
+  links: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index0, /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index0
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/video4linux/video1
   name: /dev/video1
   links: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:10:1.0-video-index1, /dev/v4l/by-id/usb-Generic_USB2.0_PC_CAMERA-video-index1
@@ -9757,7 +9758,7 @@ Timeout waiting for PADO packets
   name: /dev/snd/pcmC2D0c
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.2/sound/card2/controlC2
   name: /dev/snd/controlC2
-  links: /dev/snd/by-path/pci-0000:00:14.0-usb-0:10:1.2, /dev/snd/by-id/usb-Generic_USB2.0_PC_CAMERA-02
+  links: /dev/snd/by-id/usb-Generic_USB2.0_PC_CAMERA-02, /dev/snd/by-path/pci-0000:00:14.0-usb-0:10:1.2
 /devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.3
 /devices/pci0000:00/0000:00:14.0/usb3/3-5
   name: /dev/bus/usb/003/002
@@ -9782,7 +9783,7 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/event5
   name: /dev/input/event5
-  links: /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd
+  links: /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::capslock
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::numlock
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.0/0003:045E:0750.0002/input/input5/input5::scrolllock
@@ -9790,10 +9791,10 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/hidraw/hidraw2
   name: /dev/hidraw2
-/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11
-/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input11/event11
-  name: /dev/input/event11
-  links: /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
+/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6
+/devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6:1.1/0003:045E:0750.0003/input/input6/event6
+  name: /dev/input/event6
+  links: /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
 /devices/pci0000:00/0000:00:14.0/usb3/3-6/wakeup/wakeup21
 /devices/pci0000:00/0000:00:14.0/usb3/3-9
   name: /dev/bus/usb/003/004
@@ -9902,7 +9903,7 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sr0
   name: /dev/sr0
-  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
   name: /dev/bsg/0:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/scsi_device/0:0:0:0
@@ -9917,19 +9918,19 @@ Timeout waiting for PADO packets
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda
   name: /dev/sda
-  links: /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  links: /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda1
   name: /dev/sda1
-  links: /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
+  links: /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda2
   name: /dev/sda2
-  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-label/archlinux, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
+  links: /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-label/archlinux, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda5
   name: /dev/sda5
-  links: /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4
+  links: /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sda/sda6
   name: /dev/sda6
-  links: /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-label/archrecover, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
+  links: /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-label/archrecover, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/bsg/1:0:0:0
   name: /dev/bsg/1:0:0:0
 /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_device/1:0:0:0
@@ -9963,7 +9964,6 @@ Timeout waiting for PADO packets
 /devices/platform/PNP0C0C:00
 /devices/platform/coretemp.0
 /devices/platform/coretemp.0/hwmon/hwmon1
-/devices/platform/efi-framebuffer.0
 /devices/platform/efivars.0
 /devices/platform/intel_rapl_msr.0
 /devices/platform/microcode
@@ -10204,6 +10204,8 @@ Timeout waiting for PADO packets
   name: /dev/snapshot
 /devices/virtual/misc/udmabuf
   name: /dev/udmabuf
+/devices/virtual/misc/uinput
+  name: /dev/uinput
 /devices/virtual/misc/vboxdrv
   name: /dev/vboxdrv
 /devices/virtual/misc/vboxdrvu
@@ -10530,182 +10532,192 @@ Timeout waiting for PADO packets
   old prop read: +rIN.j8NaKXDZtZ6 (failed)
   prop read: 4zLr.j8NaKXDZtZ6 (failed)
   old prop read: 4zLr.j8NaKXDZtZ6 (failed)
-  prop read: Ij4C.ndpeucax6V1 (failed)
-  old prop read: Ij4C.ndpeucax6V1 (failed)
   prop read: ZsBS.GQNx7L4uPNA (failed)
   old prop read: ZsBS.GQNx7L4uPNA (failed)
+  prop read: Ij4C.ndpeucax6V1 (failed)
+  old prop read: Ij4C.ndpeucax6V1 (failed)
 ----- kernel log -----
-  <4>[ 1497.128888] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=103.141.138.175 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=234 ID=33615 PROTO=TCP SPT=41908 DPT=6543 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1532.606846] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=183.136.226.3 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=108 ID=7520 PROTO=TCP SPT=32527 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0 
-  <4>[ 1563.813499] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=53111 PROTO=TCP SPT=53968 DPT=6005 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1576.437001] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=89.248.163.149 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=243 ID=2293 PROTO=TCP SPT=40063 DPT=7056 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1614.032251] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=41614 DF PROTO=2 
-  <4>[ 1616.793456] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=57209 PROTO=TCP SPT=53968 DPT=503 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1633.176753] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=193.163.125.58 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=9255 PROTO=TCP SPT=51558 DPT=32770 WINDOW=14600 RES=0x00 SYN URGP=0 
-  <4>[ 1636.538444] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=167.71.234.134 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=233 ID=51032 PROTO=TCP SPT=49696 DPT=32692 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1650.428042] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=43368 PROTO=TCP SPT=53968 DPT=9991 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1670.770585] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=44365 PROTO=TCP SPT=53968 DPT=1901 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1720.752566] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.143.203.2 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=65377 PROTO=TCP SPT=49050 DPT=8469 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1723.535966] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=122.226.223.138 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=38851 PROTO=TCP SPT=56971 DPT=2376 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1734.530954] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=29643 PROTO=TCP SPT=53968 DPT=55002 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1773.631875] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=6098 PROTO=TCP SPT=53968 DPT=38014 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1783.304847] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=212.193.30.108 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=242 ID=54321 PROTO=TCP SPT=37483 DPT=34567 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[ 1790.015094] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.125.65.126 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=60543 DPT=22 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[ 1825.684967] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=143.198.64.214 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=29716 PROTO=TCP SPT=57235 DPT=41241 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1843.277560] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:7f:ff:fa:10:96:93:32:a3:f9:08:00 SRC=192.168.0.13 DST=239.255.255.250 LEN=123 TOS=0x00 PREC=0x00 TTL=1 ID=12065 DF PROTO=UDP SPT=50022 DPT=1982 LEN=103 
-  <4>[ 1855.433563] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=192.241.196.211 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=54321 PROTO=TCP SPT=42540 DPT=8080 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[ 1885.710649] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=222.187.238.93 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=232 ID=58080 PROTO=TCP SPT=46760 DPT=10046 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1896.615130] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=103.178.236.95 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=54321 PROTO=TCP SPT=54337 DPT=25569 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[ 1916.686523] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=162.142.125.230 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=37 ID=50819 PROTO=TCP SPT=46318 DPT=5090 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1977.816010] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=10450 PROTO=TCP SPT=53968 DPT=5450 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 1988.606595] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=1931 DF PROTO=2 
-  <4>[ 1997.425315] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=193.163.125.12 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=12433 PROTO=TCP SPT=36232 DPT=12367 WINDOW=14600 RES=0x00 SYN URGP=0 
-  <4>[ 2025.396374] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=192.241.224.183 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=54321 PROTO=TCP SPT=60459 DPT=2638 WINDOW=65535 RES=0x00 SYN URGP=0 
-  <4>[ 2030.365101] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=163.172.147.100 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=10424 PROTO=TCP SPT=61234 DPT=873 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2055.733999] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=60.222.235.132 DST=192.168.0.201 LEN=60 TOS=0x00 PREC=0x00 TTL=44 ID=30938 DF PROTO=TCP SPT=6990 DPT=60597 WINDOW=0 RES=0x00 SYN URGP=0 
-  <4>[ 2056.897952] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.41 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=37486 PROTO=TCP SPT=52660 DPT=6057 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2106.560064] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=158.255.7.204 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=35926 PROTO=TCP SPT=53968 DPT=56037 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2113.464776] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=23833 DF PROTO=2 
-  <4>[ 2119.662322] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.134.144.153 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=236 ID=42094 PROTO=TCP SPT=56766 DPT=5060 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2135.634858] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=193.163.125.46 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=26155 PROTO=TCP SPT=55163 DPT=3200 WINDOW=14600 RES=0x00 SYN URGP=0 
-  <4>[ 2167.449510] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.41 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=48121 PROTO=TCP SPT=52660 DPT=5793 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2182.140345] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=167.94.138.106 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=36 ID=1186 PROTO=TCP SPT=62442 DPT=49502 WINDOW=1024 RES=0x00 SYN URGP=0 
-  <4>[ 2205.896662] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=43.130.11.228 DST=192.168.0.201 LEN=52 TOS=0x00 PREC=0x00 TTL=50 ID=20319 DF PROTO=TCP SPT=21343 DPT=7004 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[21920.139466] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=185.156.73.91 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=244 ID=6876 PROTO=TCP SPT=48067 DPT=3325 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[21940.254419] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=120.238.147.178 DST=192.168.0.201 LEN=60 TOS=0x00 PREC=0x00 TTL=43 ID=30768 DF PROTO=TCP SPT=29385 DPT=8250 WINDOW=0 RES=0x00 SYN URGP=0 
+  <4>[21948.752068] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=104.206.128.22 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=11839 PROTO=TCP SPT=34247 DPT=8333 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[21966.738122] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=89.248.165.202 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=243 ID=54321 PROTO=TCP SPT=43337 DPT=4768 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[21975.475909] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=17272 DF PROTO=2 
+  <4>[21981.043393] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=92.63.197.94 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=242 ID=10664 PROTO=TCP SPT=45462 DPT=3333 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[21984.050832] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=78.101.166.142 DST=192.168.0.201 LEN=52 TOS=0x00 PREC=0x00 TTL=111 ID=2226 DF PROTO=TCP SPT=50995 DPT=5598 WINDOW=64240 RES=0x00 SYN URGP=0 
+  <4>[21999.079133] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=78.101.166.142 DST=192.168.0.201 LEN=52 TOS=0x00 PREC=0x00 TTL=111 ID=2230 DF PROTO=TCP SPT=50995 DPT=5598 WINDOW=64240 RES=0x00 SYN URGP=0 
+  <4>[22024.541676] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=46.161.27.5 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=37074 PROTO=TCP SPT=40563 DPT=443 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22050.625062] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=89.163.138.112 DST=192.168.0.201 LEN=449 TOS=0x00 PREC=0x00 TTL=51 ID=49627 DF PROTO=UDP SPT=5106 DPT=5060 LEN=429 
+  <4>[22084.524299] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=207.154.255.215 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=54321 PROTO=TCP SPT=44293 DPT=8081 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[22098.454798] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=162.142.125.232 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=37 ID=44741 PROTO=TCP SPT=35099 DPT=5431 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22100.333948] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=18662 DF PROTO=2 
+  <6>[22130.315514] printk: console [lp0] disabled
+  <6>[22130.453615] lp: driver loaded but no devices found
+  <4>[22136.512528] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.41 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=48978 PROTO=TCP SPT=53250 DPT=13430 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22173.058458] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.51 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=51319 PROTO=TCP SPT=59475 DPT=14133 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22178.010745] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=23.148.145.2 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=64896 PROTO=TCP SPT=61011 DPT=2443 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22179.489227] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=92.204.139.216 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=240 ID=4637 PROTO=TCP SPT=40758 DPT=2376 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22224.795025] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.135.232.80 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=54321 PROTO=TCP SPT=47732 DPT=7474 WINDOW=65535 RES=0x00 SYN URGP=0 
+  <4>[22225.192191] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=32134 DF PROTO=2 
+  <6>[22245.550365] btrfs[102677]: segfault at 0 ip 000055c95f5ae0ff sp 00007ffdb49e1b50 error 4 in btrfs[55c95f516000+9b000]
+  <6>[22245.550376] Code: 49 89 c6 b9 0d 00 00 00 31 c0 48 89 df 48 8d ac 24 b0 00 00 00 31 f6 f3 48 ab b9 18 00 00 00 48 89 ef f3 48 ab 48 8d 7c 24 20 <49> 8b 06 48 c7 84 24 00 01 00 00 ff ff ff ff 44 0f b6 a8 dc 00 00
+  <4>[22260.258168] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=170.130.187.34 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=235 ID=43664 PROTO=TCP SPT=52039 DPT=995 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22315.570392] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=14.127.251.197 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=236 ID=21055 PROTO=TCP SPT=17410 DPT=1433 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22330.908111] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=172.104.138.223 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=237 ID=23206 PROTO=TCP SPT=12406 DPT=8888 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22341.028877] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=178.128.126.245 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=230 ID=20258 PROTO=TCP SPT=40956 DPT=3300 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22350.051326] [UFW BLOCK] IN=enp2s0 OUT= MAC=01:00:5e:00:00:01:54:a6:5c:8c:c5:8c:08:00 SRC=192.168.0.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=42762 DF PROTO=2 
+  <4>[22375.020800] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.53 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=239 ID=5712 PROTO=TCP SPT=53276 DPT=13769 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22377.847800] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=45.143.200.50 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=238 ID=45114 PROTO=TCP SPT=57913 DPT=16019 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22389.035691] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=92.255.85.60 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=236 ID=12125 PROTO=TCP SPT=50318 DPT=5239 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22414.299075] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=167.94.145.83 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=31 ID=30531 PROTO=TCP SPT=57452 DPT=102 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22423.120595] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=72.167.32.184 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=235 ID=44895 PROTO=TCP SPT=51006 DPT=3389 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22445.043552] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=147.203.255.20 DST=192.168.0.201 LEN=43 TOS=0x00 PREC=0x00 TTL=236 ID=54321 PROTO=UDP SPT=40801 DPT=11211 LEN=23 
+  <4>[22474.151564] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.41 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=59383 PROTO=TCP SPT=53250 DPT=13485 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22483.350815] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=162.142.125.83 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=39 ID=14467 PROTO=TCP SPT=1876 DPT=12312 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <6>[22509.962466] printk: console [lp0] disabled
+  <6>[22510.098334] lp: driver loaded but no devices found
+  <4>[22512.654145] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=91.240.118.39 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=241 ID=15719 PROTO=TCP SPT=53224 DPT=13041 WINDOW=1024 RES=0x00 SYN URGP=0 
+  <4>[22541.014548] [UFW BLOCK] IN=enp2s0 OUT= MAC=00:e0:4c:f5:51:d8:54:a6:5c:8c:c5:8c:08:00 SRC=167.94.146.22 DST=192.168.0.201 LEN=44 TOS=0x00 PREC=0x00 TTL=32 ID=5174 PROTO=TCP SPT=39766 DPT=7917 WINDOW=1024 RES=0x00 SYN URGP=0 
 ----- kernel log end -----
 ----- /proc/modules -----
-  st 65536 0 - Live 0xffffffffc1227000
-  lp 24576 0 - Live 0xffffffffc1205000
-  parport_pc 69632 0 - Live 0xffffffffc1211000
-  ppdev 24576 0 - Live 0xffffffffc1128000
-  parport 77824 3 lp,parport_pc,ppdev, Live 0xffffffffc1114000
-  snd_seq_dummy 16384 0 - Live 0xffffffffc11f8000
-  snd_hrtimer 16384 1 - Live 0xffffffffc1200000
-  snd_seq 94208 7 snd_seq_dummy, Live 0xffffffffc11e0000
-  rfcomm 90112 16 - Live 0xffffffffc1177000
-  cmac 16384 3 - Live 0xffffffffc1140000
-  algif_hash 16384 1 - Live 0xffffffffc113b000
-  algif_skcipher 16384 1 - Live 0xffffffffc10ff000
-  af_alg 36864 6 algif_hash,algif_skcipher, Live 0xffffffffc10f5000
-  bnep 28672 2 - Live 0xffffffffc10e3000
-  vfat 20480 1 - Live 0xffffffffc10af000
-  fat 86016 1 vfat, Live 0xffffffffc1099000
-  intel_rapl_msr 20480 0 - Live 0xffffffffc1073000
-  intel_rapl_common 32768 1 intel_rapl_msr, Live 0xffffffffc107c000
-  x86_pkg_temp_thermal 20480 0 - Live 0xffffffffc106d000
-  intel_powerclamp 20480 0 - Live 0xffffffffc1062000
-  btusb 65536 0 - Live 0xffffffffc1088000
-  coretemp 20480 0 - Live 0xffffffffc105c000
-  btrtl 28672 1 btusb, Live 0xffffffffc0fce000
-  uvcvideo 151552 0 - Live 0xffffffffc1036000
-  btbcm 20480 1 btusb, Live 0xffffffffc0f9c000
-  kvm_intel 372736 0 - Live 0xffffffffc0fda000
-  videobuf2_vmalloc 20480 1 uvcvideo, Live 0xffffffffc0da9000
-  btintel 45056 1 btusb, Live 0xffffffffc0f90000
-  videobuf2_memops 20480 1 videobuf2_vmalloc, Live 0xffffffffc0d07000
-  videobuf2_v4l2 40960 1 uvcvideo, Live 0xffffffffc0f85000
-  kvm 1069056 1 kvm_intel, Live 0xffffffffc0e7f000
-  snd_hda_codec_realtek 159744 1 - Live 0xffffffffc0fa6000
-  bluetooth 753664 45 rfcomm,bnep,btusb,btrtl,btbcm,btintel, Live 0xffffffffc0dc6000
-  videobuf2_common 86016 4 uvcvideo,videobuf2_vmalloc,videobuf2_memops,videobuf2_v4l2, Live 0xffffffffc0db0000
-  joydev 28672 0 - Live 0xffffffffc0c8f000
-  snd_hda_codec_generic 98304 1 snd_hda_codec_realtek, Live 0xffffffffc0d90000
-  irqbypass 16384 1 kvm, Live 0xffffffffc0c85000
-  crct10dif_pclmul 16384 1 - Live 0xffffffffc0c8a000
-  ledtrig_audio 16384 1 snd_hda_codec_generic, Live 0xffffffffc0c80000
-  snd_usb_audio 380928 1 - Live 0xffffffffc0d32000
-  snd_usbmidi_lib 45056 1 snd_usb_audio, Live 0xffffffffc0cfb000
-  snd_rawmidi 49152 1 snd_usbmidi_lib, Live 0xffffffffc0d25000
-  snd_hda_codec_hdmi 81920 1 - Live 0xffffffffc0d10000
-  videodev 303104 3 uvcvideo,videobuf2_v4l2,videobuf2_common, Live 0xffffffffc0cb0000
-  crc32_pclmul 16384 0 - Live 0xffffffffc0b1f000
-  snd_hda_intel 61440 3 - Live 0xffffffffc0ca0000
-  hid_microsoft 16384 0 - Live 0xffffffffc0a08000
-  snd_seq_device 16384 2 snd_seq,snd_rawmidi, Live 0xffffffffc0c98000
-  ghash_clmulni_intel 16384 0 - Live 0xffffffffc0ac3000
-  mousedev 24576 0 - Live 0xffffffffc0b18000
-  ecdh_generic 16384 2 bluetooth, Live 0xffffffffc0a95000
-  mc 65536 5 uvcvideo,videobuf2_v4l2,videobuf2_common,snd_usb_audio,videodev, Live 0xffffffffc0c6f000
-  ff_memless 20480 1 hid_microsoft, Live 0xffffffffc0c5d000
-  snd_intel_dspcfg 32768 1 snd_hda_intel, Live 0xffffffffc0c66000
-  rfkill 32768 6 bluetooth, Live 0xffffffffc09ef000
-  aesni_intel 380928 4 - Live 0xffffffffc0bff000
-  snd_intel_sdw_acpi 20480 1 snd_intel_dspcfg, Live 0xffffffffc09e9000
-  r8169 102400 0 - Live 0xffffffffc0be5000
-  crc16 16384 1 bluetooth, Live 0xffffffffc0a2d000
-  mei_hdcp 24576 0 - Live 0xffffffffc0a7d000
-  crypto_simd 16384 1 aesni_intel, Live 0xffffffffc09f8000
-  snd_hda_codec 180224 4 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel, Live 0xffffffffc0bb8000
-  intel_spi_platform 16384 0 - Live 0xffffffffc09d7000
-  intel_spi 24576 1 intel_spi_platform, Live 0xffffffffc09e2000
-  mei_pxp 20480 0 - Live 0xffffffffc0a10000
-  spi_nor 102400 1 intel_spi, Live 0xffffffffc0afe000
-  cryptd 28672 3 ghash_clmulni_intel,crypto_simd, Live 0xffffffffc09c7000
-  at24 28672 0 - Live 0xffffffffc0bb0000
-  realtek 36864 1 - Live 0xffffffffc0b28000
-  rapl 16384 0 - Live 0xffffffffc0a03000
-  snd_hda_core 118784 5 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0xffffffffc0ae0000
-  mtd 90112 4 intel_spi,spi_nor, Live 0xffffffffc0ac9000
-  snd_hwdep 16384 2 snd_usb_audio,snd_hda_codec, Live 0xffffffffc09dd000
-  snd_pcm 163840 6 snd_usb_audio,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0xffffffffc0a9a000
-  mdio_devres 16384 1 r8169, Live 0xffffffffc0a41000
-  intel_cstate 20480 0 - Live 0xffffffffc09d1000
-  intel_uncore 208896 0 - Live 0xffffffffc0b7c000
-  snd_timer 45056 3 snd_hrtimer,snd_seq,snd_pcm, Live 0xffffffffc0a18000
-  libphy 167936 3 r8169,realtek,mdio_devres, Live 0xffffffffc0b52000
-  mei_me 53248 2 - Live 0xffffffffc0a87000
-  snd 126976 22 snd_seq,snd_hda_codec_realtek,snd_hda_codec_generic,snd_usb_audio,snd_usbmidi_lib,snd_rawmidi,snd_hda_codec_hdmi,snd_hda_intel,snd_seq_device,snd_hda_codec,snd_hwdep,snd_pcm,snd_timer, Live 0xffffffffc0b32000
-  i2c_i801 45056 0 - Live 0xffffffffc0a71000
-  mac_hid 16384 0 - Live 0xffffffffc0a3c000
-  mei 167936 5 mei_hdcp,mei_pxp,mei_me, Live 0xffffffffc0a47000
-  soundcore 16384 1 snd, Live 0xffffffffc0a33000
-  pcspkr 16384 0 - Live 0xffffffffc09fe000
-  lpc_ich 28672 0 - Live 0xffffffffc0a25000
-  i2c_smbus 20480 1 i2c_i801, Live 0xffffffffc09c1000
-  ip6t_REJECT 16384 1 - Live 0xffffffffc09bc000
-  nf_reject_ipv6 20480 1 ip6t_REJECT, Live 0xffffffffc09b6000
-  xt_hl 16384 22 - Live 0xffffffffc0989000
-  ip6t_rt 20480 3 - Live 0xffffffffc0981000
-  ipt_REJECT 16384 1 - Live 0xffffffffc097c000
-  nf_reject_ipv4 16384 1 ipt_REJECT, Live 0xffffffffc0977000
-  xt_LOG 20480 8 - Live 0xffffffffc0971000
-  nf_log_syslog 20480 8 - Live 0xffffffffc096b000
-  xt_limit 16384 11 - Live 0xffffffffc0966000
-  xt_addrtype 16384 4 - Live 0xffffffffc0959000
-  xt_tcpudp 20480 28 - Live 0xffffffffc0953000
-  xt_conntrack 16384 20 - Live 0xffffffffc0961000
-  nf_conntrack 180224 1 xt_conntrack, Live 0xffffffffc0926000
-  nf_defrag_ipv6 24576 1 nf_conntrack, Live 0xffffffffc091f000
-  nf_defrag_ipv4 16384 1 nf_conntrack, Live 0xffffffffc091a000
-  ip6table_filter 16384 1 - Live 0xffffffffc0915000
-  ip6_tables 36864 53 ip6table_filter, Live 0xffffffffc0907000
-  iptable_filter 16384 1 - Live 0xffffffffc0902000
-  winesync 20480 0 - Live 0xffffffffc08fc000
-  vboxnetflt 32768 0 - Live 0xffffffffc08f3000 (OE)
-  vboxnetadp 28672 0 - Live 0xffffffffc0851000 (OE)
-  vboxdrv 540672 2 vboxnetflt,vboxnetadp, Live 0xffffffffc086e000 (OE)
-  sg 45056 0 - Live 0xffffffffc0862000
-  crypto_user 20480 0 - Live 0xffffffffc085c000
-  fuse 172032 1 - Live 0xffffffffc0826000
-  bpf_preload 16384 0 - Live 0xffffffffc07ef000
-  ip_tables 36864 9 iptable_filter, Live 0xffffffffc07f6000
-  x_tables 57344 13 ip6t_REJECT,xt_hl,ip6t_rt,ipt_REJECT,xt_LOG,xt_limit,xt_addrtype,xt_tcpudp,xt_conntrack,ip6table_filter,ip6_tables,iptable_filter,ip_tables, Live 0xffffffffc07e0000
-  usbhid 73728 0 - Live 0xffffffffc07cd000
-  btrfs 1695744 1 - Live 0xffffffffc062e000
-  blake2b_generic 20480 0 - Live 0xffffffffc0628000
-  libcrc32c 16384 2 nf_conntrack,btrfs, Live 0xffffffffc0620000
-  crc32c_generic 16384 0 - Live 0xffffffffc061b000
-  xor 24576 1 btrfs, Live 0xffffffffc05db000
-  raid6_pq 122880 1 btrfs, Live 0xffffffffc05fc000
-  sr_mod 28672 0 - Live 0xffffffffc05f4000
-  crc32c_intel 24576 2 - Live 0xffffffffc05e9000
-  xhci_pci 24576 0 - Live 0xffffffffc05e2000
-  cdrom 77824 1 sr_mod, Live 0xffffffffc05c7000
-  xhci_pci_renesas 24576 1 xhci_pci, Live 0xffffffffc05c0000
-  intel_agp 24576 0 - Live 0xffffffffc0281000
-  i915 3289088 70 - Live 0xffffffffc029c000
-  video 57344 1 i915, Live 0xffffffffc0288000
-  ttm 86016 1 i915, Live 0xffffffffc026b000
-  intel_gtt 28672 2 intel_agp,i915, Live 0xffffffffc0260000
+  lp 24576 0 - Live 0xffffffffc1262000
+  parport_pc 69632 0 - Live 0xffffffffc1247000
+  st 65536 0 - Live 0xffffffffc1269000
+  ppdev 24576 0 - Live 0xffffffffc1240000
+  parport 77824 3 lp,parport_pc,ppdev, Live 0xffffffffc122c000
+  uinput 20480 0 - Live 0xffffffffc1226000
+  xt_recent 24576 0 - Live 0xffffffffc121d000
+  udp_diag 16384 0 - Live 0xffffffffc1159000
+  tcp_diag 16384 0 - Live 0xffffffffc1154000
+  inet_diag 24576 2 udp_diag,tcp_diag, Live 0xffffffffc114d000
+  rfcomm 90112 16 - Live 0xffffffffc11d8000
+  snd_seq_dummy 16384 0 - Live 0xffffffffc118a000
+  snd_hrtimer 16384 1 - Live 0xffffffffc11d3000
+  snd_seq 90112 7 snd_seq_dummy, Live 0xffffffffc11b4000
+  cmac 16384 3 - Live 0xffffffffc116d000
+  algif_hash 16384 1 - Live 0xffffffffc1163000
+  algif_skcipher 16384 1 - Live 0xffffffffc1129000
+  af_alg 32768 6 algif_hash,algif_skcipher, Live 0xffffffffc1120000
+  bnep 28672 2 - Live 0xffffffffc110e000
+  intel_rapl_msr 20480 0 - Live 0xffffffffc0f30000
+  intel_rapl_common 32768 1 intel_rapl_msr, Live 0xffffffffc0e93000
+  x86_pkg_temp_thermal 20480 0 - Live 0xffffffffc10fc000
+  intel_powerclamp 20480 0 - Live 0xffffffffc0af9000
+  vfat 20480 1 - Live 0xffffffffc10f1000
+  coretemp 20480 0 - Live 0xffffffffc0dd0000
+  fat 86016 1 vfat, Live 0xffffffffc10c5000
+  kvm_intel 385024 0 - Live 0xffffffffc1066000
+  btusb 65536 0 - Live 0xffffffffc0f1f000
+  kvm 1077248 1 kvm_intel, Live 0xffffffffc0f5e000
+  btrtl 28672 1 btusb, Live 0xffffffffc0e8b000
+  irqbypass 16384 1 kvm, Live 0xffffffffc0c82000
+  btbcm 20480 1 btusb, Live 0xffffffffc0df6000
+  crct10dif_pclmul 16384 1 - Live 0xffffffffc0a5d000
+  uvcvideo 147456 0 - Live 0xffffffffc0f39000
+  videobuf2_vmalloc 20480 1 uvcvideo, Live 0xffffffffc09ee000
+  videobuf2_memops 20480 1 videobuf2_vmalloc, Live 0xffffffffc0ab4000
+  snd_usb_audio 376832 1 - Live 0xffffffffc0ec2000
+  videobuf2_v4l2 40960 1 uvcvideo, Live 0xffffffffc0dc5000
+  videobuf2_common 86016 4 uvcvideo,videobuf2_vmalloc,videobuf2_memops,videobuf2_v4l2, Live 0xffffffffc0eac000
+  btintel 45056 1 btusb, Live 0xffffffffc0ea0000
+  snd_usbmidi_lib 45056 1 snd_usb_audio, Live 0xffffffffc0dea000
+  videodev 299008 3 uvcvideo,videobuf2_v4l2,videobuf2_common, Live 0xffffffffc0e41000
+  snd_hda_codec_realtek 167936 1 - Live 0xffffffffc0e17000
+  crc32_pclmul 16384 0 - Live 0xffffffffc0ac7000
+  joydev 28672 0 - Live 0xffffffffc0b3d000
+  btmtk 16384 1 btusb, Live 0xffffffffc0a98000
+  snd_rawmidi 49152 1 snd_usbmidi_lib, Live 0xffffffffc0ce8000
+  snd_hda_codec_generic 98304 1 snd_hda_codec_realtek, Live 0xffffffffc0dfe000
+  snd_seq_device 16384 2 snd_seq,snd_rawmidi, Live 0xffffffffc0a3c000
+  snd_hda_codec_hdmi 77824 1 - Live 0xffffffffc0dd6000
+  ghash_clmulni_intel 16384 0 - Live 0xffffffffc0a37000
+  ledtrig_audio 16384 1 snd_hda_codec_generic, Live 0xffffffffc0a0b000
+  mc 65536 5 uvcvideo,snd_usb_audio,videobuf2_v4l2,videobuf2_common,videodev, Live 0xffffffffc0c71000
+  intel_spi_platform 16384 0 - Live 0xffffffffc09de000
+  bluetooth 843776 46 rfcomm,bnep,btusb,btrtl,btbcm,btintel,btmtk, Live 0xffffffffc0cf6000
+  aesni_intel 380928 4 - Live 0xffffffffc0c8a000
+  snd_hda_intel 61440 1 - Live 0xffffffffc0b9c000
+  intel_spi 24576 1 intel_spi_platform, Live 0xffffffffc0af2000
+  crypto_simd 16384 1 aesni_intel, Live 0xffffffffc0aaf000
+  spi_nor 106496 1 intel_spi, Live 0xffffffffc0c56000
+  snd_intel_dspcfg 36864 1 snd_hda_intel, Live 0xffffffffc0aa5000
+  mei_pxp 20480 0 - Live 0xffffffffc0b00000
+  mtd 90112 4 intel_spi,spi_nor, Live 0xffffffffc0ad8000
+  cryptd 28672 3 ghash_clmulni_intel,crypto_simd, Live 0xffffffffc0a90000
+  hid_microsoft 16384 0 - Live 0xffffffffc0a29000
+  mei_hdcp 24576 0 - Live 0xffffffffc0ad1000
+  ecdh_generic 16384 2 bluetooth, Live 0xffffffffc0acc000
+  rapl 16384 0 - Live 0xffffffffc09e9000
+  snd_intel_sdw_acpi 20480 1 snd_intel_dspcfg, Live 0xffffffffc0a2e000
+  at24 28672 0 - Live 0xffffffffc0a55000
+  r8169 102400 0 - Live 0xffffffffc0bd8000
+  snd_hda_codec 180224 4 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel, Live 0xffffffffc0c29000
+  rfkill 32768 6 bluetooth, Live 0xffffffffc0abe000
+  intel_cstate 20480 0 - Live 0xffffffffc0a05000
+  ff_memless 20480 1 hid_microsoft, Live 0xffffffffc09ff000
+  mousedev 24576 0 - Live 0xffffffffc09f8000
+  crc16 16384 1 bluetooth, Live 0xffffffffc09e4000
+  intel_uncore 208896 0 - Live 0xffffffffc0bf5000
+  realtek 36864 1 - Live 0xffffffffc0b33000
+  snd_hda_core 114688 5 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0xffffffffc0b16000
+  mdio_devres 16384 1 r8169, Live 0xffffffffc0a24000
+  snd_hwdep 16384 2 snd_usb_audio,snd_hda_codec, Live 0xffffffffc09d9000
+  snd_pcm 163840 5 snd_usb_audio,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0xffffffffc0baf000
+  libphy 163840 3 r8169,realtek,mdio_devres, Live 0xffffffffc0b73000
+  snd_timer 45056 3 snd_hrtimer,snd_seq,snd_pcm, Live 0xffffffffc0a49000
+  snd 122880 19 snd_seq,snd_usb_audio,snd_usbmidi_lib,snd_hda_codec_realtek,snd_rawmidi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_pcm,snd_timer, Live 0xffffffffc0b54000
+  i2c_i801 45056 0 - Live 0xffffffffc0b48000
+  mei_me 53248 2 - Live 0xffffffffc0b08000
+  pcspkr 16384 0 - Live 0xffffffffc0a44000
+  soundcore 16384 1 snd, Live 0xffffffffc0a9d000
+  mei 163840 5 mei_pxp,mei_hdcp,mei_me, Live 0xffffffffc0a67000
+  mac_hid 16384 0 - Live 0xffffffffc0a62000
+  lpc_ich 28672 0 - Live 0xffffffffc0a1c000
+  i2c_smbus 20480 1 i2c_i801, Live 0xffffffffc0a12000
+  ip6t_REJECT 16384 1 - Live 0xffffffffc09d4000
+  nf_reject_ipv6 20480 1 ip6t_REJECT, Live 0xffffffffc09ce000
+  xt_hl 16384 22 - Live 0xffffffffc09c9000
+  ip6t_rt 20480 3 - Live 0xffffffffc09c3000
+  ipt_REJECT 16384 1 - Live 0xffffffffc09be000
+  nf_reject_ipv4 16384 1 ipt_REJECT, Live 0xffffffffc09b9000
+  xt_LOG 20480 8 - Live 0xffffffffc09b3000
+  nf_log_syslog 20480 8 - Live 0xffffffffc09ad000
+  xt_limit 16384 11 - Live 0xffffffffc0999000
+  xt_addrtype 16384 4 - Live 0xffffffffc0994000
+  xt_tcpudp 20480 26 - Live 0xffffffffc09a7000
+  xt_conntrack 16384 20 - Live 0xffffffffc09a2000
+  nf_conntrack 176128 1 xt_conntrack, Live 0xffffffffc0968000
+  nf_defrag_ipv6 24576 1 nf_conntrack, Live 0xffffffffc095d000
+  nf_defrag_ipv4 16384 1 nf_conntrack, Live 0xffffffffc0955000
+  ip6table_filter 16384 1 - Live 0xffffffffc0950000
+  ip6_tables 36864 53 ip6table_filter, Live 0xffffffffc0946000
+  iptable_filter 16384 1 - Live 0xffffffffc0941000
+  winesync 20480 0 - Live 0xffffffffc0906000
+  vboxnetflt 32768 0 - Live 0xffffffffc0922000 (OE)
+  vboxnetadp 28672 0 - Live 0xffffffffc0866000 (OE)
+  vboxdrv 532480 2 vboxnetflt,vboxnetadp, Live 0xffffffffc0883000 (OE)
+  sg 45056 0 - Live 0xffffffffc0877000
+  crypto_user 20480 0 - Live 0xffffffffc0871000
+  fuse 167936 1 - Live 0xffffffffc083c000
+  bpf_preload 16384 0 - Live 0xffffffffc02b0000
+  ip_tables 36864 9 iptable_filter, Live 0xffffffffc080e000
+  x_tables 57344 14 xt_recent,ip6t_REJECT,xt_hl,ip6t_rt,ipt_REJECT,xt_LOG,xt_limit,xt_addrtype,xt_tcpudp,xt_conntrack,ip6table_filter,ip6_tables,iptable_filter,ip_tables, Live 0xffffffffc07f8000
+  usbhid 73728 0 - Live 0xffffffffc07e5000
+  btrfs 1667072 1 - Live 0xffffffffc064d000
+  blake2b_generic 20480 0 - Live 0xffffffffc0644000
+  libcrc32c 16384 2 nf_conntrack,btrfs, Live 0xffffffffc063c000
+  crc32c_generic 16384 0 - Live 0xffffffffc0637000
+  xor 24576 1 btrfs, Live 0xffffffffc05f8000
+  raid6_pq 122880 1 btrfs, Live 0xffffffffc0618000
+  crc32c_intel 24576 2 - Live 0xffffffffc0611000
+  sr_mod 28672 0 - Live 0xffffffffc0605000
+  xhci_pci 20480 0 - Live 0xffffffffc05ff000
+  cdrom 77824 1 sr_mod, Live 0xffffffffc05e4000
+  xhci_pci_renesas 24576 1 xhci_pci, Live 0xffffffffc05dd000
+  intel_agp 20480 0 - Live 0xffffffffc029a000
+  i915 3305472 159 - Live 0xffffffffc02b5000
+  video 57344 1 i915, Live 0xffffffffc02a1000
+  ttm 86016 1 i915, Live 0xffffffffc0284000
+  intel_gtt 28672 2 intel_agp,i915, Live 0xffffffffc0279000
 ----- /proc/modules end -----
   used irqs: 0,8,9,16,18,23,24,25,26,27,28,29,30,31,32
 =========== end debug info ============
@@ -11217,7 +11229,7 @@ Timeout waiting for PADO packets
   Unique ID: rdCR.CxwsZFjVASF
   Hardware Class: memory
   Model: "Main Memory"
-  Memory Range: 0x00000000-0x1ec213fff (rw)
+  Memory Range: 0x00000000-0x1ec1f7fff (rw)
   Memory Size: 7 GB + 512 MB
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -11241,7 +11253,7 @@ Timeout waiting for PADO packets
   I/O Ports: 0xf080-0xf083 (rw)
   I/O Ports: 0xf060-0xf07f (rw)
   Memory Range: 0xf7d1a000-0xf7d1a7ff (rw,non-prefetchable)
-  IRQ: 26 (142416 events)
+  IRQ: 26 (1230014 events)
   Module Alias: "pci:v00008086d00008C02sv00008086sd00008C02bc01sc06i01"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -11411,7 +11423,7 @@ Timeout waiting for PADO packets
   Driver: "snd_hda_intel"
   Driver Modules: "snd_hda_intel"
   Memory Range: 0xf7d14000-0xf7d17fff (rw,non-prefetchable)
-  IRQ: 31 (814 events)
+  IRQ: 31 (2746 events)
   Module Alias: "pci:v00008086d00000C0Csv00008086sd00000C0Cbc04sc03i00"
   Driver Info #0:
     Driver Status: snd_hda_intel is active
@@ -11432,7 +11444,7 @@ Timeout waiting for PADO packets
   Revision: 0x05
   Driver: "ehci-pci"
   Memory Range: 0xf7d1c000-0xf7d1c3ff (rw,non-prefetchable)
-  IRQ: 16 (27 events)
+  IRQ: 16 (120 events)
   Module Alias: "pci:v00008086d00008C2Dsv00008086sd00008C2Dbc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -11453,7 +11465,7 @@ Timeout waiting for PADO packets
   Revision: 0x05
   Driver: "ehci-pci"
   Memory Range: 0xf7d1b000-0xf7d1b3ff (rw,non-prefetchable)
-  IRQ: 23 (29 events)
+  IRQ: 23 (142 events)
   Module Alias: "pci:v00008086d00008C26sv00008086sd00008C26bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -11479,7 +11491,7 @@ Timeout waiting for PADO packets
   Memory Range: 0xe0000000-0xefffffff (ro,non-prefetchable)
   I/O Ports: 0xf000-0xf03f (rw)
   Memory Range: 0x000c0000-0x000dffff (rw,non-prefetchable,disabled)
-  IRQ: 27 (243871 events)
+  IRQ: 27 (3572889 events)
   Module Alias: "pci:v00008086d0000041Esv00008086sd0000041Ebc03sc00i00"
   Driver Info #0:
     Driver Status: i915 is active
@@ -11501,7 +11513,7 @@ Timeout waiting for PADO packets
   Driver: "xhci_hcd"
   Driver Modules: "xhci_pci"
   Memory Range: 0xf7d00000-0xf7d0ffff (rw,non-prefetchable)
-  IRQ: 28 (75041 events)
+  IRQ: 28 (6320387 events)
   Module Alias: "pci:v00008086d00008C31sv00008086sd00008C31bc0Csc03i30"
   Driver Info #0:
     Driver Status: xhci_pci is active
@@ -11579,7 +11591,7 @@ Timeout waiting for PADO packets
   Driver: "ahci", "sr"
   Driver Modules: "ahci", "sr_mod"
   Device File: /dev/sr0 (/dev/sg0)
-  Device Files: /dev/sr0, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
+  Device Files: /dev/sr0, /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0, /dev/cdrom, /dev/disk/by-path/pci-0000:00:1f.2-ata-1, /dev/disk/by-id/ata-HL-DT-STDVD-RAM_GH22NS30
   Device Number: block 11:0 (char 21:0)
   Features: CD-R, CD-RW, DVD, DVD-R, DVD-RW, DVD-R DL, DVD+R, DVD+RW, DVD+R DL, DVD-RAM, MRW, MRW-W
   Drive status: no medium
@@ -11603,7 +11615,7 @@ Timeout waiting for PADO packets
   Driver: "ahci", "sd"
   Driver Modules: "ahci"
   Device File: /dev/sda
-  Device Files: /dev/sda, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  Device Files: /dev/sda, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0, /dev/disk/by-id/wwn-0x5001b448b1c77808, /dev/disk/by-path/pci-0000:00:1f.2-ata-2
   Device Number: block 8:0-8:15
   BIOS id: 0x80
   Geometry (Logical): CHS 14593/255/63
@@ -11620,7 +11632,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda1
-  Device Files: /dev/sda1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0
+  Device Files: /dev/sda1, /dev/disk/by-id/wwn-0x5001b448b1c77808-part1, /dev/disk/by-partuuid/ce7ed71b-6a0a-244b-a1fc-48578a2069e0, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part1, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part1, /dev/disk/by-uuid/83ED-BDD9, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part1
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11632,7 +11644,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda2
-  Device Files: /dev/sda2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-label/archlinux, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2
+  Device Files: /dev/sda2, /dev/disk/by-partlabel/archlinux, /dev/disk/by-id/wwn-0x5001b448b1c77808-part2, /dev/disk/by-uuid/696cc724-3165-4249-8dc1-2c59193f6b7e, /dev/disk/by-label/archlinux, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part2, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part2, /dev/disk/by-partuuid/076b16ce-f47f-4306-826b-85f19ec2746a, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part2
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11644,7 +11656,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda5
-  Device Files: /dev/sda5, /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4
+  Device Files: /dev/sda5, /dev/disk/by-partuuid/a6358fab-98b7-4608-afa2-ac5a01f722fc, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part5, /dev/disk/by-uuid/b4d2c360-49ac-4c9f-a9ac-0827a35891b4, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part5, /dev/disk/by-id/wwn-0x5001b448b1c77808-part5, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part5
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11656,7 +11668,7 @@ Timeout waiting for PADO packets
   Hardware Class: partition
   Model: "Partition"
   Device File: /dev/sda6
-  Device Files: /dev/sda6, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-label/archrecover, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd
+  Device Files: /dev/sda6, /dev/disk/by-path/pci-0000:00:1f.2-ata-2-part6, /dev/disk/by-id/ata-SanDisk_SSD_PLUS_120GB_1952B4801980-part6, /dev/disk/by-uuid/22a16043-0587-4846-a3f6-934533dc68dd, /dev/disk/by-path/pci-0000:00:1f.2-ata-2.0-part6, /dev/disk/by-label/archrecover, /dev/disk/by-id/wwn-0x5001b448b1c77808-part6, /dev/disk/by-partuuid/81340b67-1eb3-8f41-93b8-9cd8e296531e
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Disk)
 
@@ -11735,12 +11747,12 @@ Timeout waiting for PADO packets
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0002 "2.0 root hub"
-  Revision: "5.16"
+  Revision: "5.17"
   Serial ID: "0000:00:14.0"
   Driver: "hub"
   Driver Modules: "usbcore"
   Speed: 480 Mbps
-  Module Alias: "usb:v1D6Bp0002d0516dc09dsc00dp01ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0002d0517dc09dsc00dp01ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #26 (USB Controller)
 
@@ -11758,9 +11770,9 @@ Timeout waiting for PADO packets
   Revision: "1.10"
   Driver: "usbhid"
   Driver Modules: "usbhid"
-  Device File: /dev/input/event11
-  Device Files: /dev/input/event11, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd
-  Device Number: char 13:75
+  Device File: /dev/input/event6
+  Device Files: /dev/input/event6, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.1-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-if01-event-kbd
+  Device Number: char 13:70
   Speed: 1.5 Mbps
   Module Alias: "usb:v045Ep0750d0110dc00dsc00dp00ic03isc00ip00in01"
   Driver Info #0:
@@ -11780,11 +11792,11 @@ Timeout waiting for PADO packets
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0003 "3.0 root hub"
-  Revision: "5.16"
+  Revision: "5.17"
   Serial ID: "0000:00:14.0"
   Driver: "hub"
   Driver Modules: "usbcore"
-  Module Alias: "usb:v1D6Bp0003d0516dc09dsc00dp03ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0003d0517dc09dsc00dp03ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #26 (USB Controller)
 
@@ -11827,12 +11839,12 @@ Timeout waiting for PADO packets
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0002 "2.0 root hub"
-  Revision: "5.16"
+  Revision: "5.17"
   Serial ID: "0000:00:1a.0"
   Driver: "hub"
   Driver Modules: "usbcore"
   Speed: 480 Mbps
-  Module Alias: "usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #23 (USB Controller)
 
@@ -11851,7 +11863,7 @@ Timeout waiting for PADO packets
   Driver: "usbhid"
   Driver Modules: "usbhid"
   Device File: /dev/input/event5
-  Device Files: /dev/input/event5, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd
+  Device Files: /dev/input/event5, /dev/input/by-id/usb-Microsoft_Wired_Keyboard_600-event-kbd, /dev/input/by-path/pci-0000:00:14.0-usb-0:6:1.0-event-kbd
   Device Number: char 13:69
   Speed: 1.5 Mbps
   Module Alias: "usb:v045Ep0750d0110dc00dsc00dp00ic03isc01ip01in00"
@@ -11891,12 +11903,12 @@ Timeout waiting for PADO packets
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0002 "2.0 root hub"
-  Revision: "5.16"
+  Revision: "5.17"
   Serial ID: "0000:00:1d.0"
   Driver: "hub"
   Driver Modules: "usbcore"
   Speed: 480 Mbps
-  Module Alias: "usb:v1D6Bp0002d0516dc09dsc00dp00ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0002d0517dc09dsc00dp00ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #24 (USB Controller)
 
@@ -11908,8 +11920,8 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 2106 MHz
-  BogoMips: 7383.11
+  Clock: 3103 MHz
+  BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -11922,8 +11934,8 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 2220 MHz
-  BogoMips: 7383.11
+  Clock: 2100 MHz
+  BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -11936,8 +11948,8 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 800 MHz
-  BogoMips: 7383.11
+  Clock: 1000 MHz
+  BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -11950,13 +11962,23 @@ Timeout waiting for PADO packets
   Vendor: "GenuineIntel"
   Model: 6.60.3 "Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,cpuid_fault,epb,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,xsaveopt,dtherm,arat,pln,pts,md_clear,flush_l1d
-  Clock: 1200 MHz
-  BogoMips: 7383.11
+  Clock: 800 MHz
+  BogoMips: 7383.27
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-54: None 00.0: 10701 Ethernet
+54: None 00.0: 10700 Loopback
+  [Created at net.126]
+  Unique ID: ZsBS.GQNx7L4uPNA
+  SysFS ID: /class/net/lo
+  Hardware Class: network interface
+  Model: "Loopback network interface"
+  Device File: lo
+  Link detected: yes
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+
+55: None 00.0: 10701 Ethernet
   [Created at net.126]
   Unique ID: Ij4C.ndpeucax6V1
   Parent ID: c3qJ.m7pjCDtNwYF
@@ -11972,13 +11994,3 @@ Timeout waiting for PADO packets
   Link detected: yes
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #17 (Ethernet controller)
-
-55: None 00.0: 10700 Loopback
-  [Created at net.126]
-  Unique ID: ZsBS.GQNx7L4uPNA
-  SysFS ID: /class/net/lo
-  Hardware Class: network interface
-  Model: "Loopback network interface"
-  Device File: lo
-  Link detected: yes
-  Config Status: cfg=new, avail=yes, need=no, active=unknown

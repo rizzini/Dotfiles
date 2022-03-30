@@ -138,6 +138,34 @@ wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
+[4]
+Description=Dark Devotion
+ignoregeometry=true
+ignoregeometryrule=2
+position=23,250
+positionrule=3
+size=1280,744
+sizerule=2
+title=Dark Devotion
+titlematch=1
+wmclass=steam_app_0 steam_app_0
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Configurações de janela para Dark Devotion
+ignoregeometry=true
+ignoregeometryrule=3
+position=26,317
+positionrule=3
+size=1258,732
+sizerule=2
+title=Dark Devotion
+titlematch=1
+wmclass=darkdevotion.exe darkdevotion.exe
+wmclasscomplete=true
+wmclassmatch=1
+
 [7]
 Description=Configurações de janela para Blasphemous
 ignoregeometry=true
@@ -263,7 +291,7 @@ wmclassmatch=1
 
 [General]
 count=5
-rules=1,2,3,1ae186a4-2107-4425-a939-dfa2407ec5c0,7c6478c2-3c65-4ecc-a8ce-a2459d421437
+rules=1,2,3,4,5
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

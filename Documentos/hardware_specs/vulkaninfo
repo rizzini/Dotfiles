@@ -420,7 +420,7 @@ VkPhysicalDeviceDrmPropertiesEXT:
 	hasPrimary   = true
 	hasRender    = true
 	primaryMajor = 226
-	primaryMinor = 1
+	primaryMinor = 0
 	renderMajor  = 226
 	renderMinor  = 128
 

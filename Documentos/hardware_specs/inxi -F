@@ -1,14 +1,14 @@
 System:
-  Host: archlinux Kernel: 5.17.0-248-tkg-pds arch: x86_64 bits: 64
-    Console: pty pts/2 Distro: Arch Linux
+  Host: archlinux Kernel: 5.17.1-250-tkg-pds arch: x86_64 bits: 64
+    Console: pty pts/1 Distro: Arch Linux
 Machine:
   Type: Desktop Mobo: INTEL model: H81 serial: N/A UEFI: American Megatrends
     v: 4.6.5 date: 09/18/2020
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 1793 min/max: 800/3700 cores: 1: 2086 2: 1696 3: 1767
-    4: 1626
+  Speed (MHz): avg: 1675 min/max: 800/3700 cores: 1: 1639 2: 1524 3: 1755
+    4: 1785
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -25,7 +25,7 @@ Audio:
     driver: snd_hda_intel
   Device-3: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
-  Sound Server-1: ALSA v: k5.17.0-248-tkg-pds running: yes
+  Sound Server-1: ALSA v: k5.17.1-250-tkg-pds running: yes
   Sound Server-2: PipeWire v: 0.3.48 running: yes
 Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
@@ -35,20 +35,20 @@ Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 75.2 GiB (67.3%)
+  Local Storage: total: 111.79 GiB used: 63.44 GiB (56.8%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 74.8 GiB (72.4%) fs: btrfs dev: /dev/sda2
+  ID-1: / size: 103.28 GiB used: 63.19 GiB (61.2%) fs: btrfs dev: /dev/sda2
   ID-2: /boot/efi size: 126 MiB used: 5.1 MiB (4.1%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 74.8 GiB (72.4%) fs: btrfs
+  ID-3: /home size: 103.28 GiB used: 63.19 GiB (61.2%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 396.2 MiB (9.7%)
+  ID-1: swap-1 type: partition size: 4 GiB used: 257.8 MiB (6.3%)
     dev: /dev/sda5
 Sensors:
   System Temperatures: cpu: 29.8 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 212 Uptime: 10h 40m Memory: 7.69 GiB used: 4.61 GiB (59.9%)
+  Processes: 202 Uptime: 2h 18m Memory: 7.69 GiB used: 4.41 GiB (57.4%)
   Shell: Bash inxi: 3.3.14

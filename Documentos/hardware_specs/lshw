@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3391MHz
+          size: 3112MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -149,7 +149,7 @@ archlinux
              resources: irq:28 memory:f7d00000-f7d0ffff
            *-usbhost:0
                 product: xHCI Host Controller
-                vendor: Linux 5.17.0-248-tkg-pds xhci-hcd
+                vendor: Linux 5.17.1-250-tkg-pds xhci-hcd
                 physical id: 0
                 bus info: usb@3
                 logical name: usb3
@@ -195,7 +195,7 @@ archlinux
                    configuration: driver=snd-usb-audio maxpower=256mA speed=480Mbit/s
            *-usbhost:1
                 product: xHCI Host Controller
-                vendor: Linux 5.17.0-248-tkg-pds xhci-hcd
+                vendor: Linux 5.17.1-250-tkg-pds xhci-hcd
                 physical id: 1
                 bus info: usb@4
                 logical name: usb4
@@ -228,7 +228,7 @@ archlinux
              resources: irq:16 memory:f7d1c000-f7d1c3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.0-248-tkg-pds ehci_hcd
+                vendor: Linux 5.17.1-250-tkg-pds ehci_hcd
                 physical id: 1
                 bus info: usb@1
                 logical name: usb1
@@ -294,7 +294,7 @@ archlinux
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.17.0-248-tkg-pds duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.17.1-250-tkg-pds duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:18 ioport:e000(size=256) memory:f7c04000-f7c04fff memory:f7c00000-f7c03fff
         *-usb:2
              description: USB controller
@@ -310,7 +310,7 @@ archlinux
              resources: irq:23 memory:f7d1b000-f7d1b3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.0-248-tkg-pds ehci_hcd
+                vendor: Linux 5.17.1-250-tkg-pds ehci_hcd
                 physical id: 1
                 bus info: usb@2
                 logical name: usb2
@@ -396,8 +396,8 @@ archlinux
                    logical name: /mnt/archlinux
                    logical name: /home
                    logical name: /var/cache/pacman/pkg
-                   logical name: /home/lucas/.ccache
                    logical name: /home/lucas/Downloads
+                   logical name: /home/lucas/.ccache
                    logical name: /mnt/archlinux/Games
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 103GiB

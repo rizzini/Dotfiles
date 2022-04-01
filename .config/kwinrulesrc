@@ -70,16 +70,15 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [2]
-Description=Configurações de janela para Blasphemous
+Description=Configurações de janela para EasyEffects
 ignoregeometry=true
-ignoregeometryrule=2
-noborder=true
-position=15,237
+ignoregeometryrule=3
+position=997,549
 positionrule=3
-size=963,680
-title=Blasphemous
-windowrole=browser
-wmclass=blasphemous blasphemous
+size=882,483
+sizerule=3
+title=EasyEffects
+wmclass=easyeffects easyeffects
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -138,31 +137,12 @@ wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
-[4]
-Description=Dark Devotion
-ignoregeometry=true
-ignoregeometryrule=2
-position=23,250
-positionrule=3
-size=1280,744
+[668047ec-ea6f-4074-bbc3-190b1f5d62ea]
+Description=Configurações de janela para Primordia
+size=919,600
 sizerule=2
-title=Dark Devotion
-titlematch=1
-wmclass=steam_app_0 steam_app_0
-wmclasscomplete=true
-wmclassmatch=1
-
-[5]
-Description=Configurações de janela para Dark Devotion
-ignoregeometry=true
-ignoregeometryrule=3
-position=26,317
-positionrule=3
-size=1258,732
-sizerule=2
-title=Dark Devotion
-titlematch=1
-wmclass=darkdevotion.exe darkdevotion.exe
+title=Primordia
+wmclass=primordia.bin.x86_64 primordia.bin.x86_64
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -290,8 +270,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=5
-rules=1,2,3,4,5
+count=3
+rules=1,2,668047ec-ea6f-4074-bbc3-190b1f5d62ea
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

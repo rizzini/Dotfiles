@@ -53,6 +53,7 @@ minimizeallEnabled=false
 overviewEnabled=true
 shakeEnabled=false
 slideEnabled=false
+sticky-window-snappingEnabled=false
 synchronizeskipswitcherEnabled=false
 videowallEnabled=false
 

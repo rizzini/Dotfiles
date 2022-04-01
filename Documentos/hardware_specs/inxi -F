@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 1526 min/max: 800/3700 cores: 1: 1397 2: 1473 3: 1636
-    4: 1600
+  Speed (MHz): avg: 1793 min/max: 800/3700 cores: 1: 2086 2: 1696 3: 1767
+    4: 1626
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -35,20 +35,20 @@ Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 83.78 GiB (74.9%)
+  Local Storage: total: 111.79 GiB used: 75.2 GiB (67.3%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 83.46 GiB (80.8%) fs: btrfs dev: /dev/sda2
+  ID-1: / size: 103.28 GiB used: 74.8 GiB (72.4%) fs: btrfs dev: /dev/sda2
   ID-2: /boot/efi size: 126 MiB used: 5.1 MiB (4.1%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 83.46 GiB (80.8%) fs: btrfs
+  ID-3: /home size: 103.28 GiB used: 74.8 GiB (72.4%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 328.8 MiB (8.0%)
+  ID-1: swap-1 type: partition size: 4 GiB used: 396.2 MiB (9.7%)
     dev: /dev/sda5
 Sensors:
-  System Temperatures: cpu: 53.0 C mobo: 27.8 C
+  System Temperatures: cpu: 29.8 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 210 Uptime: 6h 18m Memory: 7.69 GiB used: 3.96 GiB (51.5%)
+  Processes: 212 Uptime: 10h 40m Memory: 7.69 GiB used: 4.61 GiB (59.9%)
   Shell: Bash inxi: 3.3.14

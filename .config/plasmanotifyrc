@@ -17,5 +17,6 @@ Seen=true
 Seen=true
 
 [Notifications]
+LowPriorityHistory=true
 NormalAlwaysOnTop=true
 PopupPosition=BottomCenter

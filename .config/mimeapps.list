@@ -1,6 +1,7 @@
 [Added Associations]
 application/json=org.kde.kate.desktop;firefox.desktop;libreoffice-writer.desktop;vim.desktop;nvim.desktop;
 application/octet-stream=org.kde.kate.desktop;
+application/pdf=firefox.desktop;
 application/x-bittorrent=transmission-gtk.desktop;smartcode-stremio.desktop;org.kde.kate.desktop;
 application/x-compressed-tar=org.kde.ark.desktop;
 application/x-extension-htm=firefox.desktop;
@@ -10,7 +11,6 @@ application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-ms-shortcut=org.kde.kate.desktop;
 application/x-partial-download=mpv.desktop;
-application/x-wine-extension-ini=org.kde.kate.desktop;
 application/x-xz-compressed-tar=org.kde.ark.desktop;org.kde.kate.desktop;
 application/x-zstd-compressed-tar=org.kde.ark.desktop;org.kde.kate.desktop;
 application/xhtml+xml=firefox.desktop;
@@ -48,6 +48,7 @@ x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop;
 [Default Applications]
 application/json=org.kde.kate.desktop;
 application/octet-stream=org.kde.kate.desktop;
+application/pdf=firefox.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 application/x-compressed-tar=org.kde.ark.desktop;
 application/x-extension-htm=firefox.desktop
@@ -55,10 +56,8 @@ application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
-application/x-ms-dos-executable;application/x-wine-extension-msp;application/x-msi;application/x-msdos-program=PortProton.desktop
 application/x-ms-shortcut=org.kde.kate.desktop;
 application/x-partial-download=mpv.desktop;
-application/x-wine-extension-ini=org.kde.kate.desktop;
 application/x-xz-compressed-tar=org.kde.ark.desktop;
 application/x-zstd-compressed-tar=org.kde.ark.desktop;
 application/xhtml+xml=firefox.desktop
@@ -100,6 +99,6 @@ x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]
+application/pdf=org.kde.kate.desktop;
 application/x-ms-shortcut=wine.desktop;
-text/html=wine-extension-htm.desktop;wine-extension-txt.desktop;
 video/x-matroska=org.kde.kate.desktop;

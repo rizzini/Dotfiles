@@ -15,7 +15,6 @@ anbox-image-houdini-rooted 2018.07.19-5
 android-tools 31.0.3-3
 android-udev 20220102-1
 aom 3.3.0-1
-apg 2.2.3-5
 appstream 0.15.2-1
 appstream-qt 0.15.2-1
 arch-install-scripts 24-2
@@ -51,7 +50,6 @@ bluez 5.64-2
 bluez-libs 5.64-2
 bluez-qt 5.92.0-1
 bluez-utils 5.64-2
-bmon 4.0-4
 bolt 0.9.2-1
 boost 1.78.0-1
 boost-libs 1.78.0-1
@@ -63,7 +61,6 @@ brotli 1.0.9-7
 btrbk-git 0.31.3.r74.gc5273a8-1
 btrfs-progs 5.16.2-1
 bubblewrap 0.6.1-1
-byobu 5.133-2
 bzip2 1.0.8-4
 c-ares 1.18.1-1
 ca-certificates 20210603-1
@@ -74,18 +71,15 @@ cairo 1.17.6-1
 calf 0.90.3-5
 cantarell-fonts 1:0.303.1-1
 ccache 4.6-1
-ccze 0.2.1-12
 cdparanoia 10.2-8
 cdrtools 3.02a09-5
 ceph-libs 15.2.14-5
 cfitsio 1:4.1.0-1
 cifs-utils 6.14-1
 clang 13.0.1-2
-cmatrix 2.0-2
 colord 1.4.6-1
 colordiff 1.0.19-1
 compiler-rt 13.0.1-1
-confuse 3.3-3
 convertlit 1.8-10
 coreutils 9.0-2
 cpio 2.13-2
@@ -93,7 +87,7 @@ cpupower 5.17-1
 cronie 1.6.0-2
 crow-translate 2.9.2-1
 cryptsetup 2.4.3-2
-curl 7.82.0-1
+curl 7.82.0-2
 dav1d 0.9.2-1
 db 5.3.28-5
 dbus 1.14.0-1
@@ -103,6 +97,7 @@ desktop-file-utils 0.26-2
 device-mapper 2.03.15-1
 diffutils 3.8-1
 discord 0.0.17-1
+discord-canary 0.0.134-1
 dkms 3.0.3-1
 dmidecode 3.3-1
 dmraid 1.0.0.rc16.3-13
@@ -217,9 +212,7 @@ harfbuzz-icu 4.2.0-1
 hicolor-icon-theme 0.17-2
 hidapi 0.11.2-1
 hiredis 1.0.2-1
-hollywood 1.21-6
 html-xml-utils 8.4-1
-htop 3.1.2-1
 http-parser 2.9.4-1
 hunspell 1.7.0-3
 hwdata 0.357-1
@@ -246,7 +239,6 @@ jansson 2.14-1
 jasper 2.0.33-1
 jbig2dec 0.19-1
 jemalloc 1:5.2.1-6
-jp2a 1.1.1-1
 js78 78.15.0-4
 json-c 0.15-3
 json-glib 1.6.6-2
@@ -384,7 +376,7 @@ lib32-icu 70.1-1
 lib32-jack2 1.9.20-3
 lib32-json-glib 1.6.6-2
 lib32-keyutils 1.6.3-1
-lib32-krb5 1.19.2-2
+lib32-krb5 1.19.3-2
 lib32-lcms2 2.13.1-1
 lib32-libasyncns 0.8+3+g68cd5af-2
 lib32-libcanberra 1:0.30+r2+gc0620e4-1
@@ -517,7 +509,7 @@ libcloudproviders 0.3.1-2
 libcolord 1.4.6-1
 libcpufeatures-git 0.7.0+8.r277.d20220315.188d0d3-1
 libcups 1:2.4.1-1
-libcurl-gnutls 7.82.0-1
+libcurl-gnutls 7.82.0-2
 libdaemon 0.14-5
 libdatrie 0.2.13-1
 libdbusmenu-glib 16.04.0-4
@@ -736,12 +728,10 @@ miniupnpc 2.2.3-1
 minizip 1:1.2.12-1
 mkinitcpio 31-2
 mkinitcpio-busybox 1.35.0-1
-mlocate 0.26.git.20170220-7
 mobile-broadband-provider-info 20220315-1
 modem-manager-gui 0.0.20-2
 modemmanager 1.18.6-1
 modemmanager-qt 5.92.0-1
-moreutils 0.67-2
 mpfr 4.1.0.p13-2
 mpg123 1.29.3-1
 mpv 1:0.34.1-4
@@ -812,14 +802,11 @@ perl-http-date 6.05-4
 perl-http-message 6.36-1
 perl-http-negotiate 6.01-9
 perl-io-html 1.004-2
-perl-io-tty 1.16-2
-perl-ipc-run 20180523.0-2
 perl-libwww 6.59-1
 perl-lwp-mediatypes 6.04-1
 perl-mailtools 2.21-5
 perl-net-http 6.22-1
 perl-parse-yapp 1.21-4
-perl-time-duration 1:1.20-4
 perl-timedate 2.33-3
 perl-try-tiny 0.31-1
 perl-uri 5.10-1
@@ -902,7 +889,6 @@ python-pid 3.0.3-1
 python-pip 21.0-1
 python-ply 3.11-10
 python-progress 1.6-5
-python-psutil 5.9.0-1
 python-pycparser 2.21-3
 python-pycryptodomex 3.12.0-1
 python-pygments 2.11.2-1
@@ -934,7 +920,6 @@ python-transitions 0.8.11-1
 python-typeguard 2.13.3-1
 python-typing_extensions 4.1.0-1
 python-urllib3 1.26.9-1
-python-urwid 2.1.2-3
 python-watchdog 0.10.7-3
 python-webencodings 0.5.1-9
 python-websockets 10.2-1
@@ -1019,7 +1004,6 @@ sord 0.16.8-1
 sound-theme-freedesktop 0.8-4
 soundtouch 2.3.1-2
 source-highlight 3.1.9-7
-speedometer 2.8-4
 speex 1.2.0-3
 speexdsp 1.2.0-2
 spirv-tools 2022.1-1
@@ -1060,11 +1044,9 @@ texinfo 6.8-2
 thin-provisioning-tools 0.9.0-1
 threadweaver 5.92.0-1
 time 1.9-3
-tmux 3.2_a-1
 tpm2-tss 3.2.0-1
 tracker3 3.3.0-1
 transmission-gtk 3.00-3
-tree 2.0.2-1
 tslib 1.22-1
 ttf-hack 3.003-3
 ttf-iosevka-nerd 2.1.0-2

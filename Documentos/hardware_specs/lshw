@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3112MHz
+          size: 3537MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -399,9 +399,11 @@ archlinux
                    logical name: /home/lucas/Downloads
                    logical name: /home/lucas/.ccache
                    logical name: /mnt/archlinux/Games
+                   logical name: /var/lib/anbox/rootfs/cache
+                   logical name: /var/lib/anbox/rootfs/data
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 103GiB
-                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=651,subvol=/Games name=archlinux state=mounted
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=3891,subvol=/ROOT name=archlinux state=mounted
               *-volume:2
                    description: Linux swap volume
                    vendor: Linux

@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 1274 min/max: 800/3700 cores: 1: 1257 2: 1319 3: 1328
-    4: 1194
+  Speed (MHz): avg: 2713 min/max: 800/3700 cores: 1: 2684 2: 2728 3: 2733
+    4: 2708
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -31,25 +31,23 @@ Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
   IF: enp2s0 state: up speed: 1000 Mbps duplex: full mac: 00:e0:4c:f5:51:d8
-  IF-ID-1: anbox0 state: down mac: 6e:52:cf:cb:a3:5c
 Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 61.3 GiB (54.8%)
+  Local Storage: total: 111.79 GiB used: 71.1 GiB (63.6%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 61.21 GiB (59.3%) fs: btrfs dev: /dev/sda2
+  ID-1: / size: 103.28 GiB used: 71.09 GiB (68.8%) fs: btrfs dev: /dev/sda2
   ID-2: /boot/efi size: 126 MiB used: 5.1 MiB (4.1%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 61.21 GiB (59.3%) fs: btrfs
+  ID-3: /home size: 103.28 GiB used: 71.09 GiB (68.8%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 82.8 MiB (2.0%)
-    dev: /dev/sda5
+  ID-1: swap-1 type: partition size: 4 GiB used: 0 KiB (0.0%) dev: /dev/sda5
 Sensors:
   System Temperatures: cpu: 29.8 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 204 Uptime: 1h 51m Memory: 7.69 GiB used: 3.73 GiB (48.5%)
+  Processes: 203 Uptime: 32m Memory: 7.69 GiB used: 3.93 GiB (51.0%)
   Shell: Bash inxi: 3.3.14

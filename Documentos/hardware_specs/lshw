@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3537MHz
+          size: 3384MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -374,19 +374,17 @@ archlinux
                 size: 111GiB (120GB)
                 capabilities: gpt-1.00 partitioned partitioned:gpt
                 configuration: ansiversion=5 guid=c932b96a-2553-4827-be2d-2c993ed424ba logicalsectorsize=512 sectorsize=512
-              *-volume:0
+              *-volume:0 UNCLAIMED
                    description: Windows FAT volume
                    vendor: mkfs.fat
                    physical id: 1
                    bus info: scsi@1:0.0.0,1
-                   logical name: /dev/sda1
-                   logical name: /boot/efi
                    version: FAT32
                    serial: 83ed-bdd9
                    size: 126MiB
                    capacity: 127MiB
                    capabilities: boot fat initialized
-                   configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro state=mounted
+                   configuration: FATs=2 filesystem=fat
               *-volume:1
                    description: EFI partition
                    physical id: 2
@@ -396,14 +394,12 @@ archlinux
                    logical name: /mnt/archlinux
                    logical name: /home
                    logical name: /var/cache/pacman/pkg
-                   logical name: /home/lucas/Downloads
                    logical name: /home/lucas/.ccache
+                   logical name: /home/lucas/Downloads
                    logical name: /mnt/archlinux/Games
-                   logical name: /var/lib/anbox/rootfs/cache
-                   logical name: /var/lib/anbox/rootfs/data
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 103GiB
-                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=3891,subvol=/ROOT name=archlinux state=mounted
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=651,subvol=/Games name=archlinux state=mounted
               *-volume:2
                    description: Linux swap volume
                    vendor: Linux

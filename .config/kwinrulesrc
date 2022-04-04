@@ -103,15 +103,14 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [3]
-Description=Configurações de janela para EasyEffects
+Description=Configurações de janela para Blasphemous
 ignoregeometry=true
-ignoregeometryrule=3
-position=997,549
+ignoregeometryrule=2
+position=13,246
 positionrule=3
 size=882,483
-sizerule=3
-title=EasyEffects
-wmclass=easyeffects easyeffects
+title=Blasphemous
+wmclass=blasphemous blasphemous
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -125,6 +124,17 @@ size=882,483
 sizerule=3
 title=EasyEffects
 wmclass=easyeffects easyeffects
+wmclasscomplete=true
+wmclassmatch=1
+
+[39956b0f-9ca4-4216-b179-186a59575149]
+Description=Configurações de janela para Blasphemous
+ignoregeometry=true
+ignoregeometryrule=2
+position=13,246
+positionrule=3
+title=Blasphemous
+wmclass=blasphemous blasphemous
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -261,8 +271,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=2
-rules=1,2
+count=3
+rules=1,2,3
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

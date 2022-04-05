@@ -54,7 +54,7 @@ positions=1,18,desktop:/2022-04-03_19-21.png,0,0,desktop:/Darkwood.desktop,0,1
 sortMode=-1
 
 [Containments][155][Wallpaper][org.kde.image][General]
-Image=file:///home/lucas/Imagens/Wallpaper/wallhaven-lmwg12.jpg
+Image=file:///home/lucas/.local/share/wallpapers/Desert Green-No Plasma Logo.jpg
 SlidePaths=/usr/share/wallpapers
 
 [Containments][2]
@@ -822,7 +822,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][87][Configuration][General]
-launchers=applications:steam.desktop,applications:Half-Life 2.desktop,applications:Left 4 Dead 2.desktop,applications:Darkwood.desktop,applications:Blasphemous-2.desktop,applications:Silence of the Sleep.desktop,applications:com.github.wwmm.easyeffects.desktop,applications:spotify.desktop,applications:firefox.desktop
+launchers=applications:steam.desktop,applications:Half-Life 2.desktop,applications:Left 4 Dead 2.desktop,applications:Blasphemous-2.desktop,applications:com.github.wwmm.easyeffects.desktop,applications:spotify.desktop,applications:firefox.desktop
 wheelEnabled=false
 
 [Containments][84][Applets][88]

@@ -22,3 +22,4 @@ export LC_ALL=C
 /usr/bin/sudo -u lucas /usr/bin/yay -Q | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/installed_package_list'
 /usr/bin/pacman -Qqem | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/installed_AUR_package_list'
 /usr/bin/mount | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/mount'
+/usr/bin/expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | /usr/bin/sort | /usr/bin/tail -200 | /usr/bin/nl | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/recently_installed_package_list'

@@ -26,6 +26,10 @@ _launch=none,none,Iniciar Carrion
 _k_friendly_name=Dark Devotion
 _launch=none,none,Iniciar Dark Devotion
 
+[Darkwood.desktop]
+_k_friendly_name=Darkwood
+_launch=,none,Iniciar Darkwood
+
 [Dead Cells (OpenGL).desktop]
 _k_friendly_name=Dead Cells (OpenGL)
 _launch=none,none,Iniciar Dead Cells (OpenGL)
@@ -148,6 +152,10 @@ _launch=none,none,Iniciar ReadMe
 [Rocketbirds Hardboiled Chicken.desktop]
 _k_friendly_name=Rocketbirds Hardboiled Chicken
 _launch=none,none,Iniciar Rocketbirds Hardboiled Chicken
+
+[Silence of the Sleep.desktop]
+_k_friendly_name=Silence of the Sleep
+_launch=,none,Iniciar Silence of the Sleep
 
 [The Dark Eye - Chains of Satinav.desktop]
 _k_friendly_name=The Dark Eye - Chains of Satinav

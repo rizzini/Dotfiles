@@ -252,6 +252,10 @@ increase_volume=Volume Up,Volume Up,Aumentar volume
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Silenciar microfone
 mute=Volume Mute,Volume Mute,Sem áudio
 
+[konsole]
+Konsole Background Mode=Ctrl+Shift+F12,Ctrl+Shift+F12,Alternar a janela de fundo
+_k_friendly_name=Konsole
+
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
 Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session

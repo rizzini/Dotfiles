@@ -1,4 +1,5 @@
 #!/bin/bash
+#usar case
 if [ "$1" == 'play_pause' ]; then
     if [ -n "$(/usr/bin/pgrep -x spotify)" ];
     then

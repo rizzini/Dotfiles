@@ -147,6 +147,18 @@ wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
+[6e256e8d-6ef0-47c3-b810-58b9555ff032]
+Description=Configurações de janela para Darkwood
+ignoregeometry=true
+ignoregeometryrule=2
+position=12,290
+positionrule=3
+title=Darkwood
+titlematch=1
+wmclass=darkwood.exe darkwood.exe
+wmclasscomplete=true
+wmclassmatch=1
+
 [7]
 Description=Configurações de janela para Blasphemous
 ignoregeometry=true
@@ -271,8 +283,16 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=3
-rules=1,2,3
+count=4
+rules=1,2,3,6e256e8d-6ef0-47c3-b810-58b9555ff032
+
+[baab69ca-594a-43d2-af61-ff3e20f933d9]
+Description=Configurações de nova janela
+ignoregeometry=true
+ignoregeometryrule=2
+position=17,292
+positionrule=3
+wmclassmatch=1
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]
 Description=Configurações de janela para UNO

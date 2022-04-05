@@ -21,3 +21,4 @@ export LC_ALL=C
 /usr/bin/btrfs filesystem usage / | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/btrfs filesystem usage'
 /usr/bin/sudo -u lucas /usr/bin/yay -Q | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/installed_package_list'
 /usr/bin/pacman -Qqem | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/installed_AUR_package_list'
+/usr/bin/mount | /usr/bin/tee '/home/lucas/Documentos/hardware_specs/mount'

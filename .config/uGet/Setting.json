@@ -2,8 +2,8 @@
 	"Window": {
 		"Toolbar": true,
 		"Statusbar": true,
-		"Category": true,
-		"Summary": true,
+		"Category": false,
+		"Summary": false,
 		"Banner": false,
 		"x": 142,
 		"y": 79,
@@ -114,6 +114,7 @@
 		"OnError": null
 	},
 	"FolderHistory": [
+		"\/home\/lucas",
 		"\/home\/lucas\/Downloads"
 	],
 	"AutoSave": 1,

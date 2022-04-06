@@ -28,7 +28,7 @@ _launch=none,none,Iniciar Dark Devotion
 
 [Darkwood.desktop]
 _k_friendly_name=Darkwood
-_launch=,none,Iniciar Darkwood
+_launch=none,none,Iniciar Darkwood
 
 [Dead Cells (OpenGL).desktop]
 _k_friendly_name=Dead Cells (OpenGL)
@@ -155,7 +155,7 @@ _launch=none,none,Iniciar Rocketbirds Hardboiled Chicken
 
 [Silence of the Sleep.desktop]
 _k_friendly_name=Silence of the Sleep
-_launch=,none,Iniciar Silence of the Sleep
+_launch=none,none,Iniciar Silence of the Sleep
 
 [The Dark Eye - Chains of Satinav.desktop]
 _k_friendly_name=The Dark Eye - Chains of Satinav
@@ -266,11 +266,11 @@ _k_friendly_name=Konsole
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Session Management
+_k_friendly_name=Gerenciamento de sessão
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção

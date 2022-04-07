@@ -7,6 +7,7 @@ crow-translate
 easyeffects-git
 flameshot-git
 glmark2
+google-chrome
 inxi
 legendary
 lib32-mangohud
@@ -24,7 +25,7 @@ pipewire-git
 pipewire-jack-git
 pipewire-pulse-git
 pipewire-v4l2-git
-powerstat
+python-pymkv
 refind-btrfs
 skypeforlinux-stable-bin
 spotify

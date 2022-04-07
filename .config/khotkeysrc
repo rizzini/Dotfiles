@@ -1372,7 +1372,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=
+Key=Ctrl+Volume Up
 Type=SHORTCUT
 Uuid={bdd817c1-8b94-4c4d-8abf-bd744ebbe289}
 

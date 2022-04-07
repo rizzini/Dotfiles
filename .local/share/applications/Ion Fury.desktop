@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec='/mnt/archlinux/Games/Ion Fury/start.sh'
+Icon=/mnt/archlinux/Games/Ion Fury/game/files/icon.png
+Name=Ion Fury
+NoDisplay=false
+Path=/home/lucas/Games/Ion Fury
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -7,10 +7,10 @@ position=959,-134
 positionrule=2
 size=963,680
 sizerule=2
-title=Prime Video - Firefox Nightly
+title=Prime Video - Google Chrome
 titlematch=1
 windowrole=browser
-wmclass=navigator firefox-nightly
+wmclass=google-chrome google-chrome
 wmclasscomplete=true
 
 [10]
@@ -159,6 +159,18 @@ wmclass=darkwood.exe darkwood.exe
 wmclasscomplete=true
 wmclassmatch=1
 
+[5]
+Description=Configurações de janela para Ion Fury
+position=16,292
+positionrule=2
+size=1284,747
+sizerule=2
+title=Ion Fury
+titlematch=1
+wmclass=fury_nodrm.bin fury_nodrm.bin
+wmclasscomplete=true
+wmclassmatch=1
+
 [6e256e8d-6ef0-47c3-b810-58b9555ff032]
 Description=Configurações de janela para Darkwood
 ignoregeometry=true
@@ -295,8 +307,20 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=4
-rules=1,2,3,4
+count=5
+rules=1,2,3,4,5
+
+[a0a0e2c0-fef1-4087-b006-bc4730991325]
+Description=Configurações de janela para Ion Fury
+position=16,292
+positionrule=2
+size=1284,747
+sizerule=2
+title=Ion Fury
+titlematch=1
+wmclass=fury_nodrm.bin fury_nodrm.bin
+wmclasscomplete=true
+wmclassmatch=1
 
 [baab69ca-594a-43d2-af61-ff3e20f933d9]
 Description=Configurações de nova janela

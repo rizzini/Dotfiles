@@ -1,17 +1,13 @@
 set fish_greeting;
+source ("/usr/bin/starship" init fish --print-full-init | psub);
 set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;
-
 # export PATH="/opt/VirtualGL/bin/:$PATH";
-
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
         set -p PATH ~/.local/bin
     end
 end
-
-source ("/usr/bin/starship" init fish --print-full-init | psub);
-
 alias plasmashell='kquitapp5 plasmashell &> /dev/null & sleep 1 && kstart5 /usr/bin/plasmashell &> /dev/null & disown $last_pid';
 alias ls='exa -al --color=always --group-directories-first --icons';
 alias grep='grep --color=auto';
@@ -21,4 +17,3 @@ alias syadm="sudo yadm -Y /etc/yadm";
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl";
 alias cat='bat -p ';
 alias mem='watch -n0.5 "~/Documentos/scripts/mem_monitor_taskbar.sh & ~/Documentos/scripts/disk_monitor_taskbar.sh &"'
-

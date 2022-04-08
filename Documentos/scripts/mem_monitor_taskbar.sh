@@ -28,6 +28,14 @@ size () {
     fi
     echo "${whole}${decimal}${units[$unit]}"
 }
-writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
-dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
-echo "Dirty: "$dirty "|" "Writeback: "$writeback
+if [[ -n "$1" && $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}') -gt 100000 ]];then
+    writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
+    dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
+    echo "Dirty: "$dirty "|" "Writeback: "$writeback
+    exit
+elif [ -z "$1" ];then
+    writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
+    dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
+    echo "Dirty: "$dirty "|" "Writeback: "$writeback
+fi
+

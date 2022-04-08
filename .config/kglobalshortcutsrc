@@ -110,6 +110,10 @@ _launch=none,none,Iniciar Icey
 _k_friendly_name=Intravenous
 _launch=none,none,Iniciar Intravenous
 
+[Ion Fury.desktop]
+_k_friendly_name=Ion Fury
+_launch=none,none,Iniciar Ion Fury
+
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)

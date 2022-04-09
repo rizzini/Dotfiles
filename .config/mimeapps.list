@@ -101,6 +101,7 @@ x-scheme-handler/skype=skypeforlinux.desktop
 x-scheme-handler/tel=skypeforlinux.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-VZNHJ1.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/magnet=transmission-gtk.desktop
 
 [Removed Associations]
 application/pdf=org.kde.kate.desktop;

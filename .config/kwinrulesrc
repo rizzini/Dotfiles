@@ -171,6 +171,15 @@ wmclass=fury_nodrm.bin fury_nodrm.bin
 wmclasscomplete=true
 wmclassmatch=1
 
+[6]
+Description=Configurações de janela para Dex
+ignoregeometry=true
+ignoregeometryrule=2
+size=1280,720
+sizerule=3
+title=Dex
+wmclassmatch=1
+
 [6e256e8d-6ef0-47c3-b810-58b9555ff032]
 Description=Configurações de janela para Darkwood
 ignoregeometry=true
@@ -307,8 +316,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=5
-rules=1,2,3,4,5
+count=6
+rules=1,2,3,4,5,6
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury
@@ -320,6 +329,15 @@ title=Ion Fury
 titlematch=1
 wmclass=fury_nodrm.bin fury_nodrm.bin
 wmclasscomplete=true
+wmclassmatch=1
+
+[b5e67adf-288f-4082-ad0f-f72ef0ec7dfd]
+Description=Configurações de janela para Dex
+ignoregeometry=true
+ignoregeometryrule=2
+size=1280,720
+sizerule=3
+title=Dex
 wmclassmatch=1
 
 [baab69ca-594a-43d2-af61-ff3e20f933d9]

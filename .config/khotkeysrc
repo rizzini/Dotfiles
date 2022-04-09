@@ -200,7 +200,7 @@ Uuid={484d75d9-178b-4d38-973d-1614e27be52a}
 
 [Data_12]
 Comment=Comentário
-Enabled=true
+Enabled=false
 Name=waydroid
 Type=SIMPLE_ACTION_DATA
 

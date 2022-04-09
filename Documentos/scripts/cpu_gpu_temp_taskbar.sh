@@ -11,6 +11,9 @@ if [ $? -eq 0 ];then
     /usr/bin/echo 'Firewall desativado';
     clean_space_emergency;
     exit 0
+else
+    if [ $(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18) -ge 80 ];then
+        /usr/bin/printf "CPU: ""$(/usr/bin/echo $(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18))""ºc";
+    fi
 fi
-/usr/bin/printf "CPU: ""$(/usr/bin/echo $(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18))""ºc";
 clean_space_emergency;

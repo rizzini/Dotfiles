@@ -269,11 +269,11 @@ _k_friendly_name=Konsole
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção

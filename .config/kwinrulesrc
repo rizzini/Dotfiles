@@ -208,7 +208,7 @@ wmclassmatch=1
 [7]
 Description=Configurações de janela para Deedlit in Wonder Labyrinth
 ignoregeometry=true
-ignoregeometryrule=3
+ignoregeometryrule=2
 position=11,293
 positionrule=3
 size=1284,747

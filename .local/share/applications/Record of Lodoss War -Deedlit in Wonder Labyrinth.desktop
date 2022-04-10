@@ -1,7 +1,12 @@
 [Desktop Entry]
+Comment[pt_BR]=
 Comment=
-Exec=WINEPREFIX='/mnt/archlinux/Games/Record of Lodoss War Deedlit in Wonder Labyrinth' /opt/wine-tkg-staging-fsync-opt-git/bin/wine Deedlit\\ in\\ Wonder\\ Labyrinth.exe
+Exec=WINEFSYNC=1 WINEFSYNC=1 WINEPREFIX='/mnt/archlinux/Games/Record of Lodoss War Deedlit in Wonder Labyrinth' /opt/wine-tkg-staging-fsync-opt-git/bin/wine Deedlit\\ in\\ Wonder\\ Labyrinth.exe
+GenericName[pt_BR]=
+GenericName=
 Icon=/home/lucas/Games/Record of Lodoss War Deedlit in Wonder Labyrinth/256x256.png
+MimeType=
+Name[pt_BR]=Record of Lodoss War -Deedlit in Wonder Labyrinth
 Name=Record of Lodoss War -Deedlit in Wonder Labyrinth
 NoDisplay=false
 Path=/home/lucas/Games/Record of Lodoss War Deedlit in Wonder Labyrinth/drive_c/Record.of.Lodoss.War.Deedlit.in.Wonder.Labyrinth
@@ -9,5 +14,7 @@ StartupNotify=true
 Terminal=false
 TerminalOptions=
 Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
 X-KDE-Username=

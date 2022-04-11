@@ -12,7 +12,7 @@ function h
         set --local --export SHELL (command --search fish)        
         set command_with_ts (
             builtin history --null --show-time="%m-%d %H:%M:%S | " |
-            fzf --read0 \
+            fzf --exact --read0 \
                 --tiebreak=index \
                 $query \
                 $fzf_history_opts |

@@ -20,7 +20,7 @@ function __fzf_search_history --description "Search command history. Replace the
     set command_with_ts (
         # Reference https://devhints.io/strftime to understand strftime format symbols
         builtin history --null --show-time="%m-%d %H:%M:%S | " |
-        fzf --read0 \
+        fzf --exact --read0 \
             --tiebreak=index \
             $query \
             # preview current command using fish_ident in a window at the bottom 3 lines tall

@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3276MHz
+          size: 3672MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -149,7 +149,7 @@ archlinux
              resources: irq:28 memory:f7d00000-f7d0ffff
            *-usbhost:0
                 product: xHCI Host Controller
-                vendor: Linux 5.17.1-252-tkg-pds xhci-hcd
+                vendor: Linux 5.17.2-255-tkg-pds xhci-hcd
                 physical id: 0
                 bus info: usb@3
                 logical name: usb3
@@ -195,7 +195,7 @@ archlinux
                    configuration: driver=snd-usb-audio maxpower=256mA speed=480Mbit/s
            *-usbhost:1
                 product: xHCI Host Controller
-                vendor: Linux 5.17.1-252-tkg-pds xhci-hcd
+                vendor: Linux 5.17.2-255-tkg-pds xhci-hcd
                 physical id: 1
                 bus info: usb@4
                 logical name: usb4
@@ -228,7 +228,7 @@ archlinux
              resources: irq:16 memory:f7d1c000-f7d1c3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.1-252-tkg-pds ehci_hcd
+                vendor: Linux 5.17.2-255-tkg-pds ehci_hcd
                 physical id: 1
                 bus info: usb@1
                 logical name: usb1
@@ -294,7 +294,7 @@ archlinux
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.17.1-252-tkg-pds duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.17.2-255-tkg-pds duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:18 ioport:e000(size=256) memory:f7c04000-f7c04fff memory:f7c00000-f7c03fff
         *-usb:2
              description: USB controller
@@ -310,7 +310,7 @@ archlinux
              resources: irq:23 memory:f7d1b000-f7d1b3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.1-252-tkg-pds ehci_hcd
+                vendor: Linux 5.17.2-255-tkg-pds ehci_hcd
                 physical id: 1
                 bus info: usb@2
                 logical name: usb2
@@ -374,19 +374,17 @@ archlinux
                 size: 111GiB (120GB)
                 capabilities: gpt-1.00 partitioned partitioned:gpt
                 configuration: ansiversion=5 guid=c932b96a-2553-4827-be2d-2c993ed424ba logicalsectorsize=512 sectorsize=512
-              *-volume:0
+              *-volume:0 UNCLAIMED
                    description: Windows FAT volume
                    vendor: mkfs.fat
                    physical id: 1
                    bus info: scsi@1:0.0.0,1
-                   logical name: /dev/sda1
-                   logical name: /boot/efi
                    version: FAT32
                    serial: 83ed-bdd9
                    size: 126MiB
                    capacity: 127MiB
                    capabilities: boot fat initialized
-                   configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro state=mounted
+                   configuration: FATs=2 filesystem=fat
               *-volume:1
                    description: EFI partition
                    physical id: 2
@@ -394,14 +392,14 @@ archlinux
                    logical name: /dev/sda2
                    logical name: /
                    logical name: /mnt/archlinux
-                   logical name: /var/cache/pacman/pkg
                    logical name: /home
-                   logical name: /mnt/archlinux/Games
-                   logical name: /home/lucas/Downloads
+                   logical name: /var/cache/pacman/pkg
                    logical name: /home/lucas/.ccache
+                   logical name: /home/lucas/Downloads
+                   logical name: /mnt/archlinux/Games
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 103GiB
-                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=265,subvol=/CCACHE name=archlinux state=mounted
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=651,subvol=/Games name=archlinux state=mounted
               *-volume:2
                    description: Linux swap volume
                    vendor: Linux
@@ -424,7 +422,7 @@ archlinux
                    serial: 22a16043-0587-4846-a3f6-934533dc68dd
                    size: 4490MiB
                    capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
-                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/ modified=2022-03-27 18:58:31 mounted=2022-03-27 18:58:31 state=clean
+                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/ modified=2022-04-11 07:55:32 mounted=2022-04-11 07:55:32 state=clean
         *-serial
              description: SMBus
              product: 8 Series/C220 Series Chipset Family SMBus Controller

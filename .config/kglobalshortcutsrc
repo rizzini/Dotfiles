@@ -267,6 +267,11 @@ mute=Volume Mute,Volume Mute,Sem áudio
 Konsole Background Mode=Ctrl+Shift+F12,Ctrl+Shift+F12,Alternar a janela de fundo
 _k_friendly_name=Konsole
 
+[konversation]
+_k_friendly_name=Konversation
+next_active_tab=none,none,Próxima aba ativa
+toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
+
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
 Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão

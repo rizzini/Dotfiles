@@ -752,7 +752,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][84][Applets][154][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][84][Applets][154][Configuration][Appearance]
 boldText=true
@@ -822,7 +822,7 @@ DialogWidth=640
 
 [Containments][84][Applets][167][Configuration][General]
 command=/home/lucas/Documentos/scripts/mem_monitor_taskbar.sh systray
-fixedWidth=168
+fixedWidth=170
 fontSize=10
 useFixedWidth=true
 

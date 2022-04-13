@@ -5,3 +5,5 @@
 	stun = status -unormal
 [status]
 	showUntrackedFiles = no
+[core]
+	precomposeunicode = true

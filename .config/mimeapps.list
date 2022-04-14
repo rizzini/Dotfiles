@@ -4,6 +4,7 @@ application/octet-stream=org.kde.kate.desktop;
 application/pdf=firefox.desktop;
 application/x-bittorrent=transmission-gtk.desktop;smartcode-stremio.desktop;org.kde.kate.desktop;
 application/x-compressed-tar=org.kde.ark.desktop;
+application/x-desktop=org.kde.kate.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
@@ -54,6 +55,7 @@ application/octet-stream=org.kde.kate.desktop;
 application/pdf=firefox.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 application/x-compressed-tar=org.kde.ark.desktop;
+application/x-desktop=org.kde.kate.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
@@ -107,6 +109,7 @@ x-scheme-handler/unknown=google-chrome.desktop
 
 [Removed Associations]
 application/pdf=org.kde.kate.desktop;
+application/x-desktop=wine-extension-txt.desktop;
 application/x-ms-shortcut=wine.desktop;
 application/x-wine-extension-ini=wine-extension-ini.desktop;
 audio/x-matroska=org.kde.kate.desktop;

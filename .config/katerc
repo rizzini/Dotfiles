@@ -21,8 +21,8 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=1.sh,file:$HOME/Área de Trabalho/1,file:$HOME/Documentos/scripts/change_wallpaper_every_boot.sh,file:$HOME/Documentos/filmes & series,file:$HOME/Documentos/scripts/check_btrfs_health.sh
-Recent URLs[$e]=file:$HOME/,file:$HOME/Documentos/,file:///etc/yadm/hooks/,file:$HOME/Documentos/scripts/,file:$HOME/Área de Trabalho/
+Recent Files[$e]=1.sh,file:///mnt/archlinux/CCACHE/1,file:$HOME/Documentos/scripts/change_wallpaper_every_boot.sh,file:$HOME/Documentos/filmes & series,file:$HOME/Documentos/scripts/check_btrfs_health.sh
+Recent URLs[$e]=file:$HOME/,file:$HOME/Documentos/,file:///etc/yadm/hooks/,file:$HOME/Documentos/scripts/,file:$HOME/Área de Trabalho/,file:///mnt/archlinux/CCACHE/
 iconViewIconSize=64
 
 [KTextEditor Document]

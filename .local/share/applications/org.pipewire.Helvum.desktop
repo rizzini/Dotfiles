@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=AudioVideo;Audio;Video;Midi;Settings;GNOME;GTK;
+Comment[pt_BR]=A patchbay for pipewire
+Comment=A patchbay for pipewire
+Exec=MESA_LOADER_DRIVER_OVERRIDE= helvum
+GenericName[pt_BR]=Patchbay
+GenericName=Patchbay
+Icon=org.pipewire.Helvum
+MimeType=
+Name[pt_BR]=Helvum
+Name=Helvum
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

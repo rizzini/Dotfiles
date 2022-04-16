@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 2705 min/max: 800/3700 cores: 1: 2708 2: 2769 3: 2652
-    4: 2694
+  Speed (MHz): avg: 2124 min/max: 800/3700 cores: 1: 2113 2: 2167 3: 2104
+    4: 2113
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -26,7 +26,7 @@ Audio:
   Device-3: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
   Sound Server-1: ALSA v: k5.17.2-255-tkg-pds running: yes
-  Sound Server-2: PipeWire v: 0.3.48 running: yes
+  Sound Server-2: PipeWire v: 0.3.50 running: yes
 Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
@@ -35,19 +35,20 @@ Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 77.93 GiB (69.7%)
+  Local Storage: total: 111.79 GiB used: 85.33 GiB (76.3%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 77.92 GiB (75.4%) fs: btrfs dev: /dev/sda2
-  ID-2: /boot/efi size: 126 MiB used: 5.1 MiB (4.1%) fs: vfat
+  ID-1: / size: 103.28 GiB used: 85.32 GiB (82.6%) fs: btrfs dev: /dev/sda2
+  ID-2: /boot/efi size: 126 MiB used: 8.6 MiB (6.8%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 77.92 GiB (75.4%) fs: btrfs
+  ID-3: /home size: 103.28 GiB used: 85.32 GiB (82.6%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 0 KiB (0.0%) dev: /dev/sda5
+  ID-1: swap-1 type: partition size: 4 GiB used: 1.2 MiB (0.0%)
+    dev: /dev/sda5
 Sensors:
-  System Temperatures: cpu: 54.0 C mobo: 27.8 C
+  System Temperatures: cpu: 50.0 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 226 Uptime: 4m Memory: 7.69 GiB used: 3.02 GiB (39.3%)
-  Shell: Bash inxi: 3.3.15
+  Processes: 205 Uptime: 1h 26m Memory: 7.69 GiB used: 3.56 GiB (46.3%)
+  Shell: generate_hardwa inxi: 3.3.15

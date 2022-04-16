@@ -23,13 +23,13 @@ ookla-speedtest-bin
 orchis-theme-git
 pipewire-alsa-git
 pipewire-git
-pipewire-jack-git
 pipewire-pulse-git
 pipewire-v4l2-git
 python-pymkv
 refind-btrfs
 skypeforlinux-stable-bin
 spotify
+streamlink-twitch-gui-bin
 stremio
 surl
 systemd-numlockontty

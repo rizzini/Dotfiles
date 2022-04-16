@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3672MHz
+          size: 3026MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -394,8 +394,8 @@ archlinux
                    logical name: /mnt/archlinux
                    logical name: /home
                    logical name: /var/cache/pacman/pkg
-                   logical name: /home/lucas/.ccache
                    logical name: /home/lucas/Downloads
+                   logical name: /home/lucas/.ccache
                    logical name: /mnt/archlinux/Games
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 103GiB
@@ -421,8 +421,8 @@ archlinux
                    version: 1.0
                    serial: 22a16043-0587-4846-a3f6-934533dc68dd
                    size: 4490MiB
-                   capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
-                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/ modified=2022-04-11 07:55:32 mounted=2022-04-11 07:55:32 state=clean
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/mnt/cdrom modified=2022-04-13 06:32:50 mounted=2022-04-13 06:32:50 state=clean
         *-serial
              description: SMBus
              product: 8 Series/C220 Series Chipset Family SMBus Controller

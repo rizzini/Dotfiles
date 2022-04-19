@@ -1,5 +1,4 @@
 set fish_greeting;
-# source ("/usr/bin/starship" init fish --print-full-init | psub);
 starship init fish | source
 set VIRTUAL_ENV_DISABLE_PROMPT "1";
 source ~/.profile;

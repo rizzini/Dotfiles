@@ -12,11 +12,9 @@ hstr-git
 inxi
 legendary
 lib32-mangohud
-lib32-mesa-git
 linux517-tkg-pds
 linux517-tkg-pds-headers
 mangohud
-mesa-git
 nerd-fonts-droid-sans-mono
 ocs-url
 ookla-speedtest-bin
@@ -35,6 +33,7 @@ surl
 systemd-numlockontty
 systester
 ventoy-bin
+webtorrent-desktop-bin
 wine-tkg-staging-fsync-opt-git
 wireplumber-git
 yay-bin

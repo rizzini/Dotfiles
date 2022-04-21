@@ -1,8 +1,8 @@
 /dev/sda2, ID: 1
    Device size:           103.28GiB
    Device slack:              0.00B
-   Data,single:            90.02GiB
+   Data,single:            92.26GiB
    Metadata,DUP:            4.00GiB
    System,DUP:             16.00MiB
-   Unallocated:             9.24GiB
+   Unallocated:             7.00GiB
 

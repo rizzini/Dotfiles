@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3026MHz
+          size: 3351MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -65,17 +65,14 @@ archlinux
           description: System Memory
           physical id: 42
           slot: System board or motherboard
-          size: 8GiB
+          size: 4GiB
         *-bank:0
-             description: DIMM DDR3 Synchronous 1600 MHz (0.6 ns)
-             product: KHX1600C9D3/4GX
-             vendor: Kingston
+             description: DIMM [empty]
+             product: [Empty]
+             vendor: [Empty]
              physical id: 0
-             serial: D90EAD88
+             serial: [Empty]
              slot: ChannelA-DIMM0
-             size: 4GiB
-             width: 64 bits
-             clock: 1600MHz (0.6ns)
         *-bank:1
              description: DIMM [empty]
              product: [Empty]
@@ -84,15 +81,15 @@ archlinux
              serial: [Empty]
              slot: ChannelA-DIMM1
         *-bank:2
-             description: DIMM DDR3 Synchronous 1600 MHz (0.6 ns)
-             product: KHX1600C9D3/4GX
-             vendor: Kingston
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             product: MW04GN1339UB8
+             vendor: 0000
              physical id: 2
-             serial: D20E3151
+             serial: 00000000
              slot: ChannelB-DIMM0
              size: 4GiB
              width: 64 bits
-             clock: 1600MHz (0.6ns)
+             clock: 1333MHz (0.8ns)
         *-bank:3
              description: DIMM [empty]
              product: [Empty]
@@ -374,17 +371,19 @@ archlinux
                 size: 111GiB (120GB)
                 capabilities: gpt-1.00 partitioned partitioned:gpt
                 configuration: ansiversion=5 guid=c932b96a-2553-4827-be2d-2c993ed424ba logicalsectorsize=512 sectorsize=512
-              *-volume:0 UNCLAIMED
+              *-volume:0
                    description: Windows FAT volume
                    vendor: mkfs.fat
                    physical id: 1
                    bus info: scsi@1:0.0.0,1
+                   logical name: /dev/sda1
+                   logical name: /boot/efi
                    version: FAT32
                    serial: 83ed-bdd9
                    size: 126MiB
                    capacity: 127MiB
                    capabilities: boot fat initialized
-                   configuration: FATs=2 filesystem=fat
+                   configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro state=mounted
               *-volume:1
                    description: EFI partition
                    physical id: 2
@@ -421,8 +420,8 @@ archlinux
                    version: 1.0
                    serial: 22a16043-0587-4846-a3f6-934533dc68dd
                    size: 4490MiB
-                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
-                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/mnt/cdrom modified=2022-04-13 06:32:50 mounted=2022-04-13 06:32:50 state=clean
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                   configuration: created=2021-05-23 16:24:38 filesystem=ext4 label=archrecover lastmountpoint=/ modified=2022-04-18 17:12:47 mounted=2022-04-18 17:12:47 state=clean
         *-serial
              description: SMBus
              product: 8 Series/C220 Series Chipset Family SMBus Controller

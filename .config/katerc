@@ -12,6 +12,7 @@ Show Menu Bar=true
 Show Status Bar=true
 Show Tab Bar=true
 Show Tabs Close Button=true
+Show Url Nav Bar=true
 Show output view for message type=1
 Startup Session=new
 Stash new unsaved files=true
@@ -138,7 +139,7 @@ HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 
 [UiSettings]
-ColorScheme=
+ColorScheme=Padrão
 
 [filetree]
 editShade=37,90,117

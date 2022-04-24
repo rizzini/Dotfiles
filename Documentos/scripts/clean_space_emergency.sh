@@ -30,8 +30,7 @@ fi
 if [ -z "$(/usr/bin/pgrep makepkg)" ];then
     /usr/bin/rm -rf /home/lucas/.ccache/*
     if [ -z "$(/usr/bin/pgrep yay)" ];then
-        /usr/bin/rm -rf /home/lucas/.cache/yay/*
-        /usr/bin/echo "s" | /usr/bin/yay -c \n
+        yay -Scc --noconfirm
     fi
 fi
 if [ -z "$(/usr/bin/pgrep pacman)" ];then

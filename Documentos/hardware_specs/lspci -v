@@ -9,7 +9,7 @@
 	Subsystem: Intel Corporation 4th Generation Core Processor Family Integrated Graphics Controller
 	Flags: bus master, fast devsel, latency 0, IRQ 27
 	Memory at f7800000 (64-bit, non-prefetchable) [size=4M]
-	Memory at e0000000 (64-bit, prefetchable) [size=256M]
+	Memory at e8000000 (64-bit, prefetchable) [size=128M]
 	I/O ports at f000 [size=64]
 	Expansion ROM at 000c0000 [virtual] [disabled] [size=128K]
 	Capabilities: [90] MSI: Enable+ Count=1/1 Maskable- 64bit-

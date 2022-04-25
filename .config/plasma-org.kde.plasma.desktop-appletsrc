@@ -677,7 +677,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558
@@ -858,7 +858,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][84][Applets][89][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 SystrayContainmentId=90
 
 [Containments][84][ConfigDialog]
@@ -942,7 +942,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][90][Applets][96][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][90][Applets][97][Configuration]
 PreloadWeight=42
@@ -952,7 +952,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][90][Applets][98][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][90][Applets][98][Configuration][ConfigDialog]
 DialogHeight=496

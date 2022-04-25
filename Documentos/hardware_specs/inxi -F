@@ -1,5 +1,5 @@
 System:
-  Host: archlinux Kernel: 5.17.2-255-tkg-pds arch: x86_64 bits: 64
+  Host: archlinux Kernel: 5.17.4-256-tkg-pds arch: x86_64 bits: 64
     Console: pty pts/1 Distro: Arch Linux
 Machine:
   Type: Desktop Mobo: INTEL model: H81 serial: N/A UEFI: American Megatrends
@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 2649 min/max: 800/3700 cores: 1: 2584 2: 2632 3: 2735
-    4: 2647
+  Speed (MHz): avg: 3298 min/max: 800/3700 cores: 1: 3350 2: 3334 3: 3272
+    4: 3238
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -25,30 +25,31 @@ Audio:
     driver: snd_hda_intel
   Device-3: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
-  Sound Server-1: ALSA v: k5.17.2-255-tkg-pds running: yes
+  Sound Server-1: ALSA v: k5.17.4-256-tkg-pds running: yes
   Sound Server-2: PipeWire v: 0.3.50 running: yes
 Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
   IF: enp2s0 state: up speed: 1000 Mbps duplex: full mac: 00:e0:4c:f5:51:d8
+  IF-ID-1: anbox0 state: down mac: 6e:52:cf:cb:a3:5c
 Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 63.8 GiB (57.1%)
+  Local Storage: total: 111.79 GiB used: 60.07 GiB (53.7%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 63.77 GiB (61.7%) fs: btrfs dev: /dev/sda2
+  ID-1: / size: 103.28 GiB used: 59.49 GiB (57.6%) fs: btrfs dev: /dev/sda2
   ID-2: /boot/efi size: 126 MiB used: 8.6 MiB (6.8%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 63.77 GiB (61.7%) fs: btrfs
+  ID-3: /home size: 103.28 GiB used: 59.49 GiB (57.6%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 23.5 MiB (0.6%)
+  ID-1: swap-1 type: partition size: 4 GiB used: 587.2 MiB (14.3%)
     dev: /dev/sda5
 Sensors:
-  System Temperatures: cpu: 59.0 C mobo: 27.8 C
+  System Temperatures: cpu: 51.0 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 204 Uptime: 33m Memory: 3.76 GiB used: 2.58 GiB (68.7%)
+  Processes: 219 Uptime: 5h 44m Memory: 3.76 GiB used: 2.37 GiB (63.1%)
   Shell: Bash inxi: 3.3.15

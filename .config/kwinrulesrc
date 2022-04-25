@@ -338,8 +338,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=8
-rules=1,2,3,4,5,6,7,8
+count=9
+rules=1,2,3,4,5,6,7,8,cb58e05a-a8c5-4375-92b4-0f25cb6a3fae
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury
@@ -368,6 +368,19 @@ ignoregeometry=true
 ignoregeometryrule=2
 position=17,292
 positionrule=3
+wmclassmatch=1
+
+[cb58e05a-a8c5-4375-92b4-0f25cb6a3fae]
+Description=Configurações de janela para Anbox - Android in a Box
+ignoregeometry=true
+ignoregeometryrule=3
+position=960,525
+positionrule=3
+size=600,526
+sizerule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
+wmclasscomplete=true
 wmclassmatch=1
 
 [d4586b6d-421b-4658-be33-771c9b434c5c]

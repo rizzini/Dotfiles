@@ -305,15 +305,15 @@ wmclasscomplete=true
 wmclassmatch=2
 
 [9]
-Description=Configurações de janela para Dark Devotion
+Description=Configurações de janela para Anbox - Android in a Box
 ignoregeometry=true
-ignoregeometryrule=2
-position=26,257
+ignoregeometryrule=3
+position=960,525
 positionrule=3
-size=1330,772
-sizerule=2
-title=Dark Devotion
-wmclass=darkdevotion.exe darkdevotion.exe
+size=600,526
+sizerule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -339,7 +339,7 @@ wmclassmatch=1
 
 [General]
 count=9
-rules=1,2,3,4,5,6,7,8,cb58e05a-a8c5-4375-92b4-0f25cb6a3fae
+rules=1,2,3,4,5,6,7,8,9
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury

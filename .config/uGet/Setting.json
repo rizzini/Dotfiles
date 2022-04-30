@@ -5,8 +5,8 @@
 		"Category": false,
 		"Summary": false,
 		"Banner": false,
-		"x": 612,
-		"y": 526,
+		"x": 892,
+		"y": 624,
 		"width": 883,
 		"height": 464,
 		"maximized": false,
@@ -60,7 +60,7 @@
 		"completed": true
 	},
 	"UserInterface": {
-		"ExitConfirmation": true,
+		"ExitConfirmation": false,
 		"DeleteConfirmation": true,
 		"ShowTrayIcon": true,
 		"StartInTray": false,

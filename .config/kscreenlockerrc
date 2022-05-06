@@ -1,6 +1,10 @@
 [$Version]
 update_info=kscreenlocker.upd:0.1-autolock
 
+[Daemon]
+Autolock=false
+LockOnResume=false
+
 [Greeter][Wallpaper][org.kde.image][General]
 Image=/home/lucas/Imagens/Wallpaper/nebula_invertido.png
 SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers

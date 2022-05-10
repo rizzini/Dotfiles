@@ -8,12 +8,6 @@ Disk identifier: C932B96A-2553-4827-BE2D-2C993ED424BA
 
 Device         Start       End   Sectors   Size Type
 /dev/sda1       2048    264191    262144   128M EFI System
-/dev/sda2     264192 216856575 216592384 103.3G Linux filesystem
+/dev/sda2     264192 216854527 216590336 103.3G Linux filesystem
 /dev/sda5  216856576 225245183   8388608     4G Linux swap
 /dev/sda6  225245184 234440703   9195520   4.4G Linux filesystem
-
-
-Disk /dev/loop0: 360.69 MiB, 378208256 bytes, 738688 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes

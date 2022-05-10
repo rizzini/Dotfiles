@@ -11,8 +11,8 @@ hstr-git
 inxi
 legendary
 lib32-mangohud
-linux517-tkg-pds
-linux517-tkg-pds-headers
+linux517-tkg-cfs
+linux517-tkg-cfs-headers
 mangohud
 megasync-bin
 nerd-fonts-droid-sans-mono
@@ -23,12 +23,12 @@ python-pymkv
 refind-btrfs
 skypeforlinux-stable-bin
 spotify
-streamlink-twitch-gui-bin
 stremio
 surl
 systemd-numlockontty
 systester
 ventoy-bin
+vmware-workstation
 webtorrent-cli
 wine-tkg-staging-fsync-opt-git
 yay-bin

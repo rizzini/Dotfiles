@@ -22,7 +22,7 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=1.sh,file:///mnt/archlinux/CCACHE/1,file:$HOME/Documentos/scripts/change_wallpaper_every_boot.sh,file:$HOME/Documentos/filmes & series,file:$HOME/Documentos/scripts/check_btrfs_health.sh
+Recent Files[$e]=1.sh,file:$HOME/musicas  filmes,file:///mnt/archlinux/CCACHE/1,file:$HOME/Documentos/scripts/change_wallpaper_every_boot.sh,file:$HOME/Documentos/filmes & series,file:$HOME/Documentos/scripts/check_btrfs_health.sh
 Recent URLs[$e]=file:$HOME/,file:$HOME/Documentos/,file:///etc/yadm/hooks/,file:$HOME/Documentos/scripts/,file:$HOME/Área de Trabalho/,file:///mnt/archlinux/CCACHE/
 iconViewIconSize=64
 
@@ -133,13 +133,13 @@ Replace History=cfs,yadm rm -r --cached \n,,/usr/bin/tee,/tmp/check_btrfs_health
 Search History=allowBlacklistedDrivers,pds,A,deed,en_us,1.,torrent,exec,wine,www,tee,show,status,stats,confirma,*,"\\, true);,"\\, false);,user_pref(",vaa,localhost,pipe,pipew,alsa,48,41,        "api.bluez5.address": "FC:58:FA:93:42:42"\\,\n,"rate":,4410,bluez5.default.rate,_clear_patches,155,experimen,cpu,error,multi,512,4800,Disable=,default.clock.max-quantum,default.clock.min-quantum,default.clock.quantum,ray,Could not get password database information for UID of current process: User "???" unknown or no memory to allocate password entry,???,mar 12 19:49:35 archlinux systemd[606]: Starting D-Bus User Message Bus...\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Main process exited\\, code=exited\\, status=1/FAILURE\nmar 12 19:49:35 archlinux systemd[606]: dbus.service: Failed with result 'exit-code'.\nmar 12 19:49:35 archlinux systemd[606]: Failed to start D-Bus User Message Bus.,yadm,failed,44,SDL_AUDIODRIVER,directsound,steam://open/minigameslist,system,pipewire,fail,vulkan,height,size,border,bluez,enter,2022,<tr class="colorRed">,existente-down,/series/,<tr class="colorBlue">\n,colorBlue,proximo,Episódio Existente,/series/superman-and-lois/episodios/S02E06 ,s02e06,superman,sdd,scan,en_US,/tmp/btrbk.sh.pid,discard\\,,fastsync,fatsync,en-US,pt-BRen-US,pt-BR,pt-br,language,err,quant,quantum,menu,alsa_card.pci-0000_00_03.0,node,switch,device,noatime\\,,noatime\\,discard\\,,- cmd: ,prior,erro,preemp,zswap,install
 
 [MainWindow]
-HDMI-1 Height 1920x1080=543
-HDMI-1 Width 1920x1080=1482
+HDMI-1 Height 1920x1080=447
+HDMI-1 Width 1920x1080=800
 HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 
 [UiSettings]
-ColorScheme=
+ColorScheme=Padrão
 
 [filetree]
 editShade=37,90,117

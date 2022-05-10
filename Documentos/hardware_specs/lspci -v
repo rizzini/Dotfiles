@@ -67,11 +67,12 @@
 	Kernel modules: snd_hda_intel
 
 00:1c.0 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #1 (rev d5) (prog-if 00 [Normal decode])
+	Subsystem: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #1
 	Flags: bus master, fast devsel, latency 0, IRQ 24
 	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
-	I/O behind bridge: 00002000-00002fff [size=4K]
-	Memory behind bridge: df200000-df3fffff [size=2M]
-	Prefetchable memory behind bridge: 00000000df400000-00000000df5fffff [size=2M]
+	I/O behind bridge: 2000-2fff [size=4K] [16-bit]
+	Memory behind bridge: df200000-df3fffff [size=2M] [32-bit]
+	Prefetchable memory behind bridge: df400000-df5fffff [size=2M] [32-bit]
 	Capabilities: [40] Express Root Port (Slot+), MSI 00
 	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
 	Capabilities: [90] Subsystem: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #1
@@ -79,11 +80,12 @@
 	Kernel driver in use: pcieport
 
 00:1c.2 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #3 (rev d5) (prog-if 00 [Normal decode])
+	Subsystem: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #3
 	Flags: bus master, fast devsel, latency 0, IRQ 25
 	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
-	I/O behind bridge: 0000e000-0000efff [size=4K]
-	Memory behind bridge: f7c00000-f7cfffff [size=1M]
-	Prefetchable memory behind bridge: [disabled]
+	I/O behind bridge: e000-efff [size=4K] [16-bit]
+	Memory behind bridge: f7c00000-f7cfffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: [disabled] [64-bit]
 	Capabilities: [40] Express Root Port (Slot+), MSI 00
 	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
 	Capabilities: [90] Subsystem: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #3

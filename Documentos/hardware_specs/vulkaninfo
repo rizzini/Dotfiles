@@ -2,7 +2,7 @@
 VULKANINFO
 ==========
 
-Vulkan Instance Version: 1.3.208
+Vulkan Instance Version: 1.3.212
 
 
 Instance Extensions: count = 19
@@ -27,8 +27,20 @@ Instance Extensions: count = 19
 	VK_KHR_xcb_surface                     : extension revision 6
 	VK_KHR_xlib_surface                    : extension revision 6
 
-Layers: count = 2
+Layers: count = 4
 =================
+VK_LAYER_MANGOAPP_overlay (Mangoapp Layer) Vulkan version 1.2.135, layer version 1:
+	Layer Extensions: count = 0
+	Devices: count = 1
+		GPU id = 0 (Intel(R) HD Graphics 4400 (HSW GT2))
+		Layer-Device Extensions: count = 0
+
+VK_LAYER_MANGOAPP_overlay (Mangoapp Layer) Vulkan version 1.2.135, layer version 1:
+	Layer Extensions: count = 0
+	Devices: count = 1
+		GPU id = 0 (Intel(R) HD Graphics 4400 (HSW GT2))
+		Layer-Device Extensions: count = 0
+
 VK_LAYER_MANGOHUD_overlay (Vulkan Hud Overlay) Vulkan version 1.2.135, layer version 1:
 	Layer Extensions: count = 0
 	Devices: count = 1
@@ -118,12 +130,12 @@ GPU0:
 VkPhysicalDeviceProperties:
 ---------------------------
 	apiVersion        = 4206796 (1.3.204)
-	driverVersion     = 92274689 (0x5800001)
+	driverVersion     = 92274691 (0x5800003)
 	vendorID          = 0x8086
 	deviceID          = 0x041e
 	deviceType        = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU
 	deviceName        = Intel(R) HD Graphics 4400 (HSW GT2)
-	pipelineCacheUUID = 94762ff1-d0ac-87cf-f5e3-d5c5728bcbc5
+	pipelineCacheUUID = e96d5449-bd8b-4e9a-0030-ca8fea59305d
 
 VkPhysicalDeviceLimits:
 -----------------------
@@ -323,7 +335,7 @@ VkPhysicalDeviceDriverProperties:
 ---------------------------------
 	driverID           = DRIVER_ID_INTEL_OPEN_SOURCE_MESA
 	driverName         = Intel open-source Mesa driver
-	driverInfo         = Mesa 22.0.1
+	driverInfo         = Mesa 22.0.3
 	conformanceVersion = 0.0.0.0
 
 VkPhysicalDeviceDrmPropertiesEXT:
@@ -362,7 +374,7 @@ VkPhysicalDeviceFloatControlsProperties:
 VkPhysicalDeviceIDProperties:
 -----------------------------
 	deviceUUID      = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID      = 79eb7e56-bd4f-bb6a-7f19-6eb29a0449be
+	driverUUID      = a38972fa-8f98-ec5a-cfca-8a2fe6b82e91
 	deviceNodeMask  = 0
 	deviceLUIDValid = false
 
@@ -535,7 +547,7 @@ VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT:
 VkPhysicalDeviceVulkan11Properties:
 -----------------------------------
 	deviceUUID                        = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID                        = 79eb7e56-bd4f-bb6a-7f19-6eb29a0449be
+	driverUUID                        = a38972fa-8f98-ec5a-cfca-8a2fe6b82e91
 	deviceNodeMask                    = 0
 	deviceLUIDValid                   = false
 	subgroupSize                      = 32
@@ -563,7 +575,7 @@ VkPhysicalDeviceVulkan12Properties:
 -----------------------------------
 	driverID                                             = DRIVER_ID_INTEL_OPEN_SOURCE_MESA
 	driverName                                           = Intel open-source Mesa driver
-	driverInfo                                           = Mesa 22.0.1
+	driverInfo                                           = Mesa 22.0.3
 	conformanceVersion                                   = 0.0.0.0
 	denormBehaviorIndependence                           = SHADER_FLOAT_CONTROLS_INDEPENDENCE_ALL
 	roundingModeIndependence                             = SHADER_FLOAT_CONTROLS_INDEPENDENCE_NONE
@@ -673,7 +685,7 @@ VkPhysicalDeviceVulkan13Properties:
 	maxBufferSize                                                                 = 0x40000000
 
 
-Device Extensions: count = 95
+Device Extensions: count = 96
 	VK_EXT_4444_formats                         : extension revision 1
 	VK_EXT_calibrated_timestamps                : extension revision 2
 	VK_EXT_color_write_enable                   : extension revision 1
@@ -711,6 +723,7 @@ Device Extensions: count = 95
 	VK_EXT_shader_viewport_index_layer          : extension revision 1
 	VK_EXT_subgroup_size_control                : extension revision 2
 	VK_EXT_texel_buffer_alignment               : extension revision 1
+	VK_EXT_tooling_info                         : extension revision 1
 	VK_EXT_transform_feedback                   : extension revision 1
 	VK_EXT_vertex_attribute_divisor             : extension revision 3
 	VK_EXT_ycbcr_image_arrays                   : extension revision 1

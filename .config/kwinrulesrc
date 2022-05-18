@@ -243,11 +243,11 @@ wmclassmatch=1
 
 [8]
 Description=Configurações de janela para UNO
-ignoregeometry=true
 position=997,549
 size=560,350
 sizerule=2
 title=UNO
+titlematch=1
 wmclass=steam_app_470220 steam_app_470220
 wmclasscomplete=true
 wmclassmatch=1

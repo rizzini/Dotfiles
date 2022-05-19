@@ -5,8 +5,8 @@
 		"Category": false,
 		"Summary": false,
 		"Banner": false,
-		"x": 1000,
-		"y": 541,
+		"x": 1015,
+		"y": 542,
 		"width": 883,
 		"height": 464,
 		"maximized": false,
@@ -115,6 +115,7 @@
 	},
 	"FolderHistory": [
 		"\/home\/lucas\/Downloads",
+		"\/home\/lucas\/Documentos",
 		"\/home\/lucas"
 	],
 	"AutoSave": 1,

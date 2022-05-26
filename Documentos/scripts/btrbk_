@@ -10,7 +10,7 @@ if [[ ! "$(/usr/bin/mount | /usr/bin/grep '/dev/sda2 on / type btrfs')" == *"sub
     /usr/bin/rm /tmp/btrbk.sh.pid;
     exit 1
 fi
-while [ -n "$(pgrep UNO)" ] || [ -n "$(/usr/bin/pgrep Diablo)" ] ||  [ -n "$(/usr/bin/pgrep qemu)" ];
+while [ -n "$(/usr/bin/pgrep UNO)" ] || [ -n "$(/usr/bin/pgrep wine)" ] ||  [ -n "$(/usr/bin/pgrep qemu)" ];
 do
    /usr/bin/sleep 10;
 done

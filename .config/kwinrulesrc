@@ -23,13 +23,14 @@ wmclass=google-chrome google-chrome
 wmclasscomplete=true
 
 [10]
-Description=Configurações de janela para Blasphemous
+Description=Configurações de janela para Guvcview (24,70 fps)
 ignoregeometry=true
-ignoregeometryrule=2
-position=46,226
-positionrule=3
-title=Blasphemous
-wmclass=blasphemous blasphemous
+position=338,443
+positionrule=4
+size=644,507
+sizerule=4
+title=Guvcview (24,70 fps)
+wmclass=guvcview guvcview
 wmclasscomplete=true
 wmclassmatch=1
 

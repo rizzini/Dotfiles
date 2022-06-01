@@ -262,6 +262,7 @@ _k_friendly_name=Serviço de atalhos personalizados
 {b38898b3-0b17-420b-8a13-8d71a49cb83e}=Meta+M,none,mem and disk monitor
 {bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=Ctrl+Volume Up,none,playerctl next
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+{d3f9fc7f-622a-49a4-a52b-c5f2446a13a7}=Ctrl+Alt+E,none,eaasyeffects
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
@@ -289,11 +290,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Ativar janela que demanda atenção

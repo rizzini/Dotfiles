@@ -16,6 +16,10 @@ Seen=true
 [Applications][modem-manager-gui]
 Seen=true
 
+[DoNotDisturb]
+NotificationSoundsMuted=true
+Until=2023,6,3,17,51,41.58
+
 [Notifications]
 LowPriorityHistory=true
 NormalAlwaysOnTop=true

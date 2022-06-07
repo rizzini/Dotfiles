@@ -9,8 +9,8 @@ HDMI-1 Width 1920x1080=600
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=nebula.jpg,file:$HOME/Imagens/Wallpaper/wallhaven-ym66q7.png,file:$HOME/Imagens/Wallpaper/wallhaven-g88owd.jpg,file:$HOME/Imagens/Wallpaper/sombrero-galaxy.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula_invertido.png,file:$HOME/Imagens/Wallpaper/ddj64ow-7b05f44f-adde-46aa-b82b-6be9fd14bc65.jpg,file:$HOME/Imagens/Wallpaper/bg_7.jpg,file:$HOME/Imagens/Wallpaper/4096x2160-72822-rio-de-janeiro-brazil-4k-ultra-hd-wallpaper__cityscapes.jpg,file:$HOME/Imagens/Wallpaper/0058.jpg
-Recent URLs[$e]=file:$HOME/Imagens/,file:$HOME/.config/,file:$HOME/,file:$HOME/Documentos/,file:///usr/share/help/C/easyeffects/,file:$HOME/Documentos/scripts/,file:$HOME/Imagens/Wallpaper/
+Recent Files[$e]=nebula.jpg,file:///mnt/dados/Downloads/WhatsApp_Plus_v8.75.apk,file:$HOME/Imagens/Wallpaper/wallhaven-ym66q7.png,file:$HOME/Imagens/Wallpaper/wallhaven-g88owd.jpg,file:$HOME/Imagens/Wallpaper/sombrero-galaxy.jpg,file:$HOME/Imagens/Wallpaper/nebula.jpg,file:$HOME/Imagens/Wallpaper/nebula_invertido.png,file:$HOME/Imagens/Wallpaper/ddj64ow-7b05f44f-adde-46aa-b82b-6be9fd14bc65.jpg,file:$HOME/Imagens/Wallpaper/bg_7.jpg,file:$HOME/Imagens/Wallpaper/4096x2160-72822-rio-de-janeiro-brazil-4k-ultra-hd-wallpaper__cityscapes.jpg,file:$HOME/Imagens/Wallpaper/0058.jpg
+Recent URLs[$e]=file:$HOME/Imagens/,file:$HOME/.config/,file:$HOME/,file:$HOME/Documentos/,file:///usr/share/help/C/easyeffects/,file:$HOME/Documentos/scripts/,file:$HOME/Imagens/Wallpaper/,file:///mnt/dados/Downloads/
 iconViewIconSize=64
 
 [KPropertiesDialog]

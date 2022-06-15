@@ -2,10 +2,10 @@
 VULKANINFO
 ==========
 
-Vulkan Instance Version: 1.3.212
+Vulkan Instance Version: 1.3.217
 
 
-Instance Extensions: count = 19
+Instance Extensions: count = 20
 ===============================
 	VK_EXT_acquire_drm_display             : extension revision 1
 	VK_EXT_acquire_xlib_display            : extension revision 1
@@ -21,32 +21,15 @@ Instance Extensions: count = 19
 	VK_KHR_get_display_properties2         : extension revision 1
 	VK_KHR_get_physical_device_properties2 : extension revision 2
 	VK_KHR_get_surface_capabilities2       : extension revision 1
+	VK_KHR_portability_enumeration         : extension revision 1
 	VK_KHR_surface                         : extension revision 25
 	VK_KHR_surface_protected_capabilities  : extension revision 1
 	VK_KHR_wayland_surface                 : extension revision 6
 	VK_KHR_xcb_surface                     : extension revision 6
 	VK_KHR_xlib_surface                    : extension revision 6
 
-Layers: count = 4
+Layers: count = 1
 =================
-VK_LAYER_MANGOAPP_overlay (Mangoapp Layer) Vulkan version 1.2.135, layer version 1:
-	Layer Extensions: count = 0
-	Devices: count = 1
-		GPU id = 0 (Intel(R) HD Graphics 4400 (HSW GT2))
-		Layer-Device Extensions: count = 0
-
-VK_LAYER_MANGOAPP_overlay (Mangoapp Layer) Vulkan version 1.2.135, layer version 1:
-	Layer Extensions: count = 0
-	Devices: count = 1
-		GPU id = 0 (Intel(R) HD Graphics 4400 (HSW GT2))
-		Layer-Device Extensions: count = 0
-
-VK_LAYER_MANGOHUD_overlay (Vulkan Hud Overlay) Vulkan version 1.2.135, layer version 1:
-	Layer Extensions: count = 0
-	Devices: count = 1
-		GPU id = 0 (Intel(R) HD Graphics 4400 (HSW GT2))
-		Layer-Device Extensions: count = 0
-
 VK_LAYER_MANGOHUD_overlay (Vulkan Hud Overlay) Vulkan version 1.2.135, layer version 1:
 	Layer Extensions: count = 0
 	Devices: count = 1
@@ -129,13 +112,13 @@ Device Properties and Extensions:
 GPU0:
 VkPhysicalDeviceProperties:
 ---------------------------
-	apiVersion        = 4206796 (1.3.204)
-	driverVersion     = 92274691 (0x5800003)
+	apiVersion        = 4206803 (1.3.211)
+	driverVersion     = 92278785 (0x5801001)
 	vendorID          = 0x8086
 	deviceID          = 0x041e
 	deviceType        = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU
 	deviceName        = Intel(R) HD Graphics 4400 (HSW GT2)
-	pipelineCacheUUID = e96d5449-bd8b-4e9a-0030-ca8fea59305d
+	pipelineCacheUUID = 70476a80-c4b0-c85e-de04-62c923377f57
 
 VkPhysicalDeviceLimits:
 -----------------------
@@ -150,9 +133,9 @@ VkPhysicalDeviceLimits:
 	maxPushConstantsSize                            = 128
 	maxMemoryAllocationCount                        = 4294967295
 	maxSamplerAllocationCount                       = 65536
-	bufferImageGranularity                          = 0x00000040
+	bufferImageGranularity                          = 0x00000001
 	sparseAddressSpaceSize                          = 0x00000000
-	maxBoundDescriptorSets                          = 8
+	maxBoundDescriptorSets                          = 32
 	maxPerStageDescriptorSamplers                   = 128
 	maxPerStageDescriptorUniformBuffers             = 64
 	maxPerStageDescriptorStorageBuffers             = 64
@@ -168,8 +151,8 @@ VkPhysicalDeviceLimits:
 	maxDescriptorSetSampledImages                   = 768
 	maxDescriptorSetStorageImages                   = 384
 	maxDescriptorSetInputAttachments                = 256
-	maxVertexInputAttributes                        = 28
-	maxVertexInputBindings                          = 28
+	maxVertexInputAttributes                        = 29
+	maxVertexInputBindings                          = 31
 	maxVertexInputAttributeOffset                   = 2047
 	maxVertexInputBindingStride                     = 2048
 	maxVertexOutputComponents                       = 128
@@ -333,10 +316,14 @@ VkPhysicalDeviceDescriptorIndexingProperties:
 
 VkPhysicalDeviceDriverProperties:
 ---------------------------------
-	driverID           = DRIVER_ID_INTEL_OPEN_SOURCE_MESA
-	driverName         = Intel open-source Mesa driver
-	driverInfo         = Mesa 22.0.3
-	conformanceVersion = 0.0.0.0
+	driverID        = DRIVER_ID_INTEL_OPEN_SOURCE_MESA
+	driverName      = Intel open-source Mesa driver
+	driverInfo      = Mesa 22.1.1
+	conformanceVersion:
+		major    = 0
+		minor    = 0
+		subminor = 0
+		patch    = 0
 
 VkPhysicalDeviceDrmPropertiesEXT:
 ---------------------------------
@@ -374,7 +361,7 @@ VkPhysicalDeviceFloatControlsProperties:
 VkPhysicalDeviceIDProperties:
 -----------------------------
 	deviceUUID      = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID      = a38972fa-8f98-ec5a-cfca-8a2fe6b82e91
+	driverUUID      = fefd9b8b-6625-b919-f512-f567f6665502
 	deviceNodeMask  = 0
 	deviceLUIDValid = false
 
@@ -512,9 +499,11 @@ VkPhysicalDeviceSubgroupSizeControlProperties:
 	minSubgroupSize              = 8
 	maxSubgroupSize              = 32
 	maxComputeWorkgroupSubgroups = 64
-	requiredSubgroupSizeStages: count = 2
+	requiredSubgroupSizeStages: count = 4
 		SHADER_STAGE_COMPUTE_BIT
 		SHADER_STAGE_ALL
+		SHADER_STAGE_TASK_BIT_NV
+		SHADER_STAGE_MESH_BIT_NV
 
 VkPhysicalDeviceTexelBufferAlignmentProperties:
 -----------------------------------------------
@@ -547,7 +536,7 @@ VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT:
 VkPhysicalDeviceVulkan11Properties:
 -----------------------------------
 	deviceUUID                        = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID                        = a38972fa-8f98-ec5a-cfca-8a2fe6b82e91
+	driverUUID                        = fefd9b8b-6625-b919-f512-f567f6665502
 	deviceNodeMask                    = 0
 	deviceLUIDValid                   = false
 	subgroupSize                      = 32
@@ -575,8 +564,12 @@ VkPhysicalDeviceVulkan12Properties:
 -----------------------------------
 	driverID                                             = DRIVER_ID_INTEL_OPEN_SOURCE_MESA
 	driverName                                           = Intel open-source Mesa driver
-	driverInfo                                           = Mesa 22.0.3
-	conformanceVersion                                   = 0.0.0.0
+	driverInfo                                           = Mesa 22.1.1
+	conformanceVersion:
+		major    = 0
+		minor    = 0
+		subminor = 0
+		patch    = 0
 	denormBehaviorIndependence                           = SHADER_FLOAT_CONTROLS_INDEPENDENCE_ALL
 	roundingModeIndependence                             = SHADER_FLOAT_CONTROLS_INDEPENDENCE_NONE
 	shaderSignedZeroInfNanPreserveFloat16                = true
@@ -639,9 +632,11 @@ VkPhysicalDeviceVulkan13Properties:
 	minSubgroupSize                                                               = 8
 	maxSubgroupSize                                                               = 32
 	maxComputeWorkgroupSubgroups                                                  = 64
-	requiredSubgroupSizeStages: count = 2
+	requiredSubgroupSizeStages: count = 4
 		SHADER_STAGE_COMPUTE_BIT
 		SHADER_STAGE_ALL
+		SHADER_STAGE_TASK_BIT_NV
+		SHADER_STAGE_MESH_BIT_NV
 	maxInlineUniformBlockSize                                                     = 4096
 	maxPerStageDescriptorInlineUniformBlocks                                      = 32
 	maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks                       = 32
@@ -685,11 +680,12 @@ VkPhysicalDeviceVulkan13Properties:
 	maxBufferSize                                                                 = 0x40000000
 
 
-Device Extensions: count = 96
+Device Extensions: count = 98
 	VK_EXT_4444_formats                         : extension revision 1
 	VK_EXT_calibrated_timestamps                : extension revision 2
 	VK_EXT_color_write_enable                   : extension revision 1
 	VK_EXT_conditional_rendering                : extension revision 2
+	VK_EXT_depth_clip_control                   : extension revision 1
 	VK_EXT_depth_clip_enable                    : extension revision 1
 	VK_EXT_display_control                      : extension revision 1
 	VK_EXT_extended_dynamic_state               : extension revision 1
@@ -697,6 +693,7 @@ Device Extensions: count = 96
 	VK_EXT_external_memory_dma_buf              : extension revision 1
 	VK_EXT_external_memory_host                 : extension revision 1
 	VK_EXT_host_query_reset                     : extension revision 1
+	VK_EXT_image_2d_view_of_3d                  : extension revision 1
 	VK_EXT_image_drm_format_modifier            : extension revision 2
 	VK_EXT_image_robustness                     : extension revision 1
 	VK_EXT_index_type_uint8                     : extension revision 1
@@ -915,6 +912,10 @@ VkPhysicalDeviceConditionalRenderingFeaturesEXT:
 	conditionalRendering          = true
 	inheritedConditionalRendering = true
 
+VkPhysicalDeviceDepthClipControlFeaturesEXT:
+--------------------------------------------
+	depthClipControl = true
+
 VkPhysicalDeviceDepthClipEnableFeaturesEXT:
 -------------------------------------------
 	depthClipEnable = true
@@ -960,6 +961,11 @@ VkPhysicalDeviceHostQueryResetFeatures:
 ---------------------------------------
 	hostQueryReset = true
 
+VkPhysicalDeviceImage2DViewOf3DFeaturesEXT:
+-------------------------------------------
+	image2DViewOf3D   = true
+	sampler2DViewOf3D = false
+
 VkPhysicalDeviceImageRobustnessFeatures:
 ----------------------------------------
 	robustImageAccess = true
@@ -979,7 +985,7 @@ VkPhysicalDeviceInlineUniformBlockFeatures:
 
 VkPhysicalDeviceLineRasterizationFeaturesEXT:
 ---------------------------------------------
-	rectangularLines         = true
+	rectangularLines         = false
 	bresenhamLines           = true
 	smoothLines              = true
 	stippledRectangularLines = false

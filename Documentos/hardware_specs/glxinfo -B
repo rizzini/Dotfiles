@@ -4,26 +4,27 @@ direct rendering: Yes
 Extended renderer info (GLX_MESA_query_renderer):
     Vendor: Intel (0x8086)
     Device: Mesa Intel(R) HD Graphics 4400 (HSW GT2) (0x41e)
-    Version: 22.0.3
+    Version: 22.1.1
     Accelerated: yes
     Video memory: 1536MB
     Unified memory: yes
     Preferred profile: core (0x1)
     Max core profile version: 4.6
-    Max compat profile version: 3.1
+    Max compat profile version: 4.6
     Max GLES1 profile version: 1.1
     Max GLES[23] profile version: 3.2
 OpenGL vendor string: Intel
 OpenGL renderer string: Mesa Intel(R) HD Graphics 4400 (HSW GT2)
-OpenGL core profile version string: 4.6 (Core Profile) Mesa 22.0.3
+OpenGL core profile version string: 4.6 (Core Profile) Mesa 22.1.1
 OpenGL core profile shading language version string: 4.60
 OpenGL core profile context flags: (none)
 OpenGL core profile profile mask: core profile
 
-OpenGL version string: 3.1 Mesa 22.0.3
-OpenGL shading language version string: 1.40
+OpenGL version string: 4.6 (Compatibility Profile) Mesa 22.1.1
+OpenGL shading language version string: 4.60
 OpenGL context flags: (none)
+OpenGL profile mask: compatibility profile
 
-OpenGL ES profile version string: OpenGL ES 3.2 Mesa 22.0.3
+OpenGL ES profile version string: OpenGL ES 3.2 Mesa 22.1.1
 OpenGL ES profile shading language version string: OpenGL ES GLSL ES 3.20
 

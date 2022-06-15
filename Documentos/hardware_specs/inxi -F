@@ -1,5 +1,5 @@
 System:
-  Host: archlinux Kernel: 5.17.5-256-tkg-cfs arch: x86_64 bits: 64
+  Host: archlinux Kernel: 5.17.13-260-tkg-cfs arch: x86_64 bits: 64
     Console: pty pts/1 Distro: Arch Linux
 Machine:
   Type: Desktop Mobo: INTEL model: H81 serial: N/A UEFI: American Megatrends
@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 3392 min/max: 800/3700 cores: 1: 3392 2: 3405 3: 3501
-    4: 3270
+  Speed (MHz): avg: 2262 min/max: 800/3700 cores: 1: 2191 2: 2347 3: 2228
+    4: 2283
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -17,7 +17,7 @@ Graphics:
   Display: x11 server: X.Org v: 21.1.3 driver: X: loaded: modesetting
     gpu: i915 resolution: 1920x1080~60Hz
   OpenGL: renderer: Mesa Intel HD Graphics 4400 (HSW GT2)
-    v: 4.6 Mesa 22.0.3
+    v: 4.6 Mesa 22.1.1
 Audio:
   Device-1: Intel Xeon E3-1200 v3/4th Gen Core Processor HD Audio
     driver: snd_hda_intel
@@ -25,29 +25,35 @@ Audio:
     driver: snd_hda_intel
   Device-3: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
-  Sound Server-1: ALSA v: k5.17.5-256-tkg-cfs running: yes
-  Sound Server-2: PipeWire v: 0.3.51 running: yes
+  Sound Server-1: ALSA v: k5.17.13-260-tkg-cfs running: yes
+  Sound Server-2: PipeWire v: 0.3.52 running: yes
 Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
   IF: enp2s0 state: up speed: 1000 Mbps duplex: full mac: 00:e0:4c:f5:51:d8
+  IF-ID-1: anbox0 state: up speed: 10000 Mbps duplex: unknown
+    mac: 6e:52:cf:cb:a3:5c
+  IF-ID-2: vethnYS7IV state: up speed: 10000 Mbps duplex: full
+    mac: fe:cf:bd:83:73:06
 Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 111.79 GiB used: 75.73 GiB (67.7%)
+  Local Storage: total: 344.68 GiB used: 119.46 GiB (34.7%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
+  ID-2: /dev/sdb vendor: Hitachi model: HDP725025GLA380 size: 232.89 GiB
 Partition:
-  ID-1: / size: 103.28 GiB used: 75.72 GiB (73.3%) fs: btrfs dev: /dev/sda2
-  ID-2: /boot/efi size: 126 MiB used: 8.5 MiB (6.8%) fs: vfat
+  ID-1: / size: 107.64 GiB used: 34.83 GiB (32.4%) fs: btrfs dev: /dev/sda2
+  ID-2: /boot/efi size: 126 MiB used: 5.6 MiB (4.5%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 103.28 GiB used: 75.72 GiB (73.3%) fs: btrfs
+  ID-3: /home size: 107.64 GiB used: 34.83 GiB (32.4%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4 GiB used: 0 KiB (0.0%) dev: /dev/sda5
+  ID-1: swap-1 type: partition size: 4.02 GiB used: 2 MiB (0.0%)
+    dev: /dev/sda3
 Sensors:
-  System Temperatures: cpu: 65.0 C mobo: 27.8 C
+  System Temperatures: cpu: 29.8 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 208 Uptime: 0m Memory: 5.72 GiB used: 2.1 GiB (36.7%)
-  Shell: generate_hardwa inxi: 3.3.15
+  Processes: 279 Uptime: 34m Memory: 5.72 GiB used: 3.1 GiB (54.1%)
+  Shell: generate_hardwa inxi: 3.3.18

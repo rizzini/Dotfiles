@@ -1,4 +1,8 @@
-Label: 'archlinux'  uuid: 696cc724-3165-4249-8dc1-2c59193f6b7e
-	Total devices 1 FS bytes used 74.79GiB
-	devid    1 size 103.28GiB used 81.04GiB path /dev/sda2
+Label: none  uuid: 8c36ee55-73c8-4908-b764-e6db1ac14940
+	Total devices 1 FS bytes used 34.18GiB
+	devid    1 size 107.64GiB used 36.02GiB path /dev/sda2
+
+Label: 'Backup'  uuid: d10eaec6-68e4-4319-965d-a4c04828715f
+	Total devices 1 FS bytes used 32.71GiB
+	devid    1 size 48.83GiB used 34.52GiB path /dev/sdb2
 

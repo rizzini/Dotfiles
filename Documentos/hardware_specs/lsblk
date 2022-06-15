@@ -1,13 +1,16 @@
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0 360.7M  1 loop /var/lib/anbox/rootfs
 sda      8:0    0 111.8G  0 disk 
 |-sda1   8:1    0   128M  0 part /boot/efi
-|-sda2   8:2    0 103.3G  0 part /mnt/archlinux/Games
+|-sda2   8:2    0 107.6G  0 part /var/lib/anbox/combined-rootfs/data
+|                                /var/lib/anbox/combined-rootfs/cache
 |                                /home/lucas/.ccache
-|                                /home/lucas/Downloads
-|                                /var/cache/pacman/pkg
 |                                /home
+|                                /var/cache/pacman/pkg
 |                                /mnt/archlinux
 |                                /
-|-sda5   8:5    0     4G  0 part [SWAP]
-`-sda6   8:6    0   4.4G  0 part 
-sr0     11:0    1  1024M  0 rom  
+`-sda3   8:3    0     4G  0 part [SWAP]
+sdb      8:16   0 232.9G  0 disk 
+|-sdb1   8:17   0   9.8G  0 part 
+|-sdb2   8:18   0  48.8G  0 part /mnt/backup
+`-sdb3   8:19   0 174.1G  0 part /mnt/dados

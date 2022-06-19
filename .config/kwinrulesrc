@@ -245,7 +245,7 @@ wmclassmatch=1
 [8]
 Description=Configurações de janela para UNO
 position=997,549
-size=560,350
+size=660,450
 sizerule=2
 title=UNO
 titlematch=1

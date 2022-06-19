@@ -290,11 +290,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Ativar janela que demanda atenção
@@ -314,7 +314,7 @@ MoveZoomUp=none,none,Mover a área ampliada para cima
 Overview=Meta+',Meta+W,Ativar visão geral
 Setup Window Shortcut=none,,Configurar atalhos para a janela
 Show Desktop=Meta+D,Meta+D,Exibir a área de trabalho
-ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Mostrar a grade de áreas de trabalho
+ShowDesktopGrid=Ctrl+F8,Meta+F8,Mostrar a grade de áreas de trabalho
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspender composição
 Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Mudar para a área de trabalho abaixo
 Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Mudar para a área de trabalho acima

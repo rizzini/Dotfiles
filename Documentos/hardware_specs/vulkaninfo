@@ -361,7 +361,7 @@ VkPhysicalDeviceFloatControlsProperties:
 VkPhysicalDeviceIDProperties:
 -----------------------------
 	deviceUUID      = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID      = fefd9b8b-6625-b919-f512-f567f6665502
+	driverUUID      = fe46283c-ca1e-a2aa-548e-76ac42426add
 	deviceNodeMask  = 0
 	deviceLUIDValid = false
 
@@ -536,7 +536,7 @@ VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT:
 VkPhysicalDeviceVulkan11Properties:
 -----------------------------------
 	deviceUUID                        = 410875d3-c5d0-caee-ba28-dbc22886aa1c
-	driverUUID                        = fefd9b8b-6625-b919-f512-f567f6665502
+	driverUUID                        = fe46283c-ca1e-a2aa-548e-76ac42426add
 	deviceNodeMask                    = 0
 	deviceLUIDValid                   = false
 	subgroupSize                      = 32

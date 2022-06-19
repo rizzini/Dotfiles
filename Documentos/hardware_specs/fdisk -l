@@ -26,9 +26,3 @@ Device         Start       End   Sectors   Size Type
 /dev/sdb3  102664192 467791871 365127680 174.1G Linux filesystem
 
 Partition table entries are not in disk order.
-
-
-Disk /dev/loop0: 360.69 MiB, 378208256 bytes, 738688 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes

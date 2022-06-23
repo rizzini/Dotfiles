@@ -1,4 +1,4 @@
-Data, single: total=80.00GiB, used=79.08GiB
+Data, single: total=102.00GiB, used=64.37GiB
 System, DUP: total=8.00MiB, used=16.00KiB
-Metadata, DUP: total=2.00GiB, used=760.22MiB
-GlobalReserve, single: total=107.14MiB, used=0.00B
+Metadata, DUP: total=2.00GiB, used=822.20MiB
+GlobalReserve, single: total=87.55MiB, used=0.00B

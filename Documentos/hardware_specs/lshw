@@ -31,7 +31,7 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3691MHz
+          size: 3614MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
@@ -165,6 +165,15 @@ archlinux
                    capabilities: bluetooth usb-1.10
                    configuration: driver=btusb maxpower=500mA speed=12Mbit/s
               *-usb:1
+                   description: Mouse
+                   product: 2.4G Mouse
+                   vendor: SHARKOON Technologies GmbH
+                   physical id: 2
+                   bus info: usb@3:2
+                   version: 2.00
+                   capabilities: usb-1.10
+                   configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+              *-usb:2
                    description: Keyboard
                    product: Wired Keyboard 600
                    vendor: Microsoft
@@ -173,7 +182,7 @@ archlinux
                    version: 1.10
                    capabilities: usb-1.10
                    configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
-              *-usb:2
+              *-usb:3
                    description: Mouse
                    product: USB Optical Mouse
                    vendor: Sunplus Innovation Technology Inc.
@@ -182,7 +191,7 @@ archlinux
                    version: 0.90
                    capabilities: usb-2.00
                    configuration: driver=usbhid maxpower=98mA speed=2Mbit/s
-              *-usb:3
+              *-usb:4
                    description: Video
                    product: USB2.0 PC CAMERA
                    vendor: Generic
@@ -362,17 +371,19 @@ archlinux
                 size: 111GiB (120GB)
                 capabilities: gpt-1.00 partitioned partitioned:gpt
                 configuration: ansiversion=5 guid=c932b96a-2553-4827-be2d-2c993ed424ba logicalsectorsize=512 sectorsize=512
-              *-volume:0 UNCLAIMED
+              *-volume:0
                    description: Windows FAT volume
                    vendor: mkfs.fat
                    physical id: 1
                    bus info: scsi@1:0.0.0,1
+                   logical name: /dev/sda1
+                   logical name: /boot/efi
                    version: FAT32
                    serial: 83ed-bdd9
                    size: 126MiB
                    capacity: 127MiB
                    capabilities: boot fat initialized
-                   configuration: FATs=2 filesystem=fat name=EFI System Partition
+                   configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro name=EFI System Partition state=mounted
               *-volume:1
                    description: EFI partition
                    physical id: 2
@@ -380,8 +391,8 @@ archlinux
                    logical name: /dev/sda2
                    logical name: /
                    logical name: /mnt/archlinux
-                   logical name: /home
                    logical name: /var/cache/pacman/pkg
+                   logical name: /home
                    logical name: /home/lucas/.ccache
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 107GiB
@@ -416,12 +427,11 @@ archlinux
                    physical id: 1
                    bus info: scsi@4:0.0.0,1
                    logical name: /dev/sdb1
-                   logical name: /mnt/recovery
                    version: 1.0
                    serial: cda8102d-e400-478a-a678-8adc19aa5e49
                    size: 10061MiB
-                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
-                   configuration: created=2022-06-14 14:54:14 filesystem=ext4 label=Recover lastmountpoint=/ modified=2022-06-19 13:52:46 mount.fstype=ext4 mount.options=rw,relatime mounted=2022-06-19 13:52:46 state=mounted
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                   configuration: created=2022-06-14 14:54:14 filesystem=ext4 label=Recover lastmountpoint=/ modified=2022-06-20 15:57:53 mounted=2022-06-20 15:57:53 state=clean
               *-volume:1
                    description: EFI partition
                    physical id: 2
@@ -442,7 +452,7 @@ archlinux
                    serial: 4e595048-56b4-4d26-ae4b-90ba6d7c7011
                    size: 174GiB
                    capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
-                   configuration: created=2022-05-23 13:29:00 filesystem=ext4 label=Dados lastmountpoint=/mnt/dados modified=2022-06-19 13:52:46 mount.fstype=ext4 mount.options=rw,noatime mounted=2022-06-19 13:52:46 state=mounted
+                   configuration: created=2022-05-23 13:29:00 filesystem=ext4 label=Dados lastmountpoint=/mnt/dados modified=2022-06-23 08:00:15 mount.fstype=ext4 mount.options=rw,noatime mounted=2022-06-23 08:00:15 state=mounted
            *-cdrom
                 description: DVD-RAM writer
                 product: DVD-RAM GH22NS30

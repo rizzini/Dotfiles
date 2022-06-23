@@ -7,8 +7,8 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 2821 min/max: 800/3700 cores: 1: 2710 2: 3012 3: 2600
-    4: 2962
+  Speed (MHz): avg: 1608 min/max: 800/3700 cores: 1: 1651 2: 1635 3: 1593
+    4: 1553
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
@@ -17,7 +17,7 @@ Graphics:
   Display: x11 server: X.Org v: 21.1.3 driver: X: loaded: modesetting
     gpu: i915 resolution: 1920x1080~60Hz
   OpenGL: renderer: Mesa Intel HD Graphics 4400 (HSW GT2)
-    v: 4.6 Mesa 22.1.1
+    v: 4.6 Mesa 22.1.2
 Audio:
   Device-1: Intel Xeon E3-1200 v3/4th Gen Core Processor HD Audio
     driver: snd_hda_intel
@@ -31,26 +31,25 @@ Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
   IF: enp2s0 state: up speed: 1000 Mbps duplex: full mac: 00:e0:4c:f5:51:d8
-  IF-ID-1: anbox0 state: down mac: 6e:52:cf:cb:a3:5c
 Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 344.68 GiB used: 192.06 GiB (55.7%)
+  Local Storage: total: 344.68 GiB used: 167.8 GiB (48.7%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
   ID-2: /dev/sdb vendor: Hitachi model: HDP725025GLA380 size: 232.89 GiB
 Partition:
-  ID-1: / size: 107.64 GiB used: 80.67 GiB (74.9%) fs: btrfs dev: /dev/sda2
+  ID-1: / size: 107.64 GiB used: 66.05 GiB (61.4%) fs: btrfs dev: /dev/sda2
   ID-2: /boot/efi size: 126 MiB used: 10.3 MiB (8.2%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 107.64 GiB used: 80.67 GiB (74.9%) fs: btrfs
+  ID-3: /home size: 107.64 GiB used: 66.05 GiB (61.4%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4.02 GiB used: 0 KiB (0.0%)
+  ID-1: swap-1 type: partition size: 4.02 GiB used: 465.2 MiB (11.3%)
     dev: /dev/sda3
 Sensors:
-  System Temperatures: cpu: 59.0 C mobo: 27.8 C
+  System Temperatures: cpu: 52.0 C mobo: 27.8 C
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 237 Uptime: 6m Memory: 7.69 GiB used: 2.82 GiB (36.7%)
+  Processes: 224 Uptime: 37m Memory: 7.69 GiB used: 2.93 GiB (38.1%)
   Shell: generate_hardwa inxi: 3.3.18

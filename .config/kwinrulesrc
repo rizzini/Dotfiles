@@ -244,6 +244,8 @@ wmclassmatch=1
 
 [8]
 Description=Configurações de janela para UNO
+blockcompositing=true
+blockcompositingrule=2
 position=997,549
 size=560,350
 sizerule=2

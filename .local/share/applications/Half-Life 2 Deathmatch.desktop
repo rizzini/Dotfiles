@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Half-Life 2: Deathmatch
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/320
+Icon=steam_icon_320
+Terminal=false
+Type=Application
+Categories=Game;

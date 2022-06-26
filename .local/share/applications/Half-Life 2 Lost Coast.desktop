@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Half-Life 2: Lost Coast
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/340
+Icon=steam_icon_340
+Terminal=false
+Type=Application
+Categories=Game;

@@ -5,10 +5,10 @@
 		"Category": false,
 		"Summary": false,
 		"Banner": false,
-		"x": 960,
-		"y": 544,
-		"width": 883,
-		"height": 464,
+		"x": 608,
+		"y": 584,
+		"width": 1069,
+		"height": 455,
 		"maximized": false,
 		"NthCategory": 0,
 		"NthStatus": 0,
@@ -114,8 +114,8 @@
 		"OnError": null
 	},
 	"FolderHistory": [
-		"\/home\/lucas\/Downloads",
 		"\/home\/lucas",
+		"\/home\/lucas\/Downloads",
 		"\/mnt\/dados\/VMs",
 		"\/home\/lucas\/Documentos"
 	],

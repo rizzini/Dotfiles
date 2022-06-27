@@ -21,6 +21,9 @@ HDMI-1 Width 1920x1080=390
 CompletionMode=1
 History=kate
 
+[PlasmaTransientsConfig]
+PreloadWeight=34
+
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 

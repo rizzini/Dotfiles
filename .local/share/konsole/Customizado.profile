@@ -7,4 +7,5 @@ Name=Customizado
 Parent=FALLBACK/
 
 [Scrolling]
+HistoryMode=2
 HistorySize=999999

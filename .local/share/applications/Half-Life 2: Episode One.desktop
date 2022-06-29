@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=WINEPREFIX=/home/lucas/.wine_hl2ep1/ /opt/wine-tkg-staging-fsync-opt-git/bin/wine hl2.exe -steam -game episodic -w 1280 -h 720 -window
+GenericName[pt_BR]=
+GenericName=
+Icon=/mnt/archlinux/Games/Half-Life 2 Episode One/pngegg.png
+MimeType=
+Name[pt_BR]=Half-Life 2: Episode One
+Name=Half-Life 2: Episode One
+NoDisplay=false
+Path=/mnt/archlinux/Games/Half-Life 2 Episode One
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

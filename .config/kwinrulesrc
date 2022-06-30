@@ -11,16 +11,16 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [1]
-Description=Configurações de janela para Prime Video
-position=960,-144
-positionrule=2
+Description=Configurações de aplicativo para hl2.exe
+clientmachine=localhost
+position=19,286
+positionrule=3
 size=965,670
-sizerule=2
-title=Prime Video - Google Chrome
-titlematch=1
+title=HALF-LIFE 2
 windowrole=browser
-wmclass=google-chrome google-chrome
+wmclass=hl2.exe hl2.exe
 wmclasscomplete=true
+wmclassmatch=1
 
 [10]
 Description=Configurações de janela para Guvcview (24,70 fps)
@@ -80,17 +80,17 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [2]
-Description=Configurações de janela para EasyEffects
+Description=Configurações de janela para Prime Video
 ignoregeometry=true
-ignoregeometryrule=3
-position=997,549
-positionrule=3
-size=882,483
-sizerule=3
-title=EasyEffects
-wmclass=easyeffects easyeffects
+position=960,-144
+positionrule=2
+size=965,670
+sizerule=2
+title=Prime Video - Google Chrome
+titlematch=1
+windowrole=browser
+wmclass=google-chrome google-chrome
 wmclasscomplete=true
-wmclassmatch=1
 
 [2c29c231-73e8-4dc6-a8eb-e7b7bc33dc57]
 Description=Configurações de janela para Blasphemous
@@ -109,6 +109,20 @@ position=960,530
 positionrule=3
 title=Anbox - Android in a Box
 wmclass=anbox anbox
+wmclasscomplete=true
+wmclassmatch=1
+
+[3]
+Description=Configurações de janela para EasyEffects
+blockcompositing=true
+ignoregeometry=true
+ignoregeometryrule=3
+position=997,549
+positionrule=3
+size=882,483
+sizerule=3
+title=EasyEffects
+wmclass=easyeffects easyeffects
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -158,6 +172,33 @@ wmclass=zenity zenity
 wmclasscomplete=true
 wmclassmatch=1
 
+[4]
+Description=Configurações de janela para UNO
+blockcompositing=true
+blockcompositingrule=2
+ignoregeometry=true
+position=960,525
+size=560,350
+sizerule=2
+title=UNO
+titlematch=1
+wmclass=steam_app_470220 steam_app_470220
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Configurações de janela para Anbox - Android in a Box
+ignoregeometry=true
+ignoregeometryrule=3
+position=960,525
+positionrule=3
+size=600,526
+sizerule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
+wmclasscomplete=true
+wmclassmatch=1
+
 [6e256e8d-6ef0-47c3-b810-58b9555ff032]
 Description=Configurações de janela para Darkwood
 ignoregeometry=true
@@ -194,6 +235,16 @@ sizerule=2
 title=UNO
 titlematch=1
 wmclass=steam_app_470220 steam_app_470220
+wmclasscomplete=true
+wmclassmatch=1
+
+[81b7bc30-4f94-43e1-bb58-49bdeefa961d]
+Description=Configurações de aplicativo para hl2.exe
+clientmachine=localhost
+position=11,287
+positionrule=3
+title=HALF-LIFE 2
+wmclass=hl2.exe hl2.exe
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -283,8 +334,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=4
-rules=1,2,8,9
+count=5
+rules=1,2,3,4,5
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury

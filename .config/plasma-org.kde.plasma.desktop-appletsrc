@@ -44,6 +44,10 @@ wallpaperplugin=org.kde.image
 DialogHeight=663
 DialogWidth=912
 
+[Containments][168][General]
+positions={"1920x1080":["1"\\,"18"\\,"desktop:/1"\\,"0"\\,"0"]}
+sortMode=-1
+
 [Containments][168][Wallpaper][org.kde.image][General]
 Image=file:///home/lucas/Imagens/Wallpaper/wallhaven-4lopll.jpg
 SlidePaths=/home/lucas/.local/share/wallpapers,/usr/share/wallpapers

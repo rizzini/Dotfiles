@@ -1,6 +1,6 @@
 #!/bin/bash
 pulseeffects=0
-if [ -n "$(pgrep easyeffects)" ]; then
+if [ -n "$(/usr/bin/pgrep easyeffects)" ]; then
     pulseeffects=1
     /home/lucas/Documentos/scripts/laudness.sh
 fi

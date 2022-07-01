@@ -1,0 +1,6 @@
+[Event/freespacenotif]
+Action=Popup|Execute|Taskbar
+Execute=/bin/bash -c '/usr/bin/sudo /home/lucas/Documentos/scripts/clean_space_emergency.sh'
+Logfile=
+Sound=
+TTS=

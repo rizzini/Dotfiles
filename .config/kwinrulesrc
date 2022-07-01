@@ -13,10 +13,13 @@ wmclassmatch=1
 [1]
 Description=Configurações de aplicativo para hl2.exe
 clientmachine=localhost
+ignoregeometry=true
+ignoregeometryrule=2
 position=19,286
 positionrule=3
 size=965,670
 title=HALF-LIFE 2
+titlematch=1
 windowrole=browser
 wmclass=hl2.exe hl2.exe
 wmclasscomplete=true
@@ -199,6 +202,10 @@ wmclass=anbox anbox
 wmclasscomplete=true
 wmclassmatch=1
 
+[6]
+Description=Configurações de nova janela
+wmclassmatch=1
+
 [6e256e8d-6ef0-47c3-b810-58b9555ff032]
 Description=Configurações de janela para Darkwood
 ignoregeometry=true
@@ -334,8 +341,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=5
-rules=1,2,3,4,5
+count=6
+rules=1,2,3,4,5,6
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury
@@ -408,4 +415,8 @@ positionrule=3
 title=Huntdown
 wmclass=huntdown.x86_64 huntdown.x86_64
 wmclasscomplete=true
+wmclassmatch=1
+
+[ff19e168-096f-40d7-ab92-7e9405511fb2]
+Description=Configurações de nova janela
 wmclassmatch=1

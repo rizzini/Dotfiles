@@ -1,6 +1,6 @@
 #!/bin/bash
-out_of_space=0;
-while :;do
+# out_of_space=0;
+# while :;do
     {
     if [ $(/usr/bin/df -B MB  /dev/sda2 --output=avail | /usr/bin/tail -1 | /usr/bin/tr -d 'MB') -le 700 ];then
         out_of_space=1;
@@ -49,9 +49,9 @@ while :;do
         done
     fi
     } &> /tmp/clean_space_emergency.sh.log
-if [ $out_of_space = 1 ];then
-    /usr/bin/sudo -u lucas DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "Script clean_space_emergency.sh executado.\nChecar logs em /tmp/clean_space_emergency.sh.log.\nÉ possível que o BTRBK tenha sido encerrado de forma incorreta.\nVerifique as snapshots!" --title='Você está ficando sem espaço';
-    exit 0;
-fi
-sleep 5;
-done
+# if [ $out_of_space = 1 ];then
+     /usr/bin/sudo -u lucas DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "Script clean_space_emergency.sh executado.\nChecar logs em /tmp/clean_space_emergency.sh.log.\nÉ possível que o BTRBK tenha sido encerrado de forma incorreta.\nVerifique as snapshots!" --title='clean_space_emergency.sh';
+#     exit 0;
+# fi
+# sleep 5;
+# done

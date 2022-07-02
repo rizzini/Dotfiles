@@ -2,7 +2,7 @@
 # out_of_space=0;
 # while :;do
     {
-#     if [ $(/usr/bin/df -B MB  /dev/sda2 --output=avail | /usr/bin/tail -1 | /usr/bin/tr -d 'MB') -le 700 ];then
+#      if [ $(/usr/bin/df -B MB  /dev/sda2 --output=avail | /usr/bin/tail -1 | /usr/bin/tr -d 'MB') -le 700 ];then
 #         out_of_space=1;
         /usr/bin/find /mnt/archlinux/btrbk_snapshots/HOME/* -prune -type d | while IFS= read -r d; do
             if [[ -d "$d" && "$d" != *"$(/usr/bin/btrfs subvol list / | /usr/bin/grep HOME | /usr/bin/awk '{print $9}' | /usr/bin/tail -1)"* ]]; then
@@ -33,6 +33,7 @@
         fi
         if [ -z "$(/usr/bin/pgrep winetricks)" ];then
             /usr/bin/rm -rf /home/lucas/.cache/winetricks/*;
+        fi
 #     fi
 #     if [ $(/usr/bin/df -B MB  /dev/sdb2 --output=avail | /usr/bin/tail -1 | /usr/bin/tr -d 'MB') -le 700 ];then
 #         out_of_space=1;

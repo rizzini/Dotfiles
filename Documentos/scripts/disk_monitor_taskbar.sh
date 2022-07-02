@@ -34,7 +34,7 @@ if [ -n "$sdc" ]; then
 fi
 /usr/bin/printf "SSD|""R: "$(/usr/bin/echo "$((${read_sda2%%}/1024))MB/s")" W: "$(/usr/bin/echo "$((${write_sda2%%}/1024))MB/s")"\n" ;
 if [ -n "$sdb" ]; then
-    /usr/bin/printf "sdb|""R: "$(/usr/bin/echo "$((${read_sdb%%}/1024))MB/s")" W: "$(/usr/bin/echo "$((${write_sdb%%}/1024))MB/s")"\n";
+    /usr/bin/printf "HDD|""R: "$(/usr/bin/echo "$((${read_sdb%%}/1024))MB/s")" W: "$(/usr/bin/echo "$((${write_sdb%%}/1024))MB/s")"\n";
 fi
 if [ -n "$sdc" ]; then
     /usr/bin/printf "sdc|""R: "$(/usr/bin/echo "$((${read_sdc%%}/1024))MB/s")" W: "$(/usr/bin/echo "$((${write_sdc%%}/1024))MB/s")"\n";

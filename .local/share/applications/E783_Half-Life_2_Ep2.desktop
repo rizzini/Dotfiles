@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=DXVK_LOG_LEVEL=error WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_hl2ep1/ gamemoderun mangohud wine hl2.exe -steam -game ep2 -windowed -novid -w 1280 -h 720
+GenericName[pt_BR]=
+GenericName=
+Icon=E783_Half-Life_2_Ep2.0
+MimeType=
+Name[pt_BR]=Half-Life 2 Episode Two
+Name=Half-Life 2 Episode Two
+NoDisplay=false
+Path=/mnt/archlinux/Games/Half-Life 2 Episode Two
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -5,8 +5,8 @@
 		"Category": false,
 		"Summary": false,
 		"Banner": false,
-		"x": 608,
-		"y": 584,
+		"x": 629,
+		"y": 453,
 		"width": 1069,
 		"height": 455,
 		"maximized": false,
@@ -114,6 +114,7 @@
 		"OnError": null
 	},
 	"FolderHistory": [
+		"\/mnt\/archlinux\/CCACHE",
 		"\/home\/lucas",
 		"\/home\/lucas\/Downloads",
 		"\/mnt\/dados\/VMs",

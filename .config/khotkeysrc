@@ -390,7 +390,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_19Actions0]
-CommandURL=/home/lucas/Documentos/scripts/easyeffects_in_background.sh
+CommandURL=/home/lucas/Documentos/scripts/easy.effects_in_background.sh
 Type=COMMAND_URL
 
 [Data_19Conditions]

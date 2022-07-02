@@ -2,7 +2,7 @@
 pulseeffects=0
 if [ -n "$(/usr/bin/pgrep easyeffects)" ]; then
     pulseeffects=1
-    /home/lucas/Documentos/scripts/easyeffects_in_background.sh
+    /home/lucas/Documentos/scripts/easy.effects_in_background.sh
 fi
 if [ ! -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ];then
     /usr/bin/sudo /usr/bin/ln -sf /etc/wireplumber/main.lua.d/disable_minisystem/51-alsa-disable.lua /etc/wireplumber/main.lua.d/51-alsa-disable.lua;
@@ -31,5 +31,5 @@ elif [ -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]; then
 fi
 sleep 3
 if [ $pulseeffects == 1  ];then
-    /home/lucas/Documentos/scripts/easyeffects_in_background.sh
+    /home/lucas/Documentos/scripts/easy.effects_in_background.sh
 fi

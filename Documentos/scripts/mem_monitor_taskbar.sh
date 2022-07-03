@@ -11,11 +11,11 @@ size () {
     fi
     local -i whole=${1:-0}
     local -i remainder=0
-    while (( whole >= $scale ))
+    while (( whole >= scale ))
     do
         remainder=$(( whole % scale ))
         whole=$((whole / scale))
-        unit=$(( $unit + 1 ))
+        unit=$(( unit + 1 ))
     done
     local decimal
     if [ $remainder -gt 0 ]
@@ -28,14 +28,14 @@ size () {
     fi
     echo "${whole}${decimal}${units[$unit]}"
 }
-if [[ -n "$1" && $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}') -gt 100000 ]];then
-    writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
-    dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
-    echo "Dirty: "$dirty "|" "Writeback: "$writeback
+if [[ -n "$1" && $(/usr/bin/grep 'Dirty:' /proc/meminfo | /usr/bin/awk '{print $2}') -gt 100000 ]];then
+    writeback=$(size "$(/usr/bin/grep 'Writeback:' /proc/meminfo | /usr/bin/awk '{print $2}')"000)
+    dirty=$(size "$(/usr/bin/grep 'Dirty:' /proc/meminfo | /usr/bin/awk '{print $2}')"000)
+    echo "Dirty: ""$dirty" "|" "Writeback: ""$writeback"
     exit
 elif [ -z "$1" ];then
-    writeback=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Writeback:' | /usr/bin/awk '{print $2}')000)
-    dirty=$(size $(/usr/bin/cat  /proc/meminfo | /usr/bin/grep 'Dirty:' | /usr/bin/awk '{print $2}')000)
-    echo "Dirty: "$dirty "|" "Writeback: "$writeback
+    writeback=$(size "$(/usr/bin/grep 'Writeback:' /proc/meminfo | /usr/bin/awk '{print $2}')"000)
+    dirty=$(size "$(/usr/bin/grep 'Dirty:' /proc/meminfo | /usr/bin/awk '{print $2}')"000)
+    echo "Dirty: ""$dirty" "|" "Writeback: ""$writeback"
 fi
 

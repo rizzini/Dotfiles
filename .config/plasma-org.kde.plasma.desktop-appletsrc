@@ -883,7 +883,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][90][Applets][103][Configuration]
-PreloadWeight=2
+PreloadWeight=7
 
 [Containments][90][Applets][105][Configuration]
 PreloadWeight=42
@@ -907,7 +907,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][90][Applets][91][Configuration]
-PreloadWeight=5
+PreloadWeight=10
 
 [Containments][90][Applets][92]
 immutability=1

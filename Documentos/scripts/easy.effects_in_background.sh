@@ -1,8 +1,9 @@
 #!/bin/bash
 
-if [[ -n "$(pgrep easyeffects)" && "$(pgrep easyeffects | wc -l)" -lt 2 ]];then
+if [ -n "$(pgrep easyeffects)" ];then
     killall easyeffects;
 else
     easyeffects --gapplication-service &> /dev/null &
+    sleep 1
     easyeffects -l 'LoudnessEqualizer' &> /dev/null &
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$1" == 'force' ];then
-    rm -f /tmp/clean_space_emergency.sh.lock;
+    /usr/bin/rm -f /tmp/clean_space_emergency.sh.lock;
 fi
 if test -f "/tmp/clean_space_emergency.sh.lock"; then
     exit 1

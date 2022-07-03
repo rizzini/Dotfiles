@@ -1,7 +1,7 @@
 #!/bin/bash
 /usr/bin/sleep 1
 if [[ "$1" == "link" && ! -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]];then
-    if pw-cli list-objects Node | grep -q Simultaneous
+    if ! pw-cli list-objects Node | grep -q Simultaneous
     then
         /usr/bin/pactl load-module module-null-sink media.class=Audio/Sink sink_name=Simultaneous channel_map=stereo;
         /usr/bin/sleep 1;

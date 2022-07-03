@@ -5,13 +5,13 @@ if [ -n "$(/usr/bin/pgrep easyeffects)" ]; then
     /home/lucas/Documentos/scripts/easy.effects_in_background.sh
 fi
 if [ ! -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ];then
-    get_current_volume_simulatenous="$(pactl get-sink-volume 'Simultaneous' | /usr/bin/awk '{print $12}')";
+    get_current_volume="$(pactl get-sink-volume 'Simultaneous' | /usr/bin/awk '{print $12}')";
     /usr/bin/sudo /usr/bin/ln -sf /etc/wireplumber/main.lua.d/disable_minisystem/51-alsa-disable.lua /etc/wireplumber/main.lua.d/51-alsa-disable.lua;
     /usr/bin/systemctl --user restart pipewire.service wireplumber.service;
     /usr/bin/sleep 1;
-    /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 "$get_current_volume_simulatenous";
+    /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 "$get_current_volume";
 elif [ -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]; then
-    get_current_volume_hdmi="$(pactl get-sink-volume 'alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1' | /usr/bin/awk '{print $12}')";
+    get_current_volume="$(pactl get-sink-volume 'alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1' | /usr/bin/awk '{print $12}')";
     /usr/bin/sudo /usr/bin/rm -f /etc/wireplumber/main.lua.d/51-alsa-disable.lua;
     /usr/bin/systemctl --user restart pipewire.service wireplumber.service;
     /usr/bin/sleep 1
@@ -42,7 +42,7 @@ elif [ -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]; then
     sleep 0.2
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo 100%;
     /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1 100%;
-    /usr/bin/pactl set-sink-volume Simultaneous "$get_current_volume_hdmi";
+    /usr/bin/pactl set-sink-volume Simultaneous "$get_current_volume";
     /usr/bin/pactl set-default-sink Simultaneous;
 fi
 if [ $pulseeffects == 1  ];then

@@ -19,8 +19,8 @@ case $1 in
         then
             /usr/bin/playerctl --no-messages --player=spotify previous &
             exit
-        elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
-            /usr/bin/playerctl --no-messages --player=ncspot previous &
+        elif [ -n "$(/usr/bin/pgrep -x mpv)" ];then
+            /usr/bin/playerctl --no-messages --player=mpv previous &
             exit
         else
             /usr/bin/playerctl --no-messages previous &
@@ -32,8 +32,8 @@ case $1 in
         then
             /usr/bin/playerctl --no-messages --player=spotify next &
             exit
-        elif [ -n "$(/usr/bin/pgrep -x ncspot)" ];then
-            /usr/bin/playerctl --no-messages --player=ncspot next &
+        elif [ -n "$(/usr/bin/pgrep -x mpv)" ];then
+            /usr/bin/playerctl --no-messages --player=mpv next &
             exit
         else
             /usr/bin/playerctl --no-messages next &

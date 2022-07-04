@@ -135,7 +135,7 @@ Search History=bluez_output,-w,/usr/bin/cat /proc/diskstats | ,hdr,caption,font,
 
 [MainWindow]
 HDMI-1 Height 1920x1080=499
-HDMI-1 Width 1920x1080=956
+HDMI-1 Width 1920x1080=686
 HDMI1 Height 1920x1080=603
 HDMI1 Width 1920x1080=794
 

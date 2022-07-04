@@ -15,6 +15,7 @@ elif [ -h "/etc/wireplumber/main.lua.d/51-alsa-disable.lua" ]; then
     /usr/bin/sudo /usr/bin/rm -f /etc/wireplumber/main.lua.d/51-alsa-disable.lua;
     /usr/bin/systemctl --user restart pipewire.service wireplumber.service;
     /usr/bin/sleep 1
+    #pactl load-module module-combine-sink sink_name=combination-sink sink_properties=device.description=Saída_Combinada slaves=alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1,alsa_output.pci-0000_00_1b.0.analog-stereo channels=2
     while ! /usr/bin/pw-cli list-objects Node | /usr/bin/grep -q Simultaneous; do
         /usr/bin/pactl load-module module-null-sink media.class=Audio/Sink sink_name=Simultaneous channel_map=stereo;
         sleep 0.2

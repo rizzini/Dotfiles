@@ -294,11 +294,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Ativar janela que demanda atenção
@@ -501,6 +501,7 @@ activate widget 104=Alt+F1,none,Ativar o widget Menu de aplicativos
 activate widget 157=none,none,Ativar o widget Twitch Indicator
 activate widget 158=none,none,Ativar o widget Command Output
 activate widget 3=none,none,Activate Application Launcher Widget
+activate widget 98=,none,Ativar o widget Volume do áudio
 clear-history=none,,Limpar o Histórico da Área de Transferência
 clipboard_action=Ctrl+Alt+X,Meta+Ctrl+X,Menu de Contexto das Acções Automáticas
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Mover o foco do teclado entre os painéis

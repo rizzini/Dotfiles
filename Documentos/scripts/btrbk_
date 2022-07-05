@@ -3,11 +3,11 @@ if [ "$EUID" -ne 0 ]; then
     /usr/bin/echo "Please run as root";
     exit;
 fi
-/usr/bin/touch /tmp/btrbk.sh.pid
+/usr/bin/touch /tmp/btrbk.sh.lock
 if [[ ! "$(/usr/bin/mount | /usr/bin/grep '/dev/sda2 on / type btrfs')" == *"subvol=/ROOT)"* ]]; then
     /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Você não está no subvolume ROOT. Snapshot não foi criado.";
     /usr/bin/echo 'Você não está no subvolume ROOT. Snapshot não foi criado.';
-    /usr/bin/rm /tmp/btrbk.sh.pid;
+    /usr/bin/rm /tmp/btrbk.sh.lock;
     exit 1
 fi
 while [ -n "$(/usr/bin/pgrep wine)" ] ||  [ -n "$(/usr/bin/pgrep steam)" ]; do
@@ -20,5 +20,5 @@ fi
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run; then
     /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Erro no BTRBK. Subvolume: ROOT.";
 fi
-/usr/bin/rm /tmp/btrbk.sh.pid;
+/usr/bin/rm /tmp/btrbk.sh.lock;
 

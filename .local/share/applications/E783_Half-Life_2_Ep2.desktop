@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[pt_BR]=
 Comment=
-Exec=/home/lucas/Documentos/scripts/ativar_desativar_compositor.sh inicio & killall -9 crow & DXVK_LOG_LEVEL=error WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_hl2ep2/ gamemoderun wine hl2.exe -steam -game ep2 -windowed -novid -w 1280 -h 720 && /home/lucas/Documentos/scripts/ativar_desativar_compositor.sh fim & crow & disown $!
+Exec=killall -9 crow & DXVK_LOG_LEVEL=error WINEDEBUG=-all WINEPREFIX=/home/lucas/.wine_hl2ep2/ gamemoderun wine hl2.exe -steam -game ep2 -windowed -novid -w 1280 -h 720 && crow & disown $!
 GenericName[pt_BR]=
 GenericName=
 Icon=E783_Half-Life_2_Ep2.0

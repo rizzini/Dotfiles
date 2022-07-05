@@ -15,11 +15,11 @@ do
    /usr/bin/sleep 10;
 done
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run;then
-    /usr/bin/sudo -u lucas DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: HOME." --title='Subvol HOME'
+    /usr/bin/sudo -u lucas /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: HOME." --title='Subvol HOME'
 fi
 
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run; then
-    /usr/bin/sudo -u lucas DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: ROOT." --title='Subvol ROOT'
+    /usr/bin/sudo -u lucas /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: ROOT." --title='Subvol ROOT'
 fi
 /usr/bin/rm /tmp/btrbk.sh.pid;
 

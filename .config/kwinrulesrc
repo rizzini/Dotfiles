@@ -12,6 +12,8 @@ wmclassmatch=1
 
 [1]
 Description=Configurações de aplicativo para hl2.exe
+blockcompositing=true
+blockcompositingrule=2
 clientmachine=localhost
 ignoregeometry=true
 ignoregeometryrule=2

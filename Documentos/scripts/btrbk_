@@ -14,11 +14,11 @@ while [ -n "$(/usr/bin/pgrep wine)" ] ||  [ -n "$(/usr/bin/pgrep steam)" ]; do
    /usr/bin/sleep 10;
 done
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run; then
-    /usr/bin/sudo -u lucas /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: HOME." --title='Subvol HOME'
+    /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Erro no BTRBK. Subvolume: HOME"
 fi
 
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run; then
-    /usr/bin/sudo -u lucas /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: ROOT." --title='Subvol ROOT'
+    /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Erro no BTRBK. Subvolume: ROOT."
 fi
 /usr/bin/rm /tmp/btrbk.sh.pid;
 

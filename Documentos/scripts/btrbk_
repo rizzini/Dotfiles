@@ -10,11 +10,10 @@ if [[ ! "$(/usr/bin/mount | /usr/bin/grep '/dev/sda2 on / type btrfs')" == *"sub
     /usr/bin/rm /tmp/btrbk.sh.pid;
     exit 1
 fi
-while [ -n "$(/usr/bin/pgrep wine)" ] ||  [ -n "$(/usr/bin/pgrep steam)" ];
-do
+while [ -n "$(/usr/bin/pgrep wine)" ] ||  [ -n "$(/usr/bin/pgrep steam)" ]; do
    /usr/bin/sleep 10;
 done
-if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run;then
+if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run; then
     /usr/bin/sudo -u lucas /usr/bin/kdialog --error "Erro no BTRBK. Subvolume: HOME." --title='Subvol HOME'
 fi
 

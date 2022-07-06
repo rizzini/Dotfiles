@@ -5,9 +5,10 @@ then
 elif [ -n "$(pgrep easyeffects)" ];then
     /usr/bin/echo 'EasyEffects ligado'
 else
-    if [ "$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)" -ge 80 ];then
+#   if [ "$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)" -ge 80 ];then
+    if [ "$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)" -ge 10 ];then # I change my heatsink, so I set 10c so my temps can be show all the time
         /usr/bin/printf "CPU: ""$(/usr/bin/echo "$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)")""ºc";
     elif [ "$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)" == '00' ];then
-        /usr/bin/printf "CPU: ""$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 16-18)""ºc";
+        /usr/bin/printf "CPU: ""$(/usr/bin/sensors | /usr/bin/grep 'Package id 0:' | /usr/bin/tail -1 | /usr/bin/cut -c 17-18)""ºc";
     fi
 fi

@@ -42,8 +42,10 @@ case $1 in
     ;;
     'avancar_posicao')
         /usr/bin/playerctl --no-messages position 10+ &
+        exit
     ;;
     'voltar_posicao')
         /usr/bin/playerctl --no-messages position 10- &
+        exit
     ;;
 esac

@@ -19,7 +19,6 @@ done
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_home.conf -q run; then
     /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Erro no BTRBK. Subvolume: HOME";
 fi
-
 if ! /usr/bin/btrbk -c /etc/btrbk/btrbk_root.conf -q run; then
     /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Erro no BTRBK. Subvolume: ROOT.";
 fi

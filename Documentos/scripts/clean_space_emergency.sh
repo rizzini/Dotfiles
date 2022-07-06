@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+    /usr/bin/echo "Please run as root";
+    exit;
+fi
 if [ "$1" == 'force' ];then
     /usr/bin/rm -f /tmp/clean_space_emergency.sh.lock;
 fi
@@ -57,6 +61,6 @@ if [[ "$(/usr/bin/df -B MB  /dev/sda2 --output=avail | /usr/bin/tail -1 | /usr/b
 fi
 } &> /tmp/clean_space_emergency.sh.log
 if [[ $out_of_space = 1 && "$1" != 'force' ]];then
-    /usr/bin/sudo -u lucas DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/kdialog --error "Script clean_space_emergency.sh executado.\nChecar logs em /tmp/clean_space_emergency.sh.log.\nÉ possível que o BTRBK tenha sido encerrado de forma incorreta.\nVerifique as snapshots!" --title='clean_space_emergency.sh';
+    /usr/bin/machinectl shell --uid=lucas .host /usr/bin/notify-send -u critical "Script clean_space_emergency.sh executado. Checar logs em /tmp/clean_space_emergency.sh.log."
     exit 0;
 fi

@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[pt_BR]=
+Comment=
+Exec=WINEPREFIX=/home/lucas/.wine_d3 WINEDEBUG=-all gamemoderun wine-tkg-staging-fsync-opt-git/bin/wine Diablo\\ III.exe -launch\n
+GenericName[pt_BR]=
+GenericName=
+Icon=0937_Diablo III Launcher.0
+MimeType=
+Name[pt_BR]=Diablo 3
+Name=Diablo 3
+NoDisplay=false
+Path=/mnt/archlinux/Games/Diablo III
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

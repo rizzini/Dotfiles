@@ -302,11 +302,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Bloquear sessão
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Session Management
+_k_friendly_name=Gerenciamento de sessão
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Ativar janela que demanda atenção

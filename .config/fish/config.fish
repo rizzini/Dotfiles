@@ -16,4 +16,3 @@ alias gitpkg='pacman -Q | grep -i "\-git" ';
 alias syadm="sudo yadm -Y /etc/yadm";
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl";
 alias cat='bat -p ';
-alias mem='watch -n0.5 "~/Documentos/scripts/mem_monitor_taskbar.sh & ~/Documentos/scripts/disk_monitor_taskbar.sh &"'

@@ -1,5 +1,5 @@
 #!/bin/bash
-#For when whating movies and such..
+#For when watching movies and such..
 /usr/bin/sleep 10
 while :; do
     if [[ "$(/usr/bin/xdotool getactivewindow getwindowgeometry | /usr/bin/grep 'Geometry:' | /usr/bin/awk '{print $2}')" == '1920x1080' && "$(/usr/bin/xdotool getactivewindow getwindowclassname)" != 'plasmashell' && -z "$(pgrep wine)" ]]; then

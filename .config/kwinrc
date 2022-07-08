@@ -9,11 +9,9 @@ OpenGLIsUnsafe1=false
 
 [Desktops]
 Id_1=01215cf7-285e-49c9-a14b-0775340fc48f
-Id_2=cb537a2a-a0c5-470e-8cb1-af2b5e03f1d6
 Name_1=1
-Name_2=2
-Number=2
-Rows=2
+Number=1
+Rows=1
 
 [Effect-Blur]
 BlurStrength=5
@@ -35,6 +33,9 @@ Inactive=58
 MoveResize=83
 
 [Effect-presentwindows]
+BorderActivateAll=9
+
+[Effect-windowview]
 BorderActivateAll=9
 
 [Effect-wobblywindows]

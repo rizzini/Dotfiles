@@ -7,7 +7,6 @@ while :; do
     else
         fullscreen=0;
         sleep=300;
-        exit
     fi
     if [ $fullscreen == 1 ] && ! /usr/bin/grep -q 'powersave' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
         /usr/bin/echo -n 'powersave' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;

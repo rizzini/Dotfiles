@@ -7,11 +7,16 @@ while :; do
         sleep=1;
     else
         fullscreen=0;
-        sleep=300;
+        sleep=1;
     fi
-    if [ $fullscreen == 1 ] && ! /usr/bin/grep -q 'powersave' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
-        /usr/bin/echo -n 'powersave' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-        /usr/bin/mpv --no-terminal /home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3; #Remove after stating the script is reliable.
+    if [ $fullscreen == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
+        if wmctrl -l | grep -q Netflix; then #Netflix is too hungry. powersave can't handle it
+            /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
+            /usr/bin/mpv --no-terminal /home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3; #Remove after stating the script is reliable.
+        else
+            /usr/bin/echo -n 'powersave' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
+            /usr/bin/mpv --no-terminal /home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3; #Remove after stating the script is reliable.
+        fi
     elif [ $fullscreen == 0 ] && ! /usr/bin/grep -q 'performance' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
         /usr/bin/echo -n 'performance' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
         /usr/bin/mpv --no-terminal /home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3; #Remove after stating the script is reliable.

@@ -302,11 +302,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Ativar janela que demanda atenção
@@ -478,7 +478,7 @@ _launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
 
 [org.kde.plasma.emojier.desktop]
 _k_friendly_name=Emoji Selector
-_launch=Meta+.,Meta+.,Emoji Selector
+_launch=Meta+.\tMeta+1,Meta+.,Emoji Selector
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Reduzir a iluminação do teclado
@@ -495,7 +495,7 @@ _k_friendly_name=Gerenciamento de energia
 
 [plasmashell]
 _k_friendly_name=Plasma
-activate task manager entry 1=Meta+1,Meta+1,Ativar entrada 1 do gerenciador de tarefas
+activate task manager entry 1=none,Meta+1,Ativar entrada 1 do gerenciador de tarefas
 activate task manager entry 10=Meta+0,Meta+0,Ativar entrada 10 do gerenciador de tarefas
 activate task manager entry 2=Meta+2,Meta+2,Ativar entrada 2 do gerenciador de tarefas
 activate task manager entry 3=Meta+3,Meta+3,Ativar entrada 3 do gerenciador de tarefas

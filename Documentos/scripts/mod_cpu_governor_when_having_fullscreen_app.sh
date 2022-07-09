@@ -10,7 +10,7 @@ while :; do
         sleep=300;
     fi
     if [ $fullscreen == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
-        if wmctrl -l | grep -q Netflix; then #Netflix is too hungry and my iGPU doesn't support HW acceleration with the codec it uses. powersave can't handle it
+        if wmctrl -l | /usr/bin/grep -q Netflix; then #Netflix is too hungry and my iGPU doesn't support HW acceleration with the codec it uses. powersave can't handle it
             /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
             /usr/bin/mpv --no-terminal /home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3; #Remove after stating the script is reliable.
         else

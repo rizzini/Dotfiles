@@ -7,7 +7,7 @@ while :; do
         sleep=1;
     else
         fullscreen=0;
-        sleep=1;
+        sleep=300;
     fi
     if [ $fullscreen == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
         if wmctrl -l | grep -q Netflix; then #Netflix is too hungry. powersave can't handle it

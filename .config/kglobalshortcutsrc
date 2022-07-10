@@ -269,14 +269,14 @@ _k_friendly_name=Serviço de atalhos personalizados
 {22af2176-f96b-48b3-81e2-53c5986f4746}=Ctrl+Alt+T,none,konsole
 {484d75d9-178b-4d38-973d-1614e27be52a}=Meta+A,none,anbox
 {53975b2f-dc06-4947-8277-5c16cdb39c5f}=Ctrl+Volume Down,none,playerctl previous
-{6520a98f-3b81-488a-ad11-b8be75aa97a6}=Alt+1,none,Nova ação
+{6520a98f-3b81-488a-ad11-b8be75aa97a6}=Alt+1,none,kill emoji selector window when not active
 {6f6ce914-5c94-4113-bf9e-d388e8d92566}=Ctrl+Shift+Volume Up,none,playerctl avancar posicao
 {74f6823a-28f0-4525-a917-c84e7ad418b1}=Print,none,Flameshot
-{b38898b3-0b17-420b-8a13-8d71a49cb83e}=Meta+M,none,mem and disk monitor
 {bdd817c1-8b94-4c4d-8abf-bd744ebbe289}=Ctrl+Volume Up,none,playerctl next
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {d3f9fc7f-622a-49a4-a52b-c5f2446a13a7}=Ctrl+Alt+E,none,eaasyeffects
 {d5668542-715c-4531-b162-2ab4479e34e2}=ScrollLock,none,Reboot
+{e0bb2d48-107c-4243-90ff-74e4836e234b}=,none,disable governor control script
 {e71f4f76-6417-4b4a-a545-e28f04c50b38}=Ctrl+Launch (1),none,kcalc
 {f13f543e-e529-4f34-a748-1bb2ebef19a8}=Media Play,none,playerctl play-pause
 {f4804dd4-b377-452a-a4cb-f8024dbf9fee}=Ctrl+R,none,tradutor crow
@@ -303,11 +303,11 @@ toggle_mainwindow_visibility=none,none,Exibir/ocultar o Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Encerrar sem confirmação
-Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Bloquear sessão
+Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Encerrar sessão
 Log Out Without Confirmation=none,,Sair sem confirmação
 Reboot Without Confirmation=none,,Reiniciar sem confirmação
-_k_friendly_name=Gerenciamento de sessão
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Ativar janela que demanda atenção

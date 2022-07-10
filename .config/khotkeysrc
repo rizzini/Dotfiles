@@ -305,14 +305,14 @@ Uuid={f4804dd4-b377-452a-a4cb-f8024dbf9fee}
 [Data_16]
 Comment=Comentário
 Enabled=true
-Name=mem and disk monitor
+Name=playerctl voltar posicao
 Type=SIMPLE_ACTION_DATA
 
 [Data_16Actions]
 ActionsCount=1
 
 [Data_16Actions0]
-CommandURL=/usr/bin/xterm -e "/usr/bin/watch -n0.5 '/home/lucas/Documentos/scripts/mem_monitor_taskbar.sh & /home/lucas/Documentos/scripts/disk_monitor_taskbar.sh &'"
+CommandURL=/home/lucas/Documentos/scripts/playerctl voltar_posicao
 Type=COMMAND_URL
 
 [Data_16Conditions]
@@ -324,21 +324,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_16Triggers0]
-Key=Meta+M
+Key=Ctrl+Shift+Volume Down
 Type=SHORTCUT
-Uuid={b38898b3-0b17-420b-8a13-8d71a49cb83e}
+Uuid={fce3e738-1ca6-44b3-b2f0-c52c2da04b3c}
 
 [Data_17]
 Comment=Comentário
 Enabled=true
-Name=playerctl voltar posicao
+Name=playerctl avancar posicao
 Type=SIMPLE_ACTION_DATA
 
 [Data_17Actions]
 ActionsCount=1
 
 [Data_17Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl voltar_posicao
+CommandURL=/home/lucas/Documentos/scripts/playerctl avancar_posicao
 Type=COMMAND_URL
 
 [Data_17Conditions]
@@ -350,21 +350,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_17Triggers0]
-Key=Ctrl+Shift+Volume Down
+Key=Ctrl+Shift+Volume Up
 Type=SHORTCUT
-Uuid={fce3e738-1ca6-44b3-b2f0-c52c2da04b3c}
+Uuid={6f6ce914-5c94-4113-bf9e-d388e8d92566}
 
 [Data_18]
 Comment=Comentário
 Enabled=true
-Name=playerctl avancar posicao
+Name=eaasyeffects
 Type=SIMPLE_ACTION_DATA
 
 [Data_18Actions]
 ActionsCount=1
 
 [Data_18Actions0]
-CommandURL=/home/lucas/Documentos/scripts/playerctl avancar_posicao
+CommandURL=/home/lucas/Documentos/scripts/easy.effects_in_background.sh
 Type=COMMAND_URL
 
 [Data_18Conditions]
@@ -376,21 +376,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_18Triggers0]
-Key=Ctrl+Shift+Volume Up
+Key=Ctrl+Alt+E
 Type=SHORTCUT
-Uuid={6f6ce914-5c94-4113-bf9e-d388e8d92566}
+Uuid={d3f9fc7f-622a-49a4-a52b-c5f2446a13a7}
 
 [Data_19]
 Comment=Comentário
 Enabled=true
-Name=eaasyeffects
+Name=kill emoji selector window when not active
 Type=SIMPLE_ACTION_DATA
 
 [Data_19Actions]
 ActionsCount=1
 
 [Data_19Actions0]
-CommandURL=/home/lucas/Documentos/scripts/easy.effects_in_background.sh
+CommandURL=/home/lucas/Documentos/scripts/kill_emoji_selector_if_window_not_active.sh
 Type=COMMAND_URL
 
 [Data_19Conditions]
@@ -402,9 +402,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_19Triggers0]
-Key=Ctrl+Alt+E
+Key=Alt+1
 Type=SHORTCUT
-Uuid={d3f9fc7f-622a-49a4-a52b-c5f2446a13a7}
+Uuid={6520a98f-3b81-488a-ad11-b8be75aa97a6}
 
 [Data_1Conditions]
 Comment=
@@ -447,15 +447,15 @@ Type=ACTION_DATA_GROUP
 
 [Data_20]
 Comment=Comentário
-Enabled=true
-Name=Nova ação
+Enabled=false
+Name=disable governor control script
 Type=SIMPLE_ACTION_DATA
 
 [Data_20Actions]
 ActionsCount=1
 
 [Data_20Actions0]
-CommandURL=/home/lucas/Documentos/scripts/kill_emoji_selector_if_window_not_active.sh
+CommandURL=/bin/bash -c '/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.sh disable'
 Type=COMMAND_URL
 
 [Data_20Conditions]
@@ -467,9 +467,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_20Triggers0]
-Key=Alt+1
+Key=
 Type=SHORTCUT
-Uuid={6520a98f-3b81-488a-ad11-b8be75aa97a6}
+Uuid={e0bb2d48-107c-4243-90ff-74e4836e234b}
 
 [Data_2Conditions]
 Comment=

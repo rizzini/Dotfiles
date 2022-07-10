@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.sh disable
+Icon=/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.svg
+Name=Disable governor control script
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

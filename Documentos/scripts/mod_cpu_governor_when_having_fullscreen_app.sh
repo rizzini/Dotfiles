@@ -1,6 +1,6 @@
 #!/bin/bash
 #For when watching movies and such..
-# /usr/bin/sleep 10;
+/usr/bin/sleep 10;
 while :; do
     if [ -n "$(pgrep mpv)" ] || wmctrl -l | /usr/bin/grep -q Netflix; [[ "$(/usr/bin/xdotool getactivewindow getwindowgeometry | /usr/bin/grep 'Geometry:' | /usr/bin/awk '{print $2}')" == '1920x1080' && "$(/usr/bin/xdotool getactivewindow getwindowclassname)" != 'plasmashell' && -z "$(pgrep wine)" && -z "$(pgrep makepkg)"  ]]; then
         fullscreen=1;

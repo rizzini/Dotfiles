@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.sh
+Icon=dialog-scripts
+Name=mod_cpu_governor_when_having_fullscreen_app.sh
+Path=
+Type=Application
+X-KDE-AutostartScript=true

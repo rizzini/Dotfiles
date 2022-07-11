@@ -10,6 +10,7 @@ elif test -f "$disable_file" && [ "$1" == 'disable' ]; then
     exit
 fi
 
+/usr/bin/sleep 10
 mp3='/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3'
 while :; do
     if ! test -f "$disable_file"; then
@@ -18,7 +19,7 @@ while :; do
             sleep=1;
         else
             change_governor=0;
-            sleep=5;
+            sleep=1;
         fi
         if [ $change_governor == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             if /usr/bin/wmctrl -l | /usr/bin/grep -q "Netflix"; then

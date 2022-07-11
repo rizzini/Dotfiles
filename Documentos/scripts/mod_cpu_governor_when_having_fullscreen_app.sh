@@ -1,15 +1,13 @@
 #!/bin/bash
-kill $(cat /tmp/mod_cpu_governor_when_having_fullscreen_app.pid) &> /dev/null &
-echo $$ | tee /tmp/mod_cpu_governor_when_having_fullscreen_app.pid &> /dev/null &
-
 disable_file='/tmp/mod_cpu_governor_when_having_fullscreen_app.disable'
 if ! test -f "$disable_file" && [ "$1" == 'disable' ]; then
-    /usr/bin/echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_disabled.svg{PlasmoidIconEnd}'
-    /usr/bin/touch "$disable_file"
-
+    /usr/bin/echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_disabled.svg{PlasmoidIconEnd}';
+    /usr/bin/touch "$disable_file";
+    exit
 elif test -f "$disable_file" && [ "$1" == 'disable' ]; then
-    /usr/bin/echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_enabled.svg{PlasmoidIconEnd}'
+    /usr/bin/echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_enabled.svg{PlasmoidIconEnd}';
     /usr/bin/rm -f "$disable_file";
+    exit
 fi
 
 mp3='/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app.mp3'

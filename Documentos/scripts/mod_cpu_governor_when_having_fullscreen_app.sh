@@ -19,7 +19,7 @@ while :; do
             sleep=1;
         else
             change_governor=0;
-            sleep=1;
+            sleep=300;
         fi
         if [ $change_governor == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             if /usr/bin/wmctrl -l | /usr/bin/grep -q "Netflix"; then

@@ -8,11 +8,11 @@ if test -d ~/.local/bin
         set -p PATH ~/.local/bin
     end
 end
-alias plasmashell='kquitapp5 plasmashell &> /dev/null & sleep 1 && kstart5 /usr/bin/plasmashell &> /dev/null & disown $last_pid';
-alias ls='exa -al --color=always --group-directories-first --icons';
-alias grep='grep --color=auto';
-alias big="expac -H M '%m\t%n' | sort -h | nl";
-alias gitpkg='pacman -Q | grep -i "\-git" ';
-alias syadm="sudo yadm -Y /etc/yadm";
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl";
-alias cat='bat -p ';
+alias plasmashell='/usr/bin/plasmashell --replace &> /dev/null & disown $last_pid';
+alias ls='/usr/bin/exa -al --color=always --group-directories-first --icons';
+alias grep='/usr/bin/grep --color=auto';
+alias big="/usr/bin/expac -H M '%m\t%n' | /usr/bin/sort -h | nl";
+alias gitpkg='/usr/bin/pacman -Q | grep -i "\-git" ';
+alias syadm="/usr/bin/sudo /usr/bin/yadm -Y /etc/yadm";
+alias rip="/usr/bin/expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | /usr/bin/sort | /usr/bin/tail -200 | /usr/bin/nl";
+alias cat='/usr/bin/bat -p ';

@@ -1,6 +1,0 @@
-.ssh/**
-.gnupg/**
-.bash_history
-.local/share/fish/fish_history
-.config/yadm/config
-.local/share/klipper/**

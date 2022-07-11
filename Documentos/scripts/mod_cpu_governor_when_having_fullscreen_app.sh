@@ -1,11 +1,13 @@
 #!/bin/bash
 disable_file='/tmp/mod_cpu_governor_when_having_fullscreen_app.disable'
 if ! test -f "$disable_file" && [ "$1" == 'disable' ]; then
+    echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_disabled.svg{PlasmoidIconEnd}'
     /usr/bin/touch /tmp/mod_cpu_governor_when_having_fullscreen_app.disable;
-    exit
+    exit;
 elif test -f "$disable_file" && [ "$1" == 'disable' ]; then
     /usr/bin/rm -f "$disable_file";
-    exit
+    echo '{PlasmoidIconStart}/home/lucas/Documentos/scripts/mod_cpu_governor_when_having_fullscreen_app_enabled.svg{PlasmoidIconEnd}'
+    exit;
 fi
 
 /usr/bin/sleep 10;
@@ -22,14 +24,14 @@ while :; do
         if [ $change_governor == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             if /usr/bin/wmctrl -l | /usr/bin/grep -q "Netflix"; then
                 /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-                /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+                /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and it's finished enough.
             else
                 /usr/bin/echo -n 'powersave' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-                /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+                /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and it's finished enough.
             fi
         elif [ $change_governor == 0 ] && ! /usr/bin/grep -q 'performance' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             /usr/bin/echo -n 'performance' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-            /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+            /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and it's finished enough.
         fi
     else
         sleep=1;

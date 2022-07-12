@@ -26,7 +26,7 @@ while :; do
                 /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
                 /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
             else
-                if [[ -n "$(pgrep -f mpv)" && "$(mediainfo --Inform="Video;%Format%" "$(cat /proc/47324/cmdline | awk 'BEGIN {FS="\0"} {print $4}')")" != 'AVC' ]]; then
+                if [[ -n "$(/usr/bin/pgrep -f mpv)" && "$(/usr/bin/mediainfo --Inform="Video;%Format%" "$(/usr/bin/cat /proc/"$(pgrep -f mpv)"/cmdline | /usr/bin/awk 'BEGIN {FS="\0"} {print $4}')")" != 'AVC' ]]; then
                     /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
                     /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
                 else

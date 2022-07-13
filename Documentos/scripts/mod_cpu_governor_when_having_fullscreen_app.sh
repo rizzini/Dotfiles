@@ -23,20 +23,25 @@ while :; do
         fi
         if [ $change_governor == 1 ] && ! /usr/bin/grep -Eq "powersave|ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             if /usr/bin/wmctrl -l | /usr/bin/grep -q "Netflix"; then
+                /home/lucas/Documentos/scripts/nightstand_mouse_volume_mod.sh &
                 /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-#                 /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+#               /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
             else
                 if [[ -n "$(/usr/bin/pgrep -f mpv)" && "$(/usr/bin/mediainfo --Inform="Video;%Format%" "$(/usr/bin/cat /proc/"$(/usr/bin/pgrep -f mpv)"/cmdline | /usr/bin/awk 'BEGIN {FS="\0"} {print $4}')")" != 'AVC' ]]; then
-#                     /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+#                   /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+                    /home/lucas/Documentos/scripts/nightstand_mouse_volume_mod.sh &
                     /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
                 else
                     /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+                    /home/lucas/Documentos/scripts/nightstand_mouse_volume_mod.sh &
                     /usr/bin/echo -n 'powersave' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
                 fi
             fi
         elif [ $change_governor == 0 ] && ! /usr/bin/grep -q 'performance' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
+            /usr/bin/kill $(pgrep -f scripts/nightstand_mouse_volume_mod.sh)
             /usr/bin/echo -n 'performance' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-#             /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and.
+#           /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and.
+            kill $()
         fi
     else
         sleep=1;

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=FIREFIGHT RELOADED
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/397680
-Icon=steam_icon_397680
-Terminal=false
-Type=Application
-Categories=Game;

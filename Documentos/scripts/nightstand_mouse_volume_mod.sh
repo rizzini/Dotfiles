@@ -8,7 +8,7 @@ xinput --test $device_id | grep --line-buffered -E 'button press   1|button pres
         left_button=0
     fi
     if [ "$line" == 'button press   3' ] && [ "$left_button" == 1 ]; then
-       qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
+       /home/lucas/Documentos/scripts/playerctl 'avancar_posicao'
     fi
     if [ "$line" == 'button press   3' ]; then
         right_button=1
@@ -17,6 +17,6 @@ xinput --test $device_id | grep --line-buffered -E 'button press   1|button pres
         right_button=0
     fi
     if [ "$line" == 'button press   1' ] && [ "$right_button" == 1 ]; then
-       qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
+       /home/lucas/Documentos/scripts/playerctl 'voltar_posicao'
     fi
 done

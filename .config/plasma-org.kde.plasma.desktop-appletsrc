@@ -672,7 +672,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][84][Applets][104][Configuration]
-PreloadWeight=57
+PreloadWeight=82
 
 [Containments][84][Applets][104][Configuration][ConfigDialog]
 DialogHeight=558
@@ -846,7 +846,7 @@ DialogHeight=558
 DialogWidth=720
 
 [Containments][84][Applets][87][Configuration][General]
-launchers=applications:org.kde.kpat.desktop,applications:UNO-3.desktop,applications:com.github.wwmm.easyeffects.desktop,applications:steam.desktop,applications:spotify.desktop,applications:google-chrome.desktop
+launchers=applications:org.kde.kpat.desktop,applications:UNO-3.desktop,applications:com.github.wwmm.easyeffects.desktop,applications:steam.desktop,applications:spotify.desktop,applications:google-chrome.desktop,applications:discord.desktop
 wheelEnabled=false
 
 [Containments][84][Applets][88]

@@ -31,11 +31,11 @@ archlinux
           bus info: cpu@0
           version: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz
           slot: SOCKET 0
-          size: 3614MHz
+          size: 3684MHz
           capacity: 3800MHz
           width: 64 bits
           clock: 100MHz
-          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d cpufreq
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm arat pln pts md_clear flush_l1d cpufreq
           configuration: cores=2 enabledcores=2 threads=4
         *-cache:0
              description: L2 cache
@@ -132,7 +132,7 @@ archlinux
              clock: 33MHz
              capabilities: pm msi pciexpress bus_master cap_list
              configuration: driver=snd_hda_intel latency=0
-             resources: irq:31 memory:f7d14000-f7d17fff
+             resources: irq:30 memory:f7d14000-f7d17fff
         *-usb:0
              description: USB controller
              product: 8 Series/C220 Series Chipset Family USB xHCI
@@ -147,11 +147,11 @@ archlinux
              resources: irq:28 memory:f7d00000-f7d0ffff
            *-usbhost:0
                 product: xHCI Host Controller
-                vendor: Linux 5.17.15-262-tkg-cfs xhci-hcd
+                vendor: Linux 5.18.10-263-tkg-cfs xhci-hcd
                 physical id: 0
                 bus info: usb@3
                 logical name: usb3
-                version: 5.17
+                version: 5.18
                 capabilities: usb-2.00
                 configuration: driver=hub slots=10 speed=480Mbit/s
               *-usb:0
@@ -174,6 +174,15 @@ archlinux
                    capabilities: usb-1.10
                    configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
               *-usb:2
+                   description: Video
+                   product: USB2.0 PC CAMERA
+                   vendor: Generic
+                   physical id: 3
+                   bus info: usb@3:3
+                   version: 1.00
+                   capabilities: usb-2.00
+                   configuration: driver=snd-usb-audio maxpower=256mA speed=480Mbit/s
+              *-usb:3
                    description: Keyboard
                    product: Wired Keyboard 600
                    vendor: Microsoft
@@ -182,7 +191,7 @@ archlinux
                    version: 1.10
                    capabilities: usb-1.10
                    configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
-              *-usb:3
+              *-usb:4
                    description: Mouse
                    product: USB Optical Mouse
                    vendor: Sunplus Innovation Technology Inc.
@@ -191,22 +200,13 @@ archlinux
                    version: 0.90
                    capabilities: usb-2.00
                    configuration: driver=usbhid maxpower=98mA speed=2Mbit/s
-              *-usb:4
-                   description: Video
-                   product: USB2.0 PC CAMERA
-                   vendor: Generic
-                   physical id: a
-                   bus info: usb@3:a
-                   version: 1.00
-                   capabilities: usb-2.00
-                   configuration: driver=snd-usb-audio maxpower=256mA speed=480Mbit/s
            *-usbhost:1
                 product: xHCI Host Controller
-                vendor: Linux 5.17.15-262-tkg-cfs xhci-hcd
+                vendor: Linux 5.18.10-263-tkg-cfs xhci-hcd
                 physical id: 1
                 bus info: usb@4
                 logical name: usb4
-                version: 5.17
+                version: 5.18
                 capabilities: usb-3.00
                 configuration: driver=hub slots=2 speed=5000Mbit/s
         *-communication
@@ -235,11 +235,11 @@ archlinux
              resources: irq:16 memory:f7d1c000-f7d1c3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.15-262-tkg-cfs ehci_hcd
+                vendor: Linux 5.18.10-263-tkg-cfs ehci_hcd
                 physical id: 1
                 bus info: usb@1
                 logical name: usb1
-                version: 5.17
+                version: 5.18
                 capabilities: usb-2.00
                 configuration: driver=hub slots=2 speed=480Mbit/s
               *-usb
@@ -262,7 +262,7 @@ archlinux
              clock: 33MHz
              capabilities: pm msi pciexpress bus_master cap_list
              configuration: driver=snd_hda_intel latency=0
-             resources: irq:32 memory:f7d10000-f7d13fff
+             resources: irq:31 memory:f7d10000-f7d13fff
         *-pci:0
              description: PCI bridge
              product: 8 Series/C220 Series Chipset Family PCI Express Root Port #1
@@ -301,7 +301,7 @@ archlinux
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.17.15-262-tkg-cfs duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=5.18.10-263-tkg-cfs duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=192.168.0.201 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:18 ioport:e000(size=256) memory:f7c04000-f7c04fff memory:f7c00000-f7c03fff
         *-usb:2
              description: USB controller
@@ -317,11 +317,11 @@ archlinux
              resources: irq:23 memory:f7d1b000-f7d1b3ff
            *-usbhost
                 product: EHCI Host Controller
-                vendor: Linux 5.17.15-262-tkg-cfs ehci_hcd
+                vendor: Linux 5.18.10-263-tkg-cfs ehci_hcd
                 physical id: 1
                 bus info: usb@2
                 logical name: usb2
-                version: 5.17
+                version: 5.18
                 capabilities: usb-2.00
                 configuration: driver=hub slots=2 speed=480Mbit/s
               *-usb
@@ -351,7 +351,7 @@ archlinux
              vendor: Intel Corporation
              physical id: 1f.2
              bus info: pci@0000:00:1f.2
-             logical name: scsi1
+             logical name: scsi0
              logical name: scsi4
              logical name: scsi5
              version: 05
@@ -364,7 +364,7 @@ archlinux
                 description: ATA Disk
                 product: SanDisk SSD PLUS
                 physical id: 0
-                bus info: scsi@1:0.0.0
+                bus info: scsi@0:0.0.0
                 logical name: /dev/sda
                 version: 04RL
                 serial: 1952B4801980
@@ -375,7 +375,7 @@ archlinux
                    description: Windows FAT volume
                    vendor: mkfs.fat
                    physical id: 1
-                   bus info: scsi@1:0.0.0,1
+                   bus info: scsi@0:0.0.0,1
                    logical name: /dev/sda1
                    logical name: /boot/efi
                    version: FAT32
@@ -387,21 +387,21 @@ archlinux
               *-volume:1
                    description: EFI partition
                    physical id: 2
-                   bus info: scsi@1:0.0.0,2
+                   bus info: scsi@0:0.0.0,2
                    logical name: /dev/sda2
                    logical name: /
                    logical name: /mnt/archlinux
-                   logical name: /var/cache/pacman/pkg
                    logical name: /home
                    logical name: /home/lucas/.ccache
+                   logical name: /var/cache/pacman/pkg
                    serial: 076b16ce-f47f-4306-826b-85f19ec2746a
                    capacity: 107GiB
-                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=261,subvol=/CCACHE name=archlinux state=mounted
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,ssd,discard,space_cache=v2,subvolid=258,subvol=/PKG name=archlinux state=mounted
               *-volume:2
                    description: Linux swap volume
                    vendor: Linux
                    physical id: 3
-                   bus info: scsi@1:0.0.0,3
+                   bus info: scsi@0:0.0.0,3
                    logical name: /dev/sda3
                    version: 1
                    serial: d973bbfd-c0a6-4ef9-9b36-69814e93d879
@@ -420,39 +420,44 @@ archlinux
                 serial: GEK244RT2254TA
                 size: 232GiB (250GB)
                 capabilities: gpt-1.00 partitioned partitioned:gpt
-                configuration: ansiversion=5 guid=fb15eabb-16b4-c04f-95ca-e4260a9389a1 logicalsectorsize=512 sectorsize=512
+                configuration: ansiversion=5 guid=d59b7bbd-9136-7141-a35f-fe13b20c74c0 logicalsectorsize=512 sectorsize=512
               *-volume:0
-                   description: EXT4 volume
-                   vendor: Linux
+                   description: Windows FAT volume
+                   vendor: mkfs.fat
                    physical id: 1
                    bus info: scsi@4:0.0.0,1
                    logical name: /dev/sdb1
-                   version: 1.0
-                   serial: cda8102d-e400-478a-a678-8adc19aa5e49
-                   size: 10061MiB
-                   capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
-                   configuration: created=2022-06-14 14:54:14 filesystem=ext4 label=Recover lastmountpoint=/ modified=2022-06-20 15:57:53 mounted=2022-06-20 15:57:53 state=clean
+                   version: FAT32
+                   serial: e3a5-6033
+                   size: 126MiB
+                   capacity: 127MiB
+                   capabilities: boot fat initialized
+                   configuration: FATs=2 filesystem=fat
               *-volume:1
                    description: EFI partition
                    physical id: 2
                    bus info: scsi@4:0.0.0,2
                    logical name: /dev/sdb2
                    logical name: /mnt/backup
-                   serial: f2572fc6-73c2-e84f-bd08-e03d8fdf5390
+                   serial: 97b977fc-098a-bf48-8bd9-83262089a6d6
                    capacity: 48GiB
-                   configuration: mount.fstype=btrfs mount.options=rw,noatime,space_cache=v2,subvolid=5,subvol=/ state=mounted
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,compress-force=zstd:3,space_cache=v2,subvolid=5,subvol=/ state=mounted
               *-volume:2
-                   description: EXT4 volume
-                   vendor: Linux
+                   description: EFI partition
                    physical id: 3
                    bus info: scsi@4:0.0.0,3
                    logical name: /dev/sdb3
+                   serial: 81be256f-724f-ce46-afed-ec359383d4c0
+                   capacity: 9999MiB
+              *-volume:3
+                   description: EFI partition
+                   physical id: 4
+                   bus info: scsi@4:0.0.0,4
+                   logical name: /dev/sdb4
                    logical name: /mnt/dados
-                   version: 1.0
-                   serial: 4e595048-56b4-4d26-ae4b-90ba6d7c7011
-                   size: 174GiB
-                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
-                   configuration: created=2022-05-23 13:29:00 filesystem=ext4 label=Dados lastmountpoint=/mnt/dados modified=2022-06-23 08:00:15 mount.fstype=ext4 mount.options=rw,noatime mounted=2022-06-23 08:00:15 state=mounted
+                   serial: 7af5a8a3-3dd5-ec44-97ff-087bb41fe0c2
+                   capacity: 174GiB
+                   configuration: mount.fstype=btrfs mount.options=rw,noatime,compress-force=zstd:3,space_cache=v2,subvolid=5,subvol=/ state=mounted
            *-cdrom
                 description: DVD-RAM writer
                 product: DVD-RAM GH22NS30

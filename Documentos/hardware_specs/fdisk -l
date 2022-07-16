@@ -18,11 +18,10 @@ Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: gpt
-Disk identifier: FB15EABB-16B4-C04F-95CA-E4260A9389A1
+Disk identifier: D59B7BBD-9136-7141-A35F-FE13B20C74C0
 
 Device         Start       End   Sectors   Size Type
-/dev/sdb1  467791872 488396799  20604928   9.8G Linux filesystem
+/dev/sdb1       2048    264191    262144   128M EFI System
 /dev/sdb2     264192 102664191 102400000  48.8G Linux filesystem
-/dev/sdb3  102664192 467791871 365127680 174.1G Linux filesystem
-
-Partition table entries are not in disk order.
+/dev/sdb3  102664192 123144191  20480000   9.8G Linux filesystem
+/dev/sdb4  123144192 488396799 365252608 174.2G Linux filesystem

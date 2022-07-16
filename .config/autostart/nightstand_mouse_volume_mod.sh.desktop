@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/lucas/Documentos/scripts/nightstand_mouse_volume_mod.sh
+Icon=dialog-scripts
+Name=nightstand_mouse_volume_mod.sh
+Path=
+Type=Application
+X-KDE-AutostartScript=true

@@ -1,5 +1,5 @@
 System:
-  Host: archlinux Kernel: 5.17.15-262-tkg-cfs arch: x86_64 bits: 64
+  Host: archlinux Kernel: 5.18.10-263-tkg-cfs arch: x86_64 bits: 64
     Console: pty pts/1 Distro: Arch Linux
 Machine:
   Type: Desktop Mobo: INTEL model: H81 serial: N/A UEFI: American Megatrends
@@ -7,17 +7,17 @@ Machine:
 CPU:
   Info: dual core model: Intel Core i3-4170 bits: 64 type: MT MCP cache:
     L2: 512 KiB
-  Speed (MHz): avg: 1608 min/max: 800/3700 cores: 1: 1651 2: 1635 3: 1593
-    4: 1553
+  Speed (MHz): avg: 3691 min/max: 800/3700 cores: 1: 3691 2: 3691 3: 3691
+    4: 3691
 Graphics:
   Device-1: Intel 4th Generation Core Processor Family Integrated Graphics
     driver: i915 v: kernel
   Device-2: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
-  Display: x11 server: X.Org v: 21.1.3 driver: X: loaded: modesetting
+  Display: x11 server: X.Org v: 21.1.4 driver: X: loaded: modesetting
     gpu: i915 resolution: 1920x1080~60Hz
   OpenGL: renderer: Mesa Intel HD Graphics 4400 (HSW GT2)
-    v: 4.6 Mesa 22.1.2
+    v: 4.6 Mesa 22.2.0-devel (git-8179182660)
 Audio:
   Device-1: Intel Xeon E3-1200 v3/4th Gen Core Processor HD Audio
     driver: snd_hda_intel
@@ -25,8 +25,8 @@ Audio:
     driver: snd_hda_intel
   Device-3: GEMBIRD USB2.0 PC CAMERA type: USB
     driver: snd-usb-audio,uvcvideo
-  Sound Server-1: ALSA v: k5.17.15-262-tkg-cfs running: yes
-  Sound Server-2: PipeWire v: 0.3.52 running: yes
+  Sound Server-1: ALSA v: k5.18.10-263-tkg-cfs running: yes
+  Sound Server-2: PipeWire v: 0.3.55 running: yes
 Network:
   Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
     driver: r8169
@@ -35,21 +35,21 @@ Bluetooth:
   Device-1: Realtek Bluetooth Radio type: USB driver: btusb
   Report: rfkill ID: hci0 state: up address: see --recommends
 Drives:
-  Local Storage: total: 344.68 GiB used: 167.8 GiB (48.7%)
+  Local Storage: total: 344.68 GiB used: 135.44 GiB (39.3%)
   ID-1: /dev/sda vendor: SanDisk model: SSD PLUS 120GB size: 111.79 GiB
   ID-2: /dev/sdb vendor: Hitachi model: HDP725025GLA380 size: 232.89 GiB
 Partition:
-  ID-1: / size: 107.64 GiB used: 66.05 GiB (61.4%) fs: btrfs dev: /dev/sda2
-  ID-2: /boot/efi size: 126 MiB used: 10.3 MiB (8.2%) fs: vfat
+  ID-1: / size: 107.64 GiB used: 67.78 GiB (63.0%) fs: btrfs dev: /dev/sda2
+  ID-2: /boot/efi size: 126 MiB used: 16.3 MiB (13.0%) fs: vfat
     dev: /dev/sda1
-  ID-3: /home size: 107.64 GiB used: 66.05 GiB (61.4%) fs: btrfs
+  ID-3: /home size: 107.64 GiB used: 67.78 GiB (63.0%) fs: btrfs
     dev: /dev/sda2
 Swap:
-  ID-1: swap-1 type: partition size: 4.02 GiB used: 465.2 MiB (11.3%)
+  ID-1: swap-1 type: partition size: 4.02 GiB used: 2.5 MiB (0.1%)
     dev: /dev/sda3
 Sensors:
-  System Temperatures: cpu: 52.0 C mobo: 27.8 C
+  System Temperatures: cpu: 36.0 C mobo: N/A
   Fan Speeds (RPM): N/A
 Info:
-  Processes: 224 Uptime: 37m Memory: 7.69 GiB used: 2.93 GiB (38.1%)
-  Shell: generate_hardwa inxi: 3.3.18
+  Processes: 252 Uptime: 36m Memory: 7.69 GiB used: 3.9 GiB (50.8%)
+  Shell: generate_hardwa inxi: 3.3.19

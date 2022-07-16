@@ -1,8 +1,16 @@
 Label: none  uuid: 8c36ee55-73c8-4908-b764-e6db1ac14940
-	Total devices 1 FS bytes used 65.17GiB
-	devid    1 size 107.64GiB used 106.02GiB path /dev/sda2
+	Total devices 1 FS bytes used 66.61GiB
+	devid    1 size 107.64GiB used 88.02GiB path /dev/sda2
 
-Label: 'Backup'  uuid: d10eaec6-68e4-4319-965d-a4c04828715f
-	Total devices 1 FS bytes used 32.13GiB
-	devid    1 size 48.83GiB used 42.02GiB path /dev/sdb2
+Label: 'Dados'  uuid: a26546b0-6409-4957-bfc7-01bdc5fff16c
+	Total devices 1 FS bytes used 40.55GiB
+	devid    1 size 174.17GiB used 57.02GiB path /dev/sdb4
+
+Label: 'Backup'  uuid: ac803627-f671-4942-9b42-2cc79f7eaca0
+	Total devices 1 FS bytes used 26.10GiB
+	devid    1 size 48.83GiB used 32.02GiB path /dev/sdb2
+
+Label: 'Recovery'  uuid: 9f2edb2e-5375-4693-a451-11a979557ff6
+	Total devices 1 FS bytes used 2.99GiB
+	devid    1 size 9.77GiB used 4.45GiB path /dev/sdb3
 

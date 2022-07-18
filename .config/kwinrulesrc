@@ -11,16 +11,18 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [1]
-Description=Configurações de aplicativo para diablo iii.exe
+Description=Configurações de aplicativo para google-chrome
 blockcompositing=true
-blockcompositingrule=2
 clientmachine=localhost
 ignoregeometry=true
-position=15,293
-size=965,670
+position=0,-2
+positionrule=3
+size=960,1052
+sizerule=3
 title=HALF-LIFE 2
 windowrole=browser
-wmclass=diablo iii.exe
+wmclass=google-chrome google-chrome
+wmclasscomplete=true
 wmclassmatch=1
 
 [10]
@@ -81,20 +83,16 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [2]
-Description=Configurações de aplicativo para hl2.exe
+Description=Configurações de aplicativo para diablo iii.exe
 blockcompositing=true
 blockcompositingrule=2
 clientmachine=localhost
 ignoregeometry=true
-ignoregeometryrule=2
 position=15,293
-positionrule=3
 size=965,670
 title=HALF-LIFE 2
-titlematch=1
 windowrole=browser
-wmclass=hl2.exe hl2.exe
-wmclasscomplete=true
+wmclass=diablo iii.exe
 wmclassmatch=1
 
 [2c29c231-73e8-4dc6-a8eb-e7b7bc33dc57]
@@ -118,18 +116,21 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [3]
-Description=Configurações de janela para Prime Video
+Description=Configurações de aplicativo para hl2.exe
 blockcompositing=true
+blockcompositingrule=2
+clientmachine=localhost
 ignoregeometry=true
-position=960,-144
-positionrule=2
+ignoregeometryrule=2
+position=15,293
+positionrule=3
 size=965,670
-sizerule=2
-title=Prime Video - Google Chrome
+title=HALF-LIFE 2
 titlematch=1
 windowrole=browser
-wmclass=google-chrome google-chrome
+wmclass=hl2.exe hl2.exe
 wmclasscomplete=true
+wmclassmatch=1
 
 [33c3f8b5-3b9f-4c99-8a4a-5e181e339193]
 Description=Configurações de janela para EasyEffects
@@ -178,6 +179,20 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [4]
+Description=Configurações de janela para Prime Video
+blockcompositing=true
+ignoregeometry=true
+position=960,-144
+positionrule=2
+size=965,670
+sizerule=2
+title=Prime Video - Google Chrome
+titlematch=1
+windowrole=browser
+wmclass=google-chrome google-chrome
+wmclasscomplete=true
+
+[5]
 Description=Configurações de janela para EasyEffects
 blockcompositing=true
 ignoregeometry=true
@@ -191,7 +206,15 @@ wmclass=easyeffects easyeffects
 wmclasscomplete=true
 wmclassmatch=1
 
-[5]
+[53f983a5-128a-45aa-b341-605153327e88]
+Description=Configurações de aplicativo para diablo iii.exe
+blockcompositing=true
+blockcompositingrule=2
+clientmachine=localhost
+wmclass=diablo iii.exe
+wmclassmatch=1
+
+[6]
 Description=Configurações de janela para UNO
 blockcompositing=true
 blockcompositingrule=2
@@ -205,27 +228,6 @@ wmclass=steam_app_470220 steam_app_470220
 wmclasscomplete=true
 wmclassmatch=1
 
-[53f983a5-128a-45aa-b341-605153327e88]
-Description=Configurações de aplicativo para diablo iii.exe
-blockcompositing=true
-blockcompositingrule=2
-clientmachine=localhost
-wmclass=diablo iii.exe
-wmclassmatch=1
-
-[6]
-Description=Configurações de janela para Anbox - Android in a Box
-ignoregeometry=true
-ignoregeometryrule=3
-position=960,525
-positionrule=3
-size=600,526
-sizerule=3
-title=Anbox - Android in a Box
-wmclass=anbox anbox
-wmclasscomplete=true
-wmclassmatch=1
-
 [6e256e8d-6ef0-47c3-b810-58b9555ff032]
 Description=Configurações de janela para Darkwood
 ignoregeometry=true
@@ -235,6 +237,19 @@ positionrule=3
 title=Darkwood
 titlematch=1
 wmclass=darkwood.exe darkwood.exe
+wmclasscomplete=true
+wmclassmatch=1
+
+[7]
+Description=Configurações de janela para Anbox - Android in a Box
+ignoregeometry=true
+ignoregeometryrule=3
+position=960,525
+positionrule=3
+size=600,526
+sizerule=3
+title=Anbox - Android in a Box
+wmclass=anbox anbox
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -361,8 +376,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,2,3,4,5,6
+count=7
+rules=1,2,3,4,5,6,7
 
 [a0a0e2c0-fef1-4087-b006-bc4730991325]
 Description=Configurações de janela para Ion Fury
@@ -434,6 +449,18 @@ position=60,226
 positionrule=3
 title=Huntdown
 wmclass=huntdown.x86_64 huntdown.x86_64
+wmclasscomplete=true
+wmclassmatch=1
+
+[f8557045-df88-4010-9bcb-199c8495c36a]
+Description=Configurações de aplicativo para google-chrome
+clientmachine=localhost
+position=0,0
+positionrule=3
+size=928,1052
+sizerule=3
+windowrole=browser
+wmclass=google-chrome google-chrome
 wmclasscomplete=true
 wmclassmatch=1
 

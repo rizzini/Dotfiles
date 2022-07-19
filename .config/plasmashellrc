@@ -14,8 +14,8 @@ Recent URLs[$e]=file:$HOME/Imagens/,file:$HOME/.config/,file:$HOME/,file:$HOME/D
 iconViewIconSize=64
 
 [KPropertiesDialog]
-HDMI-1 Height 1920x1080=468
-HDMI-1 Width 1920x1080=423
+HDMI-1 Height 1920x1080=465
+HDMI-1 Width 1920x1080=382
 
 [Open-with settings]
 CompletionMode=1

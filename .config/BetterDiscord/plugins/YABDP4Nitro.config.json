@@ -1,0 +1,19 @@
+{
+    "currentVersionInfo": {
+        "version": "4.0.6",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "emojiSize": 48,
+        "screenSharing": true,
+        "emojiBypass": true,
+        "ghostMode": true,
+        "emojiBypassForValidEmoji": true,
+        "PNGemote": true,
+        "uploadEmotes": false,
+        "CustomFPSEnabled": false,
+        "CustomFPS": 60,
+        "ResolutionEnabled": false,
+        "CustomResolution": 0
+    }
+}

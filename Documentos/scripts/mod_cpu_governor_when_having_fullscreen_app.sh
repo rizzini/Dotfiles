@@ -22,11 +22,11 @@ while :; do
             sleep=300;
         fi
         if [ $change_governor == 1 ] && ! /usr/bin/grep -q "ondemand" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
-            /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
+#             /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable.
             /usr/bin/echo -n 'ondemand' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
         elif [ $change_governor == 0 ] && ! /usr/bin/grep -q 'performance' /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; then
             /usr/bin/echo -n 'performance' | /usr/bin/sudo /usr/bin/tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor;
-            /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and.
+#             /usr/bin/mpv --no-terminal "$mp3"; #Remove after stating the script is reliable and.
         fi
     else
         sleep=1;
